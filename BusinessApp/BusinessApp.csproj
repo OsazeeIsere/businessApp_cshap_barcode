@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B18DA68A-C6E0-43ED-A7D6-58322971C506}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BusinessApp.My.MyApplication</StartupObject>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessApp</RootNamespace>
+    <AssemblyName>BusinessApp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>73</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BusinessApp.xml</DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BusinessApp.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3050AEB9971D3D1008621F144B943D11155BA847</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BusinessApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib.BarcodeReader">
+      <HintPath>..\..\BarcodeLib.BarcodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Excel.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Adapter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Downloads\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="SalesAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAlert.Designer.cs">
+      <DependentUpon>SalesAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulateIsNumeric.cs" />
+    <Compile Include="action.Designer.cs">
+      <DependentUpon>action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activity.Designer.cs">
+      <DependentUpon>activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addbackup.Designer.cs">
+      <DependentUpon>addbackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addbackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admingenerasaleslog.Designer.cs">
+      <DependentUpon>admingenerasaleslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admingenerasaleslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminsales.Designer.cs">
+      <DependentUpon>adminsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assets.Designer.cs">
+      <DependentUpon>assets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backup.Designer.cs">
+      <DependentUpon>backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clearcart.Designer.cs">
+      <DependentUpon>clearcart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clearcart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clearholdsalescart.Designer.cs">
+      <DependentUpon>clearholdsalescart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clearholdsalescart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cosmetics.Designer.cs">
+      <DependentUpon>cosmetics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cosmetics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cosmeticslog.Designer.cs">
+      <DependentUpon>cosmeticslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cosmeticslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cosmeticsreorderlevel.Designer.cs">
+      <DependentUpon>cosmeticsreorderlevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cosmeticsreorderlevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier.Designer.cs">
+      <DependentUpon>cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cosmeticsexpirydateinfo.Designer.cs">
+      <DependentUpon>cosmeticsexpirydateinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cosmeticsexpirydateinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delet.Designer.cs">
+      <DependentUpon>delet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletcosmetics.Designer.cs">
+      <DependentUpon>deletcosmetics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletcosmetics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount Approval.Designer.cs">
+      <DependentUpon>Discount Approval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discount Approval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drinks.Designer.cs">
+      <DependentUpon>drinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="drinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drinksexpirydateinfo.Designer.cs">
+      <DependentUpon>drinksexpirydateinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="drinksexpirydateinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drinkslog.Designer.cs">
+      <DependentUpon>drinkslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="drinkslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drinksreorderlevel.Designer.cs">
+      <DependentUpon>drinksreorderlevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="drinksreorderlevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editsales.Designer.cs">
+      <DependentUpon>editsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expenditure.Designer.cs">
+      <DependentUpon>expenditure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="expenditure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expirydateinfo.Designer.cs">
+      <DependentUpon>expirydateinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="expirydateinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expirydateinfotype.Designer.cs">
+      <DependentUpon>expirydateinfotype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="expirydateinfotype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generalsaleslog.Designer.cs">
+      <DependentUpon>generalsaleslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generalsaleslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="getdatabaseclass.cs" />
+    <Compile Include="holdsales.Designer.cs">
+      <DependentUpon>holdsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="holdsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old Patient.Designer.cs">
+      <DependentUpon>Old Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old Patient.cs" />
+    <Compile Include="operation.Designer.cs">
+      <DependentUpon>operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drugs.Designer.cs">
+      <DependentUpon>drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drugslog.Designer.cs">
+      <DependentUpon>drugslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="drugslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient Database.Designer.cs">
+      <DependentUpon>Patient Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Patient Info.Designer.cs">
+      <DependentUpon>New Patient Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New Patient Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient Electronic Record.Designer.cs">
+      <DependentUpon>Patient Electronic Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient Electronic Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchasehistory.Designer.cs">
+      <DependentUpon>purchasehistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchasehistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receiptholdsales.Designer.cs">
+      <DependentUpon>receiptholdsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="receiptholdsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receiptmidip.Designer.cs">
+      <DependentUpon>receiptmidip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="receiptmidip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reorderlevel.Designer.cs">
+      <DependentUpon>reorderlevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reorderlevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reorderleveltype.Designer.cs">
+      <DependentUpon>reorderleveltype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reorderleveltype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saleslog.Designer.cs">
+      <DependentUpon>saleslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saleslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saleslogtype.Designer.cs">
+      <DependentUpon>saleslogtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saleslogtype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings.cs" />
+    <Compile Include="trackExpiryDate1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trackExpiryDate1.Designer.cs">
+      <DependentUpon>trackExpiryDate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trackExpiryDate2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trackExpiryDate2.Designer.cs">
+      <DependentUpon>trackExpiryDate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trackExpiryDate3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trackExpiryDate3.Designer.cs">
+      <DependentUpon>trackExpiryDate3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="viewsales.Designer.cs">
+      <DependentUpon>viewsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales.Designer.cs">
+      <DependentUpon>sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finalreceipt.Designer.cs">
+      <DependentUpon>finalreceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="finalreceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewsaleslog.Designer.cs">
+      <DependentUpon>viewsaleslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewsaleslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcome.Designer.cs">
+      <DependentUpon>welcome.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="action.resx">
+      <DependentUpon>action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="activity.resx">
+      <DependentUpon>activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addbackup.resx">
+      <DependentUpon>addbackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admingenerasaleslog.resx">
+      <DependentUpon>admingenerasaleslog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminsales.resx">
+      <DependentUpon>adminsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets.resx">
+      <DependentUpon>assets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backup.resx">
+      <DependentUpon>backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clearcart.resx">
+      <DependentUpon>clearcart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clearholdsalescart.resx">
+      <DependentUpon>clearholdsalescart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cosmetics.resx">
+      <DependentUpon>cosmetics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cosmeticslog.resx">
+      <DependentUpon>cosmeticslog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cosmeticsreorderlevel.resx">
+      <DependentUpon>cosmeticsreorderlevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier.resx">
+      <DependentUpon>cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cosmeticsexpirydateinfo.resx">
+      <DependentUpon>cosmeticsexpirydateinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delet.resx">
+      <DependentUpon>delet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletcosmetics.resx">
+      <DependentUpon>deletcosmetics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount Approval.resx">
+      <DependentUpon>Discount Approval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drinks.resx">
+      <DependentUpon>drinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drinksexpirydateinfo.resx">
+      <DependentUpon>drinksexpirydateinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drinkslog.resx">
+      <DependentUpon>drinkslog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drinksreorderlevel.resx">
+      <DependentUpon>drinksreorderlevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editsales.resx">
+      <DependentUpon>editsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expenditure.resx">
+      <DependentUpon>expenditure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expirydateinfo.resx">
+      <DependentUpon>expirydateinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expirydateinfotype.resx">
+      <DependentUpon>expirydateinfotype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generalsaleslog.resx">
+      <DependentUpon>generalsaleslog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="holdsales.resx">
+      <DependentUpon>holdsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old Patient.resx">
+      <DependentUpon>Old Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operation.resx">
+      <DependentUpon>operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drugs.resx">
+      <DependentUpon>drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drugslog.resx">
+      <DependentUpon>drugslog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient Database.resx">
+      <DependentUpon>Patient Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Patient Info.resx">
+      <DependentUpon>New Patient Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient Electronic Record.resx">
+      <DependentUpon>Patient Electronic Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchasehistory.resx">
+      <DependentUpon>purchasehistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receiptholdsales.resx">
+      <DependentUpon>receiptholdsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receiptmidip.resx">
+      <DependentUpon>receiptmidip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reorderlevel.resx">
+      <DependentUpon>reorderlevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reorderleveltype.resx">
+      <DependentUpon>reorderleveltype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAlert.resx">
+      <DependentUpon>SalesAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saleslog.resx">
+      <DependentUpon>saleslog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saleslogtype.resx">
+      <DependentUpon>saleslogtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trackExpiryDate1.resx">
+      <DependentUpon>trackExpiryDate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trackExpiryDate2.resx">
+      <DependentUpon>trackExpiryDate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trackExpiryDate3.resx">
+      <DependentUpon>trackExpiryDate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewsales.resx">
+      <DependentUpon>viewsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales.resx">
+      <DependentUpon>sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finalreceipt.resx">
+      <DependentUpon>finalreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewsaleslog.resx">
+      <DependentUpon>viewsaleslog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessApp_TemporaryKey.pfx" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="CrystalReport1.mht" />
+    <None Include="Properties\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ExcelAdaptorLib">
+      <Guid>{ADA724D6-B9E0-458A-851D-91681D9E3B2C}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.MSProject">
+      <Guid>{A7107640-94DF-1068-855E-00DD01075445}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSDASC">
+      <Guid>{2206CEB0-19C1-11D1-89E0-00C04FD7A829}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="PMCObjLib">
+      <Guid>{A1B0DE63-7454-4184-B5B6-6ACFDAC5C9A6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NAIRA.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
