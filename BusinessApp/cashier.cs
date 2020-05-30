@@ -33,7 +33,7 @@ namespace BusinessApp
             MySqlDataAdapter ad = new MySqlDataAdapter();
             MySqlCommand cm = new MySqlCommand();
             string strconnection = "";
-            strconnection = "Server=localhost;Port=3306;Database=snowbakedb;Uid=root;Pwd=prayer;";
+            strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
             cn.ConnectionString = strconnection;
             cn.Open();
             cm.CommandText = strcommand;
@@ -109,7 +109,7 @@ namespace BusinessApp
                 {
                     for (int i = 0; i < dtgetcashier.Rows.Count; i++)
                     {
-                        if (txtcashiername.Text.ToUpper() == dtgetcashier.Rows[i]["cashiername"].ToString().ToUpper() && txtcashierpassword.Text == dtgetcashier.Rows[i]["cashierpassword"].ToString())
+                        if (txtcashiername.Text.ToUpper() == Convert.ToString(dtgetcashier.Rows[i]["cashiername"]).ToUpper() && txtcashierpassword.Text == dtgetcashier.Rows[i]["cashierpassword"].ToString())
                         {
 
                             v.txtcashiername1.Text = txtcashiername.Text;
