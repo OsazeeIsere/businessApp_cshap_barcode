@@ -100,42 +100,49 @@ namespace BusinessApp
 		private void Button1_Click(object sender, System.EventArgs e)
 		{
 
-			try
-			{
+            try
+            {
 
-				System.Data.DataTable dtgetcashier = new System.Data.DataTable();
-				dtgetcashier = getdatabase("select * from cashier");
-				for (var i = 0; i < dtgetcashier.Rows.Count; i++)
-				{
-					if (txtcashiername.Text.ToUpper() == dtgetcashier.Rows[i]["cashiername"].ToString().ToUpper() && txtcashierpassword.Text == dtgetcashier.Rows[i]["cashierpassword"].ToString())
-					{
+                System.Data.DataTable dtgetcashier = new System.Data.DataTable();
+                dtgetcashier = getdatabase("select * from cashier");
+                if (dtgetcashier.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dtgetcashier.Rows.Count; i++)
+                    {
+                        if (txtcashiername.Text.ToUpper() == dtgetcashier.Rows[i]["cashiername"].ToString().ToUpper() && txtcashierpassword.Text == dtgetcashier.Rows[i]["cashierpassword"].ToString())
+                        {
 
-						v.txtcashiername1.Text = txtcashiername.Text;
-						v.Show();
-						txtcashiername.Text = "";
-						txtcashierpassword.Text = "";
-						goto brake1;
+                            v.txtcashiername1.Text = txtcashiername.Text;
+                            v.Show();
+                            txtcashiername.Text = "";
+                            txtcashierpassword.Text = "";
+                            goto brake1;
 
-					}
-				}
-				//for (var i = 0; i < dtgetcashier.Rows.Count; i++)
-				//{
-				//	if (txtcashiername.Text.ToUpper() == Convert.ToString(dtgetcashier.Rows[i]["cashiername"]).ToUpper() && txtcashierpassword.Text == (dtgetcashier.Rows[i]["cashierpassword"]).ToString())
-				//	{
-				//		//goto 95;
-				//		//dtgetresult.Rows(i).Item("subjectid").ToString()
-				//	}
-				//}
-				MessageBox.Show("You made a WRONG or INCOMPLET Entry");
-				brake1:;
+                        }
 
+                    }
+                  
+                        MessageBox.Show("You made a WRONG or INCOMPLET Entry");
 
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.ToString());
+                  
 
-			}
+                    //for (var i = 0; i < dtgetcashier.Rows.Count; i++)
+                    //{
+                    //	if (txtcashiername.Text.ToUpper() == Convert.ToString(dtgetcashier.Rows[i]["cashiername"]).ToUpper() && txtcashierpassword.Text == (dtgetcashier.Rows[i]["cashierpassword"]).ToString())
+                    //	{
+                    //		//goto 95;
+                    //		//dtgetresult.Rows(i).Item("subjectid").ToString()
+                    //	}
+                    //}
+
+                }
+            brake1:;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
 			//strcashiername = txtcashiername.Text
 			// txtcashiername.Text = ""
 			//txtcashierpassword.Text = ""
