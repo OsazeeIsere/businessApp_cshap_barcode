@@ -43,7 +43,7 @@ namespace BusinessApp
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -60,8 +60,8 @@ namespace BusinessApp
             this.Label8 = new System.Windows.Forms.Label();
             this.PrintDocument1 = new System.Drawing.Printing.PrintDocument();
             this.txtpassword1 = new System.Windows.Forms.TextBox();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,14 +69,14 @@ namespace BusinessApp
             // 
             this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvsaleslog.Location = new System.Drawing.Point(22, 75);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -218,30 +218,30 @@ namespace BusinessApp
             this.txtpassword1.Size = new System.Drawing.Size(142, 26);
             this.txtpassword1.TabIndex = 38;
             // 
-            // Label5
+            // lbaddress
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.BackColor = System.Drawing.Color.Black;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Label5.Location = new System.Drawing.Point(484, 48);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(269, 18);
-            this.Label5.TabIndex = 40;
-            this.Label5.Text = "Okha Market , Sapele Road, Benin City.\r\n";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.BackColor = System.Drawing.Color.Black;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbaddress.Location = new System.Drawing.Point(484, 48);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(27, 18);
+            this.lbaddress.TabIndex = 40;
+            this.lbaddress.Text = "lb2";
             // 
-            // Label6
+            // lbname
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.BackColor = System.Drawing.Color.Red;
-            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Label6.Location = new System.Drawing.Point(472, 9);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(336, 25);
-            this.Label6.TabIndex = 39;
-            this.Label6.Text = "WELCOME TO TRENDY SHOP\r\n";
+            this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.Color.Red;
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbname.Location = new System.Drawing.Point(472, 9);
+            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(44, 25);
+            this.lbname.TabIndex = 39;
+            this.lbname.Text = "lb1";
             // 
             // drugslog
             // 
@@ -252,8 +252,8 @@ namespace BusinessApp
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1284, 782);
-            this.Controls.Add(this.Label5);
-            this.Controls.Add(this.Label6);
+            this.Controls.Add(this.lbaddress);
+            this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtpassword1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.DateTimePicker2);
@@ -295,8 +295,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label8;
 		internal System.Drawing.Printing.PrintDocument PrintDocument1;
 		internal System.Windows.Forms.TextBox txtpassword1;
-		internal System.Windows.Forms.Label Label5;
-		internal System.Windows.Forms.Label Label6;
+		internal System.Windows.Forms.Label lbaddress;
+		internal System.Windows.Forms.Label lbname;
 	}
 
 }

@@ -29,7 +29,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -47,7 +47,14 @@ namespace BusinessApp
 
 			try
 			{
-				generalsaleslog x = new generalsaleslog();
+                DataTable dtidentity = new DataTable();
+                dtidentity = getdatabase("Select * from identity");
+
+                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+               // lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+                generalsaleslog x = new generalsaleslog();
 				double totalsales = 0;
 				double totalprofit = 0;
 				System.Data.DataTable dtgetgeneralsaleslog = new System.Data.DataTable();

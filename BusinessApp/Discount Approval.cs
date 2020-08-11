@@ -28,7 +28,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;

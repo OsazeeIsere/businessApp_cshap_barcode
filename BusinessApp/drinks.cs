@@ -24,7 +24,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -39,7 +39,14 @@ namespace BusinessApp
 
 		private void drinks_Load(object sender, System.EventArgs e)
 		{
-			System.Data.DataTable dtgetdrinks = new System.Data.DataTable();
+            DataTable dtidentity = new DataTable();
+            dtidentity = getdatabase("Select * from identity");
+
+            lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+            lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+       //    lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+            System.Data.DataTable dtgetdrinks = new System.Data.DataTable();
 			dtgetdrinks = getdatabase("Select * From drinks");
 			dgvdrinks.DataSource = dtgetdrinks;
 		}
@@ -67,7 +74,7 @@ namespace BusinessApp
 				}
 				else if (Simulate.IsNumeric(txtquantity.Text) && string.IsNullOrEmpty(txtproductname.Text))
 				{
-					strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+					strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 					cn.ConnectionString = strconnection;
 					int newquantity = 0;
 					System.Data.DataTable dtgetdrinks = new System.Data.DataTable();
@@ -112,7 +119,7 @@ namespace BusinessApp
 				else
 				{
 					//Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
-					strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+					strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 					cn.ConnectionString = strconnection;
 					cn.Open();
 					cm.CommandText = "Insert Into drinks(drinksname,drinksquantity,drinksunitcostprice,drinksunitsalesprice) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + txtunitcostprice.Text + "','" + txtunitprice.Text + "')";
@@ -214,7 +221,7 @@ namespace BusinessApp
 							MySqlDataAdapter ad = new MySqlDataAdapter();
 							MySqlCommand cm = new MySqlCommand();
 							string strconnection = "";
-							strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+							strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 							cn.ConnectionString = strconnection;
 							int newquantity = 0;
 							System.Data.DataTable dtgetdrinks = new System.Data.DataTable();
@@ -236,7 +243,7 @@ namespace BusinessApp
 
 							//Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
 							string strconnection = "";
-							strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+							strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 							cn.ConnectionString = strconnection;
 							cn.Open();
 							cm.CommandText = "Insert Into drinks(drinksname,drinksquantity,drinksunitcostprice,drinksunitsalesprice,expirydate) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "')";

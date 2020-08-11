@@ -28,7 +28,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -48,7 +48,7 @@ namespace BusinessApp
 				MySqlDataAdapter ad = new MySqlDataAdapter();
 				MySqlCommand cm = new MySqlCommand();
 				string strconnection = "";
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				cn.Open();
 				cm.CommandText = "Delete from cosmetics where cosmeticsid=" + Convert.ToInt32(txtproductid.Text) + ";";

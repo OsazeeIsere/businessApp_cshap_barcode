@@ -87,8 +87,8 @@ namespace BusinessApp
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.Button3 = new System.Windows.Forms.Button();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
             this.txt3 = new System.Windows.Forms.TextBox();
             this.txt1 = new System.Windows.Forms.TextBox();
             this.txt0 = new System.Windows.Forms.TextBox();
@@ -96,6 +96,10 @@ namespace BusinessApp
             this.thisMonth2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.thisMonth = new System.Windows.Forms.Button();
+            this.txtcode2 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtproductname = new System.Windows.Forms.TextBox();
+            this.Label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -163,7 +167,7 @@ namespace BusinessApp
             // 
             // txtseachdrugs
             // 
-            this.txtseachdrugs.Location = new System.Drawing.Point(431, 222);
+            this.txtseachdrugs.Location = new System.Drawing.Point(427, 252);
             this.txtseachdrugs.Multiline = true;
             this.txtseachdrugs.Name = "txtseachdrugs";
             this.txtseachdrugs.Size = new System.Drawing.Size(195, 37);
@@ -193,7 +197,7 @@ namespace BusinessApp
             // btnenter
             // 
             this.btnenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnenter.Location = new System.Drawing.Point(175, 201);
+            this.btnenter.Location = new System.Drawing.Point(171, 231);
             this.btnenter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnenter.Name = "btnenter";
             this.btnenter.Size = new System.Drawing.Size(175, 66);
@@ -263,7 +267,7 @@ namespace BusinessApp
             // txtquantity
             // 
             this.txtquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquantity.Location = new System.Drawing.Point(100, 229);
+            this.txtquantity.Location = new System.Drawing.Point(96, 259);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(65, 29);
@@ -273,7 +277,7 @@ namespace BusinessApp
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(23, 229);
+            this.Label2.Location = new System.Drawing.Point(19, 259);
             this.Label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(78, 24);
@@ -283,7 +287,7 @@ namespace BusinessApp
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(810, 164);
+            this.Label1.Location = new System.Drawing.Point(812, 150);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(225, 20);
             this.Label1.TabIndex = 102;
@@ -291,7 +295,7 @@ namespace BusinessApp
             // 
             // txtunitsalesprice1
             // 
-            this.txtunitsalesprice1.Location = new System.Drawing.Point(1041, 161);
+            this.txtunitsalesprice1.Location = new System.Drawing.Point(1043, 147);
             this.txtunitsalesprice1.Name = "txtunitsalesprice1";
             this.txtunitsalesprice1.Size = new System.Drawing.Size(86, 26);
             this.txtunitsalesprice1.TabIndex = 103;
@@ -299,7 +303,7 @@ namespace BusinessApp
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(237, 164);
+            this.Label3.Location = new System.Drawing.Point(594, 200);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(181, 20);
             this.Label3.TabIndex = 104;
@@ -307,7 +311,7 @@ namespace BusinessApp
             // 
             // txtunitsalesprice
             // 
-            this.txtunitsalesprice.Location = new System.Drawing.Point(424, 164);
+            this.txtunitsalesprice.Location = new System.Drawing.Point(781, 200);
             this.txtunitsalesprice.Name = "txtunitsalesprice";
             this.txtunitsalesprice.Size = new System.Drawing.Size(101, 26);
             this.txtunitsalesprice.TabIndex = 105;
@@ -381,10 +385,10 @@ namespace BusinessApp
             this.ColumnHeader10});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
-            this.lsvitems.Location = new System.Drawing.Point(38, 287);
+            this.lsvitems.Location = new System.Drawing.Point(38, 314);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(956, 436);
+            this.lsvitems.Size = new System.Drawing.Size(956, 409);
             this.lsvitems.TabIndex = 106;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -429,7 +433,7 @@ namespace BusinessApp
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(22, 167);
+            this.Label4.Location = new System.Drawing.Point(18, 197);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(85, 20);
             this.Label4.TabIndex = 108;
@@ -437,7 +441,7 @@ namespace BusinessApp
             // 
             // txtdrugid
             // 
-            this.txtdrugid.Location = new System.Drawing.Point(109, 166);
+            this.txtdrugid.Location = new System.Drawing.Point(112, 194);
             this.txtdrugid.Name = "txtdrugid";
             this.txtdrugid.Size = new System.Drawing.Size(55, 26);
             this.txtdrugid.TabIndex = 109;
@@ -445,7 +449,7 @@ namespace BusinessApp
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(708, 166);
+            this.Label6.Location = new System.Drawing.Point(710, 152);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(28, 20);
             this.Label6.TabIndex = 110;
@@ -453,7 +457,7 @@ namespace BusinessApp
             // 
             // txtcosmeticsid
             // 
-            this.txtcosmeticsid.Location = new System.Drawing.Point(742, 164);
+            this.txtcosmeticsid.Location = new System.Drawing.Point(744, 150);
             this.txtcosmeticsid.Name = "txtcosmeticsid";
             this.txtcosmeticsid.Size = new System.Drawing.Size(64, 26);
             this.txtcosmeticsid.TabIndex = 111;
@@ -471,7 +475,7 @@ namespace BusinessApp
             // PictureBox3
             // 
             this.PictureBox3.Image = global::BusinessApp.Properties.Resources.search3;
-            this.PictureBox3.Location = new System.Drawing.Point(353, 222);
+            this.PictureBox3.Location = new System.Drawing.Point(349, 252);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(61, 37);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -482,7 +486,7 @@ namespace BusinessApp
             // 
             this.Button3.BackColor = System.Drawing.Color.White;
             this.Button3.ForeColor = System.Drawing.Color.Red;
-            this.Button3.Location = new System.Drawing.Point(544, 156);
+            this.Button3.Location = new System.Drawing.Point(546, 142);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(158, 43);
             this.Button3.TabIndex = 114;
@@ -490,30 +494,30 @@ namespace BusinessApp
             this.Button3.UseVisualStyleBackColor = false;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // Label10
+            // lbaddress
             // 
-            this.Label10.AutoSize = true;
-            this.Label10.BackColor = System.Drawing.Color.Black;
-            this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Label10.Location = new System.Drawing.Point(484, 47);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(269, 18);
-            this.Label10.TabIndex = 116;
-            this.Label10.Text = "Okha Market , Sapele Road, Benin City.\r\n";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.BackColor = System.Drawing.Color.Black;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbaddress.Location = new System.Drawing.Point(484, 47);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(27, 18);
+            this.lbaddress.TabIndex = 116;
+            this.lbaddress.Text = "lb2";
             // 
-            // Label11
+            // lbname
             // 
-            this.Label11.AutoSize = true;
-            this.Label11.BackColor = System.Drawing.Color.Black;
-            this.Label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Label11.Location = new System.Drawing.Point(446, 9);
-            this.Label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(336, 25);
-            this.Label11.TabIndex = 115;
-            this.Label11.Text = "WELCOME TO TRENDY SHOP\r\n";
+            this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.Color.Black;
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbname.Location = new System.Drawing.Point(446, 9);
+            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(44, 25);
+            this.lbname.TabIndex = 115;
+            this.lbname.Text = "lb1";
             // 
             // txt3
             // 
@@ -587,12 +591,50 @@ namespace BusinessApp
             this.thisMonth.UseVisualStyleBackColor = false;
             this.thisMonth.Click += new System.EventHandler(this.thisMonth_Click);
             // 
+            // txtcode2
+            // 
+            this.txtcode2.Location = new System.Drawing.Point(112, 150);
+            this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcode2.Name = "txtcode2";
+            this.txtcode2.Size = new System.Drawing.Size(199, 26);
+            this.txtcode2.TabIndex = 138;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(13, 150);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(88, 24);
+            this.label19.TabIndex = 137;
+            this.label19.Text = "Barcode";
+            // 
+            // txtproductname
+            // 
+            this.txtproductname.Location = new System.Drawing.Point(237, 194);
+            this.txtproductname.Name = "txtproductname";
+            this.txtproductname.Size = new System.Drawing.Size(324, 26);
+            this.txtproductname.TabIndex = 140;
+            // 
+            // Label15
+            // 
+            this.Label15.AutoSize = true;
+            this.Label15.Location = new System.Drawing.Point(177, 199);
+            this.Label15.Name = "Label15";
+            this.Label15.Size = new System.Drawing.Size(55, 20);
+            this.Label15.TabIndex = 139;
+            this.Label15.Text = "Name";
+            // 
             // adminsales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1444, 774);
+            this.Controls.Add(this.txtproductname);
+            this.Controls.Add(this.Label15);
+            this.Controls.Add(this.txtcode2);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.txt3);
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.txt0);
@@ -600,8 +642,8 @@ namespace BusinessApp
             this.Controls.Add(this.thisMonth2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.thisMonth);
-            this.Controls.Add(this.Label10);
-            this.Controls.Add(this.Label11);
+            this.Controls.Add(this.lbaddress);
+            this.Controls.Add(this.lbname);
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.txtcosmeticsid);
             this.Controls.Add(this.Label6);
@@ -690,8 +732,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label6;
 		internal System.Windows.Forms.TextBox txtcosmeticsid;
 		internal System.Windows.Forms.Button Button3;
-		internal System.Windows.Forms.Label Label10;
-		internal System.Windows.Forms.Label Label11;
+		internal System.Windows.Forms.Label lbaddress;
+		internal System.Windows.Forms.Label lbname;
         private TextBox txt3;
         private TextBox txt1;
         private TextBox txt0;
@@ -699,6 +741,10 @@ namespace BusinessApp
         private Button thisMonth2;
         private TextBox textBox1;
         private Button thisMonth;
+        internal TextBox txtcode2;
+        private Label label19;
+        internal TextBox txtproductname;
+        internal Label Label15;
     }
 
 }

@@ -55,6 +55,7 @@ namespace BusinessApp
             this.txtadminpassword = new System.Windows.Forms.TextBox();
             this.lbaddress = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
+            this.lbtel = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -196,12 +197,22 @@ namespace BusinessApp
             this.lbname.Text = "WELCOME TO TRENDY SHOP";
             this.lbname.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lbtel
+            // 
+            this.lbtel.AutoSize = true;
+            this.lbtel.Location = new System.Drawing.Point(284, 78);
+            this.lbtel.Name = "lbtel";
+            this.lbtel.Size = new System.Drawing.Size(51, 20);
+            this.lbtel.TabIndex = 104;
+            this.lbtel.Text = "label1";
+            // 
             // activity
             // 
             this.AcceptButton = this.Button4;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 428);
+            this.Controls.Add(this.lbtel);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.Label16);
@@ -234,6 +245,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.TextBox txtadminpassword;
 		internal System.Windows.Forms.Label lbaddress;
 		internal System.Windows.Forms.Label lbname;
-	}
+        private Label lbtel;
+    }
 
 }

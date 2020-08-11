@@ -78,9 +78,9 @@ namespace BusinessApp
             this.PrintDocument1 = new System.Drawing.Printing.PrintDocument();
             this.PrintForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.lbcopyright = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Label18 = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
+            this.lbtel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label17
@@ -362,40 +362,40 @@ namespace BusinessApp
             this.lbcopyright.Size = new System.Drawing.Size(0, 20);
             this.lbcopyright.TabIndex = 147;
             // 
-            // Label2
+            // lbaddress
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Label2.Location = new System.Drawing.Point(201, 38);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(269, 18);
-            this.Label2.TabIndex = 150;
-            this.Label2.Text = "Okha Market , Sapele Road, Benin City.\r\n";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbaddress.Location = new System.Drawing.Point(201, 38);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(27, 18);
+            this.lbaddress.TabIndex = 150;
+            this.lbaddress.Text = "lb2";
             // 
-            // Label1
+            // lbname
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.BackColor = System.Drawing.Color.RosyBrown;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Label1.Location = new System.Drawing.Point(209, 9);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(257, 20);
-            this.Label1.TabIndex = 149;
-            this.Label1.Text = "WELCOME TO TRENDY SHOP\r\n";
+            this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.Color.RosyBrown;
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbname.Location = new System.Drawing.Point(209, 9);
+            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(33, 20);
+            this.lbname.TabIndex = 149;
+            this.lbname.Text = "lb1";
             // 
-            // Label18
+            // lbtel
             // 
-            this.Label18.AutoSize = true;
-            this.Label18.BackColor = System.Drawing.Color.White;
-            this.Label18.Location = new System.Drawing.Point(107, 56);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(428, 20);
-            this.Label18.TabIndex = 148;
-            this.Label18.Text = "TEL: (+234) 9081043085, 7069628878, 8069239354";
+            this.lbtel.AutoSize = true;
+            this.lbtel.BackColor = System.Drawing.Color.White;
+            this.lbtel.Location = new System.Drawing.Point(107, 56);
+            this.lbtel.Name = "lbtel";
+            this.lbtel.Size = new System.Drawing.Size(33, 20);
+            this.lbtel.TabIndex = 148;
+            this.lbtel.Text = "lb3";
             // 
             // receiptmidip
             // 
@@ -403,9 +403,9 @@ namespace BusinessApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 726);
-            this.Controls.Add(this.Label2);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.Label18);
+            this.Controls.Add(this.lbaddress);
+            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.lbtel);
             this.Controls.Add(this.lbcopyright);
             this.Controls.Add(this.Label17);
             this.Controls.Add(this.txtdiscount1);
@@ -473,9 +473,9 @@ namespace BusinessApp
 		internal System.Drawing.Printing.PrintDocument PrintDocument1;
 		internal Microsoft.VisualBasic.PowerPacks.Printing.PrintForm PrintForm1;
 		internal System.Windows.Forms.Label lbcopyright;
-		internal System.Windows.Forms.Label Label2;
-		internal System.Windows.Forms.Label Label1;
-		internal System.Windows.Forms.Label Label18;
+		internal System.Windows.Forms.Label lbaddress;
+		internal System.Windows.Forms.Label lbname;
+		internal System.Windows.Forms.Label lbtel;
 	}
 
 }

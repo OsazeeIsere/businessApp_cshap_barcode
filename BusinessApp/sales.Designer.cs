@@ -91,7 +91,7 @@ namespace BusinessApp
             this.txtproductname = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
             this.Button3 = new System.Windows.Forms.Button();
-            this.lbadress = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
             this.thisMonth = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -522,17 +522,17 @@ namespace BusinessApp
             this.Button3.UseVisualStyleBackColor = true;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // lbadress
+            // lbaddress
             // 
-            this.lbadress.AutoSize = true;
-            this.lbadress.BackColor = System.Drawing.Color.Black;
-            this.lbadress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbadress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbadress.Location = new System.Drawing.Point(486, 45);
-            this.lbadress.Name = "lbadress";
-            this.lbadress.Size = new System.Drawing.Size(326, 20);
-            this.lbadress.TabIndex = 122;
-            this.lbadress.Text = "Okha Market , Sapele Road, Benin City.\r\n";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.BackColor = System.Drawing.Color.Black;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbaddress.Location = new System.Drawing.Point(486, 45);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(33, 20);
+            this.lbaddress.TabIndex = 122;
+            this.lbaddress.Text = "lb2";
             // 
             // lbname
             // 
@@ -542,9 +542,9 @@ namespace BusinessApp
             this.lbname.Location = new System.Drawing.Point(476, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(336, 25);
+            this.lbname.Size = new System.Drawing.Size(44, 25);
             this.lbname.TabIndex = 121;
-            this.lbname.Text = "WELCOME TO TRENDY SHOP\r\n";
+            this.lbname.Text = "lb1";
             // 
             // thisMonth
             // 
@@ -674,7 +674,7 @@ namespace BusinessApp
             this.Controls.Add(this.thisMonth2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.thisMonth);
-            this.Controls.Add(this.lbadress);
+            this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.txtproductname);
@@ -773,7 +773,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.TextBox txtproductname;
 		internal System.Windows.Forms.Label Label15;
 		internal System.Windows.Forms.Button Button3;
-		internal System.Windows.Forms.Label lbadress;
+		internal System.Windows.Forms.Label lbaddress;
 		internal System.Windows.Forms.Label lbname;
         private TextBox textBox1;
         private Button thisMonth;

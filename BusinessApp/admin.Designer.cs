@@ -53,6 +53,7 @@ namespace BusinessApp
             this.Label2 = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
             this.lbaddress = new System.Windows.Forms.Label();
+            this.lbtel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,12 +169,22 @@ namespace BusinessApp
             this.lbaddress.TabIndex = 12;
             this.lbaddress.Text = "label3";
             // 
+            // lbtel
+            // 
+            this.lbtel.AutoSize = true;
+            this.lbtel.Location = new System.Drawing.Point(129, 72);
+            this.lbtel.Name = "lbtel";
+            this.lbtel.Size = new System.Drawing.Size(51, 20);
+            this.lbtel.TabIndex = 13;
+            this.lbtel.Text = "label3";
+            // 
             // admin
             // 
             this.AcceptButton = this.btnmanageuser;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 448);
+            this.Controls.Add(this.lbtel);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtadminpassword1);
@@ -206,6 +217,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label2;
         private Label lbname;
         private Label lbaddress;
+        private Label lbtel;
     }
 
 }

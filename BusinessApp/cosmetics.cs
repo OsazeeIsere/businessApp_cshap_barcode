@@ -30,7 +30,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -97,7 +97,7 @@ namespace BusinessApp
 				}
 				else if (Simulate.IsNumeric(txtquantity.Text) && !string.IsNullOrEmpty(txtproductid.Text))
 				{
-					strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+					strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 					cn.ConnectionString = strconnection;
 					int newquantity = 0;
 					System.Data.DataTable dtgetcards = new System.Data.DataTable();
@@ -160,7 +160,7 @@ namespace BusinessApp
 				else
 				{
 					//Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
-					strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+					strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 					cn.ConnectionString = strconnection;
 					cn.Open();
 					cm.CommandText = "Insert Into cosmetics(cosmeticsname,cosmeticsquantity,cosmeticsunitcostprice,cosmeticsunitsalesprice) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + txtunitcostprice.Text + "','" + txtunitprice.Text + "')";
@@ -267,7 +267,7 @@ namespace BusinessApp
 								MySqlDataAdapter ad = new MySqlDataAdapter();
 								MySqlCommand cm = new MySqlCommand();
 								string strconnection = "";
-								strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+								strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 								cn.ConnectionString = strconnection;
 								int newquantity = 0;
 								System.Data.DataTable dtgetcards = new System.Data.DataTable();
@@ -307,7 +307,7 @@ namespace BusinessApp
 
 								//Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
 								string strconnection = "";
-								strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+								strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 								cn.ConnectionString = strconnection;
 								cn.Open();
 								cm.CommandText = "Insert Into cosmetics(cosmeticsname,cosmeticsquantity,cosmeticsunitcostprice,cosmeticsunitsalesprice,expirydate) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "')";
@@ -365,9 +365,16 @@ namespace BusinessApp
 		private void cards_Load(object sender, System.EventArgs e)
 		{
 
-			// Use TimeSpan and some date calculaton, this should work:
+            // Use TimeSpan and some date calculaton, this should work:
 
-			System.Data.DataTable dtgetcosmetics = new System.Data.DataTable();
+            DataTable dtidentity = new DataTable();
+            dtidentity = getdatabase("Select * from identity");
+
+            lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+            lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+           // lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+            System.Data.DataTable dtgetcosmetics = new System.Data.DataTable();
 			dtgetcosmetics = getdatabase("Select * From cosmetics order by cosmeticsname");
 			if (dtgetcosmetics.Rows.Count > 0)
 			{
@@ -480,7 +487,7 @@ namespace BusinessApp
 				MySqlCommand cm = new MySqlCommand();
 				string strconnection = "";
 				int intproductid = 0;
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				System.Data.DataTable dtgetproduct = new System.Data.DataTable();
 				intproductid = Convert.ToInt32(lsvitems1.SelectedItems[0].Text);
@@ -585,7 +592,7 @@ namespace BusinessApp
                 }
                 else if (Simulate.IsNumeric(txtquantity.Text) && !string.IsNullOrEmpty(txtproductid.Text))
                 {
-                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     int newquantity = 0;
                     System.Data.DataTable dtgetcards = new System.Data.DataTable();
@@ -650,7 +657,7 @@ namespace BusinessApp
                 else
                 {
                     //Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
-                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     cn.Open();
                     cm.CommandText = "Insert Into cosmetics(cosmeticsname,cosmeticsquantity,cosmeticsunitcostprice,cosmeticsunitsalesprice) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + txtunitcostprice.Text + "','" + txtunitprice.Text + "')";

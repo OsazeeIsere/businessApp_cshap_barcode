@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.txttotal = new System.Windows.Forms.TextBox();
@@ -56,30 +56,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Label3
+            // lbaddress
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label3.Location = new System.Drawing.Point(645, 55);
-            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(269, 36);
-            this.Label3.TabIndex = 107;
-            this.Label3.Text = "Okha Market , Sapele Road, Benin City.\r\n\r\n";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbaddress.Location = new System.Drawing.Point(645, 55);
+            this.lbaddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(27, 18);
+            this.lbaddress.TabIndex = 107;
+            this.lbaddress.Text = "lb2";
             // 
-            // Label4
+            // lbname
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label4.Location = new System.Drawing.Point(580, 5);
-            this.Label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(336, 50);
-            this.Label4.TabIndex = 106;
-            this.Label4.Text = "WELCOME TO TRENDY SHOP\r\n\r\n";
+            this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbname.Location = new System.Drawing.Point(580, 5);
+            this.lbname.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(51, 25);
+            this.lbname.TabIndex = 106;
+            this.lbname.Text = "l b1";
             // 
             // Label8
             // 
@@ -273,9 +273,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 882);
-            this.Controls.Add(this.Label3);
-            this.Controls.Add(this.Label4);
+            this.ClientSize = new System.Drawing.Size(1436, 865);
+            this.Controls.Add(this.lbaddress);
+            this.Controls.Add(this.lbname);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.txtsearch);
@@ -299,8 +299,8 @@
 
         #endregion
 
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label4;
+        internal System.Windows.Forms.Label lbaddress;
+        internal System.Windows.Forms.Label lbname;
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox txtsearch;

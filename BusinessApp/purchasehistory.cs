@@ -29,7 +29,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -45,9 +45,15 @@ namespace BusinessApp
 		{
 			try
 			{
-				// Use TimeSpan and some date calculaton, this should work:
+                DataTable dtidentity = new DataTable();
+                dtidentity = getdatabase("Select * from identity");
 
-				System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                // Use TimeSpan and some date calculaton, this should work:
+
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
 				dtgetproduct = getdatabase("Select * From purchasehistory order by productid");
 				if (dtgetproduct.Rows.Count > 0)
 				{

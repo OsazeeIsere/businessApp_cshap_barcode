@@ -27,7 +27,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -154,12 +154,16 @@ namespace BusinessApp
 		}
 		private void drinksreorderlevel_Load(object sender, System.EventArgs e)
 		{
-			//        Products Less Than 50 units in Stock
-			//
-			//Products Above  100 units in Stock
-		}
+            DataTable dtidentity = new DataTable();
+            dtidentity = getdatabase("Select * from identity");
 
-		private void DateTimePicker1_ValueChanged(object sender, System.EventArgs e)
+            lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+            lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+          //  lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+        }
+
+        private void DateTimePicker1_ValueChanged(object sender, System.EventArgs e)
 		{
 
 		}

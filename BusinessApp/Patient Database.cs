@@ -27,7 +27,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection1 = "";
-			strconnection1 = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection1 = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection1;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -48,7 +48,7 @@ namespace BusinessApp
 				MySqlCommand cm = new MySqlCommand();
 				string strconnection = "";
 				int intpatientid = 0;
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				string newpatientallegies = null;
 				string newpatientcomplaint = null;
@@ -80,7 +80,7 @@ namespace BusinessApp
 				//End If
 				//Else
 				//'Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
-				//strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+				//strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 				//cn.ConnectionString = strconnection
 				//cn.Open()
 				//cm.CommandText = "Insert Into casefile(surname,othernames,address,phonenumber,dateofbirth,age,sex,maritalstatus,occupation,religion,height,weight,bmi,nextofkin,nextofkinaddress,relationship,doctor,hospital,doctorphonenumber,allergies,complaint,treatment,plan) Values('" & txtpatientname.Text & "','" & txtpatientothernames.Text & "','" & txtpatientaddress.Text & "','" & txtpatientnumber.Text & "','" & txtpatientdob.Text & "','" & txtpatientage.Text & "','" & cblpatientsex.Text & "','" & cblpatientmaritalstatus.Text & "','" & txtpatientoccupation.Text & "','" & txtpatientreligion.Text & "','" & txtpatientheight.Text & "','" & txtpatientweight.Text & "','" & txtpatientbmi.Text & "','" & txtpatientnextofkin.Text & "','" & txtpatientnextofkinaddress.Text & "','" & txtpatientnextofkinrelationship.Text & "','" & txtdoctorname.Text & "','" & txthospital.Text & "','" & txtdoctorphonenumber.Text & "','" & txtpatientallergies.Text & "','" & txtpatientcomplaint.Text & "','" & txtpatienttreatment.Text & "','" & txtpatientplan.Text & "')"
@@ -113,7 +113,7 @@ namespace BusinessApp
 				MySqlCommand cm = new MySqlCommand();
 				string strconnection = "";
 				int intpatientid = 0;
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				string newpatientallegies = null;
 				string newpatientcomplaint = null;
@@ -170,7 +170,7 @@ namespace BusinessApp
 				MySqlCommand cm = new MySqlCommand();
 				string strconnection = "";
 				int intpatientid = 0;
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				System.Data.DataTable dtgetcasefile = new System.Data.DataTable();
 				if (!string.IsNullOrEmpty(dgvpatient.SelectedCells[0].Value.ToString()))

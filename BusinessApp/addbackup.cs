@@ -28,7 +28,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -56,7 +56,7 @@ namespace BusinessApp
 				MySqlCommand cm = new MySqlCommand();
 				System.Data.DataTable dtgetbackup = new System.Data.DataTable();
 				string strconnection = "";
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				cn.Open();
 				dtgetbackup = getdatabase("Select * From backup");
@@ -109,7 +109,7 @@ namespace BusinessApp
 				string strconnection = "";
 				string time1 = null;
 				time1 =DateTime.Now.ToString ();
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				cn.Open();
 				dtgetcashier = getdatabase("Select * From cashier");

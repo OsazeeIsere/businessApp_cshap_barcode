@@ -29,7 +29,7 @@ namespace BusinessApp
             MySqlDataAdapter ad = new MySqlDataAdapter();
             MySqlCommand cm = new MySqlCommand();
             string strconnection = "";
-            strconnection = "Server=localhost;Port=3306;Database=snowbakedb;Uid=root;Pwd=prayer;";
+            strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
             cn.ConnectionString = strconnection;
             cn.Open();
             cm.CommandText = strcommand;
@@ -51,7 +51,7 @@ namespace BusinessApp
 				MySqlCommand cm = new MySqlCommand();
 				System.Data.DataTable dtgetadmin = new System.Data.DataTable();
 				string strconnection = "";
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				cn.Open();
 				dtgetadmin = getdatabase("Select * From administrator");
@@ -106,7 +106,7 @@ namespace BusinessApp
                 {
                     System.Data.DataTable dtgetadmin = new System.Data.DataTable();
                     dtgetadmin = getdatabase("select * from administrator");
-                    for (var i = 0; i < dtgetadmin.Rows.Count-1; i++)
+                    for (var i = 0; i < dtgetadmin.Rows.Count; i++)
                     {
                         if (txtadminname.Text.ToUpper() == Convert.ToString(dtgetadmin.Rows[i]["adminname"]).ToUpper() && txtadminpassword.Text == (dtgetadmin.Rows[i]["adminpassword"]).ToString())
                         {
@@ -133,8 +133,14 @@ namespace BusinessApp
 
 		private void admin_Load(object sender, System.EventArgs e)
 		{
+            DataTable dtidentity = new DataTable();
+            dtidentity = getdatabase("Select * from identity");
 
-		}
+            lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+            lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+        }
 
         private void rtxtmap_TextChanged(object sender, EventArgs e)
         {

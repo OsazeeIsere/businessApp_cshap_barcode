@@ -30,7 +30,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection1 = "";
-			strconnection1 = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection1 = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection1;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -54,6 +54,22 @@ namespace BusinessApp
         {
 			try
             {
+                Label12.Hide();
+                txtcosmeticsid.Hide();
+                Label13.Hide();
+                txtcosmeticsname.Hide();
+                Label7.Hide();
+                txtcardsquantity.Hide();
+                btncards.Hide();
+                PictureBox2.Hide();
+                txtcardssearch.Hide();
+                Label14.Hide();
+                DataTable dtidentity = new DataTable();
+                dtidentity = getdatabase("Select * from identity");
+
+                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 // Use TimeSpan and some date calculaton, this should work:
                 lsvitems1.Visible = false;
                 Label12.Visible = false;
@@ -458,7 +474,7 @@ namespace BusinessApp
                         double x = 0;
                         x = Convert.ToDouble(dtgetsales.Rows[0]["unitsalesprice"]);
                         amount = x * Convert.ToInt32(txtquantity.Text);
-                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
                         cn.ConnectionString = strconnection;
                         cn.Open();
                         cm.CommandText = "Insert Into sales(cashiername,itemsold,quantitysold,unitcostprice,unitprice,amount,discount,productid) Values('" + txtcashiername1.Text + "','" + dtgetsales.Rows[0]["productname"].ToString() + "','" + txtquantity.Text + "','" + dtgetsales.Rows[0]["unitcostprice"] + "','" + dtgetsales.Rows[0]["unitsalesprice"] + "'," + amount + "," + discount + "," + intproductid + ")";
@@ -483,7 +499,7 @@ namespace BusinessApp
                         double x = 0;
                         x = Convert.ToDouble(dtgetsales.Rows[0]["unitsalesprice"]);
                         amount = x * Convert.ToInt32(txtquantity.Text);
-                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
                         cn.ConnectionString = strconnection;
                         cn.Open();
                         cm.CommandText = "Insert Into sales(cashiername,itemsold,quantitysold,unitcostprice,unitprice,amount,discount,productid) Values('" + txtcashiername1.Text + "','" + dtgetsales.Rows[0]["productname"].ToString() + "','" + txtquantity.Text + "','" + dtgetsales.Rows[0]["unitcostprice"] + "','" + dtgetsales.Rows[0]["unitsalesprice"] + "'," + amount + "," + discount + "," + intproductid + ")";
@@ -517,7 +533,7 @@ namespace BusinessApp
                 //                        amountcost = v * CInt(txtquantity.Text)
                 //                        profit = amount - amountcost
                 //                        discount = 0
-                //                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+                //                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
                 //                        cn.ConnectionString = strconnection
                 //                        cn.Open()
                 //                        cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" & txtcashiername1.Text & "','" & dtgetsales.Rows(0).Item("productname").ToString & "','" & txtquantity.Text & "','" & dtgetsales.Rows(0).Item("unitcostprice").ToString & "'," & amountcost & ",'" & dtgetsales.Rows(0).Item("unitsalesprice").ToString & "'," & amount & "," & profit & ", '" & DateTimePicker1.Value.Date & "')"
@@ -530,7 +546,7 @@ namespace BusinessApp
                 //                        cm.Connection = cn
                 //                        cm.ExecuteNonQuery()
                 //                        cn.Close()
-                //                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+                //                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
                 //                        cn.ConnectionString = strconnection
                 //                        cn.Open()
                 //                        newquantity = CInt(dtgetsales.Rows(0).Item("quantity")) - CInt(txtquantity.Text)
@@ -562,7 +578,7 @@ namespace BusinessApp
                 //                            For k = 0 To dtgetexpirydate.Rows.Count - 1
                 //                                If CInt(dtgetexpirydate.Rows(0).Item("quantity")) < CInt(txtquantity.Text) Then
                 //                                    newquantity1 = (CInt(dtgetexpirydate.Rows(0).Item("quantity")) + CInt(dtgetexpirydate.Rows(k + 1).Item("quantity"))) - CInt(txtquantity.Text)
-                //                                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+                //                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
                 //                                    cn.ConnectionString = strconnection
                 //                                    cn.Open()
                 //                                    cm.CommandText = "Update expirydate Set quantity=" & newquantity1 & " Where productname='" & ProductName1 & "' And productid =" & CInt(dtgetexpirydate.Rows(k + 1).Item("productid")) & ";"
@@ -570,7 +586,7 @@ namespace BusinessApp
                 //                                    cm.ExecuteNonQuery()
                 //                                    cn.Close()
 
-                //                                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+                //                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
                 //                                    cn.ConnectionString = strconnection
                 //                                    'Dim intnewproductid As Integer
                 //                                    'intnewproductid = CInt(dtgetexpirydate.Rows(0).Item("quantity"))
@@ -594,7 +610,7 @@ namespace BusinessApp
                 //                                    GoTo 256
                 //                                Else
                 //                                    newquantity1 = CInt(dtgetexpirydate.Rows(0).Item("quantity")) - CInt(txtquantity.Text)
-                //                                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+                //                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
                 //                                    cn.ConnectionString = strconnection
                 //                                    cn.Open()
                 //                                    cm.CommandText = "Update expirydate Set quantity=" & newquantity1 & " Where productname='" & ProductName1 & "' And productid=" & CInt(dtgetexpirydate.Rows(0).Item("productid")) & ";"
@@ -799,7 +815,7 @@ namespace BusinessApp
 		//                            Dim x As Double
 		//                            x = CDbl(dtgetsales.Rows(0).Item("drinksunitsalesprice"))
 		//                            amount = x * CInt(txtdrinksquantity.Text)
-		//                            strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+		//                            strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 		//                            cn.ConnectionString = strconnection
 		//                            cn.Open()
 		//                            cm.CommandText = "Insert Into sales(cashiername,itemsold,quantitysold,unitprice,amount) Values('" & txtcashiername1.Text & "','" & dtgetsales.Rows(0).Item("drinksname").ToString & "','" & txtdrinksquantity.Text & "','" & dtgetsales.Rows(0).Item("drinksunitsalesprice") & "'," & amount & ")"
@@ -815,7 +831,7 @@ namespace BusinessApp
 		//                            v = CDbl(dtgetsales.Rows(0).Item("drinksunitcostprice"))
 		//                            amountcost = v * CInt(txtdrinksquantity.Text)
 		//                            profit = amount - amountcost
-		//                            strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+		//                            strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 		//                            cn.ConnectionString = strconnection
 		//                            cn.Open()
 		//                            cm.CommandText = "Insert Into drinkslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" & txtcashiername1.Text & "','" & dtgetsales.Rows(0).Item("drinksname").ToString & "','" & txtdrinksquantity.Text & "','" & dtgetsales.Rows(0).Item("drinksunitcostprice").ToString & "'," & amountcost & ",'" & dtgetsales.Rows(0).Item("drinksunitsalesprice").ToString & "'," & amount & "," & profit & ", '" & DateTimePicker1.Value.Date & "')"
@@ -828,7 +844,7 @@ namespace BusinessApp
 		//                            cm.Connection = cn
 		//                            cm.ExecuteNonQuery()
 		//                            cn.Close()
-		//                            strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+		//                            strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 		//                            cn.ConnectionString = strconnection
 		//                            cn.Open()
 		//                            newquantity = CInt(dtgetsales.Rows(0).Item("drinksquantity")) - CInt(txtdrinksquantity.Text)
@@ -856,7 +872,7 @@ namespace BusinessApp
 		//                                For k = 0 To dtgetexpirydate.Rows.Count - 1
 		//                                    If CInt(dtgetexpirydate.Rows(0).Item("drinksquantity")) < CInt(txtdrinksquantity.Text) Then
 		//                                        newquantity1 = (CInt(dtgetexpirydate.Rows(0).Item("drinksquantity")) + CInt(dtgetexpirydate.Rows(k + 1).Item("drinksquantity"))) - CInt(txtdrinksquantity.Text)
-		//                                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+		//                                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 		//                                        cn.ConnectionString = strconnection
 		//                                        cn.Open()
 		//                                        cm.CommandText = "Update drinksexpirydate Set drinksquantity=" & newquantity1 & " Where drinksname='" & ProductName1 & "' And drinksid =" & CInt(dtgetexpirydate.Rows(k + 1).Item("drinksid")) & ";"
@@ -864,7 +880,7 @@ namespace BusinessApp
 		//                                        cm.ExecuteNonQuery()
 		//                                        cn.Close()
 
-		//                                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+		//                                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 		//                                        cn.ConnectionString = strconnection
 		//                                        'Dim intnewproductid As Integer
 		//                                        'intnewproductid = CInt(dtgetexpirydate.Rows(0).Item("quantity"))
@@ -888,7 +904,7 @@ namespace BusinessApp
 		//                                        GoTo 424
 		//                                    Else
 		//                                        newquantity1 = CInt(dtgetexpirydate.Rows(0).Item("drinksquantity")) - CInt(txtdrinksquantity.Text)
-		//                                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+		//                                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 		//                                        cn.ConnectionString = strconnection
 		//                                        cn.Open()
 		//                                        cm.CommandText = "Update drinksexpirydate Set drinksquantity=" & newquantity1 & " Where drinksname='" & ProductName1 & "' And drinksid=" & CInt(dtgetexpirydate.Rows(0).Item("drinksid")) & ";"
@@ -946,7 +962,7 @@ namespace BusinessApp
 							double x = 0;
 							x = Convert.ToDouble(dtgetsales.Rows[0]["cosmeticsunitsalesprice"]);
 							amount = x * Convert.ToInt32(txtcardsquantity.Text);
-							strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+							strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 							cn.ConnectionString = strconnection;
 							cn.Open();
 							cm.CommandText = "Insert Into sales(cashiername,itemsold,quantitysold,unitcostprice,unitprice,amount,discount,cosmeticsid) Values('" + txtcashiername1.Text + "','" + dtgetsales.Rows[0]["cosmeticsname"].ToString() + "','" + txtcardsquantity.Text + "','" + dtgetsales.Rows[0]["cosmeticsunitcostprice"] + "','" + dtgetsales.Rows[0]["cosmeticsunitsalesprice"] + "'," + amount + "," + discount + "," + intproductid + ")";
@@ -962,7 +978,7 @@ namespace BusinessApp
 							//                        v = CDbl(dtgetsales.Rows(0).Item("cosmeticsunitcostprice"))
 							//                        amountcost = v * CInt(txtcardsquantity.Text)
 							//                        profit = amount - amountcost
-							//                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+							//                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 							//                        cn.ConnectionString = strconnection
 							//                        cn.Open()
 							//                        cm.CommandText = "Insert Into cosmeticslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" & txtcashiername1.Text & "','" & dtgetsales.Rows(0).Item("cosmeticsname").ToString & "','" & txtcardsquantity.Text & "','" & dtgetsales.Rows(0).Item("cosmeticsunitcostprice").ToString & "'," & amountcost & ",'" & dtgetsales.Rows(0).Item("cosmeticsunitsalesprice").ToString & "'," & amount & "," & profit & ", '" & DateTimePicker1.Value.Date & "')"
@@ -975,7 +991,7 @@ namespace BusinessApp
 							//                        cm.Connection = cn
 							//                        cm.ExecuteNonQuery()
 							//                        cn.Close()
-							//                        strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+							//                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 							//                        cn.ConnectionString = strconnection
 							//                        cn.Open()
 							//                        newquantity = CInt(dtgetsales.Rows(0).Item("cosmeticsquantity")) - CInt(txtcardsquantity.Text)
@@ -1007,7 +1023,7 @@ namespace BusinessApp
 							//                            For k = 0 To dtgetexpirydate.Rows.Count - 1
 							//                                If CInt(dtgetexpirydate.Rows(0).Item("cosmeticsquantity")) < CInt(txtcardsquantity.Text) Then
 							//                                    newquantity1 = (CInt(dtgetexpirydate.Rows(0).Item("cosmeticsquantity")) + CInt(dtgetexpirydate.Rows(k + 1).Item("cosmeticsquantity"))) - CInt(txtcardsquantity.Text)
-							//                                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+							//                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 							//                                    cn.ConnectionString = strconnection
 							//                                    cn.Open()
 							//                                    cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" & newquantity1 & " Where cosmeticsname='" & ProductName1 & "' And cosmeticsid =" & CInt(dtgetexpirydate.Rows(k + 1).Item("cosmeticsid")) & ";"
@@ -1015,7 +1031,7 @@ namespace BusinessApp
 							//                                    cm.ExecuteNonQuery()
 							//                                    cn.Close()
 
-							//                                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+							//                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 							//                                    cn.ConnectionString = strconnection
 							//                                    'Dim intnewproductid As Integer
 							//                                    'intnewproductid = CInt(dtgetexpirydate.Rows(0).Item("quantity"))
@@ -1039,7 +1055,7 @@ namespace BusinessApp
 							//                                    GoTo 642
 							//                                Else
 							//                                    newquantity1 = CInt(dtgetexpirydate.Rows(0).Item("cosmeticsquantity")) - CInt(txtcardsquantity.Text)
-							//                                    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+							//                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 							//                                    cn.ConnectionString = strconnection
 							//                                    cn.Open()
 							//                                    cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" & newquantity1 & " Where cosmeticsname='" & ProductName1 & "' And cosmeticsid=" & CInt(dtgetexpirydate.Rows(0).Item("cosmeticsid")) & ";"

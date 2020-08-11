@@ -40,37 +40,37 @@ namespace BusinessApp
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
 		{
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtmisc = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // Label5
+            // lbaddress
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.BackColor = System.Drawing.Color.White;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label5.Location = new System.Drawing.Point(238, 59);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(381, 24);
-            this.Label5.TabIndex = 67;
-            this.Label5.Text = "No. 218, 2nd, East Circular Road, Benin City.";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.BackColor = System.Drawing.Color.White;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbaddress.Location = new System.Drawing.Point(238, 59);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(35, 24);
+            this.lbaddress.TabIndex = 67;
+            this.lbaddress.Text = "lb2";
             // 
-            // Label6
+            // lbname
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.ForeColor = System.Drawing.Color.Aqua;
-            this.Label6.Location = new System.Drawing.Point(240, 20);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(379, 29);
-            this.Label6.TabIndex = 66;
-            this.Label6.Text = "WELCOME TO TRENDY SHOP\r\n";
+            this.lbname.AutoSize = true;
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.Color.Aqua;
+            this.lbname.Location = new System.Drawing.Point(240, 20);
+            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(49, 29);
+            this.lbname.TabIndex = 66;
+            this.lbname.Text = "lb1";
             // 
             // Label1
             // 
@@ -114,8 +114,8 @@ namespace BusinessApp
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.txtmisc);
             this.Controls.Add(this.Label1);
-            this.Controls.Add(this.Label5);
-            this.Controls.Add(this.Label6);
+            this.Controls.Add(this.lbaddress);
+            this.Controls.Add(this.lbname);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "expenditure";
@@ -125,8 +125,8 @@ namespace BusinessApp
             this.PerformLayout();
 
 		}
-		internal System.Windows.Forms.Label Label5;
-		internal System.Windows.Forms.Label Label6;
+		internal System.Windows.Forms.Label lbaddress;
+		internal System.Windows.Forms.Label lbname;
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.TextBox txtmisc;
 		internal System.Windows.Forms.Label Label2;

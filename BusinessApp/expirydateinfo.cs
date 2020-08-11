@@ -28,7 +28,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -44,8 +44,15 @@ namespace BusinessApp
 		{
 			try
 			{
-				// Use TimeSpan and some date calculaton, this should work:
-				System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                DataTable dtidentity = new DataTable();
+                dtidentity = getdatabase("Select * from identity");
+
+                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+             // lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+                // Use TimeSpan and some date calculaton, this should work:
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
 				dtgetproduct = getdatabase("Select * From expirydate order by productname");
 				if (dtgetproduct.Rows.Count > 0)
 				{
@@ -409,7 +416,7 @@ namespace BusinessApp
 						//    Dim ad As New MySqlDataAdapter
 						//    Dim cm As New MySqlCommand
 						//    Dim strconnection As String = ""
-						//    strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer"
+						//    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer"
 						//    cn.ConnectionString = strconnection
 						//    Dim newquantity As Integer
 						//    Dim dtgetproduct As New System.Data.DataTable
@@ -425,7 +432,7 @@ namespace BusinessApp
 						MySqlDataAdapter ad = new MySqlDataAdapter();
 						MySqlCommand cm = new MySqlCommand();
 						string strconnection = "";
-						strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+						strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 						cn.ConnectionString = strconnection;
 						cn.Open();
 						cm.CommandText = "Insert Into expirydate(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "','" + suppliername + "','" + suppliertel + "','" + datepurchased + "'," + dblamount + ",'" + invoicenumber + "')";

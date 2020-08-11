@@ -1,4 +1,4 @@
-﻿//INSTANT C# NOTE: Formerly VB project-level imports:
+﻿
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -55,10 +55,27 @@ namespace BusinessApp
 
 		private void welcome_Load(object sender, System.EventArgs e)
 		{
+            button2.Hide();
 			BackColor = Color.Orange;
-		}
+            DataTable dtidentity = new DataTable();
+            dtidentity = getdatabase("Select * from identity");
+            if (dtidentity.Rows.Count > 0)
+            {
+                lbName.Text = dtidentity.Rows[0]["businessName"].ToString();
+                lbAddress.Text = dtidentity.Rows[0]["address"].ToString();
+                lbTel.Text = dtidentity.Rows[0]["telephone"].ToString();
 
-		private void btnbackup_Click(object sender, System.EventArgs e)
+            }
+            else
+            {
+                
+                button2.Show();
+            }
+
+        }
+
+
+        private void btnbackup_Click(object sender, System.EventArgs e)
 		{
 			backup x = new backup();
 			x.Show();
@@ -80,6 +97,12 @@ namespace BusinessApp
 				return _DefaultInstance;
 			}
 		}
-	}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IdentityForm x = new IdentityForm();
+            x.Show();
+        }
+    }
 
 }

@@ -32,7 +32,7 @@ namespace BusinessApp
             MySqlDataAdapter ad = new MySqlDataAdapter();
             MySqlCommand cm = new MySqlCommand();
             string strconnection = "";
-            strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+            strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
             cn.ConnectionString = strconnection;
             cn.Open();
             cm.CommandText = strcommand;
@@ -49,7 +49,13 @@ namespace BusinessApp
 		{
 			try
 			{
-				txtcash.Focus();
+                DataTable dtidentity = new DataTable();
+                dtidentity = getdatabase("Select * from identity");
+
+                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                txtcash.Focus();
 				System.Data.DataTable dtgetsales = new System.Data.DataTable();
 				dtgetsales = getdatabase("select transactionid,quantitysold,itemsold,unitprice,amount from holdsales order by itemsold");
 				if (dtgetsales.Rows.Count > 0)
@@ -94,7 +100,7 @@ namespace BusinessApp
 				MySqlDataAdapter ad = new MySqlDataAdapter();
 				MySqlCommand cm = new MySqlCommand();
 				string strconnection = "";
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				System.Data.DataTable dtgetproduct = new System.Data.DataTable();
 				inttransactionid = Convert.ToInt32((txttransactionid.Text).ToString());
@@ -132,7 +138,7 @@ namespace BusinessApp
 					inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
 					dtgetsales = getdatabase(" select * from holdsales where transactionid=" + inttransactionid);
 					x = Convert.ToInt32(txtquantity.Text) * Convert.ToDouble(dtgetsales.Rows[0]["unitprice"]);
-					strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+					strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 					cn.ConnectionString = strconnection;
 					cn.Open();
 					cm.CommandText = "Update holdsales Set quantitysold='" + txtquantity.Text + "', amount=" + x + " Where transactionid=" + inttransactionid + ";";
@@ -361,14 +367,14 @@ namespace BusinessApp
 											if (dtgetexpirydate.Rows.Count > 1)
 											{
 												newquantity1 = (Convert.ToInt32(dtgetexpirydate.Rows[0]["quantity"]) + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["quantity"])) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
 												cm.CommandText = "Update expirydate Set quantity=" + newquantity1 + " Where productname='" + ProductName1 + "' And expirydateid =" + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["expirydateid"]) + ";";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												//Dim intnewproductid As Integer
 												//intnewproductid = CInt(dtgetexpirydate.Rows(0).Item("quantity"))
@@ -388,7 +394,7 @@ namespace BusinessApp
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
 												cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
@@ -401,7 +407,7 @@ namespace BusinessApp
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
 												newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
@@ -421,14 +427,14 @@ namespace BusinessApp
 										else
 										{
 											newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-											strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
 											cm.CommandText = "Update expirydate Set quantity=" + newquantity1 + " Where productname='" + ProductName1 + "' And expirydateid=" + Convert.ToInt32(dtgetexpirydate.Rows[0]["expirydateid"]) + ";";
 											cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
-											strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
 											cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
@@ -441,7 +447,7 @@ namespace BusinessApp
 											cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
-											strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
 											newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
@@ -490,14 +496,14 @@ namespace BusinessApp
 											if (dtgetexpirydate.Rows.Count > 1)
 											{
 												newquantity1 = (Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["cosmeticsquantity"])) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
 												cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsexpirydateid =" + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["cosmeticsexpirydateid"]) + ";";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												//Dim intnewproductid As Integer
 												//intnewproductid = CInt(dtgetexpirydate.Rows(0).Item("quantity"))
@@ -517,7 +523,7 @@ namespace BusinessApp
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
 												cm.CommandText = "Insert Into cosmeticslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
@@ -530,7 +536,7 @@ namespace BusinessApp
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
-												strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
 												newquantity = Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
@@ -549,14 +555,14 @@ namespace BusinessApp
 										else
 										{
 											newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-											strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
 											cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsid=" + Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsid"]) + ";";
 											cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
-											strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
 											cm.CommandText = "Insert Into cosmeticslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
@@ -569,7 +575,7 @@ namespace BusinessApp
 											cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
-											strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
 											newquantity = Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);

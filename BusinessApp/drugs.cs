@@ -31,7 +31,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -72,7 +72,7 @@ namespace BusinessApp
 				}
 				else if (Simulate.IsNumeric(txtquantity.Text) && !string.IsNullOrEmpty(txtproductid.Text))
 				{
-					strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+					strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 					cn.ConnectionString = strconnection;
 					int newquantity = 0;
 					intproductid = Convert.ToInt32(txtproductid .Text );
@@ -130,7 +130,7 @@ namespace BusinessApp
 				{
                     //Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
                     DataTable dtgetproduct2 = new DataTable();
-					strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+					strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 					cn.ConnectionString = strconnection;
 					cn.Open();
 					cm.CommandText = "Insert Into product(productname,quantity,unitcostprice,unitsalesprice,barcode,expirydate) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + txtunitcostprice.Text + "','" + txtunitprice.Text + "','"+ txtcode2 .Text +"','" + txtexpirydate.Text + "')";
@@ -196,7 +196,14 @@ namespace BusinessApp
 
 		private void product_Load(object sender, System.EventArgs e)
 		{
-			System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+            DataTable dtidentity = new DataTable();
+            dtidentity = getdatabase("Select * from identity");
+
+            lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+            lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+     //       lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+            System.Data.DataTable dtgetproduct = new System.Data.DataTable();
 			dtgetproduct = getdatabase("Select productid,productname,quantity,unitsalesprice,unitcostprice,expirydate,entrydate from product");
 			if (dtgetproduct.Rows.Count > 0)
 			{
@@ -293,7 +300,7 @@ namespace BusinessApp
 								MySqlDataAdapter ad = new MySqlDataAdapter();
 								MySqlCommand cm = new MySqlCommand();
 								string strconnection = "";
-								strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+								strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 								cn.ConnectionString = strconnection;
 								int newquantity = 0;
 								dtgetproduct = getdatabase("Select * From product where productid=" + intproductid);
@@ -330,7 +337,7 @@ namespace BusinessApp
 								MySqlCommand cm = new MySqlCommand();
 								//Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
 								string strconnection = "";
-								strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+								strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 								cn.ConnectionString = strconnection;
 								cn.Open();
 								cm.CommandText = "Insert Into product(productname,quantity,unitcostprice,unitsalesprice,expirydate) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "')";
@@ -575,7 +582,7 @@ namespace BusinessApp
 				MySqlCommand cm = new MySqlCommand();
 				string strconnection = "";
 				int intproductid = 0;
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				System.Data.DataTable dtgetproduct = new System.Data.DataTable();
 				System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();

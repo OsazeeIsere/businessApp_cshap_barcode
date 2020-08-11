@@ -44,16 +44,18 @@ namespace BusinessApp
 		{
             this.btnaddproduct = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.btnbackup = new System.Windows.Forms.Button();
-            this.Label2 = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbTel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnaddproduct
             // 
             this.btnaddproduct.BackColor = System.Drawing.Color.Silver;
             this.btnaddproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddproduct.Location = new System.Drawing.Point(569, 140);
+            this.btnaddproduct.Location = new System.Drawing.Point(569, 214);
             this.btnaddproduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnaddproduct.Name = "btnaddproduct";
             this.btnaddproduct.Size = new System.Drawing.Size(186, 82);
@@ -66,7 +68,7 @@ namespace BusinessApp
             // 
             this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(35, 140);
+            this.Button1.Location = new System.Drawing.Point(35, 214);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(201, 82);
@@ -75,24 +77,24 @@ namespace BusinessApp
             this.Button1.UseVisualStyleBackColor = false;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // Label1
+            // lbName
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Label1.Location = new System.Drawing.Point(230, 9);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(336, 25);
-            this.Label1.TabIndex = 2;
-            this.Label1.Text = "WELCOME TO TRENDY SHOP\r\n";
-            this.Label1.Click += new System.EventHandler(this.Label1_Click);
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbName.Location = new System.Drawing.Point(234, 9);
+            this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(76, 25);
+            this.lbName.TabIndex = 2;
+            this.lbName.Text = "label3";
+            this.lbName.Click += new System.EventHandler(this.Label1_Click);
             // 
             // btnbackup
             // 
             this.btnbackup.BackColor = System.Drawing.Color.LightGray;
             this.btnbackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackup.Location = new System.Drawing.Point(297, 140);
+            this.btnbackup.Location = new System.Drawing.Point(297, 214);
             this.btnbackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnbackup.Name = "btnbackup";
             this.btnbackup.Size = new System.Drawing.Size(196, 82);
@@ -101,16 +103,38 @@ namespace BusinessApp
             this.btnbackup.UseVisualStyleBackColor = false;
             this.btnbackup.Click += new System.EventHandler(this.btnbackup_Click);
             // 
-            // Label2
+            // lbAddress
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Label2.Location = new System.Drawing.Point(267, 50);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(269, 18);
-            this.Label2.TabIndex = 4;
-            this.Label2.Text = "Okha Market , Sapele Road, Benin City.\r\n";
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbAddress.Location = new System.Drawing.Point(252, 51);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(46, 18);
+            this.lbAddress.TabIndex = 4;
+            this.lbAddress.Text = "label2";
+            // 
+            // lbTel
+            // 
+            this.lbTel.AutoSize = true;
+            this.lbTel.Location = new System.Drawing.Point(329, 84);
+            this.lbTel.Name = "lbTel";
+            this.lbTel.Size = new System.Drawing.Size(51, 20);
+            this.lbTel.TabIndex = 5;
+            this.lbTel.Text = "label1";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Blue;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(35, 26);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 157);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Click Here To Add Your Business Information First!";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // welcome
             // 
@@ -118,9 +142,11 @@ namespace BusinessApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 373);
-            this.Controls.Add(this.Label2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lbTel);
+            this.Controls.Add(this.lbAddress);
             this.Controls.Add(this.btnbackup);
-            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.lbName);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.btnaddproduct);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,10 +160,11 @@ namespace BusinessApp
 		}
 		internal System.Windows.Forms.Button btnaddproduct;
 		internal System.Windows.Forms.Button Button1;
-		internal System.Windows.Forms.Label Label1;
+		internal System.Windows.Forms.Label lbName;
 		internal System.Windows.Forms.Button btnbackup;
-		internal System.Windows.Forms.Label Label2;
-
-	}
+		internal System.Windows.Forms.Label lbAddress;
+        private Label lbTel;
+        private Button button2;
+    }
 
 }

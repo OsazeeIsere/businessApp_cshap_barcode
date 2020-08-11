@@ -102,8 +102,8 @@ namespace BusinessApp
             this.Label17 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
             this.txtproductid = new System.Windows.Forms.TextBox();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
             this.txtcode2 = new System.Windows.Forms.TextBox();
             this.btncode = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -586,30 +586,30 @@ namespace BusinessApp
             this.txtproductid.Size = new System.Drawing.Size(191, 26);
             this.txtproductid.TabIndex = 105;
             // 
-            // Label5
+            // lbaddress
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.BackColor = System.Drawing.Color.Black;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Label5.Location = new System.Drawing.Point(498, 49);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(269, 18);
-            this.Label5.TabIndex = 107;
-            this.Label5.Text = "Okha Market , Sapele Road, Benin City.\r\n";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.BackColor = System.Drawing.Color.Black;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbaddress.Location = new System.Drawing.Point(498, 49);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(27, 18);
+            this.lbaddress.TabIndex = 107;
+            this.lbaddress.Text = "lb2";
             // 
-            // Label6
+            // lbname
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Label6.Location = new System.Drawing.Point(454, 9);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(336, 25);
-            this.Label6.TabIndex = 106;
-            this.Label6.Text = "WELCOME TO TRENDY SHOP\r\n";
+            this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbname.Location = new System.Drawing.Point(454, 9);
+            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(44, 25);
+            this.lbname.TabIndex = 106;
+            this.lbname.Text = "lb1";
             // 
             // txtcode2
             // 
@@ -646,8 +646,8 @@ namespace BusinessApp
             this.ClientSize = new System.Drawing.Size(1284, 762);
             this.Controls.Add(this.btncode);
             this.Controls.Add(this.txtcode2);
-            this.Controls.Add(this.Label5);
-            this.Controls.Add(this.Label6);
+            this.Controls.Add(this.lbaddress);
+            this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtproductid);
             this.Controls.Add(this.Label18);
             this.Controls.Add(this.txttotal);
@@ -766,8 +766,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label17;
 		internal System.Windows.Forms.Label Label18;
 		internal System.Windows.Forms.TextBox txtproductid;
-		internal System.Windows.Forms.Label Label5;
-		internal System.Windows.Forms.Label Label6;
+		internal System.Windows.Forms.Label lbaddress;
+		internal System.Windows.Forms.Label lbname;
         internal System.Windows.Forms.TextBox txtcode2;
         private System.Windows.Forms.Button btncode;
     }

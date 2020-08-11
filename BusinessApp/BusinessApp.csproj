@@ -27,7 +27,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>73</ApplicationRevision>
+    <ApplicationRevision>74</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -126,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="IdentityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdentityForm.Designer.cs">
+      <DependentUpon>IdentityForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -540,6 +546,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="holdsales.resx">
       <DependentUpon>holdsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdentityForm.resx">
+      <DependentUpon>IdentityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Old Patient.resx">
       <DependentUpon>Old Patient.cs</DependentUpon>

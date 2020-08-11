@@ -29,7 +29,7 @@ namespace BusinessApp
 			MySqlDataAdapter ad = new MySqlDataAdapter();
 			MySqlCommand cm = new MySqlCommand();
 			string strconnection = "";
-			strconnection = "Server=localhost;Port=3306;Database=businnessdatabase;Uid=root;Pwd=prayer;";
+			strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
 			cn.ConnectionString = strconnection;
 			cn.Open();
 			cm.CommandText = strcommand;
@@ -45,8 +45,13 @@ namespace BusinessApp
 		{
 			try
 			{
+                DataTable dtidentity = new DataTable();
+                dtidentity = getdatabase("Select * from identity");
 
-				System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
 				dtgetsales = getdatabase("select quantitysold,itemsold,unitprice,amount from holdsales order by itemsold");
 				if (dtgetsales.Rows.Count > 0)
 				{
@@ -98,9 +103,9 @@ namespace BusinessApp
 				Font font1 = new Font("arial", 7F, FontStyle.Regular);
 				Font font2 = new Font("arial", 7F, FontStyle.Regular);
 				Font font3 = new Font("arial", 8F, FontStyle.Regular);
-				e.Graphics.DrawString(Label2.Text, font, Brushes.Black, 1, 20);
-				e.Graphics.DrawString(Label1.Text, font1, Brushes.Black, 1, 35);
-				e.Graphics.DrawString(Label18.Text, fontx, Brushes.Black, 6, 50);
+				e.Graphics.DrawString(lbaddress.Text, font, Brushes.Black, 1, 20);
+				e.Graphics.DrawString(lbname.Text, font1, Brushes.Black, 1, 35);
+				e.Graphics.DrawString(lbtel.Text, fontx, Brushes.Black, 6, 50);
 				e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 65);
 				e.Graphics.DrawString(txtcashiername1.Text, font3, Brushes.Black, 60, 65);
 				e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 120, 65);
@@ -172,7 +177,7 @@ namespace BusinessApp
 				System.Data.DataTable dtgetsales = new System.Data.DataTable();
 				dtgetsales = getdatabase("Select* from holdsales");
 				string strconnection = "";
-				strconnection = "server= localhost;port=3306;database=businnessdatabase;uid=root;pwd=prayer";
+				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 				cn.ConnectionString = strconnection;
 				cn.Open();
 				cm.CommandText = "Delete from holdsales where transactionid>0";

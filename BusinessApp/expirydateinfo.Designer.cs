@@ -70,8 +70,8 @@ namespace BusinessApp
             this.txtitems = new System.Windows.Forms.TextBox();
             this.txtfile = new System.Windows.Forms.TextBox();
             this.OpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
+            this.lbaddress = new System.Windows.Forms.Label();
+            this.lbname = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -283,29 +283,29 @@ namespace BusinessApp
             this.OpenFileDialog1.FileName = "OpenFileDialog1";
             this.OpenFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
-            // Label3
+            // lbaddress
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label3.Location = new System.Drawing.Point(472, 57);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(269, 18);
-            this.Label3.TabIndex = 80;
-            this.Label3.Text = "Okha Market , Sapele Road, Benin City.\r\n";
+            this.lbaddress.AutoSize = true;
+            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbaddress.Location = new System.Drawing.Point(472, 57);
+            this.lbaddress.Name = "lbaddress";
+            this.lbaddress.Size = new System.Drawing.Size(27, 18);
+            this.lbaddress.TabIndex = 80;
+            this.lbaddress.Text = "lb2";
             // 
-            // Label4
+            // lbname
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label4.Location = new System.Drawing.Point(442, 21);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(336, 25);
-            this.Label4.TabIndex = 79;
-            this.Label4.Text = "WELCOME TO TRENDY SHOP\r\n";
+            this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbname.Location = new System.Drawing.Point(442, 21);
+            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(44, 25);
+            this.lbname.TabIndex = 79;
+            this.lbname.Text = "lb1";
             // 
             // expirydateinfo
             // 
@@ -314,8 +314,8 @@ namespace BusinessApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1284, 782);
-            this.Controls.Add(this.Label3);
-            this.Controls.Add(this.Label4);
+            this.Controls.Add(this.lbaddress);
+            this.Controls.Add(this.lbname);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.txtsearch);
@@ -366,8 +366,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.ColumnHeader ColumnHeader10;
 		internal System.Windows.Forms.ColumnHeader ColumnHeader11;
 		internal System.Windows.Forms.ColumnHeader ColumnHeader12;
-		internal System.Windows.Forms.Label Label3;
-		internal System.Windows.Forms.Label Label4;
+		internal System.Windows.Forms.Label lbaddress;
+		internal System.Windows.Forms.Label lbname;
 		internal System.Windows.Forms.ColumnHeader ColumnHeader13;
 	}
 
