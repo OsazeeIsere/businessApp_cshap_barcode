@@ -113,6 +113,7 @@ namespace BusinessApp
             this.txtcashiername1.Location = new System.Drawing.Point(154, 47);
             this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcashiername1.Name = "txtcashiername1";
+            this.txtcashiername1.ReadOnly = true;
             this.txtcashiername1.Size = new System.Drawing.Size(199, 26);
             this.txtcashiername1.TabIndex = 25;
             // 
@@ -184,6 +185,7 @@ namespace BusinessApp
             this.txttime.Location = new System.Drawing.Point(930, 92);
             this.txttime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttime.Name = "txttime";
+            this.txttime.ReadOnly = true;
             this.txttime.Size = new System.Drawing.Size(131, 29);
             this.txttime.TabIndex = 33;
             this.txttime.TextChanged += new System.EventHandler(this.txttime_TextChanged);
@@ -450,6 +452,7 @@ namespace BusinessApp
             // 
             this.txtdrugid.Location = new System.Drawing.Point(103, 155);
             this.txtdrugid.Name = "txtdrugid";
+            this.txtdrugid.ReadOnly = true;
             this.txtdrugid.Size = new System.Drawing.Size(55, 26);
             this.txtdrugid.TabIndex = 111;
             // 
@@ -466,6 +469,7 @@ namespace BusinessApp
             // 
             this.txtcosmeticsid.Location = new System.Drawing.Point(755, 161);
             this.txtcosmeticsid.Name = "txtcosmeticsid";
+            this.txtcosmeticsid.ReadOnly = true;
             this.txtcosmeticsid.Size = new System.Drawing.Size(64, 26);
             this.txtcosmeticsid.TabIndex = 113;
             this.txtcosmeticsid.TextChanged += new System.EventHandler(this.txtcosmeticsid_TextChanged);
@@ -492,6 +496,7 @@ namespace BusinessApp
             // 
             this.txtcosmeticsname.Location = new System.Drawing.Point(885, 164);
             this.txtcosmeticsname.Name = "txtcosmeticsname";
+            this.txtcosmeticsname.ReadOnly = true;
             this.txtcosmeticsname.Size = new System.Drawing.Size(223, 26);
             this.txtcosmeticsname.TabIndex = 115;
             // 
@@ -499,6 +504,7 @@ namespace BusinessApp
             // 
             this.txtproductname.Location = new System.Drawing.Point(255, 150);
             this.txtproductname.Name = "txtproductname";
+            this.txtproductname.ReadOnly = true;
             this.txtproductname.Size = new System.Drawing.Size(324, 26);
             this.txtproductname.TabIndex = 117;
             // 
@@ -644,6 +650,7 @@ namespace BusinessApp
             this.txtcode2.Location = new System.Drawing.Point(154, 97);
             this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcode2.Name = "txtcode2";
+            this.txtcode2.ReadOnly = true;
             this.txtcode2.Size = new System.Drawing.Size(190, 26);
             this.txtcode2.TabIndex = 131;
             this.txtcode2.TextChanged += new System.EventHandler(this.txtcode2_TextChanged);

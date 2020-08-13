@@ -180,6 +180,7 @@ namespace BusinessApp
             // 
             this.txtcashiername1.Location = new System.Drawing.Point(166, 61);
             this.txtcashiername1.Name = "txtcashiername1";
+            this.txtcashiername1.ReadOnly = true;
             this.txtcashiername1.Size = new System.Drawing.Size(191, 26);
             this.txtcashiername1.TabIndex = 17;
             // 
@@ -297,6 +298,7 @@ namespace BusinessApp
             this.txtexpirydate.Name = "txtexpirydate";
             this.txtexpirydate.Size = new System.Drawing.Size(161, 26);
             this.txtexpirydate.TabIndex = 32;
+            this.txtexpirydate.Validating += new System.ComponentModel.CancelEventHandler(this.txtexpirydate_Validating);
             // 
             // txtyear
             // 
@@ -583,6 +585,7 @@ namespace BusinessApp
             // 
             this.txtproductid.Location = new System.Drawing.Point(166, 93);
             this.txtproductid.Name = "txtproductid";
+            this.txtproductid.ReadOnly = true;
             this.txtproductid.Size = new System.Drawing.Size(191, 26);
             this.txtproductid.TabIndex = 105;
             // 

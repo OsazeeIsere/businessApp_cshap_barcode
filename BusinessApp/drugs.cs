@@ -11,6 +11,8 @@ using System.Xml.Linq;
 
 using MySql.Data.MySqlClient;
 using xlapp = Microsoft.Office.Interop.Excel;
+using System.Text.RegularExpressions;
+
 namespace BusinessApp
 {
     
@@ -927,6 +929,26 @@ namespace BusinessApp
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void txtexpirydate_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Regex reg = new Regex(@"^(\d{1,2})/(\d{1,2})/(\d{4})");
+            Match m = reg.Match(txtexpirydate.Text);
+            if (m.Success)
+            {
+                int mm = int.Parse(m.Groups[1].Value);
+                int dd = int.Parse(m.Groups[2].Value);
+                int yyyy = int.Parse(m.Groups[3].Value);
+                e.Cancel = mm < 1 || mm > 12 || dd < 1 || dd > 31 || yyyy < 2019;
+            }
+            else e.Cancel = true;
+            if (e.Cancel)
+            {
+                if (MessageBox.Show("Wrong date format. The correct format is mm/dd/yyyy\n+ mm should be between 1 and 12\n+ dd should be between 1 and 31.\n+ yyyy should be after 2019", "Invalid date", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
+                    e.Cancel = false;
+            }
+
         }
     }
 }
