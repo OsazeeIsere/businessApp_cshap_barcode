@@ -49,13 +49,18 @@ namespace BusinessApp
             this.lbAddress = new System.Windows.Forms.Label();
             this.lbTel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnaddproduct
             // 
+            this.btnaddproduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnaddproduct.BackColor = System.Drawing.Color.Silver;
             this.btnaddproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddproduct.Location = new System.Drawing.Point(569, 214);
+            this.btnaddproduct.Location = new System.Drawing.Point(511, 24);
             this.btnaddproduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnaddproduct.Name = "btnaddproduct";
             this.btnaddproduct.Size = new System.Drawing.Size(186, 82);
@@ -66,9 +71,10 @@ namespace BusinessApp
             // 
             // Button1
             // 
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(35, 214);
+            this.Button1.Location = new System.Drawing.Point(20, 24);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(201, 82);
@@ -79,10 +85,11 @@ namespace BusinessApp
             // 
             // lbName
             // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbName.Location = new System.Drawing.Point(234, 9);
+            this.lbName.Location = new System.Drawing.Point(227, 24);
             this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(76, 25);
@@ -92,9 +99,10 @@ namespace BusinessApp
             // 
             // btnbackup
             // 
+            this.btnbackup.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnbackup.BackColor = System.Drawing.Color.LightGray;
             this.btnbackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackup.Location = new System.Drawing.Point(297, 214);
+            this.btnbackup.Location = new System.Drawing.Point(262, 24);
             this.btnbackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnbackup.Name = "btnbackup";
             this.btnbackup.Size = new System.Drawing.Size(196, 82);
@@ -105,19 +113,22 @@ namespace BusinessApp
             // 
             // lbAddress
             // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbAddress.AutoSize = true;
             this.lbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbAddress.Location = new System.Drawing.Point(252, 51);
+            this.lbAddress.Location = new System.Drawing.Point(216, 64);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Size = new System.Drawing.Size(46, 18);
             this.lbAddress.TabIndex = 4;
             this.lbAddress.Text = "label2";
+            this.lbAddress.Click += new System.EventHandler(this.lbAddress_Click);
             // 
             // lbTel
             // 
+            this.lbTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTel.AutoSize = true;
-            this.lbTel.Location = new System.Drawing.Point(329, 84);
+            this.lbTel.Location = new System.Drawing.Point(319, 98);
             this.lbTel.Name = "lbTel";
             this.lbTel.Size = new System.Drawing.Size(51, 20);
             this.lbTel.TabIndex = 5;
@@ -136,26 +147,52 @@ namespace BusinessApp
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(201)))), ((int)(((byte)(211)))));
+            this.panel1.Controls.Add(this.lbTel);
+            this.panel1.Controls.Add(this.lbAddress);
+            this.panel1.Controls.Add(this.lbName);
+            this.panel1.Location = new System.Drawing.Point(55, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(677, 148);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(165)))), ((int)(((byte)(188)))));
+            this.panel2.Controls.Add(this.btnbackup);
+            this.panel2.Controls.Add(this.btnaddproduct);
+            this.panel2.Controls.Add(this.Button1);
+            this.panel2.Location = new System.Drawing.Point(35, 426);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(720, 123);
+            this.panel2.TabIndex = 8;
+            // 
             // welcome
             // 
             this.AcceptButton = this.btnaddproduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 373);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(229)))), ((int)(((byte)(232)))));
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.lbTel);
-            this.Controls.Add(this.lbAddress);
-            this.Controls.Add(this.btnbackup);
-            this.Controls.Add(this.lbName);
-            this.Controls.Add(this.Button1);
-            this.Controls.Add(this.btnaddproduct);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "welcome";
             this.Text = "welcome";
             this.Load += new System.EventHandler(this.welcome_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
 		}
 		internal System.Windows.Forms.Button btnaddproduct;
@@ -165,6 +202,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label lbAddress;
         private Label lbTel;
         private Button button2;
+        private Panel panel1;
+        private Panel panel2;
     }
 
 }

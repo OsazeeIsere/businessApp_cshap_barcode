@@ -59,17 +59,19 @@ namespace BusinessApp
             // 
             // txtadminname
             // 
-            this.txtadminname.Location = new System.Drawing.Point(300, 115);
+            this.txtadminname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtadminname.Location = new System.Drawing.Point(399, 153);
             this.txtadminname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtadminname.Name = "txtadminname";
-            this.txtadminname.Size = new System.Drawing.Size(188, 26);
+            this.txtadminname.Size = new System.Drawing.Size(351, 26);
             this.txtadminname.TabIndex = 3;
             // 
             // Label1
             // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(40, 115);
+            this.Label1.Location = new System.Drawing.Point(40, 159);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(149, 20);
@@ -78,19 +80,21 @@ namespace BusinessApp
             // 
             // txtadminpassword
             // 
+            this.txtadminpassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtadminpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtadminpassword.Location = new System.Drawing.Point(300, 169);
+            this.txtadminpassword.Location = new System.Drawing.Point(399, 207);
             this.txtadminpassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtadminpassword.Name = "txtadminpassword";
             this.txtadminpassword.PasswordChar = '*';
-            this.txtadminpassword.Size = new System.Drawing.Size(192, 26);
+            this.txtadminpassword.Size = new System.Drawing.Size(355, 26);
             this.txtadminpassword.TabIndex = 5;
             // 
             // lblpassword
             // 
+            this.lblpassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblpassword.AutoSize = true;
             this.lblpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpassword.Location = new System.Drawing.Point(40, 173);
+            this.lblpassword.Location = new System.Drawing.Point(40, 217);
             this.lblpassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpassword.Name = "lblpassword";
             this.lblpassword.Size = new System.Drawing.Size(78, 20);
@@ -99,11 +103,12 @@ namespace BusinessApp
             // 
             // Button1
             // 
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(300, 275);
+            this.Button1.Location = new System.Drawing.Point(565, 360);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(189, 43);
+            this.Button1.Size = new System.Drawing.Size(189, 62);
             this.Button1.TabIndex = 6;
             this.Button1.Text = "Admin first Entry";
             this.Button1.UseVisualStyleBackColor = true;
@@ -111,7 +116,8 @@ namespace BusinessApp
             // 
             // btnmanageuser
             // 
-            this.btnmanageuser.Location = new System.Drawing.Point(300, 341);
+            this.btnmanageuser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnmanageuser.Location = new System.Drawing.Point(348, 360);
             this.btnmanageuser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnmanageuser.Name = "btnmanageuser";
             this.btnmanageuser.Size = new System.Drawing.Size(189, 62);
@@ -122,8 +128,9 @@ namespace BusinessApp
             // 
             // PictureBox1
             // 
+            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.key_05;
-            this.PictureBox1.Location = new System.Drawing.Point(44, 252);
+            this.PictureBox1.Location = new System.Drawing.Point(43, 319);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(248, 151);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,19 +139,22 @@ namespace BusinessApp
             // 
             // txtadminpassword1
             // 
+            this.txtadminpassword1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtadminpassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtadminpassword1.Location = new System.Drawing.Point(300, 216);
+            this.txtadminpassword1.Location = new System.Drawing.Point(399, 254);
             this.txtadminpassword1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtadminpassword1.Name = "txtadminpassword1";
             this.txtadminpassword1.PasswordChar = '*';
-            this.txtadminpassword1.Size = new System.Drawing.Size(192, 26);
+            this.txtadminpassword1.Size = new System.Drawing.Size(355, 26);
             this.txtadminpassword1.TabIndex = 10;
+            this.txtadminpassword1.TextChanged += new System.EventHandler(this.txtadminpassword1_TextChanged);
             // 
             // Label2
             // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(40, 220);
+            this.Label2.Location = new System.Drawing.Point(40, 254);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(252, 20);
@@ -153,8 +163,9 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
-            this.lbname.Location = new System.Drawing.Point(114, 9);
+            this.lbname.Location = new System.Drawing.Point(229, 9);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(51, 20);
             this.lbname.TabIndex = 11;
@@ -162,8 +173,9 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
-            this.lbaddress.Location = new System.Drawing.Point(108, 48);
+            this.lbaddress.Location = new System.Drawing.Point(208, 48);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(51, 20);
             this.lbaddress.TabIndex = 12;
@@ -171,8 +183,9 @@ namespace BusinessApp
             // 
             // lbtel
             // 
+            this.lbtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbtel.AutoSize = true;
-            this.lbtel.Location = new System.Drawing.Point(129, 72);
+            this.lbtel.Location = new System.Drawing.Point(256, 68);
             this.lbtel.Name = "lbtel";
             this.lbtel.Size = new System.Drawing.Size(51, 20);
             this.lbtel.TabIndex = 13;
@@ -183,7 +196,7 @@ namespace BusinessApp
             this.AcceptButton = this.btnmanageuser;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 448);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.lbtel);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
@@ -198,6 +211,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "admin";
             this.Text = "admin";
             this.Load += new System.EventHandler(this.admin_Load);

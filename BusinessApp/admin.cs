@@ -146,5 +146,10 @@ namespace BusinessApp
         {
 
         }
-}
+
+        private void txtadminpassword1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
     }

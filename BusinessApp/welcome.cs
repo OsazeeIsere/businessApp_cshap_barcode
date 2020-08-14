@@ -56,7 +56,7 @@ namespace BusinessApp
 		private void welcome_Load(object sender, System.EventArgs e)
 		{
             button2.Hide();
-			BackColor = Color.Orange;
+			//BackColor = Color.Orange;
             DataTable dtidentity = new DataTable();
             dtidentity = getdatabase("Select * from identity");
             if (dtidentity.Rows.Count > 0)
@@ -102,6 +102,11 @@ namespace BusinessApp
         {
             IdentityForm x = new IdentityForm();
             x.Show();
+        }
+
+        private void lbAddress_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
