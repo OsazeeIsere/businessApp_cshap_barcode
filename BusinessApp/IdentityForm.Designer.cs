@@ -40,6 +40,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(105, 98);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -50,6 +51,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(65, 173);
             this.label2.Name = "label2";
@@ -59,8 +61,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 230);
+            this.label3.Location = new System.Drawing.Point(65, 230);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 2;
@@ -68,6 +71,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(69, 354);
             this.label4.Name = "label4";
@@ -77,6 +81,7 @@
             // 
             // txtName
             // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtName.Location = new System.Drawing.Point(250, 172);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
@@ -85,6 +90,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAddress.Location = new System.Drawing.Point(250, 215);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -93,6 +99,7 @@
             // 
             // txtTel
             // 
+            this.txtTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTel.Location = new System.Drawing.Point(250, 351);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(559, 26);
@@ -100,12 +107,14 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.Location = new System.Drawing.Point(483, 479);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 47);
             this.button1.TabIndex = 7;
             this.button1.Text = "Ok";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // IdentityForm

@@ -103,7 +103,7 @@ namespace BusinessApp
             // 
             // Button1
             // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.Location = new System.Drawing.Point(565, 360);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -116,7 +116,7 @@ namespace BusinessApp
             // 
             // btnmanageuser
             // 
-            this.btnmanageuser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnmanageuser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnmanageuser.Location = new System.Drawing.Point(348, 360);
             this.btnmanageuser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnmanageuser.Name = "btnmanageuser";
@@ -128,7 +128,7 @@ namespace BusinessApp
             // 
             // PictureBox1
             // 
-            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.key_05;
             this.PictureBox1.Location = new System.Drawing.Point(43, 319);
             this.PictureBox1.Name = "PictureBox1";

@@ -67,7 +67,13 @@ namespace BusinessApp
 				else if (string.IsNullOrEmpty(txtunitprice.Text))
 				{
 					MessageBox.Show("Please enter the Unit price of Product Purchased");
+
 				}
+                else if (string.IsNullOrEmpty(txtamountpaid.Text))
+                {
+                    MessageBox.Show("Please enter the Amount Paid for The Product Purchased");
+                }
+                
 				else if (string.IsNullOrEmpty(txtunitcostprice.Text))
 				{
 					MessageBox.Show("Please enter the Unit Cost price of The Product Purchased");
@@ -948,6 +954,11 @@ namespace BusinessApp
                 if (MessageBox.Show("Wrong date format. The correct format is mm/dd/yyyy\n+ mm should be between 1 and 12\n+ dd should be between 1 and 31.\n+ yyyy should be after 2019", "Invalid date", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
                     e.Cancel = false;
             }
+
+        }
+
+        private void txtexpirydate_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

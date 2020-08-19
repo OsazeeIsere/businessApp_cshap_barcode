@@ -193,6 +193,7 @@ namespace BusinessApp
             // 
             // Button3
             // 
+            this.Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button3.Location = new System.Drawing.Point(1119, 197);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(153, 57);
@@ -203,6 +204,7 @@ namespace BusinessApp
             // 
             // Button2
             // 
+            this.Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button2.Location = new System.Drawing.Point(952, 265);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(156, 70);
@@ -233,6 +235,7 @@ namespace BusinessApp
             // 
             // Button4
             // 
+            this.Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button4.Location = new System.Drawing.Point(918, 157);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(128, 41);
@@ -256,6 +259,7 @@ namespace BusinessApp
             // 
             // txtitems
             // 
+            this.txtitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtitems.Location = new System.Drawing.Point(1052, 157);
             this.txtitems.Multiline = true;
             this.txtitems.Name = "txtitems";
@@ -298,6 +302,7 @@ namespace BusinessApp
             this.txtexpirydate.Name = "txtexpirydate";
             this.txtexpirydate.Size = new System.Drawing.Size(161, 26);
             this.txtexpirydate.TabIndex = 32;
+            this.txtexpirydate.TextChanged += new System.EventHandler(this.txtexpirydate_TextChanged);
             this.txtexpirydate.Validating += new System.ComponentModel.CancelEventHandler(this.txtexpirydate_Validating);
             // 
             // txtyear
@@ -349,6 +354,7 @@ namespace BusinessApp
             // 
             // Button6
             // 
+            this.Button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button6.Location = new System.Drawing.Point(1114, 265);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(158, 70);
@@ -463,6 +469,7 @@ namespace BusinessApp
             // 
             // Button8
             // 
+            this.Button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button8.Location = new System.Drawing.Point(1119, 124);
             this.Button8.Name = "Button8";
             this.Button8.Size = new System.Drawing.Size(153, 66);
@@ -473,6 +480,7 @@ namespace BusinessApp
             // 
             // Label16
             // 
+            this.Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label16.AutoSize = true;
             this.Label16.Location = new System.Drawing.Point(928, 83);
             this.Label16.Name = "Label16";
@@ -482,6 +490,7 @@ namespace BusinessApp
             // 
             // txtadminpassword
             // 
+            this.txtadminpassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtadminpassword.Location = new System.Drawing.Point(1113, 83);
             this.txtadminpassword.Name = "txtadminpassword";
             this.txtadminpassword.PasswordChar = '#';
@@ -500,6 +509,7 @@ namespace BusinessApp
             // 
             // lsvitems
             // 
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader12,
             this.ColumnHeader2,
@@ -591,6 +601,7 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -603,6 +614,7 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -701,6 +713,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "drugs";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.product_Load);

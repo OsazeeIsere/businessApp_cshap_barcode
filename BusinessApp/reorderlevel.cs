@@ -68,6 +68,11 @@ namespace BusinessApp
 					lsvitems.ForeColor = Color.Red;
 					txttotal.Text = lsvitems.Items.Count.ToString();
 				}
+                else
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                }
 			}
 			else if ((ComboBox1.Text) == "Products Less Than 20 units in Stock")
 			{
@@ -89,7 +94,12 @@ namespace BusinessApp
 					lsvitems.ForeColor = Color.DeepPink;
 					txttotal.Text = lsvitems.Items.Count.ToString();
 				}
-			}
+                else
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                }
+            }
 			else if ((ComboBox1.Text) == "Products Less Than 50 units in Stock")
 			{
 				dtgetproduct = getdatabase("select * from product where quantity <" + 50 + "");
@@ -110,7 +120,12 @@ namespace BusinessApp
 					lsvitems.ForeColor = Color.Green;
 					txttotal.Text = lsvitems.Items.Count.ToString();
 				}
-			}
+                else
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                }
+            }
 			else if ((ComboBox1.Text) == "Products Above  50 units in Stock")
 			{
 				dtgetproduct = getdatabase("select * from product where quantity >" + 50 + "");
@@ -131,8 +146,12 @@ namespace BusinessApp
 					lsvitems.ForeColor = Color.Green;
 					txttotal.Text = lsvitems.Items.Count.ToString();
 				}
-
-			}
+                else
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                }
+            }
 			else if ((ComboBox1.Text) == "Products Less Than 5 units in Stock")
 			{
 				dtgetproduct = getdatabase("select * from product where quantity <" + 5 + "");
@@ -153,7 +172,12 @@ namespace BusinessApp
 					lsvitems.ForeColor = Color.Red;
 					txttotal.Text = lsvitems.Items.Count.ToString();
 				}
-			}
+                else
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                }
+            }
 		}
 
 		private void reorderlevel_Load(object sender, System.EventArgs e)
@@ -164,6 +188,16 @@ namespace BusinessApp
             lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
             lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
            //   lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+        }
+
+        private void txttotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,6 +46,7 @@ namespace BusinessApp
 		{
 			try
 			{
+                txtpassword1.Text = "";
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
 

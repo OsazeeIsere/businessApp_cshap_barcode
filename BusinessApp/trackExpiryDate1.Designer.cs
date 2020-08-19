@@ -58,10 +58,11 @@
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Location = new System.Drawing.Point(636, 59);
+            this.lbaddress.Location = new System.Drawing.Point(637, 40);
             this.lbaddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(27, 18);
@@ -70,11 +71,12 @@
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbname.Location = new System.Drawing.Point(621, 9);
+            this.lbname.Location = new System.Drawing.Point(667, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -83,8 +85,9 @@
             // 
             // Label8
             // 
+            this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(295, 284);
+            this.Label8.Location = new System.Drawing.Point(327, 301);
             this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(51, 16);
@@ -93,7 +96,8 @@
             // 
             // txtsearch
             // 
-            this.txtsearch.Location = new System.Drawing.Point(123, 271);
+            this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtsearch.Location = new System.Drawing.Point(126, 280);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
@@ -103,7 +107,8 @@
             // 
             // txttotal
             // 
-            this.txttotal.Location = new System.Drawing.Point(286, 203);
+            this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txttotal.Location = new System.Drawing.Point(286, 218);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
@@ -112,8 +117,9 @@
             // 
             // Label2
             // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(19, 208);
+            this.Label2.Location = new System.Drawing.Point(19, 223);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(239, 16);
@@ -122,6 +128,7 @@
             // 
             // lsvitems
             // 
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader13,
             this.ColumnHeader12,
@@ -139,11 +146,11 @@
             this.lsvitems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
-            this.lsvitems.Location = new System.Drawing.Point(4, 337);
+            this.lsvitems.Location = new System.Drawing.Point(29, 321);
             this.lsvitems.Margin = new System.Windows.Forms.Padding(4);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(1689, 536);
+            this.lsvitems.Size = new System.Drawing.Size(1378, 454);
             this.lsvitems.TabIndex = 85;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -214,10 +221,11 @@
             // 
             // DateTimePicker1
             // 
-            this.DateTimePicker1.Location = new System.Drawing.Point(993, 122);
+            this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.DateTimePicker1.Location = new System.Drawing.Point(1168, 167);
             this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(347, 22);
+            this.DateTimePicker1.Size = new System.Drawing.Size(239, 22);
             this.DateTimePicker1.TabIndex = 84;
             // 
             // check
@@ -233,8 +241,9 @@
             // 
             // Label1
             // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(23, 116);
+            this.Label1.Location = new System.Drawing.Point(23, 171);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(89, 16);
@@ -243,6 +252,7 @@
             // 
             // ComboBox1
             // 
+            this.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ComboBox1.FormattingEnabled = true;
             this.ComboBox1.Items.AddRange(new object[] {
             "All Drugs",
@@ -251,17 +261,18 @@
             "Six Months(6) Time",
             "Above Six Months(6) Time",
             "Drugs Already Expired"});
-            this.ComboBox1.Location = new System.Drawing.Point(167, 112);
+            this.ComboBox1.Location = new System.Drawing.Point(120, 167);
             this.ComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(348, 24);
+            this.ComboBox1.Size = new System.Drawing.Size(203, 24);
             this.ComboBox1.TabIndex = 81;
             // 
             // PictureBox1
             // 
+            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
-            this.PictureBox1.Location = new System.Drawing.Point(25, 271);
+            this.PictureBox1.Location = new System.Drawing.Point(29, 279);
             this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(89, 38);
@@ -273,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 705);
+            this.ClientSize = new System.Drawing.Size(1431, 815);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.PictureBox1);
@@ -288,6 +299,7 @@
             this.Controls.Add(this.ComboBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "trackExpiryDate1";
             this.Text = "Expired Products";
             this.Load += new System.EventHandler(this.trackExpiryDate1_Load);

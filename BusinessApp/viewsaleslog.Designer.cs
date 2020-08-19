@@ -62,9 +62,10 @@ namespace BusinessApp
             // 
             // Label3
             // 
+            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(281, 120);
+            this.Label3.Location = new System.Drawing.Point(249, 201);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(305, 31);
             this.Label3.TabIndex = 12;
@@ -72,13 +73,14 @@ namespace BusinessApp
             // 
             // Panel2
             // 
+            this.Panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Panel2.BackColor = System.Drawing.Color.Magenta;
             this.Panel2.Controls.Add(this.Label6);
             this.Panel2.Controls.Add(this.txtcashierpassword);
             this.Panel2.Controls.Add(this.Label5);
             this.Panel2.Controls.Add(this.Button4);
             this.Panel2.ForeColor = System.Drawing.Color.Black;
-            this.Panel2.Location = new System.Drawing.Point(424, 185);
+            this.Panel2.Location = new System.Drawing.Point(410, 287);
             this.Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(377, 204);
@@ -125,13 +127,14 @@ namespace BusinessApp
             // 
             // Panel1
             // 
+            this.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Panel1.Controls.Add(this.Label7);
             this.Panel1.Controls.Add(this.txtadminpassword);
             this.Panel1.Controls.Add(this.Label4);
             this.Panel1.Controls.Add(this.Button2);
             this.Panel1.ForeColor = System.Drawing.Color.Red;
-            this.Panel1.Location = new System.Drawing.Point(28, 185);
+            this.Panel1.Location = new System.Drawing.Point(14, 287);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(369, 204);
@@ -176,11 +179,12 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(251, 52);
+            this.lbaddress.Location = new System.Drawing.Point(274, 54);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(33, 20);
             this.lbaddress.TabIndex = 156;
@@ -188,10 +192,11 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(250, 9);
+            this.lbname.Location = new System.Drawing.Point(339, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -203,7 +208,7 @@ namespace BusinessApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(814, 403);
+            this.ClientSize = new System.Drawing.Size(814, 561);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.Panel2);
@@ -211,6 +216,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "viewsaleslog";
             this.Text = "View Sales Log";
             this.Load += new System.EventHandler(this.viewsaleslog_Load);

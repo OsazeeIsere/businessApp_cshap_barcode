@@ -51,9 +51,10 @@ namespace BusinessApp
             // 
             // btnbackup
             // 
+            this.btnbackup.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnbackup.BackColor = System.Drawing.Color.LightGray;
             this.btnbackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackup.Location = new System.Drawing.Point(558, 158);
+            this.btnbackup.Location = new System.Drawing.Point(558, 284);
             this.btnbackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnbackup.Name = "btnbackup";
             this.btnbackup.Size = new System.Drawing.Size(196, 82);
@@ -64,9 +65,10 @@ namespace BusinessApp
             // 
             // Button1
             // 
+            this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(58, 158);
+            this.Button1.Location = new System.Drawing.Point(58, 284);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(201, 82);
@@ -77,9 +79,10 @@ namespace BusinessApp
             // 
             // btnaddproduct
             // 
+            this.btnaddproduct.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnaddproduct.BackColor = System.Drawing.Color.Silver;
             this.btnaddproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddproduct.Location = new System.Drawing.Point(320, 158);
+            this.btnaddproduct.Location = new System.Drawing.Point(320, 284);
             this.btnaddproduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnaddproduct.Name = "btnaddproduct";
             this.btnaddproduct.Size = new System.Drawing.Size(186, 82);
@@ -90,9 +93,10 @@ namespace BusinessApp
             // 
             // Button2
             // 
+            this.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button2.BackColor = System.Drawing.Color.LightGray;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button2.Location = new System.Drawing.Point(320, 250);
+            this.Button2.Location = new System.Drawing.Point(311, 376);
             this.Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(196, 82);
@@ -103,7 +107,8 @@ namespace BusinessApp
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(58, 111);
+            this.txtpassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtpassword.Location = new System.Drawing.Point(58, 164);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(148, 26);
@@ -111,6 +116,7 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,11 +129,12 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.White;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(245, 20);
+            this.lbname.Location = new System.Drawing.Point(306, 21);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -139,7 +146,7 @@ namespace BusinessApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Fuchsia;
-            this.ClientSize = new System.Drawing.Size(807, 403);
+            this.ClientSize = new System.Drawing.Size(807, 561);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtpassword);
@@ -149,6 +156,7 @@ namespace BusinessApp
             this.Controls.Add(this.btnaddproduct);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "saleslog";
             this.Text = "Sales Log";
             this.Load += new System.EventHandler(this.saleslog_Load);

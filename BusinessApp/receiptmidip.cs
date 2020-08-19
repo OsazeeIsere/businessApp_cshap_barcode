@@ -201,5 +201,10 @@ namespace BusinessApp
 				MessageBox.Show(ex.ToString());
 			}
 		}
-	}
+
+        private void lbname_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

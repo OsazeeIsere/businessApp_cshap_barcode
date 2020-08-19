@@ -60,6 +60,7 @@ namespace BusinessApp
             // 
             // DateTimePicker1
             // 
+            this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DateTimePicker1.Location = new System.Drawing.Point(634, 100);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(261, 26);
@@ -67,18 +68,21 @@ namespace BusinessApp
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(508, 94);
+            this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Button1.Location = new System.Drawing.Point(521, 141);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(117, 38);
             this.Button1.TabIndex = 68;
             this.Button1.Text = "Checked";
-            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.UseVisualStyleBackColor = false;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Label1
             // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(20, 108);
+            this.Label1.Location = new System.Drawing.Point(33, 145);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(188, 20);
             this.Label1.TabIndex = 67;
@@ -86,6 +90,7 @@ namespace BusinessApp
             // 
             // ComboBox1
             // 
+            this.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ComboBox1.FormattingEnabled = true;
             this.ComboBox1.Items.AddRange(new object[] {
             "Products Less Than 5 units in Stock",
@@ -93,13 +98,14 @@ namespace BusinessApp
             "Products Less Than 20 units in Stock",
             "Products Less Than 50 units in Stock",
             "Products Above  50 units in Stock"});
-            this.ComboBox1.Location = new System.Drawing.Point(214, 104);
+            this.ComboBox1.Location = new System.Drawing.Point(227, 141);
             this.ComboBox1.Name = "ComboBox1";
             this.ComboBox1.Size = new System.Drawing.Size(288, 28);
             this.ComboBox1.TabIndex = 66;
             // 
             // lsvitems
             // 
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader2,
             this.ColumnHeader3,
@@ -108,7 +114,7 @@ namespace BusinessApp
             this.ColumnHeader6});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
-            this.lsvitems.Location = new System.Drawing.Point(99, 188);
+            this.lsvitems.Location = new System.Drawing.Point(99, 184);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.Size = new System.Drawing.Size(739, 384);
             this.lsvitems.TabIndex = 71;
@@ -142,23 +148,26 @@ namespace BusinessApp
             // 
             // txttotal
             // 
-            this.txttotal.Location = new System.Drawing.Point(631, 137);
+            this.txttotal.Location = new System.Drawing.Point(324, 94);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(82, 32);
             this.txttotal.TabIndex = 74;
+            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(340, 149);
+            this.Label2.Location = new System.Drawing.Point(33, 100);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(285, 20);
             this.Label2.TabIndex = 73;
             this.Label2.Text = "The Total Number of Products Affected";
+            this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,10 +180,11 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(300, 9);
+            this.lbname.Location = new System.Drawing.Point(378, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -185,7 +195,7 @@ namespace BusinessApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 595);
+            this.ClientSize = new System.Drawing.Size(901, 604);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.txttotal);
@@ -197,6 +207,7 @@ namespace BusinessApp
             this.Controls.Add(this.ComboBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "reorderlevel";
             this.Text = "ReOrder Level For Products";
             this.Load += new System.EventHandler(this.reorderlevel_Load);

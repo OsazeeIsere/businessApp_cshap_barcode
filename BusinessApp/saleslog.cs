@@ -63,7 +63,7 @@ namespace BusinessApp
 		private void Button2_Click(object sender, System.EventArgs e)
 		{
 			generalsaleslog v = new generalsaleslog();
-			v.txtpassword1.Text = txtpassword.Text;
+			
 			v.Show();
 		}
 

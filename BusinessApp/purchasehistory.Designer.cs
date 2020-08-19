@@ -69,6 +69,7 @@ namespace BusinessApp
             // 
             // Label8
             // 
+            this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label8.AutoSize = true;
             this.Label8.Location = new System.Drawing.Point(212, 251);
             this.Label8.Name = "Label8";
@@ -78,6 +79,7 @@ namespace BusinessApp
             // 
             // txtsearch
             // 
+            this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtsearch.Location = new System.Drawing.Point(83, 240);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
@@ -87,6 +89,7 @@ namespace BusinessApp
             // 
             // txttotal
             // 
+            this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txttotal.Location = new System.Drawing.Point(296, 177);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
@@ -95,6 +98,7 @@ namespace BusinessApp
             // 
             // Label2
             // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label2.AutoSize = true;
             this.Label2.Location = new System.Drawing.Point(5, 189);
             this.Label2.Name = "Label2";
@@ -104,6 +108,7 @@ namespace BusinessApp
             // 
             // lsvitems
             // 
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader2,
             this.ColumnHeader3,
@@ -183,6 +188,7 @@ namespace BusinessApp
             // 
             // DateTimePicker1
             // 
+            this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DateTimePicker1.Location = new System.Drawing.Point(736, 119);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(261, 26);
@@ -200,6 +206,7 @@ namespace BusinessApp
             // 
             // PictureBox1
             // 
+            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
             this.PictureBox1.Location = new System.Drawing.Point(10, 240);
@@ -211,11 +218,12 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(499, 56);
+            this.lbaddress.Location = new System.Drawing.Point(464, 58);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(33, 20);
             this.lbaddress.TabIndex = 90;
@@ -223,6 +231,7 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.Color.Red;

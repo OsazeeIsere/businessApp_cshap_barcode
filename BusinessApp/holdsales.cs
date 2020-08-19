@@ -695,5 +695,10 @@ namespace BusinessApp
 			clearholdsalescart x = new clearholdsalescart();
 			x.Show();
 		}
-	}
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

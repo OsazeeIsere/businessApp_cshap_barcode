@@ -58,10 +58,11 @@
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Location = new System.Drawing.Point(645, 55);
+            this.lbaddress.Location = new System.Drawing.Point(722, 55);
             this.lbaddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(27, 18);
@@ -70,11 +71,12 @@
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbname.Location = new System.Drawing.Point(622, 5);
+            this.lbname.Location = new System.Drawing.Point(699, 5);
             this.lbname.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -83,6 +85,7 @@
             // 
             // Label8
             // 
+            this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label8.AutoSize = true;
             this.Label8.Location = new System.Drawing.Point(304, 280);
             this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -93,6 +96,7 @@
             // 
             // txtsearch
             // 
+            this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtsearch.Location = new System.Drawing.Point(132, 267);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtsearch.Multiline = true;
@@ -103,6 +107,7 @@
             // 
             // txttotal
             // 
+            this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txttotal.Location = new System.Drawing.Point(321, 201);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Multiline = true;
@@ -112,6 +117,7 @@
             // 
             // Label2
             // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label2.AutoSize = true;
             this.Label2.Location = new System.Drawing.Point(28, 204);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -122,6 +128,8 @@
             // 
             // lsvitems
             // 
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader13,
             this.ColumnHeader12,
@@ -139,11 +147,11 @@
             this.lsvitems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
-            this.lsvitems.Location = new System.Drawing.Point(13, 333);
+            this.lsvitems.Location = new System.Drawing.Point(32, 355);
             this.lsvitems.Margin = new System.Windows.Forms.Padding(4);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(1689, 536);
+            this.lsvitems.Size = new System.Drawing.Size(1543, 506);
             this.lsvitems.TabIndex = 100;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -214,7 +222,8 @@
             // 
             // DateTimePicker1
             // 
-            this.DateTimePicker1.Location = new System.Drawing.Point(1002, 118);
+            this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.DateTimePicker1.Location = new System.Drawing.Point(1228, 106);
             this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(347, 26);
@@ -222,17 +231,19 @@
             // 
             // check
             // 
-            this.check.Location = new System.Drawing.Point(537, 101);
+            this.check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.check.Location = new System.Drawing.Point(648, 177);
             this.check.Margin = new System.Windows.Forms.Padding(4);
             this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(297, 47);
+            this.check.Size = new System.Drawing.Size(263, 47);
             this.check.TabIndex = 98;
             this.check.Text = "Checked";
-            this.check.UseVisualStyleBackColor = true;
+            this.check.UseVisualStyleBackColor = false;
             this.check.Click += new System.EventHandler(this.check_Click);
             // 
             // Label1
             // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label1.AutoSize = true;
             this.Label1.Location = new System.Drawing.Point(32, 112);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -243,6 +254,7 @@
             // 
             // ComboBox1
             // 
+            this.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ComboBox1.FormattingEnabled = true;
             this.ComboBox1.Items.AddRange(new object[] {
             "All Drugs",
@@ -259,6 +271,7 @@
             // 
             // PictureBox1
             // 
+            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
             this.PictureBox1.Location = new System.Drawing.Point(34, 267);
@@ -273,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 865);
+            this.ClientSize = new System.Drawing.Size(1588, 865);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.PictureBox1);
@@ -288,6 +301,7 @@
             this.Controls.Add(this.ComboBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "trackExpiryDate3";
             this.Text = "trackExpiryDate3";
             this.Load += new System.EventHandler(this.trackExpiryDate3_Load);

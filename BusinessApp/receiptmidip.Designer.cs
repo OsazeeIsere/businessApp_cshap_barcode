@@ -85,6 +85,7 @@ namespace BusinessApp
             // 
             // Label17
             // 
+            this.Label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label17.AutoSize = true;
             this.Label17.Location = new System.Drawing.Point(419, 506);
             this.Label17.Name = "Label17";
@@ -94,6 +95,7 @@ namespace BusinessApp
             // 
             // txtdiscount1
             // 
+            this.txtdiscount1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtdiscount1.Location = new System.Drawing.Point(482, 503);
             this.txtdiscount1.Name = "txtdiscount1";
             this.txtdiscount1.Size = new System.Drawing.Size(130, 26);
@@ -101,6 +103,7 @@ namespace BusinessApp
             // 
             // Label16
             // 
+            this.Label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label16.Location = new System.Drawing.Point(311, 503);
@@ -111,6 +114,7 @@ namespace BusinessApp
             // 
             // Label15
             // 
+            this.Label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label15.AutoSize = true;
             this.Label15.Location = new System.Drawing.Point(423, 548);
             this.Label15.Name = "Label15";
@@ -120,6 +124,7 @@ namespace BusinessApp
             // 
             // Label14
             // 
+            this.Label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label14.AutoSize = true;
             this.Label14.Location = new System.Drawing.Point(428, 458);
             this.Label14.Name = "Label14";
@@ -129,6 +134,7 @@ namespace BusinessApp
             // 
             // Label13
             // 
+            this.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label13.AutoSize = true;
             this.Label13.Location = new System.Drawing.Point(428, 406);
             this.Label13.Name = "Label13";
@@ -138,6 +144,7 @@ namespace BusinessApp
             // 
             // lsvitems
             // 
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader1,
             this.ColumnHeader2,
@@ -184,6 +191,7 @@ namespace BusinessApp
             // 
             // txtchange
             // 
+            this.txtchange.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtchange.Location = new System.Drawing.Point(480, 542);
             this.txtchange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtchange.Name = "txtchange";
@@ -192,6 +200,7 @@ namespace BusinessApp
             // 
             // Label9
             // 
+            this.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label9.AutoSize = true;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.Location = new System.Drawing.Point(320, 545);
@@ -214,6 +223,7 @@ namespace BusinessApp
             // 
             // txtcash
             // 
+            this.txtcash.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtcash.Location = new System.Drawing.Point(482, 455);
             this.txtcash.Margin = new System.Windows.Forms.Padding(4);
             this.txtcash.Name = "txtcash";
@@ -222,6 +232,7 @@ namespace BusinessApp
             // 
             // txttotal
             // 
+            this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txttotal.Location = new System.Drawing.Point(480, 404);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Name = "txttotal";
@@ -230,6 +241,7 @@ namespace BusinessApp
             // 
             // txttime
             // 
+            this.txttime.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txttime.Location = new System.Drawing.Point(433, 82);
             this.txttime.Margin = new System.Windows.Forms.Padding(4);
             this.txttime.Name = "txttime";
@@ -238,6 +250,7 @@ namespace BusinessApp
             // 
             // DateTimePicker1
             // 
+            this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DateTimePicker1.Location = new System.Drawing.Point(361, 132);
             this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.DateTimePicker1.Name = "DateTimePicker1";
@@ -246,6 +259,7 @@ namespace BusinessApp
             // 
             // txtreceiptnumber
             // 
+            this.txtreceiptnumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtreceiptnumber.Location = new System.Drawing.Point(155, 131);
             this.txtreceiptnumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtreceiptnumber.Name = "txtreceiptnumber";
@@ -254,6 +268,7 @@ namespace BusinessApp
             // 
             // txtcashiername1
             // 
+            this.txtcashiername1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtcashiername1.Location = new System.Drawing.Point(144, 83);
             this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4);
             this.txtcashiername1.Name = "txtcashiername1";
@@ -262,6 +277,7 @@ namespace BusinessApp
             // 
             // Label12
             // 
+            this.Label12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label12.AutoSize = true;
             this.Label12.Location = new System.Drawing.Point(102, 660);
             this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -272,6 +288,7 @@ namespace BusinessApp
             // 
             // Label11
             // 
+            this.Label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label11.AutoSize = true;
             this.Label11.Location = new System.Drawing.Point(132, 631);
             this.Label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -282,6 +299,7 @@ namespace BusinessApp
             // 
             // Label8
             // 
+            this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label8.Location = new System.Drawing.Point(307, 452);
@@ -293,6 +311,7 @@ namespace BusinessApp
             // 
             // Label7
             // 
+            this.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(275, 404);
@@ -304,6 +323,7 @@ namespace BusinessApp
             // 
             // Label6
             // 
+            this.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label6.AutoSize = true;
             this.Label6.Location = new System.Drawing.Point(300, 137);
             this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -314,6 +334,7 @@ namespace BusinessApp
             // 
             // Label5
             // 
+            this.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label5.AutoSize = true;
             this.Label5.Location = new System.Drawing.Point(373, 85);
             this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -324,6 +345,7 @@ namespace BusinessApp
             // 
             // Label4
             // 
+            this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label4.AutoSize = true;
             this.Label4.Location = new System.Drawing.Point(53, 137);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -334,6 +356,7 @@ namespace BusinessApp
             // 
             // Label3
             // 
+            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label3.AutoSize = true;
             this.Label3.Location = new System.Drawing.Point(47, 83);
             this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -364,6 +387,7 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -376,16 +400,18 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.RosyBrown;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(209, 9);
+            this.lbname.Location = new System.Drawing.Point(250, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(33, 20);
             this.lbname.TabIndex = 149;
             this.lbname.Text = "lb1";
+            this.lbname.Click += new System.EventHandler(this.lbname_Click);
             // 
             // lbtel
             // 
@@ -402,7 +428,7 @@ namespace BusinessApp
             this.AcceptButton = this.Button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 726);
+            this.ClientSize = new System.Drawing.Size(684, 711);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.lbtel);
@@ -434,6 +460,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(700, 750);
             this.Name = "receiptmidip";
             this.Text = "receiptmidip";
             this.Load += new System.EventHandler(this.receiptmidip_Load);

@@ -62,6 +62,7 @@ namespace BusinessApp
             // 
             // Panel1
             // 
+            this.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Panel1.Controls.Add(this.Button2);
             this.Panel1.Controls.Add(this.Button1);
@@ -119,6 +120,7 @@ namespace BusinessApp
             // 
             // Panel2
             // 
+            this.Panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Panel2.BackColor = System.Drawing.Color.Magenta;
             this.Panel2.Controls.Add(this.Button3);
             this.Panel2.Controls.Add(this.Button4);
@@ -141,6 +143,7 @@ namespace BusinessApp
             // 
             // txtcashiername1
             // 
+            this.txtcashiername1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcashiername1.Location = new System.Drawing.Point(168, 103);
             this.txtcashiername1.Name = "txtcashiername1";
             this.txtcashiername1.Size = new System.Drawing.Size(191, 26);
@@ -148,6 +151,7 @@ namespace BusinessApp
             // 
             // Label5
             // 
+            this.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label5.AutoSize = true;
             this.Label5.Location = new System.Drawing.Point(57, 103);
             this.Label5.Name = "Label5";
@@ -157,6 +161,7 @@ namespace BusinessApp
             // 
             // Label16
             // 
+            this.Label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label16.AutoSize = true;
             this.Label16.Location = new System.Drawing.Point(332, 149);
             this.Label16.Name = "Label16";
@@ -166,6 +171,7 @@ namespace BusinessApp
             // 
             // txtadminpassword
             // 
+            this.txtadminpassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtadminpassword.Location = new System.Drawing.Point(508, 146);
             this.txtadminpassword.Name = "txtadminpassword";
             this.txtadminpassword.PasswordChar = '#';
@@ -174,33 +180,36 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lbaddress.Location = new System.Drawing.Point(253, 56);
             this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(269, 18);
+            this.lbaddress.Size = new System.Drawing.Size(27, 18);
             this.lbaddress.TabIndex = 103;
-            this.lbaddress.Text = "Okha Market , Sapele Road, Benin City.";
+            this.lbaddress.Text = "lb2";
             this.lbaddress.Click += new System.EventHandler(this.Label2_Click);
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(208, 22);
+            this.lbname.Location = new System.Drawing.Point(291, 18);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(336, 25);
+            this.lbname.Size = new System.Drawing.Size(44, 25);
             this.lbname.TabIndex = 102;
-            this.lbname.Text = "WELCOME TO TRENDY SHOP";
+            this.lbname.Text = "lb1";
             this.lbname.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbtel
             // 
+            this.lbtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbtel.AutoSize = true;
-            this.lbtel.Location = new System.Drawing.Point(284, 78);
+            this.lbtel.Location = new System.Drawing.Point(368, 77);
             this.lbtel.Name = "lbtel";
             this.lbtel.Size = new System.Drawing.Size(51, 20);
             this.lbtel.TabIndex = 104;
