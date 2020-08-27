@@ -63,8 +63,9 @@ namespace BusinessApp
 		private void Button2_Click(object sender, System.EventArgs e)
 		{
 			generalsaleslog v = new generalsaleslog();
-			
-			v.Show();
+            v.txtpassword1.Text = txtpassword.Text;
+            v.txtpassword1.Visible = false;
+         	v.Show();
 		}
 
         private void saleslog_Load(object sender, EventArgs e)

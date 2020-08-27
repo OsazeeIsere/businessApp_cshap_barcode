@@ -50,6 +50,7 @@ namespace BusinessApp
             // 
             // Button1
             // 
+            this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button1.Location = new System.Drawing.Point(18, 183);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(222, 55);
@@ -60,6 +61,7 @@ namespace BusinessApp
             // 
             // Button2
             // 
+            this.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button2.Location = new System.Drawing.Point(271, 182);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(189, 55);
@@ -70,6 +72,7 @@ namespace BusinessApp
             // 
             // Button3
             // 
+            this.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button3.Location = new System.Drawing.Point(486, 185);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(185, 52);
@@ -80,6 +83,7 @@ namespace BusinessApp
             // 
             // Button4
             // 
+            this.Button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button4.Location = new System.Drawing.Point(284, 282);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(176, 52);
@@ -90,6 +94,7 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,11 +107,12 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(148, 23);
+            this.lbname.Location = new System.Drawing.Point(266, 19);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -117,7 +123,7 @@ namespace BusinessApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 403);
+            this.ClientSize = new System.Drawing.Size(685, 411);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.Button4);
@@ -126,6 +132,7 @@ namespace BusinessApp
             this.Controls.Add(this.Button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "expirydateinfotype";
             this.Text = "Expiry Date Info. Type";
             this.Load += new System.EventHandler(this.expirydateinfotype_Load);

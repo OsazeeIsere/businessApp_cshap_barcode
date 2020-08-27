@@ -52,6 +52,7 @@ namespace BusinessApp
             // 
             // txtproductid
             // 
+            this.txtproductid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtproductid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtproductid.Location = new System.Drawing.Point(179, 88);
             this.txtproductid.Name = "txtproductid";
@@ -60,6 +61,7 @@ namespace BusinessApp
             // 
             // Label2
             // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(37, 91);
@@ -70,6 +72,7 @@ namespace BusinessApp
             // 
             // Button2
             // 
+            this.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.Location = new System.Drawing.Point(362, 141);
             this.Button2.Name = "Button2";
@@ -81,6 +84,7 @@ namespace BusinessApp
             // 
             // Button1
             // 
+            this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.Location = new System.Drawing.Point(44, 141);
             this.Button1.Name = "Button1";
@@ -92,6 +96,7 @@ namespace BusinessApp
             // 
             // txtproductname
             // 
+            this.txtproductname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtproductname.Location = new System.Drawing.Point(31, 60);
             this.txtproductname.Name = "txtproductname";
             this.txtproductname.Size = new System.Drawing.Size(468, 20);
@@ -99,6 +104,7 @@ namespace BusinessApp
             // 
             // Label1
             // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(33, 33);
@@ -111,13 +117,14 @@ namespace BusinessApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 210);
+            this.ClientSize = new System.Drawing.Size(534, 211);
             this.Controls.Add(this.txtproductid);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.txtproductname);
             this.Controls.Add(this.Label1);
+            this.MinimumSize = new System.Drawing.Size(550, 250);
             this.Name = "deletcosmetics";
             this.Text = "deletcosmetics";
             this.Load += new System.EventHandler(this.deletcosmetics_Load);

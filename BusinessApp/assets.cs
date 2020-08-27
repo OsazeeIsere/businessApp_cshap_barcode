@@ -44,6 +44,9 @@ namespace BusinessApp
 		 {
 			try
 			{
+                pncosmetics.Visible = false;
+                pndrinks.Visible = false;
+                pngridview.Visible = false;
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
 
@@ -126,5 +129,10 @@ namespace BusinessApp
 		private void Label3_Click(object sender, System.EventArgs e)
 		{
 		}
-	}
+
+        private void Label13_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

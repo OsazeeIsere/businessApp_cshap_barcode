@@ -42,77 +42,82 @@ namespace BusinessApp
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
 		{
-			this.Label1 = new System.Windows.Forms.Label();
-			this.txtadminpassword = new System.Windows.Forms.TextBox();
-			this.Button1 = new System.Windows.Forms.Button();
-			this.txtcashierN = new System.Windows.Forms.TextBox();
-			this.Label2 = new System.Windows.Forms.Label();
-			this.SuspendLayout();
-			//
-			//Label1
-			//
-			this.Label1.AutoSize = true;
-			this.Label1.Location = new System.Drawing.Point(13, 66);
-			this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.Label1.Name = "Label1";
-			this.Label1.Size = new System.Drawing.Size(438, 40);
-			this.Label1.TabIndex = 0;
-			this.Label1.Text = "Administrator, If You Are There, Please Enter Your Password" + "\r" + "\n" + "And Press Enter";
-			this.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			//
-			//txtadminpassword
-			//
-			this.txtadminpassword.Location = new System.Drawing.Point(34, 128);
-			this.txtadminpassword.Name = "txtadminpassword";
-			this.txtadminpassword.PasswordChar = (char)35;
-			this.txtadminpassword.Size = new System.Drawing.Size(160, 26);
-			this.txtadminpassword.TabIndex = 1;
-			//
-			//Button1
-			//
-			this.Button1.Location = new System.Drawing.Point(210, 121);
-			this.Button1.Name = "Button1";
-			this.Button1.Size = new System.Drawing.Size(130, 33);
-			this.Button1.TabIndex = 2;
-			this.Button1.Text = "Enter";
-			this.Button1.UseVisualStyleBackColor = true;
-			//
-			//txtcashierN
-			//
-			this.txtcashierN.Location = new System.Drawing.Point(171, 14);
-			this.txtcashierN.Name = "txtcashierN";
-			this.txtcashierN.Size = new System.Drawing.Size(125, 26);
-			this.txtcashierN.TabIndex = 3;
-			//
-			//Label2
-			//
-			this.Label2.AutoSize = true;
-			this.Label2.Location = new System.Drawing.Point(45, 20);
-			this.Label2.Name = "Label2";
-			this.Label2.Size = new System.Drawing.Size(120, 20);
-			this.Label2.TabIndex = 4;
-			this.Label2.Text = "Current Cashier";
-			//
-			//Discount_Approval
-			//
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9.0F, 20.0F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(448, 193);
-			this.Controls.Add(this.Label2);
-			this.Controls.Add(this.txtcashierN);
-			this.Controls.Add(this.Button1);
-			this.Controls.Add(this.txtadminpassword);
-			this.Controls.Add(this.Label1);
-			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.0F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, Convert.ToByte(0));
-			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.Name = "Discount_Approval";
-			this.Text = "Discount_Approval";
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.txtadminpassword = new System.Windows.Forms.TextBox();
+            this.Button1 = new System.Windows.Forms.Button();
+            this.txtcashierN = new System.Windows.Forms.TextBox();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // Label1
+            // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(13, 66);
+            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(438, 40);
+            this.Label1.TabIndex = 0;
+            this.Label1.Text = "Administrator, If You Are There, Please Enter Your Password\r\nAnd Press Enter";
+            this.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtadminpassword
+            // 
+            this.txtadminpassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtadminpassword.Location = new System.Drawing.Point(34, 128);
+            this.txtadminpassword.Name = "txtadminpassword";
+            this.txtadminpassword.PasswordChar = '#';
+            this.txtadminpassword.Size = new System.Drawing.Size(160, 26);
+            this.txtadminpassword.TabIndex = 1;
+            // 
+            // Button1
+            // 
+            this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Button1.Location = new System.Drawing.Point(210, 121);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(130, 33);
+            this.Button1.TabIndex = 2;
+            this.Button1.Text = "Enter";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // txtcashierN
+            // 
+            this.txtcashierN.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtcashierN.Location = new System.Drawing.Point(171, 14);
+            this.txtcashierN.Name = "txtcashierN";
+            this.txtcashierN.Size = new System.Drawing.Size(125, 26);
+            this.txtcashierN.TabIndex = 3;
+            // 
+            // Label2
+            // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Label2.AutoSize = true;
+            this.Label2.Location = new System.Drawing.Point(45, 20);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(120, 20);
+            this.Label2.TabIndex = 4;
+            this.Label2.Text = "Current Cashier";
+            // 
+            // Discount_Approval
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(484, 211);
+            this.Controls.Add(this.Label2);
+            this.Controls.Add(this.txtcashierN);
+            this.Controls.Add(this.Button1);
+            this.Controls.Add(this.txtadminpassword);
+            this.Controls.Add(this.Label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(500, 250);
+            this.Name = "Discount_Approval";
+            this.Text = "Discount_Approval";
+            this.Load += new System.EventHandler(this.Discount_Approval_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
-//INSTANT C# NOTE: Converted design-time event handler wireups:
-			Button1.Click += new System.EventHandler(Button1_Click);
-			base.Load += new System.EventHandler(Discount_Approval_Load);
 		}
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.TextBox txtadminpassword;

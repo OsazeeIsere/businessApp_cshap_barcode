@@ -76,6 +76,7 @@ namespace BusinessApp
             // 
             // PictureBox1
             // 
+            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
             this.PictureBox1.Location = new System.Drawing.Point(419, 181);
@@ -87,6 +88,7 @@ namespace BusinessApp
             // 
             // Label8
             // 
+            this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label8.AutoSize = true;
             this.Label8.Location = new System.Drawing.Point(621, 192);
             this.Label8.Name = "Label8";
@@ -96,6 +98,7 @@ namespace BusinessApp
             // 
             // txtsearch
             // 
+            this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtsearch.Location = new System.Drawing.Point(492, 181);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
@@ -105,7 +108,8 @@ namespace BusinessApp
             // 
             // import
             // 
-            this.import.Location = new System.Drawing.Point(903, 173);
+            this.import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.import.Location = new System.Drawing.Point(1062, 178);
             this.import.Name = "import";
             this.import.Size = new System.Drawing.Size(128, 49);
             this.import.TabIndex = 88;
@@ -115,7 +119,8 @@ namespace BusinessApp
             // 
             // txtitems
             // 
-            this.txtitems.Location = new System.Drawing.Point(1037, 173);
+            this.txtitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtitems.Location = new System.Drawing.Point(1196, 178);
             this.txtitems.Multiline = true;
             this.txtitems.Name = "txtitems";
             this.txtitems.Size = new System.Drawing.Size(62, 41);
@@ -123,13 +128,15 @@ namespace BusinessApp
             // 
             // txtfile
             // 
-            this.txtfile.Location = new System.Drawing.Point(752, 181);
+            this.txtfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtfile.Location = new System.Drawing.Point(911, 186);
             this.txtfile.Name = "txtfile";
             this.txtfile.Size = new System.Drawing.Size(141, 26);
             this.txtfile.TabIndex = 89;
             // 
             // txttotal
             // 
+            this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txttotal.Location = new System.Drawing.Point(299, 181);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
@@ -138,6 +145,7 @@ namespace BusinessApp
             // 
             // Label2
             // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label2.AutoSize = true;
             this.Label2.Location = new System.Drawing.Point(8, 193);
             this.Label2.Name = "Label2";
@@ -147,6 +155,9 @@ namespace BusinessApp
             // 
             // lsvitems
             // 
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader12,
             this.ColumnHeader2,
@@ -232,13 +243,15 @@ namespace BusinessApp
             // 
             // DateTimePicker1
             // 
-            this.DateTimePicker1.Location = new System.Drawing.Point(770, 126);
+            this.DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateTimePicker1.Location = new System.Drawing.Point(986, 116);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(261, 26);
             this.DateTimePicker1.TabIndex = 84;
             // 
             // check
             // 
+            this.check.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.check.Location = new System.Drawing.Point(421, 112);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(223, 38);
@@ -249,6 +262,7 @@ namespace BusinessApp
             // 
             // Label1
             // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label1.AutoSize = true;
             this.Label1.Location = new System.Drawing.Point(42, 121);
             this.Label1.Name = "Label1";
@@ -258,6 +272,7 @@ namespace BusinessApp
             // 
             // ComboBox1
             // 
+            this.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ComboBox1.FormattingEnabled = true;
             this.ComboBox1.Items.AddRange(new object[] {
             "All Products",
@@ -278,6 +293,7 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,11 +306,12 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.Black;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(451, 9);
+            this.lbname.Location = new System.Drawing.Point(511, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -323,6 +340,7 @@ namespace BusinessApp
             this.Controls.Add(this.ComboBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "cosmeticsexpirydateinfo";
             this.Text = "Cosmetics Expiry Date Info.";
             this.Load += new System.EventHandler(this.cosmeticsexpirydateinfo_Load);

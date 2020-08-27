@@ -8,7 +8,6 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Linq;
 using System.Xml.Linq;
-
 using MySql.Data.MySqlClient;
 using xlapp = Microsoft.Office.Interop.Excel;
 namespace BusinessApp
@@ -46,6 +45,7 @@ namespace BusinessApp
 		{
 			try
 			{
+                txtadmin.Text = txtpassword1.Text;
                 txtpassword1.Text = "";
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");

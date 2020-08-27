@@ -67,6 +67,9 @@ namespace BusinessApp
             // 
             // dgvsaleslog
             // 
+            this.dgvsaleslog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -81,15 +84,16 @@ namespace BusinessApp
             this.dgvsaleslog.Location = new System.Drawing.Point(22, 75);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvsaleslog.Name = "dgvsaleslog";
-            this.dgvsaleslog.Size = new System.Drawing.Size(1249, 334);
+            this.dgvsaleslog.Size = new System.Drawing.Size(1249, 403);
             this.dgvsaleslog.TabIndex = 0;
             this.dgvsaleslog.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvsaleslog_CellContentClick);
             // 
             // Label1
             // 
+            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(806, 421);
+            this.Label1.Location = new System.Drawing.Point(807, 534);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(165, 24);
@@ -99,9 +103,10 @@ namespace BusinessApp
             // 
             // Label2
             // 
+            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(861, 473);
+            this.Label2.Location = new System.Drawing.Point(862, 586);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(97, 24);
@@ -111,8 +116,9 @@ namespace BusinessApp
             // 
             // txttotalsales
             // 
+            this.txttotalsales.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txttotalsales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalsales.Location = new System.Drawing.Point(970, 418);
+            this.txttotalsales.Location = new System.Drawing.Point(971, 531);
             this.txttotalsales.Name = "txttotalsales";
             this.txttotalsales.Size = new System.Drawing.Size(101, 31);
             this.txttotalsales.TabIndex = 27;
@@ -120,8 +126,9 @@ namespace BusinessApp
             // 
             // txttotaprofit
             // 
+            this.txttotaprofit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txttotaprofit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotaprofit.Location = new System.Drawing.Point(970, 471);
+            this.txttotaprofit.Location = new System.Drawing.Point(971, 584);
             this.txttotaprofit.Name = "txttotaprofit";
             this.txttotaprofit.Size = new System.Drawing.Size(101, 29);
             this.txttotaprofit.TabIndex = 28;
@@ -129,7 +136,8 @@ namespace BusinessApp
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(465, 522);
+            this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Button1.Location = new System.Drawing.Point(466, 635);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(254, 31);
             this.Button1.TabIndex = 29;
@@ -139,7 +147,8 @@ namespace BusinessApp
             // 
             // DateTimePicker1
             // 
-            this.DateTimePicker1.Location = new System.Drawing.Point(460, 417);
+            this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.DateTimePicker1.Location = new System.Drawing.Point(461, 530);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(260, 26);
             this.DateTimePicker1.TabIndex = 30;
@@ -147,8 +156,9 @@ namespace BusinessApp
             // 
             // Label3
             // 
+            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(51, 420);
+            this.Label3.Location = new System.Drawing.Point(52, 533);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(112, 20);
             this.Label3.TabIndex = 31;
@@ -157,8 +167,9 @@ namespace BusinessApp
             // 
             // cbocashier
             // 
+            this.cbocashier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cbocashier.FormattingEnabled = true;
-            this.cbocashier.Location = new System.Drawing.Point(169, 417);
+            this.cbocashier.Location = new System.Drawing.Point(170, 530);
             this.cbocashier.Name = "cbocashier";
             this.cbocashier.Size = new System.Drawing.Size(167, 28);
             this.cbocashier.TabIndex = 32;
@@ -166,8 +177,9 @@ namespace BusinessApp
             // 
             // Label4
             // 
+            this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(342, 420);
+            this.Label4.Location = new System.Drawing.Point(343, 533);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(120, 20);
             this.Label4.TabIndex = 33;
@@ -176,8 +188,9 @@ namespace BusinessApp
             // 
             // Label7
             // 
+            this.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(803, 522);
+            this.Label7.Location = new System.Drawing.Point(804, 635);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(155, 20);
             this.Label7.TabIndex = 34;
@@ -186,7 +199,8 @@ namespace BusinessApp
             // 
             // txtcustomer
             // 
-            this.txtcustomer.Location = new System.Drawing.Point(970, 519);
+            this.txtcustomer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtcustomer.Location = new System.Drawing.Point(971, 632);
             this.txtcustomer.Name = "txtcustomer";
             this.txtcustomer.Size = new System.Drawing.Size(101, 26);
             this.txtcustomer.TabIndex = 35;
@@ -194,7 +208,8 @@ namespace BusinessApp
             // 
             // DateTimePicker2
             // 
-            this.DateTimePicker2.Location = new System.Drawing.Point(465, 475);
+            this.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.DateTimePicker2.Location = new System.Drawing.Point(466, 588);
             this.DateTimePicker2.Name = "DateTimePicker2";
             this.DateTimePicker2.Size = new System.Drawing.Size(254, 26);
             this.DateTimePicker2.TabIndex = 36;
@@ -202,8 +217,9 @@ namespace BusinessApp
             // 
             // Label8
             // 
+            this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(342, 481);
+            this.Label8.Location = new System.Drawing.Point(343, 594);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(125, 20);
             this.Label8.TabIndex = 37;
@@ -212,6 +228,7 @@ namespace BusinessApp
             // 
             // txtpassword1
             // 
+            this.txtpassword1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtpassword1.Location = new System.Drawing.Point(47, 20);
             this.txtpassword1.Name = "txtpassword1";
             this.txtpassword1.PasswordChar = '*';
@@ -220,6 +237,7 @@ namespace BusinessApp
             // 
             // lbaddress
             // 
+            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,11 +250,12 @@ namespace BusinessApp
             // 
             // lbname
             // 
+            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
             this.lbname.BackColor = System.Drawing.Color.Red;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(472, 9);
+            this.lbname.Location = new System.Drawing.Point(545, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -251,7 +270,7 @@ namespace BusinessApp
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1284, 782);
+            this.ClientSize = new System.Drawing.Size(1294, 782);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtpassword1);
@@ -271,6 +290,7 @@ namespace BusinessApp
             this.Controls.Add(this.dgvsaleslog);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "drugslog";
             this.Text = "View Product Sales log";
             this.Load += new System.EventHandler(this.saleslog_Load);
