@@ -664,7 +664,13 @@ namespace BusinessApp
 		{
 			try
 			{
-				System.Data.DataTable dtgetsales = new System.Data.DataTable();
+
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                string strconnection = "";
+                System.Data.DataTable dtgetreceipt = new System.Data.DataTable();
 				double totalamount = 0;
 				dtgetsales = getdatabase("select amount from sales");
 				double temp = 0;
@@ -674,9 +680,20 @@ namespace BusinessApp
 					{
 						temp = temp + Convert.ToDouble(dtgetsales.Rows[i]["amount"]);
 					}
-
-					totalamount = temp;
+                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Insert Into receipt() values()"; 
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    dtgetreceipt = getdatabase("select * from receipt");
+                    totalamount = temp;
 					viewsales x = new viewsales();
+                    if (dtgetreceipt.Rows.Count > 0)
+                    {
+                        x.txtreceiptnumber.Text = dtgetreceipt.Rows.Count.ToString();
+                    }
 					x.txtcashiername1.Text = txtcashiername1.Text;
 					x.txttotal.Text = totalamount.ToString();
 					x.txtdiscount.Text = 0.ToString();
@@ -720,7 +737,7 @@ namespace BusinessApp
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+                         //   lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                             lsvitems.Items.Add(lstitem);
@@ -732,7 +749,7 @@ namespace BusinessApp
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+             //               lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                             lsvitems.Items.Add(lstitem);
@@ -1222,7 +1239,7 @@ namespace BusinessApp
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+                           // lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                             lsvitems.Items.Add(lstitem);
@@ -1234,7 +1251,7 @@ namespace BusinessApp
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+                       //     lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                             lsvitems.Items.Add(lstitem);
@@ -1350,6 +1367,11 @@ namespace BusinessApp
         private void txtcode2_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void sales_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

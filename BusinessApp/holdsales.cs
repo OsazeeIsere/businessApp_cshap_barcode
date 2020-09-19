@@ -73,13 +73,14 @@ namespace BusinessApp
 						lsvitems.Items.Add(lstitem);
 					}
 				}
-				System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
-				dtgetsaleslog = getdatabase("select quantitysold from drugslog");
-				if (dtgetsaleslog.Rows.Count > 0)
-				{
-					txtreceiptnumber.Text = "#" + dtgetsaleslog.Rows.Count.ToString();
-				}
-				txtcashiername1.Text = txtcashiername1.Text;
+				System.Data.DataTable dtgetreceipt = new System.Data.DataTable();
+                dtgetreceipt = getdatabase("select * from receipt");
+               
+                if (dtgetreceipt.Rows.Count > 0)
+                {
+                    txtreceiptnumber.Text = dtgetreceipt.Rows.Count.ToString();
+                }
+                txtcashiername1.Text = txtcashiername1.Text;
 				string time1 = null;
 				time1 = DateTime.Now.ToShortDateString () ;
 				txttime.Text = time1;

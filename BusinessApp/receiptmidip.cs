@@ -69,18 +69,12 @@ namespace BusinessApp
 						lsvitems.Items.Add(lstitem);
 					}
 				}
-				System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
-				dtgetsaleslog = getdatabase("select quantitysold from drugslog");
-				if (dtgetsaleslog.Rows.Count > 0)
-				{
-					txtreceiptnumber.Text = "#" + dtgetsaleslog.Rows.Count.ToString();
-				}
 				txtcashiername1.Text = txtcashiername1.Text;
 				string time1 = null;
                 time1 = DateTime.Now.ToShortTimeString();
                 txttime.Text = time1;
 				// insert Copyright symbol
-				lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2018 Nozeme Concepts(08163775990)";
+				lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 Nozeme Concepts(08163775990)";
 
 
 			}

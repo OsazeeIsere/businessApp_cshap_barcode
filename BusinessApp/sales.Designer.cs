@@ -368,6 +368,7 @@ namespace BusinessApp
             this.ColumnHeader10});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(12, 268);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
@@ -419,6 +420,7 @@ namespace BusinessApp
             this.ColumnHeader14});
             this.lsvitems1.FullRowSelect = true;
             this.lsvitems1.GridLines = true;
+            this.lsvitems1.HideSelection = false;
             this.lsvitems1.Location = new System.Drawing.Point(1310, 692);
             this.lsvitems1.Name = "lsvitems1";
             this.lsvitems1.ShowItemToolTips = true;
@@ -746,6 +748,7 @@ namespace BusinessApp
             this.Text = "Sales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.sales_Load);
+            this.Click += new System.EventHandler(this.sales_Click);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sales_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();

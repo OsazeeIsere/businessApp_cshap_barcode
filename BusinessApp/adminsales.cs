@@ -568,7 +568,13 @@ namespace BusinessApp
 		{
 			try
 			{
-				System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                double amount = 0;
+                string strconnection = "";
+              
 				double totalamount = 0;
 				dtgetsales = getdatabase("select amount from sales");
 				double temp = 0;
@@ -581,7 +587,22 @@ namespace BusinessApp
 				}
 				totalamount = temp;
 				viewsales x = new viewsales();
-				x.txtcashiername1.Text = txtcashiername1.Text;
+                System.Data.DataTable dtgetreceipt = new System.Data.DataTable();
+
+                strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
+                cn.Open();
+                cm.CommandText = "Insert Into receipt() values()";
+                cm.Connection = cn;
+                cm.ExecuteNonQuery();
+                cn.Close();
+                dtgetreceipt = getdatabase("select * from receipt");
+                totalamount = temp;
+                if (dtgetreceipt.Rows.Count > 0)
+                {
+                    x.txtreceiptnumber.Text = dtgetreceipt.Rows.Count.ToString();
+                }
+                x.txtcashiername1.Text = txtcashiername1.Text;
 				x.txttotal.Text = totalamount.ToString();
 				x.txtdiscount.Text = 0.ToString();
 				x.Show();

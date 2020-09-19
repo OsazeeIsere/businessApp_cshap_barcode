@@ -76,12 +76,7 @@ namespace BusinessApp
 						lstitem.SubItems.Add(dtgetsales.Rows[i]["amount"].ToString());
 						lsvitems.Items.Add(lstitem);
 					}
-					System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
-					dtgetsaleslog = getdatabase("select quantitysold from drugslog");
-					if (dtgetsaleslog.Rows.Count > 0)
-					{
-						txtreceiptnumber.Text = "#" + dtgetsaleslog.Rows.Count.ToString();
-					}
+					
 					txtcashiername1.Text = txtcashiername1.Text;
 					string time1 = null;
 					 time1 = DateTime.Now.ToShortTimeString();
@@ -217,13 +212,13 @@ namespace BusinessApp
 												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
-												cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
+												cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','"+ txtreceiptnumber.Text + "')";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
 												cn.ConnectionString = strconnection;
 												cn.Open();
-												cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
+												cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
@@ -256,13 +251,13 @@ namespace BusinessApp
 											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
-											cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
+											cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
 											cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
 											cn.ConnectionString = strconnection;
 											cn.Open();
-											cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "')";
+											cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
 											cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
@@ -423,6 +418,7 @@ namespace BusinessApp
                     x.txttotal.Text = txtgrandtotal.Text;
                     x.txtdiscount1.Text = txtdiscount.Text;
                     x.txtcash.Text = txtcash.Text;
+                    x.txtreceiptnumber.Text = txtreceiptnumber.Text;
                     double change = Convert.ToDouble(txtcash.Text) - Convert.ToDouble(txtgrandtotal.Text);
                     x.txtchange.Text = change.ToString();
                     x.Show();

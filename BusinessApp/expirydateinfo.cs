@@ -405,7 +405,9 @@ namespace BusinessApp
 						dblcost = Convert.ToDouble(worksheet.Cells[i, 4].Value);
 						dblprice = Convert.ToDouble(worksheet.Cells[i, 5].Value);
 						expirydate =Convert.ToString (worksheet.Cells[i, 6].Value);
-						suppliername = (worksheet.Cells[i, 7].Value);
+                        expirydate = Convert.ToDateTime(expirydate).ToShortDateString();
+
+                        suppliername = (worksheet.Cells[i, 7].Value);
 						suppliertel = (worksheet.Cells[i, 8].Value);
 						datepurchased = (worksheet.Cells[i, 9].Value);
 						dblamount = Convert.ToDouble(worksheet.Cells[i, 10].Value);

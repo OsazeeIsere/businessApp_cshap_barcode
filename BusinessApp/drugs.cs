@@ -301,7 +301,8 @@ namespace BusinessApp
 							dblcost = Convert.ToDouble(worksheet.Cells[i, 4].Value);
 							dblprice = Convert.ToDouble(worksheet.Cells[i, 5].Value);
 							expirydate =Convert.ToString(worksheet.Cells[i, 6].Value);
-                            //expirydate .ToShortDateString ();
+                           
+                           expirydate = Convert.ToDateTime(expirydate).ToShortDateString();
 							if (intproductid > 0)
 							{
 								MySqlConnection cn = new MySqlConnection();
@@ -348,7 +349,7 @@ namespace BusinessApp
 								strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 								cn.ConnectionString = strconnection;
 								cn.Open();
-								cm.CommandText = "Insert Into product(productname,quantity,unitcostprice,unitsalesprice,expirydate) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "')";
+								cm.CommandText = "Insert Into product(productname,quantity,unitcostprice,unitsalesprice,expirydate) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate.ToString() + "')";
 								cm.Connection = cn;
 								cm.ExecuteNonQuery();
 								cn.Close();
