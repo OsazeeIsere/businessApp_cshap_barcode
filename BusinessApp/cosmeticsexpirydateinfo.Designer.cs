@@ -173,6 +173,7 @@ namespace BusinessApp
             this.ColumnHeader10});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(12, 245);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
@@ -342,6 +343,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "cosmeticsexpirydateinfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cosmetics Expiry Date Info.";
             this.Load += new System.EventHandler(this.cosmeticsexpirydateinfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();

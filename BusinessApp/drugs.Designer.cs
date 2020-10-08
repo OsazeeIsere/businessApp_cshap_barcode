@@ -85,7 +85,6 @@ namespace BusinessApp
             this.txtinvoicenumber = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
             this.txtsupplierphonenumber = new System.Windows.Forms.TextBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Button8 = new System.Windows.Forms.Button();
             this.Label16 = new System.Windows.Forms.Label();
             this.txtadminpassword = new System.Windows.Forms.TextBox();
@@ -106,6 +105,7 @@ namespace BusinessApp
             this.lbname = new System.Windows.Forms.Label();
             this.txtcode2 = new System.Windows.Forms.TextBox();
             this.btncode = new System.Windows.Forms.Button();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -455,18 +455,6 @@ namespace BusinessApp
             this.txtsupplierphonenumber.Size = new System.Drawing.Size(161, 26);
             this.txtsupplierphonenumber.TabIndex = 55;
             // 
-            // PictureBox1
-            // 
-            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
-            this.PictureBox1.Location = new System.Drawing.Point(12, 310);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(61, 31);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 30;
-            this.PictureBox1.TabStop = false;
-            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
             // Button8
             // 
             this.Button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -520,6 +508,7 @@ namespace BusinessApp
             this.ColumnHeader10});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(12, 347);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
@@ -650,6 +639,18 @@ namespace BusinessApp
             this.btncode.UseVisualStyleBackColor = true;
             this.btncode.Click += new System.EventHandler(this.button10_Click);
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
+            this.PictureBox1.Location = new System.Drawing.Point(12, 310);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(61, 31);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 30;
+            this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
             // drugs
             // 
             this.AcceptButton = this.btncode;
@@ -715,6 +716,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "drugs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.product_Load);
             this.Enter += new System.EventHandler(this.drugs_Enter);

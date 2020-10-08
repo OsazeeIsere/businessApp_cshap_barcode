@@ -494,6 +494,7 @@ namespace BusinessApp
             this.ColumnHeader14});
             this.lsvitems1.FullRowSelect = true;
             this.lsvitems1.GridLines = true;
+            this.lsvitems1.HideSelection = false;
             this.lsvitems1.Location = new System.Drawing.Point(27, 381);
             this.lsvitems1.Name = "lsvitems1";
             this.lsvitems1.ShowItemToolTips = true;
@@ -678,6 +679,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "cosmetics";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cosmetics";
             this.Load += new System.EventHandler(this.cards_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cosmetics_MouseClick);

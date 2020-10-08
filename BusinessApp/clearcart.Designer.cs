@@ -93,6 +93,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label1);
             this.MinimumSize = new System.Drawing.Size(450, 250);
             this.Name = "clearcart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "clearcart";
             this.Load += new System.EventHandler(this.clearcart_Load);
             this.ResumeLayout(false);

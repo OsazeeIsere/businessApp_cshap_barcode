@@ -135,6 +135,12 @@
     <Compile Include="IdentityForm.Designer.cs">
       <DependentUpon>IdentityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales Reversal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Reversal.Designer.cs">
+      <DependentUpon>Sales Reversal.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -588,6 +594,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reorderleveltype.resx">
       <DependentUpon>reorderleveltype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Reversal.resx">
+      <DependentUpon>Sales Reversal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesAlert.resx">
       <DependentUpon>SalesAlert.cs</DependentUpon>

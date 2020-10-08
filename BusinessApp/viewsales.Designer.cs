@@ -155,6 +155,7 @@ namespace BusinessApp
             this.txtcashiername1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtcashiername1.Location = new System.Drawing.Point(113, 74);
             this.txtcashiername1.Name = "txtcashiername1";
+            this.txtcashiername1.ReadOnly = true;
             this.txtcashiername1.Size = new System.Drawing.Size(107, 26);
             this.txtcashiername1.TabIndex = 18;
             // 
@@ -163,6 +164,7 @@ namespace BusinessApp
             this.txtreceiptnumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtreceiptnumber.Location = new System.Drawing.Point(122, 113);
             this.txtreceiptnumber.Name = "txtreceiptnumber";
+            this.txtreceiptnumber.ReadOnly = true;
             this.txtreceiptnumber.Size = new System.Drawing.Size(97, 26);
             this.txtreceiptnumber.TabIndex = 19;
             // 
@@ -178,6 +180,7 @@ namespace BusinessApp
             // 
             this.txttime.Location = new System.Drawing.Point(324, 65);
             this.txttime.Name = "txttime";
+            this.txttime.ReadOnly = true;
             this.txttime.Size = new System.Drawing.Size(155, 26);
             this.txttime.TabIndex = 21;
             this.txttime.TextChanged += new System.EventHandler(this.txttime_TextChanged);
@@ -187,6 +190,7 @@ namespace BusinessApp
             this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txttotal.Location = new System.Drawing.Point(543, 377);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(98, 26);
             this.txttotal.TabIndex = 34;
             // 
@@ -241,6 +245,7 @@ namespace BusinessApp
             this.ColumnHeader4});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(16, 190);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.Size = new System.Drawing.Size(647, 171);
@@ -270,6 +275,7 @@ namespace BusinessApp
             this.txtdiscount.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtdiscount.Location = new System.Drawing.Point(540, 409);
             this.txtdiscount.Name = "txtdiscount";
+            this.txtdiscount.ReadOnly = true;
             this.txtdiscount.Size = new System.Drawing.Size(101, 26);
             this.txtdiscount.TabIndex = 71;
             this.txtdiscount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtdiscount_MouseClick);
@@ -292,6 +298,7 @@ namespace BusinessApp
             this.txtgrandtotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtgrandtotal.Location = new System.Drawing.Point(540, 458);
             this.txtgrandtotal.Name = "txtgrandtotal";
+            this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(101, 26);
             this.txtgrandtotal.TabIndex = 73;
             this.txtgrandtotal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtgrandtotal_MouseClick);
@@ -555,6 +562,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "viewsales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewsales";
             this.Load += new System.EventHandler(this.receipt_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.viewsales_MouseClick);

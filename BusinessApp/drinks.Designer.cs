@@ -498,6 +498,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
             this.Name = "drinks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "drinks";
             this.Load += new System.EventHandler(this.drinks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdrinks)).EndInit();

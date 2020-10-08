@@ -187,6 +187,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "welcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "welcome";
             this.Load += new System.EventHandler(this.welcome_Load);
             this.panel1.ResumeLayout(false);

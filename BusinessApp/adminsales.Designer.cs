@@ -322,9 +322,9 @@ namespace BusinessApp
             // 
             // Label3
             // 
-            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(1029, 262);
+            this.Label3.Location = new System.Drawing.Point(579, 200);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(181, 20);
             this.Label3.TabIndex = 104;
@@ -332,8 +332,8 @@ namespace BusinessApp
             // 
             // txtunitsalesprice
             // 
-            this.txtunitsalesprice.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtunitsalesprice.Location = new System.Drawing.Point(1216, 262);
+            this.txtunitsalesprice.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtunitsalesprice.Location = new System.Drawing.Point(766, 200);
             this.txtunitsalesprice.Name = "txtunitsalesprice";
             this.txtunitsalesprice.Size = new System.Drawing.Size(101, 26);
             this.txtunitsalesprice.TabIndex = 105;
@@ -350,6 +350,7 @@ namespace BusinessApp
             this.ColumnHeader14});
             this.lsvitems1.FullRowSelect = true;
             this.lsvitems1.GridLines = true;
+            this.lsvitems1.HideSelection = false;
             this.lsvitems1.Location = new System.Drawing.Point(1170, 757);
             this.lsvitems1.Name = "lsvitems1";
             this.lsvitems1.ShowItemToolTips = true;
@@ -408,6 +409,7 @@ namespace BusinessApp
             this.ColumnHeader10});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(38, 314);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
@@ -531,7 +533,7 @@ namespace BusinessApp
             this.lbaddress.BackColor = System.Drawing.Color.Black;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(484, 47);
+            this.lbaddress.Location = new System.Drawing.Point(522, 47);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(27, 18);
             this.lbaddress.TabIndex = 116;
@@ -722,6 +724,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "adminsales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminsales";
             this.Load += new System.EventHandler(this.adminsales_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.adminsales_MouseClick);

@@ -55,12 +55,16 @@ namespace BusinessApp
             {
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
-
                 lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
-                //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                //lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 txtcash.Focus();
-				System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                DataTable dtgetreceipt = getdatabase("select * from receipt");
+                if (dtgetreceipt.Rows.Count > 0)
+                {
+                    txtreceiptnumber.Text = dtgetreceipt.Rows.Count.ToString();
+                }
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
 				dtgetsales = getdatabase("select transactionid,quantitysold,itemsold,unitprice,amount from sales order by itemsold");
 				if (dtgetsales.Rows.Count > 0)
 				{
@@ -163,7 +167,7 @@ namespace BusinessApp
 								v = Convert.ToDouble(dtgetsales.Rows[i]["unitcostprice"]);
 								amountcost = v * Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
 								double a = 0;
-								a = Convert.ToDouble(dtgetsales.Rows[0]["unitprice"]);
+								a = Convert.ToDouble(dtgetsales.Rows[i]["unitprice"]);
 								amount = a * Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
 								profit = amount - amountcost;
 								discount = 0;
@@ -200,7 +204,7 @@ namespace BusinessApp
 												cm.ExecuteNonQuery();
 												cn.Close();
 												cn.Open();
-												cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + Convert.ToString(dtgetexpirydate.Rows[k]["productname"]) + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitcostprice"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]) + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
+												cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + Convert.ToString(dtgetexpirydate.Rows[k]["productname"]) + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitcostprice"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
@@ -212,13 +216,13 @@ namespace BusinessApp
 												strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 												cn.ConnectionString = strconnection;
 												cn.Open();
-												cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','"+ txtreceiptnumber.Text + "')";
+												cm.CommandText = "Insert Into drugslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "',"+intproductid+",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','"+ txtreceiptnumber.Text + "')";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
 												cn.ConnectionString = strconnection;
 												cn.Open();
-												cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
+												cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "',"+intproductid+",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
@@ -251,14 +255,14 @@ namespace BusinessApp
 											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 											cn.ConnectionString = strconnection;
 											cn.Open();
-											cm.CommandText = "Insert Into drugslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
-											cm.Connection = cn;
+                                            cm.CommandText = "Insert Into drugslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
+                                            cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
 											cn.ConnectionString = strconnection;
 											cn.Open();
-											cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
-											cm.Connection = cn;
+                                            cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date + "','" + txtreceiptnumber.Text + "')";
+                                            cm.Connection = cn;
 											cm.ExecuteNonQuery();
 											cn.Close();
 											strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
@@ -327,7 +331,7 @@ namespace BusinessApp
 												cm.ExecuteNonQuery();
 												cn.Close();
 												cn.Open();
-												cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + dtgetexpirydate.Rows[k]["cosmeticsname"] + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitcostprice"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]) + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
+												cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + dtgetexpirydate.Rows[k]["cosmeticsname"] + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitcostprice"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
 												cm.Connection = cn;
 												cm.ExecuteNonQuery();
 												cn.Close();
@@ -732,18 +736,20 @@ namespace BusinessApp
 					totalamount = temp;
 					txttotal.Text = temp.ToString();
 					System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
-					dtgetsaleslog = getdatabase("select quantitysold from drugslog");
-					if (dtgetsaleslog.Rows.Count > 0)
-					{
-						txtreceiptnumber.Text = "#" + dtgetsaleslog.Rows.Count.ToString();
-					}
-					txtcashiername1.Text = txtcashiername1.Text;
+                    DataTable dtgetreceipt = getdatabase("select * from receipt");
+                    if (dtgetreceipt.Rows.Count > 0)
+                    {
+                        txtreceiptnumber.Text = dtgetreceipt.Rows.Count.ToString();
+                    }
+                    txtcashiername1.Text = txtcashiername1.Text;
 				}
 				else
 				{
 					lsvitems.Clear();
 					txttotal.Text = "";
-					txtreceiptnumber.Text = "#";
+					txtreceiptnumber.Text = "";
+                    txtgrandtotal.Text = "";
+                    txtcash.Text = "";
 				}
 				string time1 = null;
 				 time1 = DateTime.Now.ToShortTimeString();

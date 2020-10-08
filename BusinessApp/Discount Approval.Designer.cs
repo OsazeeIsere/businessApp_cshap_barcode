@@ -58,7 +58,7 @@ namespace BusinessApp
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(438, 40);
             this.Label1.TabIndex = 0;
-            this.Label1.Text = "Administrator, If You Are There, Please Enter Your Password\r\nAnd Press Enter";
+            this.Label1.Text = "Administrator, If You Are There, Please Enter Your Password\r\nAnd Click Enter";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtadminpassword
@@ -113,6 +113,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(500, 250);
             this.Name = "Discount_Approval";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Discount_Approval";
             this.Load += new System.EventHandler(this.Discount_Approval_Load);
             this.ResumeLayout(false);

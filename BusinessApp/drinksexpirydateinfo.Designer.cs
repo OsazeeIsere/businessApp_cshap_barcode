@@ -149,6 +149,7 @@ namespace BusinessApp
             this.ColumnHeader10});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(23, 275);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
@@ -317,6 +318,7 @@ namespace BusinessApp
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "drinksexpirydateinfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Drinks Expiry Date Info.";
             this.Load += new System.EventHandler(this.drinksexpirydateinfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();

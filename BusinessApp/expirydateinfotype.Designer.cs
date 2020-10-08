@@ -134,6 +134,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "expirydateinfotype";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expiry Date Info. Type";
             this.Load += new System.EventHandler(this.expirydateinfotype_Load);
             this.ResumeLayout(false);

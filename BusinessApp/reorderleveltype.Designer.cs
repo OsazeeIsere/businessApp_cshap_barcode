@@ -129,6 +129,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "reorderleveltype";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reorder Level Type";
             this.Load += new System.EventHandler(this.reorderleveltype_Load);
             this.ResumeLayout(false);

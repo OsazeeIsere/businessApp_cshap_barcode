@@ -148,6 +148,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label1);
             this.MinimumSize = new System.Drawing.Size(500, 250);
             this.Name = "editsales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "editsales";
             this.Load += new System.EventHandler(this.editsales_Load);
             this.ResumeLayout(false);

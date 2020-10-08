@@ -147,6 +147,7 @@
             this.lsvitems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(32, 355);
             this.lsvitems.Margin = new System.Windows.Forms.Padding(4);
             this.lsvitems.Name = "lsvitems";
@@ -303,6 +304,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "trackExpiryDate3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "trackExpiryDate3";
             this.Load += new System.EventHandler(this.trackExpiryDate3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();

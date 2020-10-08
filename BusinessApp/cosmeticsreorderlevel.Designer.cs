@@ -69,6 +69,7 @@ namespace BusinessApp
             this.ColumnHeader5});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(89, 205);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.Size = new System.Drawing.Size(739, 384);
@@ -204,6 +205,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "cosmeticsreorderlevel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cosmetics ReOrder Level";
             this.Load += new System.EventHandler(this.cardsreorderlevel_Load);
             this.ResumeLayout(false);

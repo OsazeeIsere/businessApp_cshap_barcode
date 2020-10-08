@@ -43,7 +43,7 @@ namespace BusinessApp
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -62,28 +62,32 @@ namespace BusinessApp
             this.txtpassword1 = new System.Windows.Forms.TextBox();
             this.lbaddress = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvsaleslog
             // 
+            this.dgvsaleslog.AllowUserToAddRows = false;
+            this.dgvsaleslog.AllowUserToDeleteRows = false;
             this.dgvsaleslog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvsaleslog.Location = new System.Drawing.Point(22, 75);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvsaleslog.Name = "dgvsaleslog";
+            this.dgvsaleslog.ReadOnly = true;
             this.dgvsaleslog.Size = new System.Drawing.Size(1249, 403);
             this.dgvsaleslog.TabIndex = 0;
             this.dgvsaleslog.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvsaleslog_CellContentClick);
@@ -120,6 +124,7 @@ namespace BusinessApp
             this.txttotalsales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotalsales.Location = new System.Drawing.Point(971, 531);
             this.txttotalsales.Name = "txttotalsales";
+            this.txttotalsales.ReadOnly = true;
             this.txttotalsales.Size = new System.Drawing.Size(101, 31);
             this.txttotalsales.TabIndex = 27;
             this.txttotalsales.TextChanged += new System.EventHandler(this.txttotalsales_TextChanged);
@@ -130,6 +135,7 @@ namespace BusinessApp
             this.txttotaprofit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotaprofit.Location = new System.Drawing.Point(971, 584);
             this.txttotaprofit.Name = "txttotaprofit";
+            this.txttotaprofit.ReadOnly = true;
             this.txttotaprofit.Size = new System.Drawing.Size(101, 29);
             this.txttotaprofit.TabIndex = 28;
             this.txttotaprofit.TextChanged += new System.EventHandler(this.txttotaprofit_TextChanged);
@@ -202,6 +208,7 @@ namespace BusinessApp
             this.txtcustomer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtcustomer.Location = new System.Drawing.Point(971, 632);
             this.txtcustomer.Name = "txtcustomer";
+            this.txtcustomer.ReadOnly = true;
             this.txtcustomer.Size = new System.Drawing.Size(101, 26);
             this.txtcustomer.TabIndex = 35;
             this.txtcustomer.TextChanged += new System.EventHandler(this.txtcustomer_TextChanged);
@@ -232,6 +239,7 @@ namespace BusinessApp
             this.txtpassword1.Location = new System.Drawing.Point(47, 20);
             this.txtpassword1.Name = "txtpassword1";
             this.txtpassword1.PasswordChar = '*';
+            this.txtpassword1.ReadOnly = true;
             this.txtpassword1.Size = new System.Drawing.Size(142, 26);
             this.txtpassword1.TabIndex = 38;
             // 
@@ -262,6 +270,17 @@ namespace BusinessApp
             this.lbname.TabIndex = 39;
             this.lbname.Text = "lb1";
             // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(232, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 45);
+            this.button2.TabIndex = 59;
+            this.button2.Text = "Cancel Sales";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // drugslog
             // 
             this.AcceptButton = this.Button1;
@@ -271,6 +290,7 @@ namespace BusinessApp
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1294, 782);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtpassword1);
@@ -292,8 +312,10 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "drugslog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Product Sales log";
             this.Load += new System.EventHandler(this.saleslog_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drugslog_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,6 +339,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.TextBox txtpassword1;
 		internal System.Windows.Forms.Label lbaddress;
 		internal System.Windows.Forms.Label lbname;
-	}
+        private System.Windows.Forms.Button button2;
+    }
 
 }

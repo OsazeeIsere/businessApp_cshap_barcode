@@ -130,6 +130,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label1);
             this.MinimumSize = new System.Drawing.Size(500, 250);
             this.Name = "cashier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cashier";
             this.Load += new System.EventHandler(this.cashier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();

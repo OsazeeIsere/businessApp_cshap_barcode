@@ -100,10 +100,10 @@ namespace BusinessApp
             this.txt0 = new System.Windows.Forms.TextBox();
             this.txt1 = new System.Windows.Forms.TextBox();
             this.txt3 = new System.Windows.Forms.TextBox();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtcode2 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -558,7 +558,7 @@ namespace BusinessApp
             this.lbname.AutoSize = true;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(476, 9);
+            this.lbname.Location = new System.Drawing.Point(551, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -644,28 +644,6 @@ namespace BusinessApp
             this.txt3.Size = new System.Drawing.Size(202, 85);
             this.txt3.TabIndex = 129;
             // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PictureBox2.Image = global::BusinessApp.Properties.Resources.search3;
-            this.PictureBox2.Location = new System.Drawing.Point(1050, 211);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(58, 37);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox2.TabIndex = 75;
-            this.PictureBox2.TabStop = false;
-            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
-            // 
-            // PictureBox3
-            // 
-            this.PictureBox3.Image = global::BusinessApp.Properties.Resources.search3;
-            this.PictureBox3.Location = new System.Drawing.Point(340, 212);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(61, 37);
-            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox3.TabIndex = 63;
-            this.PictureBox3.TabStop = false;
-            // 
             // txtcode2
             // 
             this.txtcode2.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -687,6 +665,28 @@ namespace BusinessApp
             this.label19.Size = new System.Drawing.Size(88, 24);
             this.label19.TabIndex = 130;
             this.label19.Text = "Barcode";
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PictureBox2.Image = global::BusinessApp.Properties.Resources.search3;
+            this.PictureBox2.Location = new System.Drawing.Point(1050, 211);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(58, 37);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox2.TabIndex = 75;
+            this.PictureBox2.TabStop = false;
+            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // PictureBox3
+            // 
+            this.PictureBox3.Image = global::BusinessApp.Properties.Resources.search3;
+            this.PictureBox3.Location = new System.Drawing.Point(340, 212);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(61, 37);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox3.TabIndex = 63;
+            this.PictureBox3.TabStop = false;
             // 
             // sales
             // 
@@ -745,6 +745,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "sales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.sales_Load);

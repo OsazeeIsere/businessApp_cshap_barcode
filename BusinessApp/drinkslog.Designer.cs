@@ -258,6 +258,7 @@ namespace BusinessApp
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "drinkslog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Drinks Sales log";
             this.Load += new System.EventHandler(this.drinkslog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdrinkslog)).EndInit();

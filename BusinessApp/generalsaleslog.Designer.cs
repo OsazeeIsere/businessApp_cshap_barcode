@@ -62,6 +62,7 @@ namespace BusinessApp
             this.lbaddress = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
             this.txtadmin = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +89,7 @@ namespace BusinessApp
             this.txtcustomer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtcustomer.Location = new System.Drawing.Point(1054, 541);
             this.txtcustomer.Name = "txtcustomer";
+            this.txtcustomer.ReadOnly = true;
             this.txtcustomer.Size = new System.Drawing.Size(101, 26);
             this.txtcustomer.TabIndex = 51;
             // 
@@ -155,6 +157,7 @@ namespace BusinessApp
             this.txttotaprofit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotaprofit.Location = new System.Drawing.Point(1054, 487);
             this.txttotaprofit.Name = "txttotaprofit";
+            this.txttotaprofit.ReadOnly = true;
             this.txttotaprofit.Size = new System.Drawing.Size(101, 29);
             this.txttotaprofit.TabIndex = 44;
             // 
@@ -164,6 +167,7 @@ namespace BusinessApp
             this.txttotalsales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotalsales.Location = new System.Drawing.Point(1054, 434);
             this.txttotalsales.Name = "txttotalsales";
+            this.txttotalsales.ReadOnly = true;
             this.txttotalsales.Size = new System.Drawing.Size(101, 31);
             this.txttotalsales.TabIndex = 43;
             // 
@@ -193,6 +197,8 @@ namespace BusinessApp
             // 
             // dgvsaleslog
             // 
+            this.dgvsaleslog.AllowUserToAddRows = false;
+            this.dgvsaleslog.AllowUserToDeleteRows = false;
             this.dgvsaleslog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -210,8 +216,11 @@ namespace BusinessApp
             this.dgvsaleslog.Location = new System.Drawing.Point(25, 86);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvsaleslog.Name = "dgvsaleslog";
+            this.dgvsaleslog.ReadOnly = true;
             this.dgvsaleslog.Size = new System.Drawing.Size(1130, 334);
             this.dgvsaleslog.TabIndex = 38;
+            this.dgvsaleslog.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvsaleslog_UserDeletedRow);
+            this.dgvsaleslog.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvsaleslog_UserDeletingRow);
             // 
             // txtpassword1
             // 
@@ -258,12 +267,24 @@ namespace BusinessApp
             this.txtadmin.Size = new System.Drawing.Size(100, 26);
             this.txtadmin.TabIndex = 57;
             // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(139, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 45);
+            this.button2.TabIndex = 58;
+            this.button2.Text = "Cancel Sales";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // generalsaleslog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1253, 637);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.txtadmin);
             this.Controls.Add(this.lbaddress);
             this.Controls.Add(this.lbname);
@@ -286,8 +307,10 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 650);
             this.Name = "generalsaleslog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "general Sales Log";
             this.Load += new System.EventHandler(this.generalsaleslog_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.generalsaleslog_MouseClick_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -311,6 +334,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label lbaddress;
 		internal System.Windows.Forms.Label lbname;
         private System.Windows.Forms.TextBox txtadmin;
+        private System.Windows.Forms.Button button2;
     }
 
 }

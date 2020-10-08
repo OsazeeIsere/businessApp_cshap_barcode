@@ -152,6 +152,7 @@ namespace BusinessApp
             this.ColumnHeader4});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(46, 183);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.Size = new System.Drawing.Size(552, 193);
@@ -462,6 +463,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(700, 750);
             this.Name = "receiptmidip";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "receiptmidip";
             this.Load += new System.EventHandler(this.receiptmidip_Load);
             this.ResumeLayout(false);

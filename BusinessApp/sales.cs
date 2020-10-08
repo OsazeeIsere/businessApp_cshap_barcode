@@ -687,14 +687,9 @@ namespace BusinessApp
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    dtgetreceipt = getdatabase("select * from receipt");
                     totalamount = temp;
-					viewsales x = new viewsales();
-                    if (dtgetreceipt.Rows.Count > 0)
-                    {
-                        x.txtreceiptnumber.Text = dtgetreceipt.Rows.Count.ToString();
-                    }
-					x.txtcashiername1.Text = txtcashiername1.Text;
+                    viewsales x = new viewsales();
+                    x.txtcashiername1.Text = txtcashiername1.Text;
 					x.txttotal.Text = totalamount.ToString();
 					x.txtdiscount.Text = 0.ToString();
 					x.Show();

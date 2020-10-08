@@ -57,9 +57,9 @@ namespace BusinessApp
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(15, 21);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(284, 20);
+            this.Label1.Size = new System.Drawing.Size(294, 20);
             this.Label1.TabIndex = 0;
-            this.Label1.Text = "Are You Sure You Want To Delet: ";
+            this.Label1.Text = "Are You Sure You Want To Delete: ";
             this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtproductname
@@ -130,6 +130,7 @@ namespace BusinessApp
             this.Controls.Add(this.Label1);
             this.MinimumSize = new System.Drawing.Size(500, 250);
             this.Name = "delet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "delet";
             this.Load += new System.EventHandler(this.delet_Load);
             this.ResumeLayout(false);

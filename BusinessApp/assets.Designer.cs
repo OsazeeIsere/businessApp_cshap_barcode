@@ -471,6 +471,7 @@ namespace BusinessApp
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "assets";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "assets";
             this.Load += new System.EventHandler(this.assets_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdrugs)).EndInit();

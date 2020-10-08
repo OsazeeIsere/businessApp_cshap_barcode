@@ -320,6 +320,7 @@ namespace BusinessApp
             this.ColumnHeader4});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(75, 174);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.Size = new System.Drawing.Size(552, 193);
@@ -484,6 +485,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(700, 700);
             this.Name = "finalreceipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "finalreceipt";
             this.Load += new System.EventHandler(this.finalreceipt_Load);
             this.ResumeLayout(false);

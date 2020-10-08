@@ -114,6 +114,7 @@ namespace BusinessApp
             this.ColumnHeader6});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
             this.lsvitems.Location = new System.Drawing.Point(99, 184);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.Size = new System.Drawing.Size(739, 384);
@@ -209,6 +210,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "reorderlevel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReOrder Level For Products";
             this.Load += new System.EventHandler(this.reorderlevel_Load);
             this.ResumeLayout(false);

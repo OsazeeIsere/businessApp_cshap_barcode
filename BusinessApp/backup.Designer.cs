@@ -146,6 +146,7 @@ namespace BusinessApp
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(600, 450);
             this.Name = "backup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "backup";
             this.Load += new System.EventHandler(this.backup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
