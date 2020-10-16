@@ -45,6 +45,7 @@ namespace BusinessApp
             this.Label1 = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
+            this.txtcashiername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Label1
@@ -83,11 +84,20 @@ namespace BusinessApp
             this.Button2.UseVisualStyleBackColor = true;
             this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // txtcashiername
+            // 
+            this.txtcashiername.Location = new System.Drawing.Point(129, 183);
+            this.txtcashiername.Name = "txtcashiername";
+            this.txtcashiername.Size = new System.Drawing.Size(199, 20);
+            this.txtcashiername.TabIndex = 3;
+            this.txtcashiername.Visible = false;
+            // 
             // clearcart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 211);
+            this.Controls.Add(this.txtcashiername);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.Label1);
@@ -103,6 +113,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.Button Button1;
 		internal System.Windows.Forms.Button Button2;
-	}
+        private TextBox txtcashiername;
+    }
 
 }

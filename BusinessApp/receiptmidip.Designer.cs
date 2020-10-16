@@ -98,6 +98,7 @@ namespace BusinessApp
             this.txtdiscount1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtdiscount1.Location = new System.Drawing.Point(482, 503);
             this.txtdiscount1.Name = "txtdiscount1";
+            this.txtdiscount1.ReadOnly = true;
             this.txtdiscount1.Size = new System.Drawing.Size(130, 26);
             this.txtdiscount1.TabIndex = 142;
             // 
@@ -196,6 +197,7 @@ namespace BusinessApp
             this.txtchange.Location = new System.Drawing.Point(480, 542);
             this.txtchange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtchange.Name = "txtchange";
+            this.txtchange.ReadOnly = true;
             this.txtchange.Size = new System.Drawing.Size(132, 26);
             this.txtchange.TabIndex = 135;
             // 
@@ -228,6 +230,7 @@ namespace BusinessApp
             this.txtcash.Location = new System.Drawing.Point(482, 455);
             this.txtcash.Margin = new System.Windows.Forms.Padding(4);
             this.txtcash.Name = "txtcash";
+            this.txtcash.ReadOnly = true;
             this.txtcash.Size = new System.Drawing.Size(130, 26);
             this.txtcash.TabIndex = 132;
             // 
@@ -237,6 +240,7 @@ namespace BusinessApp
             this.txttotal.Location = new System.Drawing.Point(480, 404);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(129, 26);
             this.txttotal.TabIndex = 131;
             // 
@@ -246,6 +250,7 @@ namespace BusinessApp
             this.txttime.Location = new System.Drawing.Point(433, 82);
             this.txttime.Margin = new System.Windows.Forms.Padding(4);
             this.txttime.Name = "txttime";
+            this.txttime.ReadOnly = true;
             this.txttime.Size = new System.Drawing.Size(221, 26);
             this.txttime.TabIndex = 130;
             // 
@@ -264,6 +269,7 @@ namespace BusinessApp
             this.txtreceiptnumber.Location = new System.Drawing.Point(155, 131);
             this.txtreceiptnumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtreceiptnumber.Name = "txtreceiptnumber";
+            this.txtreceiptnumber.ReadOnly = true;
             this.txtreceiptnumber.Size = new System.Drawing.Size(128, 26);
             this.txtreceiptnumber.TabIndex = 128;
             // 
@@ -273,6 +279,7 @@ namespace BusinessApp
             this.txtcashiername1.Location = new System.Drawing.Point(144, 83);
             this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4);
             this.txtcashiername1.Name = "txtcashiername1";
+            this.txtcashiername1.ReadOnly = true;
             this.txtcashiername1.Size = new System.Drawing.Size(141, 26);
             this.txtcashiername1.TabIndex = 127;
             // 

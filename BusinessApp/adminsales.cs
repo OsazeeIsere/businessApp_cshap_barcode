@@ -723,7 +723,9 @@ namespace BusinessApp
 					//Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
 					dtgetsales = getdatabase(" select * from product where productid=" + intproductid);
 					txtunitsalesprice.Text = Convert.ToDouble(dtgetsales.Rows[0]["unitsalesprice"]).ToString();
-					txtdrugid.Text = Convert.ToDouble(dtgetsales.Rows[0]["productid"]).ToString();
+                    txtproductname.Text = dtgetsales.Rows[0]["productname"].ToString();
+
+                    txtdrugid.Text = Convert.ToDouble(dtgetsales.Rows[0]["productid"]).ToString();
 					intproductid = Convert.ToInt32(txtdrugid.Text);
 				}
 				else
