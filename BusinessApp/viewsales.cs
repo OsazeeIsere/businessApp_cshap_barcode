@@ -82,7 +82,6 @@ namespace BusinessApp
 						lsvitems.Items.Add(lstitem);
 					}
 					
-					txtcashiername1.Text = txtcashiername1.Text;
 					string time1 = null;
 					 time1 = DateTime.Now.ToShortTimeString();
                     txttime.Text = time1;
@@ -92,7 +91,7 @@ namespace BusinessApp
 				else
 				{
 					lsvitems.Clear();
-                    txtcashiername1.Text = txtcashiername1.Text;
+                   // txtcashiername1.Text = txtcashiername1.Text;
                     txtreceiptnumber.Text = "";
 					txttotal.Text = "";
 				}
@@ -865,10 +864,10 @@ namespace BusinessApp
 
 		private void Button6_Click(object sender, System.EventArgs e)
 		{
-			this.Close();
-			clearcart x = new clearcart();
-            
-			x.Show();
+			            clearcart v = new clearcart();
+            v.txtcashiername.Text = txtcashiername1.Text;
+            this.Close();
+            v.Show();
 		}
 	}
 }

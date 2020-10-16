@@ -84,7 +84,6 @@ namespace BusinessApp
             this.Label14 = new System.Windows.Forms.Label();
             this.txtinvoicenumber = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
-            this.txtsupplierphonenumber = new System.Windows.Forms.TextBox();
             this.Button8 = new System.Windows.Forms.Button();
             this.Label16 = new System.Windows.Forms.Label();
             this.txtadminpassword = new System.Windows.Forms.TextBox();
@@ -106,6 +105,7 @@ namespace BusinessApp
             this.txtcode2 = new System.Windows.Forms.TextBox();
             this.btncode = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtsupplierphonenumber = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@ namespace BusinessApp
             this.txtunitprice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtunitprice.Name = "txtunitprice";
             this.txtunitprice.Size = new System.Drawing.Size(161, 26);
-            this.txtunitprice.TabIndex = 12;
+            this.txtunitprice.TabIndex = 7;
             // 
             // Label3
             // 
@@ -133,7 +133,7 @@ namespace BusinessApp
             this.txtquantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(190, 26);
-            this.txtquantity.TabIndex = 10;
+            this.txtquantity.TabIndex = 4;
             // 
             // Label2
             // 
@@ -162,7 +162,7 @@ namespace BusinessApp
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(196, 76);
-            this.Button1.TabIndex = 14;
+            this.Button1.TabIndex = 33;
             this.Button1.Text = "Enter The Product";
             this.Button1.UseVisualStyleBackColor = true;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
@@ -182,14 +182,14 @@ namespace BusinessApp
             this.txtcashiername1.Name = "txtcashiername1";
             this.txtcashiername1.ReadOnly = true;
             this.txtcashiername1.Size = new System.Drawing.Size(191, 26);
-            this.txtcashiername1.TabIndex = 17;
+            this.txtcashiername1.TabIndex = 1;
             // 
             // txtproductname
             // 
             this.txtproductname.Location = new System.Drawing.Point(167, 130);
             this.txtproductname.Name = "txtproductname";
             this.txtproductname.Size = new System.Drawing.Size(190, 26);
-            this.txtproductname.TabIndex = 18;
+            this.txtproductname.TabIndex = 3;
             // 
             // Button3
             // 
@@ -197,7 +197,7 @@ namespace BusinessApp
             this.Button3.Location = new System.Drawing.Point(1119, 197);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(153, 57);
-            this.Button3.TabIndex = 19;
+            this.Button3.TabIndex = 17;
             this.Button3.Text = "Sell As Cashier";
             this.Button3.UseVisualStyleBackColor = true;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
@@ -208,7 +208,7 @@ namespace BusinessApp
             this.Button2.Location = new System.Drawing.Point(952, 265);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(156, 70);
-            this.Button2.TabIndex = 20;
+            this.Button2.TabIndex = 18;
             this.Button2.Text = "View sales Log";
             this.Button2.UseVisualStyleBackColor = true;
             this.Button2.Click += new System.EventHandler(this.Button2_Click_1);
@@ -219,7 +219,7 @@ namespace BusinessApp
             this.txtunitcostprice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtunitcostprice.Name = "txtunitcostprice";
             this.txtunitcostprice.Size = new System.Drawing.Size(191, 26);
-            this.txtunitcostprice.TabIndex = 24;
+            this.txtunitcostprice.TabIndex = 6;
             this.txtunitcostprice.Click += new System.EventHandler(this.txtunitcostprice_Click);
             this.txtunitcostprice.TextChanged += new System.EventHandler(this.txtunitcostprice_TextChanged);
             // 
@@ -254,7 +254,7 @@ namespace BusinessApp
             this.txtfile.Location = new System.Drawing.Point(716, 165);
             this.txtfile.Name = "txtfile";
             this.txtfile.Size = new System.Drawing.Size(196, 26);
-            this.txtfile.TabIndex = 26;
+            this.txtfile.TabIndex = 21;
             this.txtfile.TextChanged += new System.EventHandler(this.txtfile_TextChanged);
             // 
             // txtitems
@@ -264,7 +264,7 @@ namespace BusinessApp
             this.txtitems.Multiline = true;
             this.txtitems.Name = "txtitems";
             this.txtitems.Size = new System.Drawing.Size(62, 41);
-            this.txtitems.TabIndex = 27;
+            this.txtitems.TabIndex = 22;
             this.txtitems.TextChanged += new System.EventHandler(this.txtitems_TextChanged);
             // 
             // txtsearch
@@ -273,7 +273,7 @@ namespace BusinessApp
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(154, 31);
-            this.txtsearch.TabIndex = 28;
+            this.txtsearch.TabIndex = 26;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             this.txtsearch.QueryContinueDrag += new System.Windows.Forms.QueryContinueDragEventHandler(this.txtsearch_QueryContinueDrag);
             // 
@@ -283,7 +283,7 @@ namespace BusinessApp
             this.Label8.Location = new System.Drawing.Point(239, 317);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(60, 20);
-            this.Label8.TabIndex = 29;
+            this.Label8.TabIndex = 27;
             this.Label8.Text = "Search";
             this.Label8.Click += new System.EventHandler(this.Label8_Click);
             // 
@@ -298,10 +298,10 @@ namespace BusinessApp
             // 
             // txtexpirydate
             // 
-            this.txtexpirydate.Location = new System.Drawing.Point(545, 134);
+            this.txtexpirydate.Location = new System.Drawing.Point(542, 130);
             this.txtexpirydate.Name = "txtexpirydate";
-            this.txtexpirydate.Size = new System.Drawing.Size(161, 26);
-            this.txtexpirydate.TabIndex = 32;
+            this.txtexpirydate.Size = new System.Drawing.Size(164, 26);
+            this.txtexpirydate.TabIndex = 8;
             this.txtexpirydate.TextChanged += new System.EventHandler(this.txtexpirydate_TextChanged);
             this.txtexpirydate.Validating += new System.ComponentModel.CancelEventHandler(this.txtexpirydate_Validating);
             // 
@@ -358,7 +358,7 @@ namespace BusinessApp
             this.Button6.Location = new System.Drawing.Point(1114, 265);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(158, 70);
-            this.Button6.TabIndex = 44;
+            this.Button6.TabIndex = 19;
             this.Button6.Text = "Expiry Date Info.";
             this.Button6.UseVisualStyleBackColor = true;
             this.Button6.Click += new System.EventHandler(this.Button6_Click);
@@ -368,7 +368,7 @@ namespace BusinessApp
             this.Button7.Location = new System.Drawing.Point(733, 83);
             this.Button7.Name = "Button7";
             this.Button7.Size = new System.Drawing.Size(143, 49);
-            this.Button7.TabIndex = 45;
+            this.Button7.TabIndex = 20;
             this.Button7.Text = "ReOrder Level";
             this.Button7.UseVisualStyleBackColor = true;
             this.Button7.Click += new System.EventHandler(this.Button7_Click);
@@ -387,7 +387,7 @@ namespace BusinessApp
             this.txtsuppliername.Location = new System.Drawing.Point(542, 164);
             this.txtsuppliername.Name = "txtsuppliername";
             this.txtsuppliername.Size = new System.Drawing.Size(161, 26);
-            this.txtsuppliername.TabIndex = 47;
+            this.txtsuppliername.TabIndex = 9;
             // 
             // Label12
             // 
@@ -403,7 +403,7 @@ namespace BusinessApp
             this.txtdatepurchased.Location = new System.Drawing.Point(545, 233);
             this.txtdatepurchased.Name = "txtdatepurchased";
             this.txtdatepurchased.Size = new System.Drawing.Size(160, 26);
-            this.txtdatepurchased.TabIndex = 49;
+            this.txtdatepurchased.TabIndex = 11;
             // 
             // Label13
             // 
@@ -419,7 +419,7 @@ namespace BusinessApp
             this.txtamountpaid.Location = new System.Drawing.Point(167, 199);
             this.txtamountpaid.Name = "txtamountpaid";
             this.txtamountpaid.Size = new System.Drawing.Size(191, 26);
-            this.txtamountpaid.TabIndex = 51;
+            this.txtamountpaid.TabIndex = 5;
             this.txtamountpaid.TextAlignChanged += new System.EventHandler(this.txtamountpaid_TextAlignChanged);
             this.txtamountpaid.TextChanged += new System.EventHandler(this.txtamountpaid_TextChanged);
             // 
@@ -437,7 +437,7 @@ namespace BusinessApp
             this.txtinvoicenumber.Location = new System.Drawing.Point(546, 265);
             this.txtinvoicenumber.Name = "txtinvoicenumber";
             this.txtinvoicenumber.Size = new System.Drawing.Size(157, 26);
-            this.txtinvoicenumber.TabIndex = 53;
+            this.txtinvoicenumber.TabIndex = 12;
             // 
             // Label15
             // 
@@ -448,20 +448,13 @@ namespace BusinessApp
             this.Label15.TabIndex = 54;
             this.Label15.Text = "Supplier Tel:";
             // 
-            // txtsupplierphonenumber
-            // 
-            this.txtsupplierphonenumber.Location = new System.Drawing.Point(545, 201);
-            this.txtsupplierphonenumber.Name = "txtsupplierphonenumber";
-            this.txtsupplierphonenumber.Size = new System.Drawing.Size(161, 26);
-            this.txtsupplierphonenumber.TabIndex = 55;
-            // 
             // Button8
             // 
             this.Button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button8.Location = new System.Drawing.Point(1119, 124);
             this.Button8.Name = "Button8";
             this.Button8.Size = new System.Drawing.Size(153, 66);
-            this.Button8.TabIndex = 56;
+            this.Button8.TabIndex = 16;
             this.Button8.Text = "Sell As Adninistrator";
             this.Button8.UseVisualStyleBackColor = true;
             this.Button8.Click += new System.EventHandler(this.Button8_Click);
@@ -483,14 +476,14 @@ namespace BusinessApp
             this.txtadminpassword.Name = "txtadminpassword";
             this.txtadminpassword.PasswordChar = '#';
             this.txtadminpassword.Size = new System.Drawing.Size(159, 26);
-            this.txtadminpassword.TabIndex = 98;
+            this.txtadminpassword.TabIndex = 24;
             // 
             // Button9
             // 
             this.Button9.Location = new System.Drawing.Point(424, 297);
             this.Button9.Name = "Button9";
             this.Button9.Size = new System.Drawing.Size(127, 37);
-            this.Button9.TabIndex = 100;
+            this.Button9.TabIndex = 28;
             this.Button9.Text = "Delet Product";
             this.Button9.UseVisualStyleBackColor = true;
             this.Button9.Click += new System.EventHandler(this.Button9_Click);
@@ -560,7 +553,7 @@ namespace BusinessApp
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(82, 32);
-            this.txttotal.TabIndex = 103;
+            this.txttotal.TabIndex = 25;
             // 
             // Label17
             // 
@@ -586,7 +579,7 @@ namespace BusinessApp
             this.txtproductid.Name = "txtproductid";
             this.txtproductid.ReadOnly = true;
             this.txtproductid.Size = new System.Drawing.Size(191, 26);
-            this.txtproductid.TabIndex = 105;
+            this.txtproductid.TabIndex = 2;
             // 
             // lbaddress
             // 
@@ -621,7 +614,7 @@ namespace BusinessApp
             this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcode2.Name = "txtcode2";
             this.txtcode2.Size = new System.Drawing.Size(191, 26);
-            this.txtcode2.TabIndex = 115;
+            this.txtcode2.TabIndex = 23;
             this.txtcode2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtcode2_MouseClick);
             this.txtcode2.TextChanged += new System.EventHandler(this.txtcode2_TextChanged);
             this.txtcode2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcode2_KeyPress);
@@ -650,6 +643,13 @@ namespace BusinessApp
             this.PictureBox1.TabIndex = 30;
             this.PictureBox1.TabStop = false;
             this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
+            // txtsupplierphonenumber
+            // 
+            this.txtsupplierphonenumber.Location = new System.Drawing.Point(545, 201);
+            this.txtsupplierphonenumber.Name = "txtsupplierphonenumber";
+            this.txtsupplierphonenumber.Size = new System.Drawing.Size(161, 26);
+            this.txtsupplierphonenumber.TabIndex = 10;
             // 
             // drugs
             // 
@@ -767,7 +767,6 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label14;
 		internal System.Windows.Forms.TextBox txtinvoicenumber;
 		internal System.Windows.Forms.Label Label15;
-		internal System.Windows.Forms.TextBox txtsupplierphonenumber;
 		internal System.Windows.Forms.Button Button8;
 		internal System.Windows.Forms.Label Label16;
 		internal System.Windows.Forms.TextBox txtadminpassword;
@@ -788,6 +787,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label lbname;
         internal System.Windows.Forms.TextBox txtcode2;
         private System.Windows.Forms.Button btncode;
+        internal System.Windows.Forms.TextBox txtsupplierphonenumber;
     }
 
 }

@@ -62,6 +62,7 @@ namespace BusinessApp
 				v.txtreceiptnumber.Text = "";
 				v.txtdiscount.Text = "";
 				v.txtgrandtotal.Text = "";
+                v.txtcashiername1.Text = txtcashiername.Text;
 				sales x = new sales();
 				x.discount = 0;
 				this.Close();

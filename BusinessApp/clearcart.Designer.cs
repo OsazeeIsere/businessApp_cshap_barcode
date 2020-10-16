@@ -113,7 +113,7 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.Button Button1;
 		internal System.Windows.Forms.Button Button2;
-        private TextBox txtcashiername;
+        public TextBox txtcashiername;
     }
 
 }
