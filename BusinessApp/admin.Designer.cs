@@ -175,7 +175,7 @@ namespace BusinessApp
             // 
             this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
-            this.lbaddress.Location = new System.Drawing.Point(208, 48);
+            this.lbaddress.Location = new System.Drawing.Point(265, 38);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(51, 20);
             this.lbaddress.TabIndex = 12;
@@ -185,7 +185,7 @@ namespace BusinessApp
             // 
             this.lbtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbtel.AutoSize = true;
-            this.lbtel.Location = new System.Drawing.Point(256, 68);
+            this.lbtel.Location = new System.Drawing.Point(282, 67);
             this.lbtel.Name = "lbtel";
             this.lbtel.Size = new System.Drawing.Size(51, 20);
             this.lbtel.TabIndex = 13;

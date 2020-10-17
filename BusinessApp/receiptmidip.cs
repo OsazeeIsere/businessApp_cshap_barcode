@@ -74,7 +74,7 @@ namespace BusinessApp
                 time1 = DateTime.Now.ToShortTimeString();
                 txttime.Text = time1;
 				// insert Copyright symbol
-				lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 Nozeme Concepts(08163775990)";
+				lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 OZ Concepts(08163775990)";
 
 
 			}

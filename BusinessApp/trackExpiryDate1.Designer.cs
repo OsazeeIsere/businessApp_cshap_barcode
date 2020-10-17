@@ -76,7 +76,7 @@
             this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbname.Location = new System.Drawing.Point(667, 9);
+            this.lbname.Location = new System.Drawing.Point(584, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);

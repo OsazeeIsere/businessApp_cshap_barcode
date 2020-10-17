@@ -197,7 +197,7 @@ namespace BusinessApp
             this.lbname.AutoSize = true;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(291, 18);
+            this.lbname.Location = new System.Drawing.Point(223, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);
@@ -209,7 +209,7 @@ namespace BusinessApp
             // 
             this.lbtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbtel.AutoSize = true;
-            this.lbtel.Location = new System.Drawing.Point(368, 77);
+            this.lbtel.Location = new System.Drawing.Point(308, 70);
             this.lbtel.Name = "lbtel";
             this.lbtel.Size = new System.Drawing.Size(51, 20);
             this.lbtel.TabIndex = 104;

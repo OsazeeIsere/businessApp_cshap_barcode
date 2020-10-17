@@ -89,7 +89,7 @@ namespace BusinessApp
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbName.Location = new System.Drawing.Point(227, 24);
+            this.lbName.Location = new System.Drawing.Point(186, 25);
             this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(76, 25);
@@ -128,7 +128,7 @@ namespace BusinessApp
             // 
             this.lbTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTel.AutoSize = true;
-            this.lbTel.Location = new System.Drawing.Point(319, 98);
+            this.lbTel.Location = new System.Drawing.Point(277, 92);
             this.lbTel.Name = "lbTel";
             this.lbTel.Size = new System.Drawing.Size(51, 20);
             this.lbTel.TabIndex = 5;
@@ -137,11 +137,12 @@ namespace BusinessApp
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Blue;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(35, 26);
+            this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 157);
+            this.button2.Size = new System.Drawing.Size(784, 561);
             this.button2.TabIndex = 6;
             this.button2.Text = "Click Here To Add Your Business Information First!";
             this.button2.UseVisualStyleBackColor = false;

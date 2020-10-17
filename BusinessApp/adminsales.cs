@@ -918,5 +918,10 @@ namespace BusinessApp
             trackExpiryDate2 x = new trackExpiryDate2();
             x.Show();
         }
+
+        private void lbname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

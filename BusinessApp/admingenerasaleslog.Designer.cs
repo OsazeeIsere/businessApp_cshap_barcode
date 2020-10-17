@@ -219,7 +219,7 @@ namespace BusinessApp
             this.lbaddress.BackColor = System.Drawing.Color.Red;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(379, 48);
+            this.lbaddress.Location = new System.Drawing.Point(466, 48);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(27, 18);
             this.lbaddress.TabIndex = 71;
@@ -232,7 +232,7 @@ namespace BusinessApp
             this.lbname.BackColor = System.Drawing.Color.Red;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(437, 9);
+            this.lbname.Location = new System.Drawing.Point(428, 9);
             this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 25);

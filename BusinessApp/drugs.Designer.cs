@@ -106,6 +106,7 @@ namespace BusinessApp
             this.btncode = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtsupplierphonenumber = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -302,6 +303,7 @@ namespace BusinessApp
             this.txtexpirydate.Name = "txtexpirydate";
             this.txtexpirydate.Size = new System.Drawing.Size(164, 26);
             this.txtexpirydate.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.txtexpirydate, "Enter date in this format\r\nMM/DD/YYYY");
             this.txtexpirydate.TextChanged += new System.EventHandler(this.txtexpirydate_TextChanged);
             this.txtexpirydate.Validating += new System.ComponentModel.CancelEventHandler(this.txtexpirydate_Validating);
             // 
@@ -651,6 +653,13 @@ namespace BusinessApp
             this.txtsupplierphonenumber.Size = new System.Drawing.Size(161, 26);
             this.txtsupplierphonenumber.TabIndex = 10;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 0;
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 0;
+            this.toolTip1.ReshowDelay = 0;
+            // 
             // drugs
             // 
             this.AcceptButton = this.btncode;
@@ -788,6 +797,7 @@ namespace BusinessApp
         internal System.Windows.Forms.TextBox txtcode2;
         private System.Windows.Forms.Button btncode;
         internal System.Windows.Forms.TextBox txtsupplierphonenumber;
+        private ToolTip toolTip1;
     }
 
 }

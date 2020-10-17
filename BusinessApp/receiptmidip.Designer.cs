@@ -400,7 +400,7 @@ namespace BusinessApp
             this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(201, 38);
+            this.lbaddress.Location = new System.Drawing.Point(267, 39);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(27, 18);
             this.lbaddress.TabIndex = 150;
@@ -425,7 +425,7 @@ namespace BusinessApp
             // 
             this.lbtel.AutoSize = true;
             this.lbtel.BackColor = System.Drawing.Color.White;
-            this.lbtel.Location = new System.Drawing.Point(107, 56);
+            this.lbtel.Location = new System.Drawing.Point(292, 57);
             this.lbtel.Name = "lbtel";
             this.lbtel.Size = new System.Drawing.Size(33, 20);
             this.lbtel.TabIndex = 148;
