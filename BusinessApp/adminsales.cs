@@ -47,7 +47,7 @@ namespace BusinessApp
 			{
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
-
+                txtcode2.Focus();
                 lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
@@ -228,7 +228,7 @@ namespace BusinessApp
 		{
 			try
 			{
-				intproductid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+
 				MySqlConnection cn = new MySqlConnection();
 				MySqlDataAdapter ad = new MySqlDataAdapter();
 				MySqlCommand cm = new MySqlCommand();
@@ -245,7 +245,8 @@ namespace BusinessApp
 					{
 						if (intproductid != 0)
 						{
-							dtgetsales = getdatabase(" select * from product where productid=" + intproductid);
+                            intproductid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+                            dtgetsales = getdatabase(" select * from product where productid=" + intproductid);
 							amount = Convert.ToDouble(txtunitsalesprice.Text) * Convert.ToInt32(txtquantity.Text);
 							strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 							cn.ConnectionString = strconnection;
@@ -373,7 +374,7 @@ namespace BusinessApp
                             strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
                             cn.ConnectionString = strconnection;
                             cn.Open();
-                            cm.CommandText = "Insert Into sales(cashiername,itemsold,quantitysold,unitcostprice,unitprice,amount,discount,productid) Values('" + txtcashiername1.Text + "','" + dtgetsales.Rows[0]["productname"].ToString() + "','" + txtquantity.Text + "','" + dtgetsales.Rows[0]["unitcostprice"] + "','" + dtgetsales.Rows[0]["unitsalesprice"] + "'," + amount + "," + discount + "," + intproductid + ")";
+                            cm.CommandText = "Insert Into sales(cashiername,itemsold,quantitysold,unitcostprice,unitprice,amount,discount,productid) Values('" + txtcashiername1.Text + "','" + dtgetsales.Rows[0]["productname"].ToString() + "','" + txtquantity.Text + "','" + dtgetsales.Rows[0]["unitcostprice"] + "','" + dtgetsales.Rows[0]["unitsalesprice"] + "'," + amount + "," + discount + ",'" + dtgetsales.Rows[0]["productid"] + "')";
                             cm.Connection = cn;
                             cm.ExecuteNonQuery();
                             cn.Close();
@@ -922,6 +923,54 @@ namespace BusinessApp
         private void lbname_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtcode2_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                dtgetproduct = getdatabase("Select * From product Where barcode Like '%" + txtcode2.Text + "%' Order By productname;");
+                if (dtgetproduct.Rows.Count > 0)
+                {
+
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                    for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                    {
+                        if (Convert.ToInt32(dtgetproduct.Rows[j]["quantity"].ToString()) < 6)
+                        {
+
+                            lstitem = new ListViewItem();
+                            lstitem.ForeColor = Color.Red;
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                            //   lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+                        else
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                            //               lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

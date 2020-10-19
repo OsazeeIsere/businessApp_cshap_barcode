@@ -192,7 +192,7 @@ namespace BusinessApp
             this.txttotal.Name = "txttotal";
             this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(98, 26);
-            this.txttotal.TabIndex = 34;
+            this.txttotal.TabIndex = 0;
             // 
             // txtcash
             // 
@@ -201,7 +201,7 @@ namespace BusinessApp
             this.txtcash.Location = new System.Drawing.Point(540, 505);
             this.txtcash.Name = "txtcash";
             this.txtcash.Size = new System.Drawing.Size(99, 26);
-            this.txtcash.TabIndex = 35;
+            this.txtcash.TabIndex = 3;
             // 
             // Button1
             // 
@@ -209,7 +209,7 @@ namespace BusinessApp
             this.Button1.Location = new System.Drawing.Point(497, 566);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(142, 60);
-            this.Button1.TabIndex = 36;
+            this.Button1.TabIndex = 4;
             this.Button1.Text = "Get receipt";
             this.Button1.UseVisualStyleBackColor = true;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
@@ -277,7 +277,7 @@ namespace BusinessApp
             this.txtdiscount.Name = "txtdiscount";
             this.txtdiscount.ReadOnly = true;
             this.txtdiscount.Size = new System.Drawing.Size(101, 26);
-            this.txtdiscount.TabIndex = 71;
+            this.txtdiscount.TabIndex = 1;
             this.txtdiscount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtdiscount_MouseClick);
             this.txtdiscount.TextChanged += new System.EventHandler(this.txtdiscount_TextChanged);
             this.txtdiscount.MouseHover += new System.EventHandler(this.txtdiscount_MouseHover);
@@ -300,7 +300,7 @@ namespace BusinessApp
             this.txtgrandtotal.Name = "txtgrandtotal";
             this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(101, 26);
-            this.txtgrandtotal.TabIndex = 73;
+            this.txtgrandtotal.TabIndex = 2;
             this.txtgrandtotal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtgrandtotal_MouseClick);
             this.txtgrandtotal.TextChanged += new System.EventHandler(this.txtgrandtotal_TextChanged);
             this.txtgrandtotal.MouseHover += new System.EventHandler(this.txtgrandtotal_MouseHover);
@@ -327,7 +327,7 @@ namespace BusinessApp
             this.cbldiscount.Location = new System.Drawing.Point(20, 418);
             this.cbldiscount.Name = "cbldiscount";
             this.cbldiscount.Size = new System.Drawing.Size(182, 28);
-            this.cbldiscount.TabIndex = 80;
+            this.cbldiscount.TabIndex = 8;
             this.cbldiscount.SelectedIndexChanged += new System.EventHandler(this.cbldiscount_SelectedIndexChanged);
             // 
             // Label13
@@ -347,7 +347,7 @@ namespace BusinessApp
             this.txtdiscountapproval.Name = "txtdiscountapproval";
             this.txtdiscountapproval.PasswordChar = '#';
             this.txtdiscountapproval.Size = new System.Drawing.Size(138, 26);
-            this.txtdiscountapproval.TabIndex = 82;
+            this.txtdiscountapproval.TabIndex = 10;
             this.txtdiscountapproval.TextChanged += new System.EventHandler(this.txtdiscountapproval_TextChanged);
             // 
             // Label12
@@ -366,7 +366,7 @@ namespace BusinessApp
             this.txtnairadiscount.Location = new System.Drawing.Point(20, 505);
             this.txtnairadiscount.Name = "txtnairadiscount";
             this.txtnairadiscount.Size = new System.Drawing.Size(127, 26);
-            this.txtnairadiscount.TabIndex = 85;
+            this.txtnairadiscount.TabIndex = 9;
             // 
             // Label14
             // 
@@ -384,7 +384,7 @@ namespace BusinessApp
             this.txtquantity.Location = new System.Drawing.Point(540, 156);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(56, 26);
-            this.txtquantity.TabIndex = 87;
+            this.txtquantity.TabIndex = 13;
             this.txtquantity.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             this.txtquantity.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.TextBox1_ChangeUICues);
             // 
@@ -432,7 +432,7 @@ namespace BusinessApp
             this.Button2.Location = new System.Drawing.Point(602, 152);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(56, 35);
-            this.Button2.TabIndex = 92;
+            this.Button2.TabIndex = 14;
             this.Button2.Text = "ok";
             this.Button2.UseVisualStyleBackColor = false;
             this.Button2.Click += new System.EventHandler(this.Button2_Click_1);
@@ -445,7 +445,7 @@ namespace BusinessApp
             this.Button3.Location = new System.Drawing.Point(540, 60);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(123, 36);
-            this.Button3.TabIndex = 93;
+            this.Button3.TabIndex = 11;
             this.Button3.Text = "Remove Item";
             this.Button3.UseVisualStyleBackColor = false;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
@@ -458,7 +458,7 @@ namespace BusinessApp
             this.Button4.Location = new System.Drawing.Point(173, 650);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(110, 49);
-            this.Button4.TabIndex = 118;
+            this.Button4.TabIndex = 6;
             this.Button4.Text = "Hold Sales";
             this.Button4.UseVisualStyleBackColor = true;
             this.Button4.Click += new System.EventHandler(this.Button4_Click);
@@ -471,7 +471,7 @@ namespace BusinessApp
             this.Button5.Location = new System.Drawing.Point(289, 650);
             this.Button5.Name = "Button5";
             this.Button5.Size = new System.Drawing.Size(122, 49);
-            this.Button5.TabIndex = 119;
+            this.Button5.TabIndex = 7;
             this.Button5.Text = "View Hold Sales";
             this.Button5.UseVisualStyleBackColor = true;
             this.Button5.Click += new System.EventHandler(this.Button5_Click);
@@ -484,7 +484,7 @@ namespace BusinessApp
             this.Button6.Location = new System.Drawing.Point(497, 650);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(142, 44);
-            this.Button6.TabIndex = 120;
+            this.Button6.TabIndex = 5;
             this.Button6.Text = "Clear Cart";
             this.Button6.UseVisualStyleBackColor = false;
             this.Button6.Click += new System.EventHandler(this.Button6_Click);

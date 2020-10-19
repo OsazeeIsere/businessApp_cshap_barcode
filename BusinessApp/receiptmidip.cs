@@ -98,9 +98,9 @@ namespace BusinessApp
 				Font font1 = new Font("arial", 7F, FontStyle.Regular);
 				Font font2 = new Font("arial", 7F, FontStyle.Regular);
 				Font font3 = new Font("arial", 8F, FontStyle.Regular);
-				e.Graphics.DrawString(lbaddress.Text, font, Brushes.Black, 1, 20);
-				e.Graphics.DrawString(lbname.Text, font1, Brushes.Black, 1, 35);
-				e.Graphics.DrawString(lbtel.Text, fontx, Brushes.Black, 6, 50);
+				e.Graphics.DrawString(lbname.Text, font, Brushes.Black, 1, 20);
+                e.Graphics.DrawString(lbaddress.Text, font1, Brushes.Black, 1, 35);
+                e.Graphics.DrawString(lbtel.Text, fontx, Brushes.Black, 6, 50);
 				e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 65);
 				e.Graphics.DrawString(txtcashiername1.Text, font3, Brushes.Black, 60, 65);
 				e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 120, 65);
@@ -135,7 +135,7 @@ namespace BusinessApp
 				}
 				j = j + 30;
 				Pen mypen = null;
-				mypen = new Pen(Color.Black, Height = 50);
+				mypen = new Pen(Color.Black, Height = 2);
 				e.Graphics.DrawLine(mypen, x1:10, y1:j, x2:200, y2:j);
 				j = j + 20;
 				e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 100, j);

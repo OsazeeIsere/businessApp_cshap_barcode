@@ -385,7 +385,7 @@ namespace BusinessApp
 					int intquantity = 0;
 					double dblcost = 0;
 					double dblprice = 0;
-                    string expirydate;
+                    string expirydate,barcode;
 					string suppliername = null;
 					string suppliertel = null;
 					string  datepurchased ;
@@ -406,12 +406,13 @@ namespace BusinessApp
 						dblprice = Convert.ToDouble(worksheet.Cells[i, 5].Value);
 						expirydate =Convert.ToString (worksheet.Cells[i, 6].Value);
                         expirydate = Convert.ToDateTime(expirydate).ToShortDateString();
+                        barcode = Convert.ToString(worksheet.Cells[i, 7].Value);
 
-                        suppliername = (worksheet.Cells[i, 7].Value);
-						suppliertel = (worksheet.Cells[i, 8].Value);
-						datepurchased = (worksheet.Cells[i, 9].Value);
-						dblamount = Convert.ToDouble(worksheet.Cells[i, 10].Value);
-						invoicenumber = (worksheet.Cells[i, 11].Value);
+                        suppliername = (worksheet.Cells[i, 8].Value);
+						suppliertel = (worksheet.Cells[i, 9].Value);
+						datepurchased = (worksheet.Cells[i, 10].Value);
+						dblamount = Convert.ToDouble(worksheet.Cells[i, 11].Value);
+						invoicenumber = (worksheet.Cells[i, 12].Value);
 						//If intproductid > 0 Then
 
 						//    Dim cn As New MySqlConnection
@@ -437,7 +438,7 @@ namespace BusinessApp
 						strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 						cn.ConnectionString = strconnection;
 						cn.Open();
-						cm.CommandText = "Insert Into expirydate(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "','" + suppliername + "','" + suppliertel + "','" + datepurchased + "'," + dblamount + ",'" + invoicenumber + "')";
+						cm.CommandText = "Insert Into expirydate(productname,quantity,unitcostprice,unitsalesprice,expirydate,barcode,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "','" + barcode + "','" + suppliername + "','" + suppliertel + "','" + datepurchased + "'," + dblamount + ",'" + invoicenumber + "')";
 						cm.Connection = cn;
 						cm.ExecuteNonQuery();
 						cn.Close();

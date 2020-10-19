@@ -87,7 +87,7 @@ namespace BusinessApp
 					dtgetproduct = getdatabase("Select * From product where productid=" + intproductid);
 					cn.Open();
 					newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) + Convert.ToInt32(txtquantity.Text);
-					cm.CommandText = "Update product Set productname='" + txtproductname.Text + "',quantity =" + newquantity + ",unitcostprice=" + txtunitcostprice.Text + ",unitsalesprice=" + txtunitprice.Text + ",expirydate='" + txtexpirydate.Text + "' Where productid=" + intproductid + ";";
+					cm.CommandText = "Update product Set productname='" + txtproductname.Text + "',quantity =" + newquantity + ",unitcostprice=" + txtunitcostprice.Text + ",unitsalesprice=" + txtunitprice.Text + ",barcode='"+ txtcode2.Text + "',expirydate='" + txtexpirydate.Text + "' Where productid=" + intproductid + ";";
 					cm.Connection = cn;
 					cm.ExecuteNonQuery();
 					cn.Close();
@@ -282,7 +282,7 @@ namespace BusinessApp
 						int intquantity = 0;
 						double dblcost = 0;
 						double dblprice = 0;
-						string expirydate;
+						string expirydate, barcode;
 						for (var i = 2; i < 2 + intitems; i++)
 						{
 							intproductid = 0;
@@ -301,8 +301,8 @@ namespace BusinessApp
 							dblcost = Convert.ToDouble(worksheet.Cells[i, 4].Value);
 							dblprice = Convert.ToDouble(worksheet.Cells[i, 5].Value);
 							expirydate =Convert.ToString(worksheet.Cells[i, 6].Value);
-                           
-                           expirydate = Convert.ToDateTime(expirydate).ToShortDateString();
+                            expirydate = Convert.ToDateTime(expirydate).ToShortDateString();
+                            barcode = Convert.ToString(worksheet.Cells[i, 7].Value);
 							if (intproductid > 0)
 							{
 								MySqlConnection cn = new MySqlConnection();
@@ -315,7 +315,7 @@ namespace BusinessApp
 								dtgetproduct = getdatabase("Select * From product where productid=" + intproductid);
 								cn.Open();
 								newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) + Convert.ToInt32(intquantity);
-								cm.CommandText = "Update product Set quantity =" + newquantity + ",unitcostprice=" + dblcost + ",unitsalesprice=" + dblprice + ",expirydate='" + expirydate.ToString() + "' Where productid=" + intproductid + ";";
+								cm.CommandText = "Update product Set quantity =" + newquantity + ",unitcostprice=" + dblcost + ",unitsalesprice=" + dblprice + ",expirydate='" + expirydate + "',barcode='" + barcode+ "' Where productid=" + intproductid + ";";
 								cm.Connection = cn;
 								cm.ExecuteNonQuery();
 								cn.Close();
@@ -349,7 +349,7 @@ namespace BusinessApp
 								strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 								cn.ConnectionString = strconnection;
 								cn.Open();
-								cm.CommandText = "Insert Into product(productname,quantity,unitcostprice,unitsalesprice,expirydate) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate.ToString() + "')";
+								cm.CommandText = "Insert Into product(productname,quantity,unitcostprice,unitsalesprice,expirydate,barcode) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "','" + barcode + "')";
 								cm.Connection = cn;
 								cm.ExecuteNonQuery();
 								cn.Close();
@@ -690,6 +690,37 @@ namespace BusinessApp
 
         private void txtcode2_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+
+
+                    System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                    dtgetproduct = getdatabase("Select * From product Where barcode Like '%" + txtcode2.Text + "%' Order By productname;");
+
+                    if (dtgetproduct.Rows.Count > 0)
+                    {
+                        ListViewItem lstitem = new ListViewItem();
+                        lsvitems.Items.Clear();
+                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+                        txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+
+                }
             
         }
 

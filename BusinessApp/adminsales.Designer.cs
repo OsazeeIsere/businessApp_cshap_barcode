@@ -641,6 +641,7 @@ namespace BusinessApp
             this.txtcode2.Name = "txtcode2";
             this.txtcode2.Size = new System.Drawing.Size(199, 26);
             this.txtcode2.TabIndex = 138;
+            this.txtcode2.TextChanged += new System.EventHandler(this.txtcode2_TextChanged);
             // 
             // label19
             // 
@@ -673,6 +674,7 @@ namespace BusinessApp
             // 
             // adminsales
             // 
+            this.AcceptButton = this.btnenter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));

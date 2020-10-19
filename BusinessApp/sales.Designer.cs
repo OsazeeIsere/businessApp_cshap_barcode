@@ -650,7 +650,6 @@ namespace BusinessApp
             this.txtcode2.Location = new System.Drawing.Point(154, 97);
             this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcode2.Name = "txtcode2";
-            this.txtcode2.ReadOnly = true;
             this.txtcode2.Size = new System.Drawing.Size(190, 26);
             this.txtcode2.TabIndex = 131;
             this.txtcode2.TextChanged += new System.EventHandler(this.txtcode2_TextChanged);
