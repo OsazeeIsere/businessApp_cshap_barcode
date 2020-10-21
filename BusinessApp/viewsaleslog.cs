@@ -51,7 +51,7 @@ namespace BusinessApp
 
 		private void TextBox2_TextChanged(object sender, System.EventArgs e)
 		{
-
+            //this.ActiveControl = Button4;
 		}
 
 		private void Button4_Click(object sender, System.EventArgs e)
@@ -138,6 +138,34 @@ namespace BusinessApp
 
         private void Label3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtadminpassword_TextChanged(object sender, EventArgs e)
+        {
+           // this.ActiveControl = Button2;
+
+        }
+
+        private void txtcashierpassword_ModifiedChanged(object sender, EventArgs e)
+        {
+           // this.ActiveControl = Button4;
+        }
+
+        private void txtcashierpassword_MouseEnter(object sender, EventArgs e)
+        {
+         //   this.ActiveControl = Button4;
+
+        }
+
+        private void txtcashierpassword_Click(object sender, EventArgs e)
+        {
+           // this.ActiveControl = Button4;
+        }
+
+        private void txtcashierpassword_MultilineChanged(object sender, EventArgs e)
+        {
+            //this.ActiveControl = Button4;
 
         }
     }

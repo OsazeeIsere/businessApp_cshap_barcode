@@ -103,7 +103,11 @@ namespace BusinessApp
             this.txtcashierpassword.PasswordChar = '*';
             this.txtcashierpassword.Size = new System.Drawing.Size(167, 26);
             this.txtcashierpassword.TabIndex = 2;
+            this.txtcashierpassword.Click += new System.EventHandler(this.txtcashierpassword_Click);
+            this.txtcashierpassword.ModifiedChanged += new System.EventHandler(this.txtcashierpassword_ModifiedChanged);
+            this.txtcashierpassword.MultilineChanged += new System.EventHandler(this.txtcashierpassword_MultilineChanged);
             this.txtcashierpassword.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.txtcashierpassword.MouseEnter += new System.EventHandler(this.txtcashierpassword_MouseEnter);
             // 
             // Label5
             // 
@@ -157,6 +161,7 @@ namespace BusinessApp
             this.txtadminpassword.PasswordChar = '*';
             this.txtadminpassword.Size = new System.Drawing.Size(176, 26);
             this.txtadminpassword.TabIndex = 4;
+            this.txtadminpassword.TextChanged += new System.EventHandler(this.txtadminpassword_TextChanged);
             // 
             // Label4
             // 
