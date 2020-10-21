@@ -70,6 +70,7 @@ namespace BusinessApp
             this.Label3.Size = new System.Drawing.Size(305, 31);
             this.Label3.TabIndex = 12;
             this.Label3.Text = "Abeg  Who   You   Be?";
+            this.Label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // Panel2
             // 
@@ -205,6 +206,7 @@ namespace BusinessApp
             // 
             // viewsaleslog
             // 
+            this.AcceptButton = this.Button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));

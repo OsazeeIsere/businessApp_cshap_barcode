@@ -75,6 +75,7 @@ namespace BusinessApp
 
             lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
             lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+            txtpassword.Focus();
             //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
         }
     }

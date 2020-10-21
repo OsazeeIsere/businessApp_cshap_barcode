@@ -132,6 +132,13 @@ namespace BusinessApp
             lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
             lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
             //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+            this.ActiveControl = txtadminpassword;
+           // txtadminpassword.Focus();
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

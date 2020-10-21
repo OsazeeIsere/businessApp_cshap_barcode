@@ -51,7 +51,7 @@ namespace BusinessApp
                 lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
-
+                this.ActiveControl = txtcode2;
                 lsvitems1.Visible = false;
                 Label1.Visible = false;
                 txtcosmeticsid.Visible = false;
@@ -243,7 +243,7 @@ namespace BusinessApp
 				{
 					if (Simulate.IsNumeric(txtquantity.Text))
 					{
-						if (intproductid != 0)
+						if (txtdrugid.Text != "")
 						{
                             intproductid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
                             dtgetsales = getdatabase(" select * from product where productid=" + intproductid);

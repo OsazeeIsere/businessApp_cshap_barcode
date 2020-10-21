@@ -277,6 +277,7 @@ namespace BusinessApp
             this.txtcashiername1.Location = new System.Drawing.Point(175, 110);
             this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcashiername1.Name = "txtcashiername1";
+            this.txtcashiername1.ReadOnly = true;
             this.txtcashiername1.Size = new System.Drawing.Size(199, 26);
             this.txtcashiername1.TabIndex = 80;
             // 
@@ -317,6 +318,7 @@ namespace BusinessApp
             this.txtunitsalesprice1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtunitsalesprice1.Location = new System.Drawing.Point(1043, 147);
             this.txtunitsalesprice1.Name = "txtunitsalesprice1";
+            this.txtunitsalesprice1.ReadOnly = true;
             this.txtunitsalesprice1.Size = new System.Drawing.Size(86, 26);
             this.txtunitsalesprice1.TabIndex = 103;
             // 
@@ -470,6 +472,7 @@ namespace BusinessApp
             this.txtdrugid.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtdrugid.Location = new System.Drawing.Point(112, 194);
             this.txtdrugid.Name = "txtdrugid";
+            this.txtdrugid.ReadOnly = true;
             this.txtdrugid.Size = new System.Drawing.Size(55, 26);
             this.txtdrugid.TabIndex = 109;
             // 
@@ -488,6 +491,7 @@ namespace BusinessApp
             this.txtcosmeticsid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcosmeticsid.Location = new System.Drawing.Point(744, 150);
             this.txtcosmeticsid.Name = "txtcosmeticsid";
+            this.txtcosmeticsid.ReadOnly = true;
             this.txtcosmeticsid.Size = new System.Drawing.Size(64, 26);
             this.txtcosmeticsid.TabIndex = 111;
             // 
@@ -659,6 +663,7 @@ namespace BusinessApp
             this.txtproductname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtproductname.Location = new System.Drawing.Point(237, 194);
             this.txtproductname.Name = "txtproductname";
+            this.txtproductname.ReadOnly = true;
             this.txtproductname.Size = new System.Drawing.Size(324, 26);
             this.txtproductname.TabIndex = 140;
             // 

@@ -95,6 +95,7 @@ namespace BusinessApp
             // 
             this.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button2.BackColor = System.Drawing.Color.LightGray;
+            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.Location = new System.Drawing.Point(311, 376);
             this.Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -143,6 +144,7 @@ namespace BusinessApp
             // 
             // saleslog
             // 
+            this.AcceptButton = this.Button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Fuchsia;
