@@ -129,26 +129,26 @@ namespace BusinessApp
 
 
 				
-				System.Data.DataTable dtgetcosmetics = new System.Data.DataTable();
-				dtgetcosmetics = getdatabase("select cosmeticsid,cosmeticsname,cosmeticsquantity,cosmeticsunitsalesprice,cosmeticsunitcostprice,expirydate,entrydate from cosmetics");
-				if (dtgetcosmetics.Rows.Count > 0)
-				{
-					ListViewItem lstitem = new ListViewItem();
-					lsvitems1.Items.Clear();
-					for (var j = 0; j < dtgetcosmetics.Rows.Count; j++)
-					{
-						lstitem = new ListViewItem();
-						lstitem.Text = dtgetcosmetics.Rows[j]["cosmeticsid"].ToString();
-						lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["cosmeticsname"].ToString());
-						lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["cosmeticsquantity"].ToString());
-						lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["cosmeticsunitsalesprice"].ToString());
-						//lstitem.SubItems.Add(dtgetcosmetics.Rows(j).Item("cosmeticsunitcostprice").ToString)
-						lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["expirydate"].ToString());
-						lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["entrydate"].ToString());
-						lsvitems1.Items.Add(lstitem);
-					}
-					txtcardsquantity.Text = 1.ToString();
-				}
+				//System.Data.DataTable dtgetcosmetics = new System.Data.DataTable();
+				//dtgetcosmetics = getdatabase("select cosmeticsid,cosmeticsname,cosmeticsquantity,cosmeticsunitsalesprice,cosmeticsunitcostprice,expirydate,entrydate from cosmetics");
+				//if (dtgetcosmetics.Rows.Count > 0)
+				//{
+				//	ListViewItem lstitem = new ListViewItem();
+				//	lsvitems1.Items.Clear();
+				//	for (var j = 0; j < dtgetcosmetics.Rows.Count; j++)
+				//	{
+				//		lstitem = new ListViewItem();
+				//		lstitem.Text = dtgetcosmetics.Rows[j]["cosmeticsid"].ToString();
+				//		lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["cosmeticsname"].ToString());
+				//		lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["cosmeticsquantity"].ToString());
+				//		lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["cosmeticsunitsalesprice"].ToString());
+				//		//lstitem.SubItems.Add(dtgetcosmetics.Rows(j).Item("cosmeticsunitcostprice").ToString)
+				//		lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["expirydate"].ToString());
+				//		lstitem.SubItems.Add(dtgetcosmetics.Rows[j]["entrydate"].ToString());
+				//		lsvitems1.Items.Add(lstitem);
+				//	}
+				//	txtcardsquantity.Text = 1.ToString();
+				//}
                 int months = 0;
                 int months1 = 0;
                 int year = 0;
@@ -194,12 +194,12 @@ namespace BusinessApp
                         if (totalmonths > -1 && totalmonths < 4)
                         {
                             myCount[k] = k + 1;
-                            txt3 .Text = myCount[k].ToString() + "  Products Will Expire Within The Next Three Months. ";
+                            txt3 .Text = myCount[k].ToString() + "  Product(s) Will Expire Within The Next Three Months. ";
                             k = k + 1;
                             if (totalmonths == 0)
                             {
                                 myCount1[l] = l + 1;
-                                txt1 .Text = myCount1[l].ToString() + "  Products Will Expire This Months.";
+                                txt1 .Text = myCount1[l].ToString() + "  Product(s) Will Expire This Months.";
                                 l = l + 1;
                             }
 
@@ -208,7 +208,7 @@ namespace BusinessApp
                         else if (totalmonths < 0)
                         {
                             myCount2[v] = v + 1;
-                            txt0 .Text = myCount2[v].ToString() + "  Products Have Expired. ";
+                            txt0 .Text = " You Have "+ myCount2[v].ToString() + " Expired Product(s). ";
                             v= v + 1;
                         }
 
