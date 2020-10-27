@@ -165,17 +165,18 @@ namespace BusinessApp
             // 
             this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbname.AutoSize = true;
-            this.lbname.Location = new System.Drawing.Point(229, 9);
+            this.lbname.Location = new System.Drawing.Point(282, 9);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(51, 20);
             this.lbname.TabIndex = 11;
             this.lbname.Text = "label3";
+            this.lbname.Click += new System.EventHandler(this.lbname_Click);
             // 
             // lbaddress
             // 
             this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbaddress.AutoSize = true;
-            this.lbaddress.Location = new System.Drawing.Point(265, 38);
+            this.lbaddress.Location = new System.Drawing.Point(268, 38);
             this.lbaddress.Name = "lbaddress";
             this.lbaddress.Size = new System.Drawing.Size(51, 20);
             this.lbaddress.TabIndex = 12;

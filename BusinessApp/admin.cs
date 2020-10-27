@@ -151,5 +151,10 @@ namespace BusinessApp
         {
 
         }
+
+        private void lbname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }

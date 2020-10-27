@@ -67,8 +67,10 @@ namespace BusinessApp
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
 
-                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
-                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                lbname.Visible = false;
+                lbaddress.Visible = false;
                 //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 // Use TimeSpan and some date calculaton, this should work:
                 lsvitems1.Visible = false;
