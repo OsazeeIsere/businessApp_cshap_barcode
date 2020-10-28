@@ -67,7 +67,7 @@ namespace BusinessApp
             // 
             this.txtcashiername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcashiername.Location = new System.Drawing.Point(157, 46);
-            this.txtcashiername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtcashiername.Margin = new System.Windows.Forms.Padding(5);
             this.txtcashiername.Name = "txtcashiername";
             this.txtcashiername.Size = new System.Drawing.Size(213, 26);
             this.txtcashiername.TabIndex = 1;
@@ -89,7 +89,7 @@ namespace BusinessApp
             // 
             this.txtcashierpassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcashierpassword.Location = new System.Drawing.Point(157, 117);
-            this.txtcashierpassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtcashierpassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtcashierpassword.Name = "txtcashierpassword";
             this.txtcashierpassword.PasswordChar = '*';
             this.txtcashierpassword.Size = new System.Drawing.Size(216, 26);
@@ -101,7 +101,7 @@ namespace BusinessApp
             this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.Button1.Location = new System.Drawing.Point(407, 46);
-            this.Button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button1.Margin = new System.Windows.Forms.Padding(5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(300, 102);
             this.Button1.TabIndex = 4;
@@ -114,7 +114,7 @@ namespace BusinessApp
             this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.key3;
             this.PictureBox1.Location = new System.Drawing.Point(65, 157);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(228, 162);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +135,7 @@ namespace BusinessApp
             this.Controls.Add(this.txtcashiername);
             this.Controls.Add(this.Label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(742, 364);
             this.MinimumSize = new System.Drawing.Size(742, 364);
             this.Name = "cashier";

@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Linq;
 using System.Xml.Linq;
+using Excel = Microsoft.Office.Interop.Excel;
 
 using MySql.Data.MySqlClient;
 
@@ -87,6 +88,7 @@ namespace BusinessApp
                     }
                     else
 					{
+                        menuStrip1.Visible = false;
                         dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
                             "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog order by date");
                         dgvsaleslog.DataSource = dtgetsaleslog;
@@ -316,6 +318,7 @@ namespace BusinessApp
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && DateTimePicker1.Value.Date.ToShortDateString() == DateTimePicker2.Value.Date.ToShortDateString() && cbocashier.Text != "All Cashiers' Sales")
 					{
+                        menuStrip1.Visible = false;
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
                                             "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where  cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						dgvsaleslog.DataSource = dtgetsaleslog;
@@ -340,7 +343,8 @@ namespace BusinessApp
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && DateTimePicker1.Value.Date.ToShortDateString() != DateTimePicker2.Value.Date.ToShortDateString() && cbocashier.Text != "All Cashiers' Sales")
 					{
-						string stdate = DateTimePicker1.Value.Date.ToShortDateString();
+                        menuStrip1.Visible = false;
+                        string stdate = DateTimePicker1.Value.Date.ToShortDateString();
 						string eddate = DateTimePicker2.Value.Date.ToShortDateString();
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
                                             "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'and  cashiername='" + cbocashier.Text + "'");
@@ -366,7 +370,8 @@ namespace BusinessApp
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Cashiers' Sales" && DateTimePicker1.Value.Date.ToShortDateString() == DateTimePicker2.Value.Date.ToShortDateString())
 					{
-						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
+                        menuStrip1.Visible = false;
+                        dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
                                             "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						dgvsaleslog.DataSource = dtgetsaleslog;
 						if (dtgetsaleslog.Rows.Count > 0)
@@ -390,7 +395,8 @@ namespace BusinessApp
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Cashiers' Sales" && DateTimePicker1.Value.Date.ToShortDateString() != DateTimePicker2.Value.Date.ToShortDateString())
 					{
-						string stdate = DateTimePicker1.Value.Date.ToShortDateString();
+                        menuStrip1.Visible = false;
+                        string stdate = DateTimePicker1.Value.Date.ToShortDateString();
 						string eddate = DateTimePicker2.Value.Date.ToShortDateString();
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
                                             "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
@@ -568,8 +574,6 @@ namespace BusinessApp
                 double totalsales = 0;
                 double totalprofit = 0;
                 System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
-                dtgetsaleslog = getdatabase("select * from drugslog order by date");
-                dgvsaleslog.DataSource = dtgetsaleslog;
                 System.Data.DataTable dtgetsaleslog1 = new System.Data.DataTable();
                 dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog");
                 double temp = 0;
@@ -581,6 +585,9 @@ namespace BusinessApp
                 {
                     if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && dtgetsaleslog1.Rows.Count > 0)
                     {
+                        dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
+                                       "unitsalesprice,amountsold,profit,receiptnumber,entrydate from drugslog order by date");
+                        dgvsaleslog.DataSource = dtgetsaleslog;
                         for (var j = 0; j < dtgetsaleslog1.Rows.Count; j++)
                         {
                             temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
@@ -596,13 +603,16 @@ namespace BusinessApp
                     }
                     else
                     {
+                        dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
+                                       "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog order by date");
+                        dgvsaleslog.DataSource = dtgetsaleslog;
                         for (var j = 0; j < dtgetsaleslog1.Rows.Count; j++)
                         {
                             temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
                             temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["profit"]);
                         }
                         totalsales = temp;
-                        totalprofit = temp1;
+                       // totalprofit = temp1;
                         txttotalsales.Text = totalsales.ToString();
                         c = dtgetsaleslog1.Rows.Count;
                         txtcustomer.Text = c.ToString();
@@ -644,6 +654,97 @@ namespace BusinessApp
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void exportTableAsExcelDataBaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            MySqlConnection cnn;
+            string connectionString = null;
+            string sql = null;
+            string data = null;
+            string column = null;
+            int i = 0;
+            int j = 0;
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            connectionString = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer";
+            cnn = new MySqlConnection(connectionString);
+            cnn.Open();
+            sql = "SELECT * FROM drugslog";
+            MySqlDataAdapter dscmd = new MySqlDataAdapter(sql, cnn);
+            DataTable ds = new DataTable();
+            dscmd.Fill(ds);
+            // DataColumn dc = new DataColumn();
+            xlWorkSheet.Cells[1, 1] = "Salelog DataBase As At " + DateTimePicker1.Value.ToLongDateString();
+
+            for (j = 0; j <= ds.Columns.Count - 1; j++)
+            {
+                // data = ds.Rows[i].ItemArray[j].ToString();
+                column = ds.Columns[j].ColumnName.ToString();
+
+                xlWorkSheet.Cells[2, j + 1] = column;
+            }
+            for (i = 0; i <= ds.Rows.Count - 1; i++)
+            {
+                for (j = 0; j <= ds.Columns.Count - 1; j++)
+                {
+                    data = ds.Rows[i].ItemArray[j].ToString();
+                    xlWorkSheet.Cells[i + 3, j + 1] = data;
+                }
+            }
+            // workbook = APP.Workbooks.Open(txtfile.Text);
+            saveFileDialog1.ShowDialog();
+            xlWorkBook.SaveAs(txtfile1.Text, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            xlWorkBook.Close(true, misValue, misValue);
+            xlApp.Quit();
+
+            releaseObject(xlWorkSheet);
+            releaseObject(xlWorkBook);
+            releaseObject(xlApp);
+
+            MessageBox.Show("Excel file created , you can find the file c:\\" + txtfile1.Text);
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
+        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            txtfile1.Text = saveFileDialog1.FileName + ".xls";
+
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

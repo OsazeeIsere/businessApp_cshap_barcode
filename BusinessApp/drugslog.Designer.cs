@@ -43,7 +43,7 @@ namespace BusinessApp
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -65,7 +65,15 @@ namespace BusinessApp
             this.txtname = new System.Windows.Forms.TextBox();
             this.Label13 = new System.Windows.Forms.Label();
             this.txtcancelsalesapproval = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportTableAsExcelDataBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtfile1 = new System.Windows.Forms.TextBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvsaleslog
@@ -77,16 +85,16 @@ namespace BusinessApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvsaleslog.Location = new System.Drawing.Point(22, 119);
+            this.dgvsaleslog.Location = new System.Drawing.Point(13, 174);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvsaleslog.Name = "dgvsaleslog";
             this.dgvsaleslog.ReadOnly = true;
@@ -99,7 +107,7 @@ namespace BusinessApp
             this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(807, 534);
+            this.Label1.Location = new System.Drawing.Point(798, 589);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(165, 24);
@@ -112,7 +120,7 @@ namespace BusinessApp
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(862, 586);
+            this.Label2.Location = new System.Drawing.Point(853, 641);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(97, 24);
@@ -124,7 +132,7 @@ namespace BusinessApp
             // 
             this.txttotalsales.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txttotalsales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalsales.Location = new System.Drawing.Point(971, 531);
+            this.txttotalsales.Location = new System.Drawing.Point(962, 586);
             this.txttotalsales.Name = "txttotalsales";
             this.txttotalsales.ReadOnly = true;
             this.txttotalsales.Size = new System.Drawing.Size(101, 31);
@@ -135,7 +143,7 @@ namespace BusinessApp
             // 
             this.txttotaprofit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txttotaprofit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotaprofit.Location = new System.Drawing.Point(971, 584);
+            this.txttotaprofit.Location = new System.Drawing.Point(962, 639);
             this.txttotaprofit.Name = "txttotaprofit";
             this.txttotaprofit.ReadOnly = true;
             this.txttotaprofit.Size = new System.Drawing.Size(101, 29);
@@ -145,7 +153,7 @@ namespace BusinessApp
             // Button1
             // 
             this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Button1.Location = new System.Drawing.Point(466, 635);
+            this.Button1.Location = new System.Drawing.Point(457, 690);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(254, 31);
             this.Button1.TabIndex = 29;
@@ -156,7 +164,7 @@ namespace BusinessApp
             // DateTimePicker1
             // 
             this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.DateTimePicker1.Location = new System.Drawing.Point(461, 530);
+            this.DateTimePicker1.Location = new System.Drawing.Point(452, 585);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(260, 26);
             this.DateTimePicker1.TabIndex = 30;
@@ -166,7 +174,7 @@ namespace BusinessApp
             // 
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(52, 533);
+            this.Label3.Location = new System.Drawing.Point(43, 588);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(112, 20);
             this.Label3.TabIndex = 31;
@@ -177,7 +185,7 @@ namespace BusinessApp
             // 
             this.cbocashier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cbocashier.FormattingEnabled = true;
-            this.cbocashier.Location = new System.Drawing.Point(170, 530);
+            this.cbocashier.Location = new System.Drawing.Point(161, 585);
             this.cbocashier.Name = "cbocashier";
             this.cbocashier.Size = new System.Drawing.Size(167, 28);
             this.cbocashier.TabIndex = 32;
@@ -187,7 +195,7 @@ namespace BusinessApp
             // 
             this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(343, 533);
+            this.Label4.Location = new System.Drawing.Point(334, 588);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(120, 20);
             this.Label4.TabIndex = 33;
@@ -198,7 +206,7 @@ namespace BusinessApp
             // 
             this.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(804, 635);
+            this.Label7.Location = new System.Drawing.Point(795, 690);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(155, 20);
             this.Label7.TabIndex = 34;
@@ -208,7 +216,7 @@ namespace BusinessApp
             // txtcustomer
             // 
             this.txtcustomer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtcustomer.Location = new System.Drawing.Point(971, 632);
+            this.txtcustomer.Location = new System.Drawing.Point(962, 687);
             this.txtcustomer.Name = "txtcustomer";
             this.txtcustomer.ReadOnly = true;
             this.txtcustomer.Size = new System.Drawing.Size(101, 26);
@@ -218,7 +226,7 @@ namespace BusinessApp
             // DateTimePicker2
             // 
             this.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.DateTimePicker2.Location = new System.Drawing.Point(466, 588);
+            this.DateTimePicker2.Location = new System.Drawing.Point(457, 643);
             this.DateTimePicker2.Name = "DateTimePicker2";
             this.DateTimePicker2.Size = new System.Drawing.Size(254, 26);
             this.DateTimePicker2.TabIndex = 36;
@@ -228,7 +236,7 @@ namespace BusinessApp
             // 
             this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(343, 594);
+            this.Label8.Location = new System.Drawing.Point(334, 649);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(125, 20);
             this.Label8.TabIndex = 37;
@@ -237,7 +245,7 @@ namespace BusinessApp
             // 
             // txtpassword1
             // 
-            this.txtpassword1.Location = new System.Drawing.Point(46, 72);
+            this.txtpassword1.Location = new System.Drawing.Point(37, 127);
             this.txtpassword1.Name = "txtpassword1";
             this.txtpassword1.PasswordChar = '*';
             this.txtpassword1.ReadOnly = true;
@@ -247,7 +255,7 @@ namespace BusinessApp
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(231, 64);
+            this.button2.Location = new System.Drawing.Point(222, 119);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 45);
             this.button2.TabIndex = 59;
@@ -258,7 +266,7 @@ namespace BusinessApp
             // txtaddress
             // 
             this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Location = new System.Drawing.Point(0, 50);
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.ReadOnly = true;
             this.txtaddress.Size = new System.Drawing.Size(1294, 26);
@@ -268,7 +276,7 @@ namespace BusinessApp
             // txtname
             // 
             this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Location = new System.Drawing.Point(0, 24);
             this.txtname.Name = "txtname";
             this.txtname.ReadOnly = true;
             this.txtname.Size = new System.Drawing.Size(1294, 26);
@@ -279,7 +287,7 @@ namespace BusinessApp
             // 
             this.Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label13.AutoSize = true;
-            this.Label13.Location = new System.Drawing.Point(927, 75);
+            this.Label13.Location = new System.Drawing.Point(918, 130);
             this.Label13.Name = "Label13";
             this.Label13.Size = new System.Drawing.Size(200, 20);
             this.Label13.TabIndex = 112;
@@ -288,11 +296,64 @@ namespace BusinessApp
             // txtcancelsalesapproval
             // 
             this.txtcancelsalesapproval.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtcancelsalesapproval.Location = new System.Drawing.Point(1133, 72);
+            this.txtcancelsalesapproval.Location = new System.Drawing.Point(1124, 127);
             this.txtcancelsalesapproval.Name = "txtcancelsalesapproval";
             this.txtcancelsalesapproval.PasswordChar = '#';
             this.txtcancelsalesapproval.Size = new System.Drawing.Size(138, 26);
             this.txtcancelsalesapproval.TabIndex = 111;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1294, 24);
+            this.menuStrip1.TabIndex = 113;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportTableAsExcelDataBaseToolStripMenuItem,
+            this.closeToolStripMenuItem,
+            this.quitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exportTableAsExcelDataBaseToolStripMenuItem
+            // 
+            this.exportTableAsExcelDataBaseToolStripMenuItem.Name = "exportTableAsExcelDataBaseToolStripMenuItem";
+            this.exportTableAsExcelDataBaseToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.exportTableAsExcelDataBaseToolStripMenuItem.Text = "Export Table As Excel DataBase";
+            this.exportTableAsExcelDataBaseToolStripMenuItem.Click += new System.EventHandler(this.exportTableAsExcelDataBaseToolStripMenuItem_Click);
+            // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // txtfile1
+            // 
+            this.txtfile1.Location = new System.Drawing.Point(922, 83);
+            this.txtfile1.Name = "txtfile1";
+            this.txtfile1.Size = new System.Drawing.Size(100, 26);
+            this.txtfile1.TabIndex = 114;
+            this.txtfile1.Visible = false;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // drugslog
             // 
@@ -303,6 +364,7 @@ namespace BusinessApp
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1294, 782);
+            this.Controls.Add(this.txtfile1);
             this.Controls.Add(this.Label13);
             this.Controls.Add(this.txtcancelsalesapproval);
             this.Controls.Add(this.txtaddress);
@@ -323,7 +385,9 @@ namespace BusinessApp
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.dgvsaleslog);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "drugslog";
@@ -332,6 +396,8 @@ namespace BusinessApp
             this.Load += new System.EventHandler(this.saleslog_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drugslog_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,6 +423,13 @@ namespace BusinessApp
         private System.Windows.Forms.TextBox txtname;
         internal System.Windows.Forms.Label Label13;
         internal System.Windows.Forms.TextBox txtcancelsalesapproval;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem exportTableAsExcelDataBaseToolStripMenuItem;
+        private ToolStripMenuItem closeToolStripMenuItem;
+        private ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtfile1;
+        private SaveFileDialog saveFileDialog1;
     }
 
 }

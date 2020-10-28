@@ -12,7 +12,8 @@ using System.Xml.Linq;
 using MySql.Data.MySqlClient;
 using xlapp = Microsoft.Office.Interop.Excel;
 using System.Text.RegularExpressions;
-
+using System.Data.SqlClient;
+using Excel = Microsoft.Office.Interop.Excel;
 namespace BusinessApp
 {
     
@@ -992,6 +993,100 @@ namespace BusinessApp
         private void txtexpirydate_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void exportDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MySqlConnection cnn;
+            string connectionString = null;
+            string sql = null;
+            string data = null;
+            string column = null;
+            int i = 0;
+            int j = 0;
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            connectionString = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer";
+            cnn = new MySqlConnection(connectionString);
+            cnn.Open();
+            sql = "SELECT * FROM Product";
+            MySqlDataAdapter dscmd = new MySqlDataAdapter(sql, cnn);
+            DataTable ds = new DataTable();
+            dscmd.Fill(ds);
+            // DataColumn dc = new DataColumn();
+            xlWorkSheet.Cells[1,1] ="Products DataBase As At "+ DateTimePicker1.Value.ToLongDateString();
+
+            for (j = 0; j <= ds.Columns.Count - 1; j++)
+            {
+                // data = ds.Rows[i].ItemArray[j].ToString();
+                column = ds.Columns[j].ColumnName.ToString();
+
+                xlWorkSheet.Cells[2, j + 1] = column;
+            }
+            for (i = 0; i <= ds.Rows.Count - 1; i++)
+            {
+                for (j = 0; j <= ds.Columns.Count - 1; j++)
+                {
+                    data = ds.Rows[i].ItemArray[j].ToString();
+                    xlWorkSheet.Cells[i + 3, j + 1] = data;
+                }
+            }
+            // workbook = APP.Workbooks.Open(txtfile.Text);
+            saveFileDialog1.ShowDialog();
+            xlWorkBook.SaveAs(txtfile1.Text, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            xlWorkBook.Close(true, misValue, misValue);
+            xlApp.Quit();
+
+            releaseObject(xlWorkSheet);
+            releaseObject(xlWorkBook);
+            releaseObject(xlApp);
+
+            MessageBox.Show("Excel file created , you can find the file c:\\"+ txtfile1.Text);
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
+        private void saveFileDialog1_FileOk_1(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            txtfile1.Text = saveFileDialog1.FileName+".xls";
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void quitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
