@@ -85,7 +85,7 @@ namespace BusinessApp
             this.Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(377, 204);
-            this.Panel2.TabIndex = 14;
+            this.Panel2.TabIndex = 1;
             // 
             // Label6
             // 
@@ -102,7 +102,7 @@ namespace BusinessApp
             this.txtcashierpassword.Name = "txtcashierpassword";
             this.txtcashierpassword.PasswordChar = '*';
             this.txtcashierpassword.Size = new System.Drawing.Size(167, 26);
-            this.txtcashierpassword.TabIndex = 2;
+            this.txtcashierpassword.TabIndex = 0;
             this.txtcashierpassword.Click += new System.EventHandler(this.txtcashierpassword_Click);
             this.txtcashierpassword.ModifiedChanged += new System.EventHandler(this.txtcashierpassword_ModifiedChanged);
             this.txtcashierpassword.MultilineChanged += new System.EventHandler(this.txtcashierpassword_MultilineChanged);
@@ -125,7 +125,7 @@ namespace BusinessApp
             this.Button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(171, 50);
-            this.Button4.TabIndex = 0;
+            this.Button4.TabIndex = 1;
             this.Button4.Text = "You FIt See Sales Log";
             this.Button4.UseVisualStyleBackColor = true;
             this.Button4.Click += new System.EventHandler(this.Button4_Click);
@@ -143,7 +143,7 @@ namespace BusinessApp
             this.Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(369, 204);
-            this.Panel1.TabIndex = 13;
+            this.Panel1.TabIndex = 0;
             // 
             // Label7
             // 
@@ -160,7 +160,7 @@ namespace BusinessApp
             this.txtadminpassword.Name = "txtadminpassword";
             this.txtadminpassword.PasswordChar = '*';
             this.txtadminpassword.Size = new System.Drawing.Size(176, 26);
-            this.txtadminpassword.TabIndex = 4;
+            this.txtadminpassword.TabIndex = 1;
             this.txtadminpassword.TextChanged += new System.EventHandler(this.txtadminpassword_TextChanged);
             // 
             // Label4
@@ -174,6 +174,7 @@ namespace BusinessApp
             // 
             // Button2
             // 
+            this.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Button2.Location = new System.Drawing.Point(174, 137);
             this.Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button2.Name = "Button2";
