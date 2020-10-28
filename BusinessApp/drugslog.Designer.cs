@@ -60,9 +60,11 @@ namespace BusinessApp
             this.Label8 = new System.Windows.Forms.Label();
             this.PrintDocument1 = new System.Drawing.Printing.PrintDocument();
             this.txtpassword1 = new System.Windows.Forms.TextBox();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.Label13 = new System.Windows.Forms.Label();
+            this.txtcancelsalesapproval = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +86,7 @@ namespace BusinessApp
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvsaleslog.Location = new System.Drawing.Point(22, 75);
+            this.dgvsaleslog.Location = new System.Drawing.Point(22, 119);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvsaleslog.Name = "dgvsaleslog";
             this.dgvsaleslog.ReadOnly = true;
@@ -235,51 +237,62 @@ namespace BusinessApp
             // 
             // txtpassword1
             // 
-            this.txtpassword1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtpassword1.Location = new System.Drawing.Point(47, 20);
+            this.txtpassword1.Location = new System.Drawing.Point(46, 72);
             this.txtpassword1.Name = "txtpassword1";
             this.txtpassword1.PasswordChar = '*';
             this.txtpassword1.ReadOnly = true;
             this.txtpassword1.Size = new System.Drawing.Size(142, 26);
             this.txtpassword1.TabIndex = 38;
             // 
-            // lbaddress
-            // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.Black;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(580, 39);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 40;
-            this.lbaddress.Text = "lb2";
-            // 
-            // lbname
-            // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.Red;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(545, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 39;
-            this.lbname.Text = "lb1";
-            // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(232, 12);
+            this.button2.Location = new System.Drawing.Point(231, 64);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 45);
             this.button2.TabIndex = 59;
             this.button2.Text = "Cancel Sales";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1294, 26);
+            this.txtaddress.TabIndex = 110;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1294, 26);
+            this.txtname.TabIndex = 109;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Label13
+            // 
+            this.Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label13.AutoSize = true;
+            this.Label13.Location = new System.Drawing.Point(927, 75);
+            this.Label13.Name = "Label13";
+            this.Label13.Size = new System.Drawing.Size(200, 20);
+            this.Label13.TabIndex = 112;
+            this.Label13.Text = "Approval To Reverse Sales";
+            // 
+            // txtcancelsalesapproval
+            // 
+            this.txtcancelsalesapproval.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcancelsalesapproval.Location = new System.Drawing.Point(1133, 72);
+            this.txtcancelsalesapproval.Name = "txtcancelsalesapproval";
+            this.txtcancelsalesapproval.PasswordChar = '#';
+            this.txtcancelsalesapproval.Size = new System.Drawing.Size(138, 26);
+            this.txtcancelsalesapproval.TabIndex = 111;
             // 
             // drugslog
             // 
@@ -290,9 +303,11 @@ namespace BusinessApp
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1294, 782);
+            this.Controls.Add(this.Label13);
+            this.Controls.Add(this.txtcancelsalesapproval);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtpassword1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.DateTimePicker2);
@@ -337,9 +352,11 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label8;
 		internal System.Drawing.Printing.PrintDocument PrintDocument1;
 		internal System.Windows.Forms.TextBox txtpassword1;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
+        internal System.Windows.Forms.Label Label13;
+        internal System.Windows.Forms.TextBox txtcancelsalesapproval;
     }
 
 }

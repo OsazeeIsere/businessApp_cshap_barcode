@@ -45,8 +45,8 @@ namespace BusinessApp
             this.btnaddproduct = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.txtpassword = new System.Windows.Forms.TextBox();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnbackup
@@ -68,7 +68,7 @@ namespace BusinessApp
             this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(58, 284);
+            this.Button1.Location = new System.Drawing.Point(43, 284);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(201, 82);
@@ -97,7 +97,7 @@ namespace BusinessApp
             this.Button2.BackColor = System.Drawing.Color.LightGray;
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button2.Location = new System.Drawing.Point(311, 376);
+            this.Button2.Location = new System.Drawing.Point(320, 398);
             this.Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(196, 82);
@@ -115,42 +115,35 @@ namespace BusinessApp
             this.txtpassword.Size = new System.Drawing.Size(148, 26);
             this.txtpassword.TabIndex = 11;
             // 
-            // lbaddress
+            // txtaddress
             // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.Black;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(317, 66);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(33, 20);
-            this.lbaddress.TabIndex = 92;
-            this.lbaddress.Text = "lb2";
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(807, 26);
+            this.txtaddress.TabIndex = 186;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbname
+            // txtname
             // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.White;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(306, 21);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 91;
-            this.lbname.Text = "lb1";
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(807, 26);
+            this.txtname.TabIndex = 185;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // saleslog
             // 
-            this.AcceptButton = this.Button2;
+            this.AcceptButton = this.Button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.ClientSize = new System.Drawing.Size(807, 561);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.btnbackup);
@@ -172,8 +165,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Button btnaddproduct;
 		internal System.Windows.Forms.Button Button2;
 		internal System.Windows.Forms.TextBox txtpassword;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-	}
+        private TextBox txtaddress;
+        private TextBox txtname;
+    }
 
 }

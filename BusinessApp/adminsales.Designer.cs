@@ -87,8 +87,6 @@ namespace BusinessApp
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.Button3 = new System.Windows.Forms.Button();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
             this.txt3 = new System.Windows.Forms.TextBox();
             this.txt1 = new System.Windows.Forms.TextBox();
             this.txt0 = new System.Windows.Forms.TextBox();
@@ -100,6 +98,8 @@ namespace BusinessApp
             this.label19 = new System.Windows.Forms.Label();
             this.txtproductname = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -220,9 +220,10 @@ namespace BusinessApp
             // 
             this.txttime.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttime.Location = new System.Drawing.Point(1188, 36);
+            this.txttime.Location = new System.Drawing.Point(1187, 54);
             this.txttime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttime.Name = "txttime";
+            this.txttime.ReadOnly = true;
             this.txttime.Size = new System.Drawing.Size(131, 29);
             this.txttime.TabIndex = 85;
             // 
@@ -252,7 +253,7 @@ namespace BusinessApp
             this.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label9.AutoSize = true;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(1117, 41);
+            this.Label9.Location = new System.Drawing.Point(1116, 59);
             this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label9.Name = "Label9";
             this.Label9.Size = new System.Drawing.Size(58, 24);
@@ -530,34 +531,6 @@ namespace BusinessApp
             this.Button3.UseVisualStyleBackColor = false;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // lbaddress
-            // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.Black;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(568, 47);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 116;
-            this.lbaddress.Text = "lb2";
-            // 
-            // lbname
-            // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.Black;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(541, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 115;
-            this.lbname.Text = "lb1";
-            this.lbname.Click += new System.EventHandler(this.lbname_Click);
-            // 
             // txt3
             // 
             this.txt3.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -565,6 +538,7 @@ namespace BusinessApp
             this.txt3.Location = new System.Drawing.Point(1001, 626);
             this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
+            this.txt3.ReadOnly = true;
             this.txt3.Size = new System.Drawing.Size(202, 85);
             this.txt3.TabIndex = 136;
             // 
@@ -575,6 +549,7 @@ namespace BusinessApp
             this.txt1.Location = new System.Drawing.Point(1001, 472);
             this.txt1.Multiline = true;
             this.txt1.Name = "txt1";
+            this.txt1.ReadOnly = true;
             this.txt1.Size = new System.Drawing.Size(207, 89);
             this.txt1.TabIndex = 135;
             // 
@@ -584,6 +559,7 @@ namespace BusinessApp
             this.txt0.Location = new System.Drawing.Point(1001, 352);
             this.txt0.Multiline = true;
             this.txt0.Name = "txt0";
+            this.txt0.ReadOnly = true;
             this.txt0.Size = new System.Drawing.Size(207, 80);
             this.txt0.TabIndex = 134;
             // 
@@ -677,6 +653,26 @@ namespace BusinessApp
             this.Label15.TabIndex = 139;
             this.Label15.Text = "Name";
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1365, 26);
+            this.txtaddress.TabIndex = 142;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1365, 26);
+            this.txtname.TabIndex = 141;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // adminsales
             // 
             this.AcceptButton = this.btnenter;
@@ -684,6 +680,8 @@ namespace BusinessApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1365, 816);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtproductname);
             this.Controls.Add(this.Label15);
             this.Controls.Add(this.txtcode2);
@@ -695,8 +693,6 @@ namespace BusinessApp
             this.Controls.Add(this.thisMonth2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.thisMonth);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.txtcosmeticsid);
             this.Controls.Add(this.Label6);
@@ -787,8 +783,6 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label6;
 		internal System.Windows.Forms.TextBox txtcosmeticsid;
 		internal System.Windows.Forms.Button Button3;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
         private TextBox txt3;
         private TextBox txt1;
         private TextBox txt0;
@@ -800,6 +794,8 @@ namespace BusinessApp
         private Label label19;
         internal TextBox txtproductname;
         internal Label Label15;
+        private TextBox txtaddress;
+        private TextBox txtname;
     }
 
 }

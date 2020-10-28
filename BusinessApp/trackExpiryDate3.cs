@@ -42,8 +42,8 @@ namespace BusinessApp
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
 
-                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
-                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 int months = 0;
                 int months1 = 0;

@@ -53,8 +53,6 @@ namespace BusinessApp
             this.txtfile = new System.Windows.Forms.TextBox();
             this.txtunitcostprice = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
             this.Button2 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
             this.txtproductname = new System.Windows.Forms.TextBox();
@@ -85,6 +83,8 @@ namespace BusinessApp
             this.Label13 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Button5 = new System.Windows.Forms.Button();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdrinks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -155,30 +155,6 @@ namespace BusinessApp
             this.Label7.Size = new System.Drawing.Size(114, 20);
             this.Label7.TabIndex = 57;
             this.Label7.Text = "Unit Cost Price";
-            // 
-            // lbaddress
-            // 
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.White;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Location = new System.Drawing.Point(449, 45);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(35, 24);
-            this.lbaddress.TabIndex = 56;
-            this.lbaddress.Text = "lb2";
-            // 
-            // lbname
-            // 
-            this.lbname.AutoSize = true;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.Aqua;
-            this.lbname.Location = new System.Drawing.Point(290, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(49, 29);
-            this.lbname.TabIndex = 55;
-            this.lbname.Text = "lb1";
             // 
             // Button2
             // 
@@ -455,12 +431,34 @@ namespace BusinessApp
             this.Button5.UseVisualStyleBackColor = true;
             this.Button5.Click += new System.EventHandler(this.Button5_Click_1);
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 20);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1284, 20);
+            this.txtaddress.TabIndex = 108;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1284, 20);
+            this.txtname.TabIndex = 107;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // drinks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1284, 782);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.Button5);
             this.Controls.Add(this.txtamountpaid);
             this.Controls.Add(this.Label13);
@@ -483,8 +481,6 @@ namespace BusinessApp
             this.Controls.Add(this.txtfile);
             this.Controls.Add(this.txtunitcostprice);
             this.Controls.Add(this.Label7);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.txtproductname);
@@ -515,8 +511,6 @@ namespace BusinessApp
 		internal System.Windows.Forms.TextBox txtfile;
 		internal System.Windows.Forms.TextBox txtunitcostprice;
 		internal System.Windows.Forms.Label Label7;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
 		internal System.Windows.Forms.Button Button2;
 		internal System.Windows.Forms.Button Button3;
 		internal System.Windows.Forms.TextBox txtproductname;
@@ -546,6 +540,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.TextBox txtamountpaid;
 		internal System.Windows.Forms.Label Label13;
 		internal System.Windows.Forms.Button Button5;
-	}
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
+    }
 
 }

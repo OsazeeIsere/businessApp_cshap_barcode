@@ -49,9 +49,9 @@ namespace BusinessApp
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
 
-                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
-                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
-                lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                txttel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 System.Data.DataTable dtgetsales = new System.Data.DataTable();
 				dtgetsales = getdatabase("select quantitysold,itemsold,unitprice,amount from sales order by itemsold");
 				if (dtgetsales.Rows.Count > 0)
@@ -98,9 +98,9 @@ namespace BusinessApp
 				Font font1 = new Font("arial", 7F, FontStyle.Regular);
 				Font font2 = new Font("arial", 7F, FontStyle.Regular);
 				Font font3 = new Font("arial", 8F, FontStyle.Regular);
-				e.Graphics.DrawString(lbname.Text, font, Brushes.Black, 1, 20);
-                e.Graphics.DrawString(lbaddress.Text, font1, Brushes.Black, 1, 35);
-                e.Graphics.DrawString(lbtel.Text, fontx, Brushes.Black, 6, 50);
+				e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 1, 20);
+                e.Graphics.DrawString(txtaddress.Text, font1, Brushes.Black, 1, 35);
+                e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 6, 50);
 				e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 65);
 				e.Graphics.DrawString(txtcashiername1.Text, font3, Brushes.Black, 60, 65);
 				e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 120, 65);

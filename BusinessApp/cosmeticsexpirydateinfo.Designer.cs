@@ -69,8 +69,8 @@ namespace BusinessApp
             this.Label1 = new System.Windows.Forms.Label();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.OpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -292,40 +292,33 @@ namespace BusinessApp
             this.OpenFileDialog1.FileName = "OpenFileDialog1";
             this.OpenFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
-            // lbaddress
+            // txtaddress
             // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(551, 45);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 95;
-            this.lbaddress.Text = "lb2";
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1284, 26);
+            this.txtaddress.TabIndex = 108;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbname
+            // txtname
             // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.Black;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(511, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 94;
-            this.lbname.Text = "lb1";
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1284, 26);
+            this.txtname.TabIndex = 107;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cosmeticsexpirydateinfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 611);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.txtsearch);
@@ -377,8 +370,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.ComboBox ComboBox1;
 		internal System.Windows.Forms.OpenFileDialog OpenFileDialog1;
 		internal System.Windows.Forms.ColumnHeader ColumnHeader12;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-	}
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
+    }
 
 }

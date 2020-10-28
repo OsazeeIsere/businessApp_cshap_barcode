@@ -53,8 +53,8 @@ namespace BusinessApp
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lsvitems
@@ -160,40 +160,32 @@ namespace BusinessApp
             this.Label2.TabIndex = 86;
             this.Label2.Text = "The Total Number of Products Affected";
             // 
-            // lbaddress
+            // txtaddress
             // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(360, 62);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 89;
-            this.lbaddress.Text = "lb2";
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(902, 26);
+            this.txtaddress.TabIndex = 108;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbname
+            // txtname
             // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(327, 18);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 88;
-            this.lbname.Text = "lb1";
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(902, 26);
+            this.txtname.TabIndex = 107;
             // 
             // cosmeticsreorderlevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 623);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.txttotal);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.lsvitems);
@@ -223,8 +215,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.ComboBox ComboBox1;
 		internal System.Windows.Forms.TextBox txttotal;
 		internal System.Windows.Forms.Label Label2;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-	}
+        private TextBox txtaddress;
+        private TextBox txtname;
+    }
 
 }

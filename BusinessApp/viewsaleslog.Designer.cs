@@ -54,8 +54,8 @@ namespace BusinessApp
             this.txtadminpassword = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.Button2 = new System.Windows.Forms.Button();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.Panel2.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -183,41 +183,35 @@ namespace BusinessApp
             this.Button2.UseVisualStyleBackColor = true;
             this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // lbaddress
+            // txtaddress
             // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.Black;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(350, 56);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(33, 20);
-            this.lbaddress.TabIndex = 156;
-            this.lbaddress.Text = "lb2";
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(814, 26);
+            this.txtaddress.TabIndex = 186;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbname
+            // txtname
             // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(320, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 155;
-            this.lbname.Text = "lb1";
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(814, 26);
+            this.txtname.TabIndex = 185;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // viewsaleslog
             // 
-            this.AcceptButton = this.Button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton = this.Button2;
             this.ClientSize = new System.Drawing.Size(814, 561);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Label3);
@@ -247,8 +241,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.TextBox txtcashierpassword;
 		internal System.Windows.Forms.TextBox txtadminpassword;
 		internal System.Windows.Forms.Label Label7;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-	}
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
+    }
 
 }

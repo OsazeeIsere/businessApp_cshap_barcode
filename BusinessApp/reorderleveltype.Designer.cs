@@ -43,8 +43,8 @@ namespace BusinessApp
             this.btnbackup = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.btnaddproduct = new System.Windows.Forms.Button();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnbackup
@@ -89,39 +89,33 @@ namespace BusinessApp
             this.btnaddproduct.UseVisualStyleBackColor = false;
             this.btnaddproduct.Click += new System.EventHandler(this.btnaddproduct_Click);
             // 
-            // lbaddress
+            // txtaddress
             // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.Black;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(326, 124);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(33, 20);
-            this.lbaddress.TabIndex = 92;
-            this.lbaddress.Text = "lb2";
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(784, 26);
+            this.txtaddress.TabIndex = 186;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbname
+            // txtname
             // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(305, 66);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 91;
-            this.lbname.Text = "lb1";
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(784, 26);
+            this.txtname.TabIndex = 185;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // reorderleveltype
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.btnbackup);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.btnaddproduct);
@@ -139,8 +133,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Button btnbackup;
 		internal System.Windows.Forms.Button Button1;
 		internal System.Windows.Forms.Button btnaddproduct;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-	}
+        private TextBox txtaddress;
+        private TextBox txtname;
+    }
 
 }

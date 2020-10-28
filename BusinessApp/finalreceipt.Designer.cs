@@ -78,9 +78,9 @@ namespace BusinessApp
             this.txtdiscount1 = new System.Windows.Forms.TextBox();
             this.Label16 = new System.Windows.Forms.Label();
             this.Label17 = new System.Windows.Forms.Label();
-            this.lbtel = new System.Windows.Forms.Label();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.txttel = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Button1
@@ -407,43 +407,35 @@ namespace BusinessApp
             this.Label17.TabIndex = 74;
             this.Label17.Text = "NGN";
             // 
-            // lbtel
+            // txtaddress
             // 
-            this.lbtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbtel.AutoSize = true;
-            this.lbtel.BackColor = System.Drawing.Color.White;
-            this.lbtel.Location = new System.Drawing.Point(265, 66);
-            this.lbtel.Name = "lbtel";
-            this.lbtel.Size = new System.Drawing.Size(26, 16);
-            this.lbtel.TabIndex = 75;
-            this.lbtel.Text = "lb3";
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 22);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(684, 22);
+            this.txtaddress.TabIndex = 110;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbaddress
+            // txtname
             // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(246, 38);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 77;
-            this.lbaddress.Text = "lb2";
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(684, 22);
+            this.txtname.TabIndex = 109;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbname
+            // txttel
             // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.RosyBrown;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(229, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(33, 20);
-            this.lbname.TabIndex = 76;
-            this.lbname.Text = "lb1";
+            this.txttel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txttel.Location = new System.Drawing.Point(0, 44);
+            this.txttel.Name = "txttel";
+            this.txttel.ReadOnly = true;
+            this.txttel.Size = new System.Drawing.Size(684, 22);
+            this.txttel.TabIndex = 111;
+            this.txttel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // finalreceipt
             // 
@@ -451,9 +443,9 @@ namespace BusinessApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 661);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
-            this.Controls.Add(this.lbtel);
+            this.Controls.Add(this.txttel);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.Label17);
             this.Controls.Add(this.txtdiscount1);
             this.Controls.Add(this.Label16);
@@ -526,9 +518,9 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label16;
 		internal System.Windows.Forms.Label Label17;
 		internal System.Printing.PrintForm PrintForm1;
-		internal System.Windows.Forms.Label lbtel;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-	}
+        private TextBox txtaddress;
+        private TextBox txtname;
+        private TextBox txttel;
+    }
 
 }

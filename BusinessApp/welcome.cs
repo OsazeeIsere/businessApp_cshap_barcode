@@ -61,9 +61,9 @@ namespace BusinessApp
             dtidentity = getdatabase("Select * from identity");
             if (dtidentity.Rows.Count > 0)
             {
-                lbName.Text = dtidentity.Rows[0]["businessName"].ToString();
-                lbAddress.Text = dtidentity.Rows[0]["address"].ToString();
-                lbTel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                txtname.Text =" WELCOME TO "+ dtidentity.Rows[0]["businessName"].ToString();
+                txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                txttel.Text = dtidentity.Rows[0]["telephone"].ToString();
 
             }
             else

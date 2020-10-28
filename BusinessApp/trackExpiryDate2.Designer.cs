@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.txttotal = new System.Windows.Forms.TextBox();
@@ -53,36 +51,10 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbaddress
-            // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Location = new System.Drawing.Point(721, 55);
-            this.lbaddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 107;
-            this.lbaddress.Text = "lb2";
-            // 
-            // lbname
-            // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbname.Location = new System.Drawing.Point(674, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(51, 25);
-            this.lbname.TabIndex = 106;
-            this.lbname.Text = "l b1";
-            this.lbname.Click += new System.EventHandler(this.lbname_Click);
             // 
             // Label8
             // 
@@ -109,7 +81,7 @@
             // txttotal
             // 
             this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txttotal.Location = new System.Drawing.Point(326, 113);
+            this.txttotal.Location = new System.Drawing.Point(327, 140);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
@@ -120,7 +92,7 @@
             // 
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(33, 116);
+            this.Label2.Location = new System.Drawing.Point(34, 143);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(285, 20);
@@ -247,7 +219,7 @@
             // 
             this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(26, 59);
+            this.Label1.Location = new System.Drawing.Point(27, 86);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(103, 20);
@@ -265,7 +237,7 @@
             "Six Months(6) Time",
             "Above Six Months(6) Time",
             "Drugs Already Expired"});
-            this.ComboBox1.Location = new System.Drawing.Point(137, 51);
+            this.ComboBox1.Location = new System.Drawing.Point(138, 78);
             this.ComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBox1.Name = "ComboBox1";
             this.ComboBox1.Size = new System.Drawing.Size(227, 28);
@@ -284,13 +256,33 @@
             this.PictureBox1.TabIndex = 105;
             this.PictureBox1.TabStop = false;
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1588, 26);
+            this.txtaddress.TabIndex = 186;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1588, 26);
+            this.txtname.TabIndex = 185;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // trackExpiryDate2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1588, 822);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.txtsearch);
@@ -315,9 +307,6 @@
         }
 
         #endregion
-
-        internal System.Windows.Forms.Label lbaddress;
-        internal System.Windows.Forms.Label lbname;
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox txtsearch;
@@ -341,5 +330,7 @@
         internal System.Windows.Forms.Button check;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.ComboBox ComboBox1;
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
     }
 }

@@ -59,10 +59,10 @@ namespace BusinessApp
             this.Label1 = new System.Windows.Forms.Label();
             this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.txtpassword1 = new System.Windows.Forms.TextBox();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
             this.txtadmin = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@ namespace BusinessApp
             // 
             this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(353, 492);
+            this.Label8.Location = new System.Drawing.Point(346, 543);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(125, 20);
             this.Label8.TabIndex = 53;
@@ -79,7 +79,7 @@ namespace BusinessApp
             // DateTimePicker2
             // 
             this.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.DateTimePicker2.Location = new System.Drawing.Point(476, 486);
+            this.DateTimePicker2.Location = new System.Drawing.Point(469, 537);
             this.DateTimePicker2.Name = "DateTimePicker2";
             this.DateTimePicker2.Size = new System.Drawing.Size(254, 26);
             this.DateTimePicker2.TabIndex = 52;
@@ -87,7 +87,7 @@ namespace BusinessApp
             // txtcustomer
             // 
             this.txtcustomer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtcustomer.Location = new System.Drawing.Point(1054, 541);
+            this.txtcustomer.Location = new System.Drawing.Point(1047, 592);
             this.txtcustomer.Name = "txtcustomer";
             this.txtcustomer.ReadOnly = true;
             this.txtcustomer.Size = new System.Drawing.Size(101, 26);
@@ -97,7 +97,7 @@ namespace BusinessApp
             // 
             this.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(887, 544);
+            this.Label7.Location = new System.Drawing.Point(880, 595);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(155, 20);
             this.Label7.TabIndex = 50;
@@ -107,7 +107,7 @@ namespace BusinessApp
             // 
             this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(353, 431);
+            this.Label4.Location = new System.Drawing.Point(346, 482);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(120, 20);
             this.Label4.TabIndex = 49;
@@ -118,7 +118,7 @@ namespace BusinessApp
             this.cbocashier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cbocashier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbocashier.FormattingEnabled = true;
-            this.cbocashier.Location = new System.Drawing.Point(139, 431);
+            this.cbocashier.Location = new System.Drawing.Point(132, 482);
             this.cbocashier.Name = "cbocashier";
             this.cbocashier.Size = new System.Drawing.Size(163, 28);
             this.cbocashier.TabIndex = 48;
@@ -127,7 +127,7 @@ namespace BusinessApp
             // 
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(21, 434);
+            this.Label3.Location = new System.Drawing.Point(14, 485);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(112, 20);
             this.Label3.TabIndex = 47;
@@ -136,7 +136,7 @@ namespace BusinessApp
             // DateTimePicker1
             // 
             this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.DateTimePicker1.Location = new System.Drawing.Point(471, 428);
+            this.DateTimePicker1.Location = new System.Drawing.Point(464, 479);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(260, 26);
             this.DateTimePicker1.TabIndex = 46;
@@ -144,7 +144,7 @@ namespace BusinessApp
             // Button1
             // 
             this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Button1.Location = new System.Drawing.Point(476, 533);
+            this.Button1.Location = new System.Drawing.Point(469, 584);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(254, 31);
             this.Button1.TabIndex = 45;
@@ -156,7 +156,7 @@ namespace BusinessApp
             // 
             this.txttotaprofit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txttotaprofit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotaprofit.Location = new System.Drawing.Point(1054, 487);
+            this.txttotaprofit.Location = new System.Drawing.Point(1047, 538);
             this.txttotaprofit.Name = "txttotaprofit";
             this.txttotaprofit.ReadOnly = true;
             this.txttotaprofit.Size = new System.Drawing.Size(101, 29);
@@ -166,7 +166,7 @@ namespace BusinessApp
             // 
             this.txttotalsales.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txttotalsales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalsales.Location = new System.Drawing.Point(1054, 434);
+            this.txttotalsales.Location = new System.Drawing.Point(1047, 485);
             this.txttotalsales.Name = "txttotalsales";
             this.txttotalsales.ReadOnly = true;
             this.txttotalsales.Size = new System.Drawing.Size(101, 31);
@@ -177,7 +177,7 @@ namespace BusinessApp
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(945, 489);
+            this.Label2.Location = new System.Drawing.Point(938, 540);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(97, 24);
@@ -189,7 +189,7 @@ namespace BusinessApp
             this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(890, 437);
+            this.Label1.Location = new System.Drawing.Point(883, 488);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(165, 24);
@@ -214,7 +214,7 @@ namespace BusinessApp
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvsaleslog.Location = new System.Drawing.Point(25, 86);
+            this.dgvsaleslog.Location = new System.Drawing.Point(18, 137);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvsaleslog.Name = "dgvsaleslog";
             this.dgvsaleslog.ReadOnly = true;
@@ -232,36 +232,10 @@ namespace BusinessApp
             this.txtpassword1.Size = new System.Drawing.Size(152, 26);
             this.txtpassword1.TabIndex = 54;
             // 
-            // lbaddress
-            // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.Black;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(608, 36);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(33, 20);
-            this.lbaddress.TabIndex = 56;
-            this.lbaddress.Text = "lb2";
-            // 
-            // lbname
-            // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.Red;
-            this.lbname.Location = new System.Drawing.Point(585, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 55;
-            this.lbname.Text = "lb1";
-            // 
             // txtadmin
             // 
             this.txtadmin.AccessibleName = "txtadmin";
-            this.txtadmin.Location = new System.Drawing.Point(25, 9);
+            this.txtadmin.Location = new System.Drawing.Point(18, 82);
             this.txtadmin.Name = "txtadmin";
             this.txtadmin.PasswordChar = '#';
             this.txtadmin.ReadOnly = true;
@@ -271,7 +245,7 @@ namespace BusinessApp
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(139, 11);
+            this.button2.Location = new System.Drawing.Point(132, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 45);
             this.button2.TabIndex = 58;
@@ -279,16 +253,36 @@ namespace BusinessApp
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1253, 26);
+            this.txtaddress.TabIndex = 110;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1253, 26);
+            this.txtname.TabIndex = 109;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // generalsaleslog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1253, 637);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtadmin);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtpassword1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.DateTimePicker2);
@@ -332,10 +326,10 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.DataGridView dgvsaleslog;
 		internal System.Windows.Forms.TextBox txtpassword1;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
         private System.Windows.Forms.TextBox txtadmin;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
     }
 
 }

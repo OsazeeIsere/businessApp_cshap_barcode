@@ -51,9 +51,9 @@ namespace BusinessApp
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtadminpassword1 = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
-            this.lbaddress = new System.Windows.Forms.Label();
             this.lbtel = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,27 +161,6 @@ namespace BusinessApp
             this.Label2.TabIndex = 9;
             this.Label2.Text = "If New Please, Re-Enter Password";
             // 
-            // lbname
-            // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.Location = new System.Drawing.Point(282, 9);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(51, 20);
-            this.lbname.TabIndex = 11;
-            this.lbname.Text = "label3";
-            this.lbname.Click += new System.EventHandler(this.lbname_Click);
-            // 
-            // lbaddress
-            // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.Location = new System.Drawing.Point(268, 38);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(51, 20);
-            this.lbaddress.TabIndex = 12;
-            this.lbaddress.Text = "label3";
-            // 
             // lbtel
             // 
             this.lbtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -192,15 +171,35 @@ namespace BusinessApp
             this.lbtel.TabIndex = 13;
             this.lbtel.Text = "label3";
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(784, 26);
+            this.txtaddress.TabIndex = 108;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(784, 26);
+            this.txtname.TabIndex = 107;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // admin
             // 
             this.AcceptButton = this.btnmanageuser;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.lbtel);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
             this.Controls.Add(this.txtadminpassword1);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.PictureBox1);
@@ -231,9 +230,9 @@ namespace BusinessApp
 		internal System.Windows.Forms.PictureBox PictureBox1;
 		internal System.Windows.Forms.TextBox txtadminpassword1;
 		internal System.Windows.Forms.Label Label2;
-        private Label lbname;
-        private Label lbaddress;
         private Label lbtel;
+        private TextBox txtaddress;
+        private TextBox txtname;
     }
 
 }

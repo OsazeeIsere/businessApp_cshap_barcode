@@ -44,13 +44,13 @@ namespace BusinessApp
 		{
             this.btnaddproduct = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
-            this.lbName = new System.Windows.Forms.Label();
             this.btnbackup = new System.Windows.Forms.Button();
-            this.lbAddress = new System.Windows.Forms.Label();
-            this.lbTel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.txttel = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -83,20 +83,6 @@ namespace BusinessApp
             this.Button1.UseVisualStyleBackColor = false;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // lbName
-            // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbName.Location = new System.Drawing.Point(186, 25);
-            this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(76, 25);
-            this.lbName.TabIndex = 2;
-            this.lbName.Text = "label3";
-            this.lbName.Click += new System.EventHandler(this.Label1_Click);
-            // 
             // btnbackup
             // 
             this.btnbackup.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -110,29 +96,6 @@ namespace BusinessApp
             this.btnbackup.Text = "Login as Backup";
             this.btnbackup.UseVisualStyleBackColor = false;
             this.btnbackup.Click += new System.EventHandler(this.btnbackup_Click);
-            // 
-            // lbAddress
-            // 
-            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbAddress.AutoSize = true;
-            this.lbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbAddress.Location = new System.Drawing.Point(216, 64);
-            this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(46, 18);
-            this.lbAddress.TabIndex = 4;
-            this.lbAddress.Text = "label2";
-            this.lbAddress.Click += new System.EventHandler(this.lbAddress_Click);
-            // 
-            // lbTel
-            // 
-            this.lbTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbTel.AutoSize = true;
-            this.lbTel.Location = new System.Drawing.Point(277, 92);
-            this.lbTel.Name = "lbTel";
-            this.lbTel.Size = new System.Drawing.Size(51, 20);
-            this.lbTel.TabIndex = 5;
-            this.lbTel.Text = "label1";
             // 
             // button2
             // 
@@ -150,15 +113,14 @@ namespace BusinessApp
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(201)))), ((int)(((byte)(211)))));
-            this.panel1.Controls.Add(this.lbTel);
-            this.panel1.Controls.Add(this.lbAddress);
-            this.panel1.Controls.Add(this.lbName);
-            this.panel1.Location = new System.Drawing.Point(55, 51);
+            this.panel1.Controls.Add(this.txttel);
+            this.panel1.Controls.Add(this.txtaddress);
+            this.panel1.Controls.Add(this.txtname);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(677, 148);
+            this.panel1.Size = new System.Drawing.Size(784, 148);
             this.panel1.TabIndex = 7;
             // 
             // panel2
@@ -173,6 +135,36 @@ namespace BusinessApp
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(720, 123);
             this.panel2.TabIndex = 8;
+            // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(784, 26);
+            this.txtaddress.TabIndex = 186;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(784, 26);
+            this.txtname.TabIndex = 185;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txttel
+            // 
+            this.txttel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txttel.Location = new System.Drawing.Point(0, 52);
+            this.txttel.Name = "txttel";
+            this.txttel.ReadOnly = true;
+            this.txttel.Size = new System.Drawing.Size(784, 26);
+            this.txttel.TabIndex = 187;
+            this.txttel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // welcome
             // 
@@ -199,13 +191,13 @@ namespace BusinessApp
 		}
 		internal System.Windows.Forms.Button btnaddproduct;
 		internal System.Windows.Forms.Button Button1;
-		internal System.Windows.Forms.Label lbName;
 		internal System.Windows.Forms.Button btnbackup;
-		internal System.Windows.Forms.Label lbAddress;
-        private Label lbTel;
         private Button button2;
         private Panel panel1;
         private Panel panel2;
+        private TextBox txtaddress;
+        private TextBox txtname;
+        private TextBox txttel;
     }
 
 }

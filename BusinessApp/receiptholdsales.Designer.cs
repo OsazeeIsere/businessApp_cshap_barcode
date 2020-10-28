@@ -46,9 +46,6 @@ namespace BusinessApp
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(receiptholdsales));
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
-            this.lbtel = new System.Windows.Forms.Label();
             this.Label17 = new System.Windows.Forms.Label();
             this.txtdiscount1 = new System.Windows.Forms.TextBox();
             this.Label16 = new System.Windows.Forms.Label();
@@ -81,45 +78,10 @@ namespace BusinessApp
             this.PrintDocument1 = new System.Drawing.Printing.PrintDocument();
             this.PrintForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.lbcopyright = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.txttel = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // lbaddress
-            // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(277, 38);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 178;
-            this.lbaddress.Text = "lb2";
-            // 
-            // lbname
-            // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.RosyBrown;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(250, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(33, 20);
-            this.lbname.TabIndex = 177;
-            this.lbname.Text = "lb1";
-            // 
-            // lbtel
-            // 
-            this.lbtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbtel.AutoSize = true;
-            this.lbtel.BackColor = System.Drawing.Color.White;
-            this.lbtel.Location = new System.Drawing.Point(310, 52);
-            this.lbtel.Name = "lbtel";
-            this.lbtel.Size = new System.Drawing.Size(30, 20);
-            this.lbtel.TabIndex = 176;
-            this.lbtel.Text = "lb3";
             // 
             // Label17
             // 
@@ -426,16 +388,46 @@ namespace BusinessApp
             this.lbcopyright.Size = new System.Drawing.Size(0, 20);
             this.lbcopyright.TabIndex = 179;
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(703, 26);
+            this.txtaddress.TabIndex = 181;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(703, 26);
+            this.txtname.TabIndex = 180;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txttel
+            // 
+            this.txttel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txttel.Location = new System.Drawing.Point(0, 52);
+            this.txttel.Name = "txttel";
+            this.txttel.ReadOnly = true;
+            this.txttel.Size = new System.Drawing.Size(703, 26);
+            this.txttel.TabIndex = 182;
+            this.txttel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // receiptholdsales
             // 
             this.AcceptButton = this.Button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 782);
+            this.Controls.Add(this.txttel);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.lbcopyright);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
-            this.Controls.Add(this.lbtel);
             this.Controls.Add(this.Label17);
             this.Controls.Add(this.txtdiscount1);
             this.Controls.Add(this.Label16);
@@ -471,9 +463,6 @@ namespace BusinessApp
             this.PerformLayout();
 
 		}
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-		internal System.Windows.Forms.Label lbtel;
 		internal System.Windows.Forms.Label Label17;
 		internal System.Windows.Forms.TextBox txtdiscount1;
 		internal System.Windows.Forms.Label Label16;
@@ -506,6 +495,9 @@ namespace BusinessApp
 		internal System.Drawing.Printing.PrintDocument PrintDocument1;
 		internal Microsoft.VisualBasic.PowerPacks.Printing.PrintForm PrintForm1;
 		internal System.Windows.Forms.Label lbcopyright;
-	}
+        private TextBox txttel;
+        private TextBox txtaddress;
+        private TextBox txtname;
+    }
 
 }

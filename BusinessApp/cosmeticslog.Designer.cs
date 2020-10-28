@@ -59,8 +59,8 @@ namespace BusinessApp
             this.Label1 = new System.Windows.Forms.Label();
             this.dgvcardslog = new System.Windows.Forms.DataGridView();
             this.txtpassword1 = new System.Windows.Forms.TextBox();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcardslog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,38 +217,32 @@ namespace BusinessApp
             // txtpassword1
             // 
             this.txtpassword1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtpassword1.Location = new System.Drawing.Point(32, 25);
+            this.txtpassword1.Location = new System.Drawing.Point(13, 66);
             this.txtpassword1.Name = "txtpassword1";
             this.txtpassword1.PasswordChar = '*';
             this.txtpassword1.Size = new System.Drawing.Size(160, 26);
             this.txtpassword1.TabIndex = 72;
             // 
-            // lbaddress
+            // txtaddress
             // 
-            this.lbaddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.Red;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbaddress.Location = new System.Drawing.Point(566, 49);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(27, 18);
-            this.lbaddress.TabIndex = 74;
-            this.lbaddress.Text = "lb2";
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1284, 26);
+            this.txtaddress.TabIndex = 108;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbname
+            // txtname
             // 
-            this.lbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbname.Location = new System.Drawing.Point(537, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 73;
-            this.lbname.Text = "lb1";
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1284, 26);
+            this.txtname.TabIndex = 107;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtname.TextChanged += new System.EventHandler(this.txtname_TextChanged);
             // 
             // cosmeticslog
             // 
@@ -256,8 +250,8 @@ namespace BusinessApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
             this.ClientSize = new System.Drawing.Size(1284, 782);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtpassword1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.DateTimePicker2);
@@ -299,8 +293,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.DataGridView dgvcardslog;
 		internal System.Windows.Forms.TextBox txtpassword1;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
-	}
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
+    }
 
 }

@@ -56,8 +56,8 @@ namespace BusinessApp
             {
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
-                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
-                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 txtcash.Focus();
                 DataTable dtgetreceipt = getdatabase("select * from receipt");
@@ -516,12 +516,9 @@ namespace BusinessApp
 					{
 						for (var i = 0; i < dtgetadmin.Rows.Count; i++)
 						{
-							if (txtdiscountapproval.Text == (dtgetadmin.Rows[i]["adminpassword"]).ToString())
+							if (txtdiscountapproval.Text == (dtgetadmin.Rows[i]["adminpassword"]).ToString() || txtcashiername1.Text.ToUpper() == Convert.ToString(dtgetadmin.Rows[i]["adminname"]).ToUpper())
 							{
-								txtdiscount.Text = discount + txtnairadiscount.Text;
-							}
-							else if (txtcashiername1.Text.ToUpper() == Convert.ToString(dtgetadmin.Rows[i]["adminname"]).ToUpper())
-							{
+			
 								txtdiscount.Text =(Convert.ToInt32(discount) + Convert.ToInt32(txtnairadiscount.Text)).ToString();
 							}
 							else

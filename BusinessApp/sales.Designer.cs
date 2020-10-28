@@ -143,7 +143,7 @@ namespace BusinessApp
             // txtquantity
             // 
             this.txtquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquantity.Location = new System.Drawing.Point(91, 211);
+            this.txtquantity.Location = new System.Drawing.Point(91, 220);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(67, 29);
@@ -153,7 +153,7 @@ namespace BusinessApp
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(14, 211);
+            this.Label2.Location = new System.Drawing.Point(14, 220);
             this.Label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(78, 24);
@@ -230,7 +230,7 @@ namespace BusinessApp
             // btnenter
             // 
             this.btnenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnenter.Location = new System.Drawing.Point(166, 183);
+            this.btnenter.Location = new System.Drawing.Point(166, 192);
             this.btnenter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnenter.Name = "btnenter";
             this.btnenter.Size = new System.Drawing.Size(167, 66);
@@ -274,7 +274,7 @@ namespace BusinessApp
             // 
             // txtseachdrugs
             // 
-            this.txtseachdrugs.Location = new System.Drawing.Point(418, 212);
+            this.txtseachdrugs.Location = new System.Drawing.Point(418, 221);
             this.txtseachdrugs.Multiline = true;
             this.txtseachdrugs.Name = "txtseachdrugs";
             this.txtseachdrugs.Size = new System.Drawing.Size(195, 37);
@@ -465,7 +465,7 @@ namespace BusinessApp
             // 
             // txtdrugid
             // 
-            this.txtdrugid.Location = new System.Drawing.Point(103, 155);
+            this.txtdrugid.Location = new System.Drawing.Point(103, 164);
             this.txtdrugid.Name = "txtdrugid";
             this.txtdrugid.ReadOnly = true;
             this.txtdrugid.Size = new System.Drawing.Size(55, 26);
@@ -474,7 +474,7 @@ namespace BusinessApp
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(16, 156);
+            this.Label6.Location = new System.Drawing.Point(16, 165);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(76, 20);
             this.Label6.TabIndex = 110;
@@ -517,7 +517,7 @@ namespace BusinessApp
             // 
             // txtproductname
             // 
-            this.txtproductname.Location = new System.Drawing.Point(255, 150);
+            this.txtproductname.Location = new System.Drawing.Point(255, 159);
             this.txtproductname.Name = "txtproductname";
             this.txtproductname.ReadOnly = true;
             this.txtproductname.Size = new System.Drawing.Size(324, 26);
@@ -526,7 +526,7 @@ namespace BusinessApp
             // Label15
             // 
             this.Label15.AutoSize = true;
-            this.Label15.Location = new System.Drawing.Point(195, 155);
+            this.Label15.Location = new System.Drawing.Point(195, 164);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(51, 20);
             this.Label15.TabIndex = 116;
@@ -628,6 +628,7 @@ namespace BusinessApp
             this.txt0.Location = new System.Drawing.Point(1074, 303);
             this.txt0.Multiline = true;
             this.txt0.Name = "txt0";
+            this.txt0.ReadOnly = true;
             this.txt0.Size = new System.Drawing.Size(207, 80);
             this.txt0.TabIndex = 127;
             // 
@@ -638,6 +639,7 @@ namespace BusinessApp
             this.txt1.Location = new System.Drawing.Point(1074, 423);
             this.txt1.Multiline = true;
             this.txt1.Name = "txt1";
+            this.txt1.ReadOnly = true;
             this.txt1.Size = new System.Drawing.Size(207, 89);
             this.txt1.TabIndex = 128;
             // 
@@ -648,13 +650,14 @@ namespace BusinessApp
             this.txt3.Location = new System.Drawing.Point(1074, 577);
             this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
+            this.txt3.ReadOnly = true;
             this.txt3.Size = new System.Drawing.Size(202, 85);
             this.txt3.TabIndex = 129;
             // 
             // txtcode2
             // 
             this.txtcode2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtcode2.Location = new System.Drawing.Point(156, 116);
+            this.txtcode2.Location = new System.Drawing.Point(156, 100);
             this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcode2.Name = "txtcode2";
             this.txtcode2.Size = new System.Drawing.Size(190, 26);
@@ -666,7 +669,7 @@ namespace BusinessApp
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(61, 114);
+            this.label19.Location = new System.Drawing.Point(61, 98);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(88, 24);
             this.label19.TabIndex = 130;
@@ -687,7 +690,7 @@ namespace BusinessApp
             // PictureBox3
             // 
             this.PictureBox3.Image = global::BusinessApp.Properties.Resources.search3;
-            this.PictureBox3.Location = new System.Drawing.Point(340, 212);
+            this.PictureBox3.Location = new System.Drawing.Point(340, 221);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(61, 37);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -58,9 +58,9 @@ namespace BusinessApp
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.dgvdrinkslog = new System.Windows.Forms.DataGridView();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
             this.txtpassword1 = new System.Windows.Forms.TextBox();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdrinkslog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,46 +191,39 @@ namespace BusinessApp
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvdrinkslog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvdrinkslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvdrinkslog.Location = new System.Drawing.Point(13, 86);
+            this.dgvdrinkslog.Location = new System.Drawing.Point(13, 93);
             this.dgvdrinkslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvdrinkslog.Name = "dgvdrinkslog";
             this.dgvdrinkslog.Size = new System.Drawing.Size(1248, 316);
             this.dgvdrinkslog.TabIndex = 38;
             // 
-            // lbaddress
-            // 
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.White;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbaddress.Location = new System.Drawing.Point(440, 47);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.Size = new System.Drawing.Size(35, 24);
-            this.lbaddress.TabIndex = 55;
-            this.lbaddress.Text = "lb2";
-            this.lbaddress.Click += new System.EventHandler(this.Label9_Click);
-            // 
-            // lbname
-            // 
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbname.Location = new System.Drawing.Point(341, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(44, 25);
-            this.lbname.TabIndex = 54;
-            this.lbname.Text = "lb1";
-            this.lbname.Click += new System.EventHandler(this.Label10_Click);
-            // 
             // txtpassword1
             // 
-            this.txtpassword1.Location = new System.Drawing.Point(23, 8);
+            this.txtpassword1.Location = new System.Drawing.Point(13, 59);
             this.txtpassword1.Name = "txtpassword1";
             this.txtpassword1.PasswordChar = '*';
             this.txtpassword1.Size = new System.Drawing.Size(178, 26);
             this.txtpassword1.TabIndex = 56;
+            // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1284, 26);
+            this.txtaddress.TabIndex = 110;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1284, 26);
+            this.txtname.TabIndex = 109;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkslog
             // 
@@ -238,9 +231,9 @@ namespace BusinessApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1284, 627);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtpassword1);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.DateTimePicker2);
             this.Controls.Add(this.txtcustomer);
@@ -280,9 +273,9 @@ namespace BusinessApp
 		internal System.Windows.Forms.Label Label2;
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.DataGridView dgvdrinkslog;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
 		internal System.Windows.Forms.TextBox txtpassword1;
-	}
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
+    }
 
 }

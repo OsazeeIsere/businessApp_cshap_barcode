@@ -66,10 +66,10 @@ namespace BusinessApp
             this.check = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.lbaddress = new System.Windows.Forms.Label();
-            this.lbname = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.OpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -254,31 +254,6 @@ namespace BusinessApp
             this.ComboBox1.Size = new System.Drawing.Size(262, 28);
             this.ComboBox1.TabIndex = 81;
             // 
-            // lbaddress
-            // 
-            this.lbaddress.AutoSize = true;
-            this.lbaddress.BackColor = System.Drawing.Color.White;
-            this.lbaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbaddress.Location = new System.Drawing.Point(363, 52);
-            this.lbaddress.Name = "lbaddress";
-            this.lbaddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbaddress.Size = new System.Drawing.Size(35, 24);
-            this.lbaddress.TabIndex = 80;
-            this.lbaddress.Text = "lb2";
-            // 
-            // lbname
-            // 
-            this.lbname.AutoSize = true;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.Aqua;
-            this.lbname.Location = new System.Drawing.Point(319, 9);
-            this.lbname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(49, 29);
-            this.lbname.TabIndex = 79;
-            this.lbname.Text = "lb1";
-            // 
             // PictureBox1
             // 
             this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -295,11 +270,33 @@ namespace BusinessApp
             this.OpenFileDialog1.FileName = "OpenFileDialog1";
             this.OpenFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1284, 26);
+            this.txtaddress.TabIndex = 108;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1284, 26);
+            this.txtname.TabIndex = 107;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // drinksexpirydateinfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 674);
+            this.Controls.Add(this.txtaddress);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.txtsearch);
@@ -313,8 +310,6 @@ namespace BusinessApp
             this.Controls.Add(this.check);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.ComboBox1);
-            this.Controls.Add(this.lbaddress);
-            this.Controls.Add(this.lbname);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "drinksexpirydateinfo";
@@ -350,9 +345,9 @@ namespace BusinessApp
 		internal System.Windows.Forms.Button check;
 		internal System.Windows.Forms.Label Label1;
 		internal System.Windows.Forms.ComboBox ComboBox1;
-		internal System.Windows.Forms.Label lbaddress;
-		internal System.Windows.Forms.Label lbname;
 		internal System.Windows.Forms.OpenFileDialog OpenFileDialog1;
-	}
+        private System.Windows.Forms.TextBox txtaddress;
+        private System.Windows.Forms.TextBox txtname;
+    }
 
 }

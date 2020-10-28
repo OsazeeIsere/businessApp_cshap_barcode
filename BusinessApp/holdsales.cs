@@ -52,8 +52,8 @@ namespace BusinessApp
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
 
-                lbname.Text = dtidentity.Rows[0]["businessName"].ToString();
-                lbaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //            lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 txtcash.Focus();
 				System.Data.DataTable dtgetsales = new System.Data.DataTable();
@@ -258,15 +258,12 @@ namespace BusinessApp
 					{
 						for (var i = 0; i < dtgetadmin.Rows.Count; i++)
 						{
-							if (txtdiscountapproval.Text == (dtgetadmin.Rows[i]["adminpassword"]).ToString())
-							{
-								txtdiscount.Text = (discount + (Convert.ToDouble(txttotal.Text) * (Convert.ToDouble(cbldiscount.Text)) / 100)).ToString();
-							}
-							else if (txtcashiername1.Text.ToUpper() == Convert.ToString(dtgetadmin.Rows[i]["adminname"]).ToUpper())
-							{
-								txtdiscount.Text = (discount + (Convert.ToDouble(txttotal.Text) * (Convert.ToDouble(cbldiscount.Text)) / 100)).ToString();
-							}
-							else
+                            if (txtdiscountapproval.Text == (dtgetadmin.Rows[i]["adminpassword"]).ToString() || txtcashiername1.Text.ToUpper() == Convert.ToString(dtgetadmin.Rows[i]["adminname"]).ToUpper())
+                            {
+
+                                txtdiscount.Text = (Convert.ToInt32(discount) + Convert.ToInt32(txtnairadiscount.Text)).ToString();
+                            }
+                            else
 							{
 								MessageBox.Show("Please Look For The Administrator");
 								txtdiscountapproval.Focus();
