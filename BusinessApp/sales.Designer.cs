@@ -106,8 +106,11 @@ namespace BusinessApp
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnreptrintReceipt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtcashiername1
@@ -719,6 +722,27 @@ namespace BusinessApp
             this.txtaddress.TabIndex = 133;
             this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel1.Controls.Add(this.btnreptrintReceipt);
+            this.panel1.Location = new System.Drawing.Point(12, 681);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(159, 71);
+            this.panel1.TabIndex = 134;
+            // 
+            // btnreptrintReceipt
+            // 
+            this.btnreptrintReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreptrintReceipt.Location = new System.Drawing.Point(3, 3);
+            this.btnreptrintReceipt.Name = "btnreptrintReceipt";
+            this.btnreptrintReceipt.Size = new System.Drawing.Size(153, 65);
+            this.btnreptrintReceipt.TabIndex = 0;
+            this.btnreptrintReceipt.Text = "Reprint Receipt";
+            this.btnreptrintReceipt.UseVisualStyleBackColor = true;
+            this.btnreptrintReceipt.Click += new System.EventHandler(this.btnreptrintReceipt_Click);
+            // 
             // sales
             // 
             this.AcceptButton = this.btnenter;
@@ -726,6 +750,7 @@ namespace BusinessApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1412, 784);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtcode2);
@@ -786,6 +811,7 @@ namespace BusinessApp
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sales_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -852,6 +878,8 @@ namespace BusinessApp
         private Label label19;
         private TextBox txtname;
         private TextBox txtaddress;
+        private Panel panel1;
+        private Button btnreptrintReceipt;
     }
 
 }

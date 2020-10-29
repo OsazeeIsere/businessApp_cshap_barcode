@@ -1414,5 +1414,12 @@ namespace BusinessApp
         {
 
         }
+
+        private void btnreptrintReceipt_Click(object sender, EventArgs e)
+        {
+            ReprintReceipt x = new ReprintReceipt();
+            x.txtcashiername1.Text = txtcashiername1.Text;
+            x.Show();
+        }
     }
 }

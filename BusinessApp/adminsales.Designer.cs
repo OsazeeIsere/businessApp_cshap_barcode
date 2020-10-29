@@ -100,8 +100,11 @@ namespace BusinessApp
             this.Label15 = new System.Windows.Forms.Label();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Button7
@@ -673,6 +676,27 @@ namespace BusinessApp
             this.txtname.TabIndex = 141;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Location = new System.Drawing.Point(23, 729);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(159, 71);
+            this.panel1.TabIndex = 144;
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(3, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(153, 68);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Reprint Receipt";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // adminsales
             // 
             this.AcceptButton = this.btnenter;
@@ -680,6 +704,7 @@ namespace BusinessApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1365, 816);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtproductname);
@@ -734,6 +759,7 @@ namespace BusinessApp
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.adminsales_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -796,6 +822,8 @@ namespace BusinessApp
         internal Label Label15;
         private TextBox txtaddress;
         private TextBox txtname;
+        private Panel panel1;
+        private Button button4;
     }
 
 }

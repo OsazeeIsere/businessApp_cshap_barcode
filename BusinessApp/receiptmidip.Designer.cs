@@ -81,6 +81,7 @@ namespace BusinessApp
             this.txttel = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
+            this.txtrepeatreceipt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Label17
@@ -423,12 +424,21 @@ namespace BusinessApp
             this.txtname.TabIndex = 183;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtrepeatreceipt
+            // 
+            this.txtrepeatreceipt.Location = new System.Drawing.Point(12, 506);
+            this.txtrepeatreceipt.Name = "txtrepeatreceipt";
+            this.txtrepeatreceipt.Size = new System.Drawing.Size(227, 26);
+            this.txtrepeatreceipt.TabIndex = 186;
+            this.txtrepeatreceipt.Visible = false;
+            // 
             // receiptmidip
             // 
             this.AcceptButton = this.Button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 711);
+            this.Controls.Add(this.txtrepeatreceipt);
             this.Controls.Add(this.txttel);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtname);
@@ -504,6 +514,7 @@ namespace BusinessApp
         private TextBox txttel;
         private TextBox txtaddress;
         private TextBox txtname;
+        internal TextBox txtrepeatreceipt;
     }
 
 }

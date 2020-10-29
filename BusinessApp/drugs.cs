@@ -1088,5 +1088,17 @@ namespace BusinessApp
         {
             Application.Exit();
         }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void reprintReceiptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReprintReceipt x = new ReprintReceipt();
+            x.txtcashiername1.Text = txtcashiername1.Text;
+            x.Show();
+        }
     }
 }

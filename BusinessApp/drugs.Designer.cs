@@ -111,9 +111,10 @@ namespace BusinessApp
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.txtfile1 = new System.Windows.Forms.TextBox();
-            this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reprintReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -473,7 +474,7 @@ namespace BusinessApp
             // 
             this.Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label16.AutoSize = true;
-            this.Label16.Location = new System.Drawing.Point(928, 115);
+            this.Label16.Location = new System.Drawing.Point(928, 127);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(170, 20);
             this.Label16.TabIndex = 99;
@@ -482,7 +483,7 @@ namespace BusinessApp
             // txtadminpassword
             // 
             this.txtadminpassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtadminpassword.Location = new System.Drawing.Point(1113, 115);
+            this.txtadminpassword.Location = new System.Drawing.Point(1113, 127);
             this.txtadminpassword.Name = "txtadminpassword";
             this.txtadminpassword.PasswordChar = '#';
             this.txtadminpassword.Size = new System.Drawing.Size(159, 26);
@@ -675,6 +676,7 @@ namespace BusinessApp
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportDatabaseToolStripMenuItem,
+            this.reprintReceiptToolStripMenuItem,
             this.quitToolStripMenuItem,
             this.quitToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -685,16 +687,23 @@ namespace BusinessApp
             // exportDatabaseToolStripMenuItem
             // 
             this.exportDatabaseToolStripMenuItem.Name = "exportDatabaseToolStripMenuItem";
-            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exportDatabaseToolStripMenuItem.Text = "Export Database";
             this.exportDatabaseToolStripMenuItem.Click += new System.EventHandler(this.exportDatabaseToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.quitToolStripMenuItem.Text = "Close";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem1
+            // 
+            this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem1.Text = "Quit";
+            this.quitToolStripMenuItem1.Click += new System.EventHandler(this.quitToolStripMenuItem1_Click);
             // 
             // saveFileDialog1
             // 
@@ -708,12 +717,12 @@ namespace BusinessApp
             this.txtfile1.TabIndex = 120;
             this.txtfile1.Visible = false;
             // 
-            // quitToolStripMenuItem1
+            // reprintReceiptToolStripMenuItem
             // 
-            this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.quitToolStripMenuItem1.Text = "Quit";
-            this.quitToolStripMenuItem1.Click += new System.EventHandler(this.quitToolStripMenuItem1_Click);
+            this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
+            this.reprintReceiptToolStripMenuItem.Click += new System.EventHandler(this.reprintReceiptToolStripMenuItem_Click);
             // 
             // drugs
             // 
@@ -865,6 +874,7 @@ namespace BusinessApp
         private SaveFileDialog saveFileDialog1;
         internal System.Windows.Forms.TextBox txtfile1;
         private ToolStripMenuItem quitToolStripMenuItem1;
+        private ToolStripMenuItem reprintReceiptToolStripMenuItem;
     }
 
 }

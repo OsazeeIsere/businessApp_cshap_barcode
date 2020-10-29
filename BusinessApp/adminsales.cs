@@ -972,5 +972,17 @@ namespace BusinessApp
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnreptrintReceipt_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            ReprintReceipt x = new ReprintReceipt();
+            x.txtcashiername1.Text = txtcashiername1.Text;
+            x.Show();
+        }
     }
 }
