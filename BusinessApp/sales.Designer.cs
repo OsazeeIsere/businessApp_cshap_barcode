@@ -115,7 +115,6 @@ namespace BusinessApp
             // 
             // txtcashiername1
             // 
-            this.txtcashiername1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtcashiername1.Location = new System.Drawing.Point(156, 64);
             this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcashiername1.Name = "txtcashiername1";
@@ -176,7 +175,6 @@ namespace BusinessApp
             // 
             // Label5
             // 
-            this.Label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label5.Location = new System.Drawing.Point(7, 64);
@@ -185,6 +183,7 @@ namespace BusinessApp
             this.Label5.Size = new System.Drawing.Size(142, 24);
             this.Label5.TabIndex = 29;
             this.Label5.Text = "Cashier Name";
+            this.Label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // txttime
             // 
@@ -659,7 +658,6 @@ namespace BusinessApp
             // 
             // txtcode2
             // 
-            this.txtcode2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtcode2.Location = new System.Drawing.Point(156, 100);
             this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcode2.Name = "txtcode2";
@@ -669,7 +667,6 @@ namespace BusinessApp
             // 
             // label19
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(61, 98);

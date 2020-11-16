@@ -102,7 +102,6 @@ namespace BusinessApp
             this.txtproductid = new System.Windows.Forms.TextBox();
             this.txtcode2 = new System.Windows.Forms.TextBox();
             this.btncode = new System.Windows.Forms.Button();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtsupplierphonenumber = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txtaddress = new System.Windows.Forms.TextBox();
@@ -110,13 +109,16 @@ namespace BusinessApp
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reprintReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.txtfile1 = new System.Windows.Forms.TextBox();
-            this.reprintReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.salesAnalysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtunitprice
@@ -616,18 +618,6 @@ namespace BusinessApp
             this.btncode.UseVisualStyleBackColor = true;
             this.btncode.Click += new System.EventHandler(this.button10_Click);
             // 
-            // PictureBox1
-            // 
-            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
-            this.PictureBox1.Location = new System.Drawing.Point(12, 342);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(61, 31);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 30;
-            this.PictureBox1.TabStop = false;
-            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
             // txtsupplierphonenumber
             // 
             this.txtsupplierphonenumber.Location = new System.Drawing.Point(545, 233);
@@ -665,12 +655,14 @@ namespace BusinessApp
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.salesAnalysisToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
             this.menuStrip1.TabIndex = 119;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -687,21 +679,28 @@ namespace BusinessApp
             // exportDatabaseToolStripMenuItem
             // 
             this.exportDatabaseToolStripMenuItem.Name = "exportDatabaseToolStripMenuItem";
-            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportDatabaseToolStripMenuItem.Text = "Export Database";
             this.exportDatabaseToolStripMenuItem.Click += new System.EventHandler(this.exportDatabaseToolStripMenuItem_Click);
+            // 
+            // reprintReceiptToolStripMenuItem
+            // 
+            this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
+            this.reprintReceiptToolStripMenuItem.Click += new System.EventHandler(this.reprintReceiptToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Close";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem1
             // 
             this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem1.Text = "Quit";
             this.quitToolStripMenuItem1.Click += new System.EventHandler(this.quitToolStripMenuItem1_Click);
             // 
@@ -717,12 +716,32 @@ namespace BusinessApp
             this.txtfile1.TabIndex = 120;
             this.txtfile1.Visible = false;
             // 
-            // reprintReceiptToolStripMenuItem
+            // PictureBox1
             // 
-            this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
-            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
-            this.reprintReceiptToolStripMenuItem.Click += new System.EventHandler(this.reprintReceiptToolStripMenuItem_Click);
+            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
+            this.PictureBox1.Location = new System.Drawing.Point(12, 342);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(61, 31);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 30;
+            this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
+            // salesAnalysisToolStripMenuItem
+            // 
+            this.salesAnalysisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewReportToolStripMenuItem});
+            this.salesAnalysisToolStripMenuItem.Name = "salesAnalysisToolStripMenuItem";
+            this.salesAnalysisToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.salesAnalysisToolStripMenuItem.Text = "Sales Analysis";
+            // 
+            // viewReportToolStripMenuItem
+            // 
+            this.viewReportToolStripMenuItem.Name = "viewReportToolStripMenuItem";
+            this.viewReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewReportToolStripMenuItem.Text = "View Report";
+            this.viewReportToolStripMenuItem.Click += new System.EventHandler(this.viewReportToolStripMenuItem_Click);
             // 
             // drugs
             // 
@@ -797,9 +816,9 @@ namespace BusinessApp
             this.Load += new System.EventHandler(this.product_Load);
             this.Enter += new System.EventHandler(this.drugs_Enter);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drugs_MouseClick);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -875,6 +894,8 @@ namespace BusinessApp
         internal System.Windows.Forms.TextBox txtfile1;
         private ToolStripMenuItem quitToolStripMenuItem1;
         private ToolStripMenuItem reprintReceiptToolStripMenuItem;
+        private ToolStripMenuItem salesAnalysisToolStripMenuItem;
+        private ToolStripMenuItem viewReportToolStripMenuItem;
     }
 
 }

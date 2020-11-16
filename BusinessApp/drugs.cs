@@ -207,7 +207,7 @@ namespace BusinessApp
 		{
             DataTable dtidentity = new DataTable();
             dtidentity = getdatabase("Select * from identity");
-
+            salesAnalysisToolStripMenuItem.Visible = false;
             txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
             txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
      //       lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
@@ -1098,6 +1098,17 @@ namespace BusinessApp
         {
             ReprintReceipt x = new ReprintReceipt();
             x.txtcashiername1.Text = txtcashiername1.Text;
+            x.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void viewReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Analysis x = new Sales_Analysis();
             x.Show();
         }
     }

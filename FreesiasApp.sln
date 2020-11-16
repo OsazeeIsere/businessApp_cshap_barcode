@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessApp", "BusinessApp\BusinessApp.csproj", "{B18DA68A-C6E0-43ED-A7D6-58322971C506}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SimpleInventory", "SimpleInventory\SimpleInventory.vdproj", "{F3E15833-DFD3-40AE-AFDD-F50F101DE0F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,13 @@ Global
 		{B18DA68A-C6E0-43ED-A7D6-58322971C506}.Debug|x86.Build.0 = Debug|x86
 		{B18DA68A-C6E0-43ED-A7D6-58322971C506}.Release|x86.ActiveCfg = Release|x86
 		{B18DA68A-C6E0-43ED-A7D6-58322971C506}.Release|x86.Build.0 = Release|x86
+		{F3E15833-DFD3-40AE-AFDD-F50F101DE0F2}.Debug|x86.ActiveCfg = Debug
+		{F3E15833-DFD3-40AE-AFDD-F50F101DE0F2}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {427C0ECC-76BC-43C5-9D8E-87F1803CC2E5}
 	EndGlobalSection
 EndGlobal

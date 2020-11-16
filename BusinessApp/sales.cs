@@ -1421,5 +1421,10 @@ namespace BusinessApp
             x.txtcashiername1.Text = txtcashiername1.Text;
             x.Show();
         }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
