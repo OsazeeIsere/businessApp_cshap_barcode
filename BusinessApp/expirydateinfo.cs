@@ -182,7 +182,7 @@ namespace BusinessApp
 								lsvitems.Items.Add(lstitem);
 							}
 						}
-						lsvitems.ForeColor = Color.DeepPink;
+						lsvitems.ForeColor = Color.Red;
 						txttotal.Text = lsvitems.Items.Count.ToString();
 					}
 				}
