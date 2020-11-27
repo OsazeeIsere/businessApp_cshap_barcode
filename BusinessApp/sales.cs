@@ -694,6 +694,7 @@ namespace BusinessApp
                     x.txtcashiername1.Text = txtcashiername1.Text;
 					x.txttotal.Text = totalamount.ToString();
 					x.txtdiscount.Text = 0.ToString();
+                    
 					x.Show();
 				}
 			}
