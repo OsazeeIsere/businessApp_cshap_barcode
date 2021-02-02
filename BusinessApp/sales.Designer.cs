@@ -50,11 +50,9 @@ namespace BusinessApp
             this.txtquantity = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
             this.txttime = new System.Windows.Forms.TextBox();
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Label8 = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
             this.btnenter = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
@@ -101,21 +99,28 @@ namespace BusinessApp
             this.txt1 = new System.Windows.Forms.TextBox();
             this.txt3 = new System.Windows.Forms.TextBox();
             this.txtcode2 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnreptrintReceipt = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtcashiername1
             // 
-            this.txtcashiername1.Location = new System.Drawing.Point(156, 64);
+            this.txtcashiername1.Location = new System.Drawing.Point(20, 62);
             this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcashiername1.Name = "txtcashiername1";
             this.txtcashiername1.ReadOnly = true;
@@ -173,23 +178,11 @@ namespace BusinessApp
             this.Label1.TabIndex = 19;
             this.Label1.Text = "Product Name";
             // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(7, 64);
-            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(142, 24);
-            this.Label5.TabIndex = 29;
-            this.Label5.Text = "Cashier Name";
-            this.Label5.Click += new System.EventHandler(this.Label5_Click);
-            // 
             // txttime
             // 
             this.txttime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttime.Location = new System.Drawing.Point(1050, 127);
+            this.txttime.Location = new System.Drawing.Point(1046, 65);
             this.txttime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttime.Name = "txttime";
             this.txttime.ReadOnly = true;
@@ -217,18 +210,6 @@ namespace BusinessApp
             this.Label8.TabIndex = 31;
             this.Label8.Text = "Date:";
             // 
-            // Label9
-            // 
-            this.Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label9.AutoSize = true;
-            this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(979, 132);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(58, 24);
-            this.Label9.TabIndex = 30;
-            this.Label9.Text = "Time:";
-            // 
             // btnenter
             // 
             this.btnenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,8 +224,7 @@ namespace BusinessApp
             // 
             // Button2
             // 
-            this.Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button2.Location = new System.Drawing.Point(1085, 64);
+            this.Button2.Location = new System.Drawing.Point(788, 210);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(162, 53);
             this.Button2.TabIndex = 40;
@@ -267,7 +247,7 @@ namespace BusinessApp
             // 
             this.Label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label14.AutoSize = true;
-            this.Label14.Location = new System.Drawing.Point(1283, 227);
+            this.Label14.Location = new System.Drawing.Point(1352, 238);
             this.Label14.Name = "Label14";
             this.Label14.Size = new System.Drawing.Size(60, 20);
             this.Label14.TabIndex = 60;
@@ -286,17 +266,17 @@ namespace BusinessApp
             // txtcardssearch
             // 
             this.txtcardssearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtcardssearch.Location = new System.Drawing.Point(1114, 211);
+            this.txtcardssearch.Location = new System.Drawing.Point(1273, 222);
             this.txtcardssearch.Multiline = true;
             this.txtcardssearch.Name = "txtcardssearch";
-            this.txtcardssearch.Size = new System.Drawing.Size(158, 37);
+            this.txtcardssearch.Size = new System.Drawing.Size(68, 37);
             this.txtcardssearch.TabIndex = 74;
             this.txtcardssearch.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
             // 
             // btncards
             // 
             this.btncards.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncards.Location = new System.Drawing.Point(885, 195);
+            this.btncards.Location = new System.Drawing.Point(1126, 204);
             this.btncards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btncards.Name = "btncards";
             this.btncards.Size = new System.Drawing.Size(155, 63);
@@ -308,7 +288,7 @@ namespace BusinessApp
             // txtcardsquantity
             // 
             this.txtcardsquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcardsquantity.Location = new System.Drawing.Point(795, 216);
+            this.txtcardsquantity.Location = new System.Drawing.Point(1036, 225);
             this.txtcardsquantity.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtcardsquantity.Name = "txtcardsquantity";
             this.txtcardsquantity.Size = new System.Drawing.Size(80, 29);
@@ -318,7 +298,7 @@ namespace BusinessApp
             // 
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(718, 216);
+            this.Label7.Location = new System.Drawing.Point(959, 225);
             this.Label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(78, 24);
@@ -658,44 +638,12 @@ namespace BusinessApp
             // 
             // txtcode2
             // 
-            this.txtcode2.Location = new System.Drawing.Point(156, 100);
+            this.txtcode2.Location = new System.Drawing.Point(156, 125);
             this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcode2.Name = "txtcode2";
             this.txtcode2.Size = new System.Drawing.Size(190, 26);
             this.txtcode2.TabIndex = 131;
             this.txtcode2.TextChanged += new System.EventHandler(this.txtcode2_TextChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(61, 98);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(88, 24);
-            this.label19.TabIndex = 130;
-            this.label19.Text = "Barcode";
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PictureBox2.Image = global::BusinessApp.Properties.Resources.search3;
-            this.PictureBox2.Location = new System.Drawing.Point(1050, 211);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(58, 37);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox2.TabIndex = 75;
-            this.PictureBox2.TabStop = false;
-            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
-            // 
-            // PictureBox3
-            // 
-            this.PictureBox3.Image = global::BusinessApp.Properties.Resources.search3;
-            this.PictureBox3.Location = new System.Drawing.Point(340, 221);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(61, 37);
-            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox3.TabIndex = 63;
-            this.PictureBox3.TabStop = false;
             // 
             // txtname
             // 
@@ -740,6 +688,73 @@ namespace BusinessApp
             this.btnreptrintReceipt.UseVisualStyleBackColor = true;
             this.btnreptrintReceipt.Click += new System.EventHandler(this.btnreptrintReceipt_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = global::BusinessApp.Properties.Resources.time2;
+            this.pictureBox6.Location = new System.Drawing.Point(974, 58);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(65, 38);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 150;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::BusinessApp.Properties.Resources.cart__1_;
+            this.pictureBox5.Location = new System.Drawing.Point(678, 199);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(104, 61);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 149;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::BusinessApp.Properties.Resources.operator22;
+            this.pictureBox4.Location = new System.Drawing.Point(226, 53);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(149, 61);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 148;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BusinessApp.Properties.Resources.scanner2;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 106);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 147;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PictureBox2.Image = global::BusinessApp.Properties.Resources.search3;
+            this.PictureBox2.Location = new System.Drawing.Point(1174, 179);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(58, 37);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox2.TabIndex = 75;
+            this.PictureBox2.TabStop = false;
+            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // PictureBox3
+            // 
+            this.PictureBox3.Image = global::BusinessApp.Properties.Resources.search3;
+            this.PictureBox3.Location = new System.Drawing.Point(340, 221);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(61, 37);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox3.TabIndex = 63;
+            this.PictureBox3.TabStop = false;
+            // 
             // sales
             // 
             this.AcceptButton = this.btnenter;
@@ -747,11 +762,14 @@ namespace BusinessApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1412, 784);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtcode2);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.txt3);
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.txt0);
@@ -788,8 +806,6 @@ namespace BusinessApp
             this.Controls.Add(this.txttime);
             this.Controls.Add(this.DateTimePicker1);
             this.Controls.Add(this.Label8);
-            this.Controls.Add(this.Label9);
-            this.Controls.Add(this.Label5);
             this.Controls.Add(this.txtcashiername1);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Label3);
@@ -806,9 +822,13 @@ namespace BusinessApp
             this.Load += new System.EventHandler(this.sales_Load);
             this.Click += new System.EventHandler(this.sales_Click);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sales_MouseClick);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -819,11 +839,9 @@ namespace BusinessApp
 		internal System.Windows.Forms.TextBox txtquantity;
 		internal System.Windows.Forms.Label Label2;
 		internal System.Windows.Forms.Label Label1;
-		internal System.Windows.Forms.Label Label5;
 		internal System.Windows.Forms.TextBox txttime;
 		internal System.Windows.Forms.DateTimePicker DateTimePicker1;
 		internal System.Windows.Forms.Label Label8;
-		internal System.Windows.Forms.Label Label9;
 		internal System.Windows.Forms.Button btnenter;
 		internal System.Windows.Forms.Button Button2;
 		internal System.Windows.Forms.Button Button1;
@@ -872,11 +890,14 @@ namespace BusinessApp
         private TextBox txt1;
         private TextBox txt0;
         internal TextBox txtcode2;
-        private Label label19;
         private TextBox txtname;
         private TextBox txtaddress;
         private Panel panel1;
         private Button btnreptrintReceipt;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
     }
 
 }

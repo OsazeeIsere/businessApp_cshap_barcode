@@ -63,6 +63,26 @@ namespace BusinessApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _operator {
+            get {
+                object obj = ResourceManager.GetObject("operator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cart__1_ {
+            get {
+                object obj = ResourceManager.GetObject("cart (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key_05 {
             get {
                 object obj = ResourceManager.GetObject("key_05", resourceCulture);
@@ -123,6 +143,36 @@ namespace BusinessApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap operator22 {
+            get {
+                object obj = ResourceManager.GetObject("operator22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scanner1 {
+            get {
+                object obj = ResourceManager.GetObject("scanner1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scanner2 {
+            get {
+                object obj = ResourceManager.GetObject("scanner2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search1 {
             get {
                 object obj = ResourceManager.GetObject("search1", resourceCulture);
@@ -146,6 +196,16 @@ namespace BusinessApp.Properties {
         internal static System.Drawing.Bitmap search3 {
             get {
                 object obj = ResourceManager.GetObject("search3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap time2 {
+            get {
+                object obj = ResourceManager.GetObject("time2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

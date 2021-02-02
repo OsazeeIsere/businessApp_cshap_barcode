@@ -1111,5 +1111,39 @@ namespace BusinessApp
             Sales_Analysis x = new Sales_Analysis();
             x.Show();
         }
+
+        private void txtproductname_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                dtgetproduct = getdatabase("Select * From product Where productname Like '%" + txtproductname.Text + "%' Order By productname;");
+
+                if (dtgetproduct.Rows.Count > 0)
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                    for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                    {
+                        lstitem = new ListViewItem();
+                        lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                        lsvitems.Items.Add(lstitem);
+                    }
+                    txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
+        }
     }
 }

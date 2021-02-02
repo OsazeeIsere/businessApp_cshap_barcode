@@ -77,7 +77,7 @@ namespace BusinessApp
                     time1 = DateTime.Now.ToShortTimeString();
                     txttime.Text = time1;
 				    // insert Copyright symbol
-				    lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 OZ Concepts(08163775990)";
+				    lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 Nozemen InfoTech(08163775990)";
                 }
                 else
                 {
@@ -149,9 +149,9 @@ namespace BusinessApp
 				Font font1 = new Font("arial", 7F, FontStyle.Regular);
 				Font font2 = new Font("arial", 7F, FontStyle.Regular);
 				Font font3 = new Font("arial", 8F, FontStyle.Regular);
-				e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 1, 20);
+				e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 50, 20);
                 e.Graphics.DrawString(txtaddress.Text, font1, Brushes.Black, 1, 35);
-                e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 6, 50);
+                e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 50, 50);
 				e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 65);
 				e.Graphics.DrawString(txtcashiername1.Text, font3, Brushes.Black, 60, 65);
 				e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 120, 65);
@@ -186,8 +186,8 @@ namespace BusinessApp
 				}
 				j = j + 30;
 				Pen mypen = null;
-				mypen = new Pen(Color.Black, Height = 2);
-				e.Graphics.DrawLine(mypen, x1:10, y1:j, x2:200, y2:j);
+				mypen = new Pen(Color.Black, Height = 1);
+				e.Graphics.DrawLine(mypen, x1:10, y1:j, x2:300, y2:j);
 				j = j + 20;
 				e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 100, j);
 				e.Graphics.DrawString(Label13.Text, font2, Brushes.Black, 160, j);

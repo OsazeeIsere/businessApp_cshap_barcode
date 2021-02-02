@@ -331,7 +331,44 @@ namespace BusinessApp
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Please There a Product Quantity Less Than The Quatity You Are Trying Sell.The  DRUG's  ID Is: " + intproductid);
+                                    System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
+                                    dtgetexpirydate = getdatabase("select * from expirydate where productname ='" + ProductName1 + "'order by expirydateid");
+                                    if (dtgetexpirydate.Rows.Count > 0)
+                                    {
+                                        newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                        cn.ConnectionString = strconnection;
+                                        cn.Open();
+                                        cm.CommandText = "Update expirydate Set quantity=" + newquantity1 + " Where productname='" + ProductName1 + "' And expirydateid=" + Convert.ToInt32(dtgetexpirydate.Rows[0]["expirydateid"]) + ";";
+                                        cm.Connection = cn;
+                                        cm.ExecuteNonQuery();
+                                        cn.Close();
+                                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                        cn.ConnectionString = strconnection;
+                                        cn.Open();
+                                        cm.CommandText = "Insert Into drugslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                        cm.Connection = cn;
+                                        cm.ExecuteNonQuery();
+                                        cn.Close();
+                                        cn.ConnectionString = strconnection;
+                                        cn.Open();
+                                        cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                        cm.Connection = cn;
+                                        cm.ExecuteNonQuery();
+                                        cn.Close();
+                                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                        cn.ConnectionString = strconnection;
+                                        cn.Open();
+                                        newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                                        cm.CommandText = "Update product Set quantity=" + newquantity + " Where productid=" + intproductid + ";";
+                                        cm.Connection = cn;
+                                        cm.ExecuteNonQuery();
+                                        cn.Close();
+                                        goto brake1;
+
+                                    } 
+                                    brake1:;
+                                    
                                 }
                             }
                             else

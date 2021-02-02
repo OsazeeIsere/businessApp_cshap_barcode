@@ -156,6 +156,16 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="P:BusinessApp.Properties.Resources._operator">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BusinessApp.Properties.Resources.cart__1_">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:BusinessApp.Properties.Resources.key_05">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
@@ -186,6 +196,21 @@
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:BusinessApp.Properties.Resources.operator22">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BusinessApp.Properties.Resources.scanner1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BusinessApp.Properties.Resources.scanner2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:BusinessApp.Properties.Resources.search1">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
@@ -197,6 +222,11 @@
             </summary>
         </member>
         <member name="P:BusinessApp.Properties.Resources.search3">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BusinessApp.Properties.Resources.time2">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
