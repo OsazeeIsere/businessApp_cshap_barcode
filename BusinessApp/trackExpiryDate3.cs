@@ -90,7 +90,7 @@ namespace BusinessApp
                             lsvitems.Items.Add(lstitem);
                         }
                     }
-                    lsvitems.ForeColor = Color.Gold ;
+                    lsvitems.ForeColor = Color.Black ;
                     txttotal.Text = lsvitems.Items.Count.ToString();
                 }
             }

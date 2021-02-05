@@ -342,7 +342,9 @@ namespace BusinessApp
             // 
             // lsvitems
             // 
-            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader12,
             this.ColumnHeader2,
@@ -559,7 +561,7 @@ namespace BusinessApp
             this.thisMonth.AllowDrop = true;
             this.thisMonth.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.thisMonth.BackColor = System.Drawing.Color.White;
-            this.thisMonth.ForeColor = System.Drawing.Color.Gold;
+            this.thisMonth.ForeColor = System.Drawing.Color.Black;
             this.thisMonth.Location = new System.Drawing.Point(1287, 577);
             this.thisMonth.Name = "thisMonth";
             this.thisMonth.Size = new System.Drawing.Size(104, 85);
@@ -628,7 +630,7 @@ namespace BusinessApp
             // txt3
             // 
             this.txt3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txt3.ForeColor = System.Drawing.Color.Gold;
+            this.txt3.ForeColor = System.Drawing.Color.Black;
             this.txt3.Location = new System.Drawing.Point(1074, 577);
             this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
@@ -679,6 +681,7 @@ namespace BusinessApp
             // 
             // btnreptrintReceipt
             // 
+            this.btnreptrintReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnreptrintReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreptrintReceipt.Location = new System.Drawing.Point(3, 3);
             this.btnreptrintReceipt.Name = "btnreptrintReceipt";
