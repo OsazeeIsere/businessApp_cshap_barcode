@@ -502,6 +502,26 @@ namespace BusinessApp
                             }
 
                         }
+                        DataTable dtgetsaleslog = new DataTable();
+                        dtgetsaleslog = getdatabase("select salesid from drugslog");
+                        int salesid = dtgetsaleslog.Rows.Count;
+                        strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                        cn.ConnectionString = strconnection;
+                        cn.Open();
+                        //newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                        cm.CommandText = "Update drugslog Set servicecharge=" + txtservicecharge.Text + " Where salesid=" + salesid + ";";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+
+                        // strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                        cn.ConnectionString = strconnection;
+                        cn.Open();
+                        //newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                        cm.CommandText = "Update generalsaleslog Set servicecharge=" + txtservicecharge.Text + " Where salesid=" + salesid + ";";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
                         //Dim x As New finalreceipt
                         //x.txtcashiername1.Text = txtcashiername1.Text
                         receiptmidip x = new receiptmidip();
@@ -509,6 +529,7 @@ namespace BusinessApp
                         x.txttotal.Text = txtgrandtotal.Text;
                         x.txtdiscount1.Text = txtdiscount.Text;
                         x.txtcash.Text = txtcash.Text;
+                        x.txtservicecharge.Text = txtservicecharge.Text;
                         x.txtreceiptnumber.Text = txtreceiptnumber.Text;
                         x.txtchange.Text = change.ToString();
                         x.Show();
@@ -562,8 +583,10 @@ namespace BusinessApp
 			try
 			{
 				double finaltotal = 0;
+                double servicecharge = 0;
+                servicecharge = Convert.ToDouble(txtservicecharge.Text);
 				finaltotal = Convert.ToDouble(txttotal.Text) - Convert.ToDouble(txtdiscount.Text);
-				txtgrandtotal.Text = finaltotal.ToString();
+				txtgrandtotal.Text =(finaltotal + servicecharge).ToString();
 			}
 			catch (Exception ex)
 			{
@@ -948,5 +971,10 @@ namespace BusinessApp
             this.Close();
             v.Show();
 		}
-	}
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

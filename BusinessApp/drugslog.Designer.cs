@@ -43,7 +43,7 @@ namespace BusinessApp
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -72,6 +72,8 @@ namespace BusinessApp
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtfile1 = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.txtservicecharge = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,14 +87,14 @@ namespace BusinessApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvsaleslog.Location = new System.Drawing.Point(13, 174);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -120,7 +122,7 @@ namespace BusinessApp
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(853, 641);
+            this.Label2.Location = new System.Drawing.Point(853, 654);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(97, 24);
@@ -143,7 +145,7 @@ namespace BusinessApp
             // 
             this.txttotaprofit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txttotaprofit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotaprofit.Location = new System.Drawing.Point(962, 639);
+            this.txttotaprofit.Location = new System.Drawing.Point(962, 652);
             this.txttotaprofit.Name = "txttotaprofit";
             this.txttotaprofit.ReadOnly = true;
             this.txttotaprofit.Size = new System.Drawing.Size(101, 29);
@@ -355,6 +357,26 @@ namespace BusinessApp
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
+            // txtservicecharge
+            // 
+            this.txtservicecharge.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtservicecharge.Location = new System.Drawing.Point(961, 619);
+            this.txtservicecharge.Name = "txtservicecharge";
+            this.txtservicecharge.Size = new System.Drawing.Size(102, 26);
+            this.txtservicecharge.TabIndex = 189;
+            this.txtservicecharge.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(819, 625);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 20);
+            this.label5.TabIndex = 190;
+            this.label5.Text = "Service Charge";
+            // 
             // drugslog
             // 
             this.AcceptButton = this.Button1;
@@ -364,6 +386,8 @@ namespace BusinessApp
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1294, 782);
+            this.Controls.Add(this.txtservicecharge);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtfile1);
             this.Controls.Add(this.Label13);
             this.Controls.Add(this.txtcancelsalesapproval);
@@ -430,6 +454,8 @@ namespace BusinessApp
         private ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.TextBox txtfile1;
         private SaveFileDialog saveFileDialog1;
+        internal System.Windows.Forms.TextBox txtservicecharge;
+        internal System.Windows.Forms.Label label5;
     }
 
 }

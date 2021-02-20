@@ -82,13 +82,16 @@ namespace BusinessApp
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtrepeatreceipt = new System.Windows.Forms.TextBox();
+            this.txtservicecharge = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label17
             // 
             this.Label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label17.AutoSize = true;
-            this.Label17.Location = new System.Drawing.Point(419, 506);
+            this.Label17.Location = new System.Drawing.Point(449, 515);
             this.Label17.Name = "Label17";
             this.Label17.Size = new System.Drawing.Size(47, 20);
             this.Label17.TabIndex = 143;
@@ -97,7 +100,7 @@ namespace BusinessApp
             // txtdiscount1
             // 
             this.txtdiscount1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtdiscount1.Location = new System.Drawing.Point(482, 503);
+            this.txtdiscount1.Location = new System.Drawing.Point(508, 515);
             this.txtdiscount1.Name = "txtdiscount1";
             this.txtdiscount1.ReadOnly = true;
             this.txtdiscount1.Size = new System.Drawing.Size(130, 26);
@@ -108,7 +111,7 @@ namespace BusinessApp
             this.Label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(311, 503);
+            this.Label16.Location = new System.Drawing.Point(337, 515);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(80, 20);
             this.Label16.TabIndex = 141;
@@ -118,7 +121,7 @@ namespace BusinessApp
             // 
             this.Label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label15.AutoSize = true;
-            this.Label15.Location = new System.Drawing.Point(423, 548);
+            this.Label15.Location = new System.Drawing.Point(449, 563);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(47, 20);
             this.Label15.TabIndex = 140;
@@ -128,7 +131,7 @@ namespace BusinessApp
             // 
             this.Label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label14.AutoSize = true;
-            this.Label14.Location = new System.Drawing.Point(428, 458);
+            this.Label14.Location = new System.Drawing.Point(454, 472);
             this.Label14.Name = "Label14";
             this.Label14.Size = new System.Drawing.Size(47, 20);
             this.Label14.TabIndex = 139;
@@ -138,7 +141,7 @@ namespace BusinessApp
             // 
             this.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label13.AutoSize = true;
-            this.Label13.Location = new System.Drawing.Point(428, 406);
+            this.Label13.Location = new System.Drawing.Point(449, 437);
             this.Label13.Name = "Label13";
             this.Label13.Size = new System.Drawing.Size(47, 20);
             this.Label13.TabIndex = 138;
@@ -195,7 +198,7 @@ namespace BusinessApp
             // txtchange
             // 
             this.txtchange.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtchange.Location = new System.Drawing.Point(480, 542);
+            this.txtchange.Location = new System.Drawing.Point(506, 557);
             this.txtchange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtchange.Name = "txtchange";
             this.txtchange.ReadOnly = true;
@@ -207,7 +210,7 @@ namespace BusinessApp
             this.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label9.AutoSize = true;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(320, 545);
+            this.Label9.Location = new System.Drawing.Point(338, 558);
             this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label9.Name = "Label9";
             this.Label9.Size = new System.Drawing.Size(71, 20);
@@ -228,7 +231,7 @@ namespace BusinessApp
             // txtcash
             // 
             this.txtcash.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtcash.Location = new System.Drawing.Point(482, 455);
+            this.txtcash.Location = new System.Drawing.Point(508, 469);
             this.txtcash.Margin = new System.Windows.Forms.Padding(4);
             this.txtcash.Name = "txtcash";
             this.txtcash.ReadOnly = true;
@@ -238,7 +241,7 @@ namespace BusinessApp
             // txttotal
             // 
             this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txttotal.Location = new System.Drawing.Point(480, 404);
+            this.txttotal.Location = new System.Drawing.Point(508, 431);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Name = "txttotal";
             this.txttotal.ReadOnly = true;
@@ -311,7 +314,7 @@ namespace BusinessApp
             this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(307, 452);
+            this.Label8.Location = new System.Drawing.Point(333, 466);
             this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(95, 24);
@@ -323,7 +326,7 @@ namespace BusinessApp
             this.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(275, 404);
+            this.Label7.Location = new System.Drawing.Point(296, 435);
             this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(136, 25);
@@ -432,12 +435,46 @@ namespace BusinessApp
             this.txtrepeatreceipt.TabIndex = 186;
             this.txtrepeatreceipt.Visible = false;
             // 
+            // txtservicecharge
+            // 
+            this.txtservicecharge.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtservicecharge.Location = new System.Drawing.Point(507, 390);
+            this.txtservicecharge.Name = "txtservicecharge";
+            this.txtservicecharge.ReadOnly = true;
+            this.txtservicecharge.Size = new System.Drawing.Size(131, 26);
+            this.txtservicecharge.TabIndex = 189;
+            this.txtservicecharge.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(301, 396);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 20);
+            this.label1.TabIndex = 190;
+            this.label1.Text = "Service Charge";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(449, 393);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.TabIndex = 191;
+            this.label2.Text = "NGN";
+            // 
             // receiptmidip
             // 
             this.AcceptButton = this.Button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 711);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtservicecharge);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtrepeatreceipt);
             this.Controls.Add(this.txttel);
             this.Controls.Add(this.txtaddress);
@@ -515,6 +552,9 @@ namespace BusinessApp
         private TextBox txtaddress;
         private TextBox txtname;
         internal TextBox txtrepeatreceipt;
+        internal Label label1;
+        public TextBox txtservicecharge;
+        internal Label label2;
     }
 
 }

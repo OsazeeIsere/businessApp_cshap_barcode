@@ -58,9 +58,10 @@ namespace BusinessApp
 				double totalprofit = 0;
 				System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
 				System.Data.DataTable dtgetsaleslog1 = new System.Data.DataTable();
-				dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog");
+				dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog");
 				double temp = 0;
 				double temp1 = 0;
+                double temp2 = 0;
 				int c = 0;
 				System.Data.DataTable dtgetadmin = new System.Data.DataTable();
 				dtgetadmin = getdatabase("select * from administrator");
@@ -73,12 +74,15 @@ namespace BusinessApp
 						{
 							temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
 							temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["profit"]);
-						}
+                            temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
 
-						totalsales = temp;
+                        }
+
+                        totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
-						txttotaprofit.Text = totalprofit.ToString();
+                        txttotaprofit.Text = (totalprofit + temp2).ToString();
+                        txtservicecharge.Text = temp2.ToString();
 						c = dtgetsaleslog1.Rows.Count;
 						txtcustomer.Text = c.ToString();
                         dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
@@ -97,12 +101,15 @@ namespace BusinessApp
 						{
 							temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
 							temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["profit"]);
-						}
-						totalsales = temp;
+                            temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
+
+                        }
+                        totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
 						c = dtgetsaleslog1.Rows.Count;
 						txtcustomer.Text = c.ToString();
+                        txtservicecharge.Text = temp2.ToString();
 					}
 				}
 				System.Data.DataTable dtgetcashier = new System.Data.DataTable();
@@ -149,6 +156,7 @@ namespace BusinessApp
 			{
 				double temp = 0;
 				double temp1 = 0;
+                double temp2 = 0;
 				int c = 0;
 				System.Data.DataTable dtgetsaleslog1 = new System.Data.DataTable();
 				System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
@@ -163,10 +171,10 @@ namespace BusinessApp
 					if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Sales")
 					{
                         dtgetsaleslog_dgv = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,profit,entrydate from drugslog order by entrydate");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,profit,entrydate from drugslog order by entrydate");
                         dgvsaleslog.DataSource = dtgetsaleslog_dgv;
 						// generate another table for necessary calculation
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							//to sum the 2 columns
@@ -174,122 +182,138 @@ namespace BusinessApp
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
 								temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["profit"]);
-							}
-						}
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
+
+                            }
+                        }
 						c = dtgetsaleslog1.Rows.Count;
 						txtcustomer.Text = c.ToString();
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
-						txttotaprofit.Text = totalprofit.ToString();
+                        txttotaprofit.Text = (totalprofit + temp2).ToString();
+                        txtservicecharge.Text = temp2.ToString();
 					}
 					else if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && DateTimePicker1.Value.Date.ToShortDateString() == DateTimePicker2.Value.Date.ToShortDateString() && cbocashier.Text != "All Cashiers' Sales")
 					{
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,profit,receiptnumber,entrydate from drugslog where  cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+                                            "unitsalesprice,amountsold,servicecharge,profit,receiptnumber,entrydate from drugslog where  cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						dgvsaleslog.DataSource = dtgetsaleslog;
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var k = 0; k < dtgetsaleslog1.Rows.Count; k++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[k]["amountsold"]);
 								temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[k]["profit"]);
-							}
-							c = dtgetsaleslog1.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[k]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog1.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
-						txttotaprofit.Text = totalprofit.ToString();
+                        txttotaprofit.Text = (totalprofit + temp2).ToString();
+                        txtservicecharge.Text = temp2.ToString();
 					}
 					else if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && DateTimePicker1.Value.Date.ToShortDateString() != DateTimePicker2.Value.Date.ToShortDateString() && cbocashier.Text != "All Cashiers' Sales")
 					{
 						string stdate = DateTimePicker1.Value.Date.ToShortDateString();
 						string eddate = DateTimePicker2.Value.Date.ToShortDateString();
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,profit,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'and  cashiername='" + cbocashier.Text + "'");
+                                            "unitsalesprice,amountsold,servicecharge,profit,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'and  cashiername='" + cbocashier.Text + "'");
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
 						dgvsaleslog.DataSource = dtgetsaleslog;
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where date >='" + stdate + "' and date <='" + eddate + "' and cashiername='" + cbocashier.Text + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where date >='" + stdate + "' and date <='" + eddate + "' and cashiername='" + cbocashier.Text + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var l = 0; l < dtgetsaleslog1.Rows.Count; l++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[l]["amountsold"]);
 								temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[l]["profit"]);
-							}
-							c = dtgetsaleslog.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[l]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
-						txttotaprofit.Text = totalprofit.ToString();
-					}
-					else if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Cashiers' Sales" && DateTimePicker1.Value.Date.ToShortDateString() == DateTimePicker2.Value.Date.ToShortDateString())
+                        txttotaprofit.Text = (totalprofit + temp2).ToString();
+                        txtservicecharge.Text = temp2.ToString();
+
+                    }
+                    else if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Cashiers' Sales" && DateTimePicker1.Value.Date.ToShortDateString() == DateTimePicker2.Value.Date.ToShortDateString())
 					{
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,profit,entrydate from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,profit,entrydate from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						dgvsaleslog.DataSource = dtgetsaleslog;
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var j = 0; j < dtgetsaleslog1.Rows.Count; j++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
 								temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["profit"]);
-							}
-							c = dtgetsaleslog1.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog1.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
-						txttotaprofit.Text = totalprofit.ToString();
+                        txttotaprofit.Text = (totalprofit + temp2).ToString();
+                        txtservicecharge.Text = temp2.ToString();
 					}
 					else if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Cashiers' Sales" && DateTimePicker1.Value.Date.ToShortDateString() != DateTimePicker2.Value.Date.ToShortDateString())
 					{
 						string stdate = DateTimePicker1.Value.Date.ToShortDateString();
 						string eddate = DateTimePicker2.Value.Date.ToShortDateString();
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,profit,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,profit,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
 						dgvsaleslog.DataSource = dtgetsaleslog;
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var k = 0; k < dtgetsaleslog1.Rows.Count; k++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[k]["amountsold"]);
 								temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[k]["profit"]);
-							}
-							c = dtgetsaleslog.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[k]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
-						txttotaprofit.Text = totalprofit.ToString();
+                        txttotaprofit.Text = (totalprofit + temp2).ToString();
+                        txtservicecharge.Text = temp2.ToString();
 					}
 				}
 				for (var i = 0; i < dtgetadmin.Rows.Count; i++)
@@ -297,49 +321,55 @@ namespace BusinessApp
 					if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Sales")
 					{
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog order by date");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,entrydate from drugslog order by date");
 						dgvsaleslog.DataSource = dtgetsaleslog;
 						// generate another table for necessary calculation
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							//to sum the 2 columns
 							for (var j = 0; j < dtgetsaleslog1.Rows.Count; j++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
-							}
-						}
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
+
+                            }
+                        }
 						c = dtgetsaleslog1.Rows.Count;
 						txtcustomer.Text = c.ToString();
-
+                        txtservicecharge.Text = temp2.ToString();
 						totalsales = temp;
-						totalprofit = temp1;
-						txttotalsales.Text = totalsales.ToString();
+                    //    txttotaprofit.Text = (temp + temp2).ToString();
+                        txttotalsales.Text = totalsales.ToString();
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && DateTimePicker1.Value.Date.ToShortDateString() == DateTimePicker2.Value.Date.ToShortDateString() && cbocashier.Text != "All Cashiers' Sales")
 					{
                         menuStrip1.Visible = false;
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where  cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,entrydate from drugslog where  cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						dgvsaleslog.DataSource = dtgetsaleslog;
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where cashiername='" + cbocashier.Text + "' And date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var k = 0; k < dtgetsaleslog1.Rows.Count; k++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[k]["amountsold"]);
-							}
-							c = dtgetsaleslog1.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[k]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog1.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
+                        txtservicecharge.Text = temp2.ToString();
+
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && DateTimePicker1.Value.Date.ToShortDateString() != DateTimePicker2.Value.Date.ToShortDateString() && cbocashier.Text != "All Cashiers' Sales")
 					{
@@ -347,51 +377,58 @@ namespace BusinessApp
                         string stdate = DateTimePicker1.Value.Date.ToShortDateString();
 						string eddate = DateTimePicker2.Value.Date.ToShortDateString();
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'and  cashiername='" + cbocashier.Text + "'");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'and  cashiername='" + cbocashier.Text + "'");
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
 						dgvsaleslog.DataSource = dtgetsaleslog;
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where date >='" + stdate + "' and date <='" + eddate + "' and cashiername='" + cbocashier.Text + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where date >='" + stdate + "' and date <='" + eddate + "' and cashiername='" + cbocashier.Text + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var l = 0; l < dtgetsaleslog1.Rows.Count; l++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[l]["amountsold"]);
-							}
-							c = dtgetsaleslog.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[l]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
+                        txtservicecharge.Text = temp2.ToString();
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Cashiers' Sales" && DateTimePicker1.Value.Date.ToShortDateString() == DateTimePicker2.Value.Date.ToShortDateString())
 					{
                         menuStrip1.Visible = false;
                         dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,entrydate from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						dgvsaleslog.DataSource = dtgetsaleslog;
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where date='" + DateTimePicker1.Value.Date.ToShortDateString() + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var j = 0; j < dtgetsaleslog1.Rows.Count; j++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
-							}
-							c = dtgetsaleslog1.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog1.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
+                        txtservicecharge.Text = temp2.ToString();
+
 					}
 					else if (txtpassword1.Text != dtgetadmin.Rows[i]["adminpassword"].ToString() && cbocashier.Text == "All Cashiers' Sales" && DateTimePicker1.Value.Date.ToShortDateString() != DateTimePicker2.Value.Date.ToShortDateString())
 					{
@@ -399,26 +436,29 @@ namespace BusinessApp
                         string stdate = DateTimePicker1.Value.Date.ToShortDateString();
 						string eddate = DateTimePicker2.Value.Date.ToShortDateString();
 						dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                            "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
+                                            "unitsalesprice,amountsold,servicecharge,receiptnumber,entrydate from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
 						if (dtgetsaleslog.Rows.Count > 0)
 						{
 							c = dtgetsaleslog.Rows.Count;
 						}
 						txtcustomer.Text = c.ToString();
 						dgvsaleslog.DataSource = dtgetsaleslog;
-						dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
+						dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog where date >='" + stdate + "' and date <='" + eddate + "'");
 						if (dtgetsaleslog1.Rows.Count > 0)
 						{
 							for (var k = 0; k < dtgetsaleslog1.Rows.Count; k++)
 							{
 								temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[k]["amountsold"]);
-							}
-							c = dtgetsaleslog.Rows.Count;
+                                temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[k]["servicecharge"]);
+
+                            }
+                            c = dtgetsaleslog.Rows.Count;
 							txtcustomer.Text = c.ToString();
 						}
 						totalsales = temp;
 						totalprofit = temp1;
 						txttotalsales.Text = totalsales.ToString();
+                        txtservicecharge.Text = temp2.ToString();
 					}
 				}
 			}
@@ -575,9 +615,10 @@ namespace BusinessApp
                 double totalprofit = 0;
                 System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
                 System.Data.DataTable dtgetsaleslog1 = new System.Data.DataTable();
-                dtgetsaleslog1 = getdatabase("select amountsold,profit from drugslog");
+                dtgetsaleslog1 = getdatabase("select amountsold,profit,servicecharge from drugslog");
                 double temp = 0;
                 double temp1 = 0;
+                double temp2 = 0;
                 int c = 0;
                 System.Data.DataTable dtgetadmin = new System.Data.DataTable();
                 dtgetadmin = getdatabase("select * from administrator");
@@ -586,34 +627,40 @@ namespace BusinessApp
                     if (txtpassword1.Text == dtgetadmin.Rows[i]["adminpassword"].ToString() && dtgetsaleslog1.Rows.Count > 0)
                     {
                         dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                       "unitsalesprice,amountsold,profit,receiptnumber,entrydate from drugslog order by date");
+                                       "unitsalesprice,amountsold,servicecharge,profit,receiptnumber,entrydate from drugslog order by date");
                         dgvsaleslog.DataSource = dtgetsaleslog;
                         for (var j = 0; j < dtgetsaleslog1.Rows.Count; j++)
                         {
                             temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
                             temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["profit"]);
+                            temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
+
                         }
 
                         totalsales = temp;
                         totalprofit = temp1;
                         txttotalsales.Text = totalsales.ToString();
-                        txttotaprofit.Text = totalprofit.ToString();
+                        txttotaprofit.Text = (totalprofit+temp2).ToString();
+                        txtservicecharge.Text = temp2.ToString();
                         c = dtgetsaleslog1.Rows.Count;
                         txtcustomer.Text = c.ToString();
                     }
                     else
                     {
                         dtgetsaleslog = getdatabase("select cashiername,salesid,productid,itemsold,quantitysold," +
-                                       "unitsalesprice,amountsold,receiptnumber,entrydate from drugslog order by date");
+                                       "unitsalesprice,amountsold,servicecharge,receiptnumber,entrydate from drugslog order by date");
                         dgvsaleslog.DataSource = dtgetsaleslog;
                         for (var j = 0; j < dtgetsaleslog1.Rows.Count; j++)
                         {
                             temp = temp + Convert.ToDouble(dtgetsaleslog1.Rows[j]["amountsold"]);
                             temp1 = temp1 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["profit"]);
+                            temp2 = temp2 + Convert.ToDouble(dtgetsaleslog1.Rows[j]["servicecharge"]);
+
                         }
                         totalsales = temp;
                        // totalprofit = temp1;
                         txttotalsales.Text = totalsales.ToString();
+                        txtservicecharge.Text = temp2.ToString();
                         c = dtgetsaleslog1.Rows.Count;
                         txtcustomer.Text = c.ToString();
                     }

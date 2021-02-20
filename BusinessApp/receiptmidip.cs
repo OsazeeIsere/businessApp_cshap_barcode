@@ -86,7 +86,7 @@ namespace BusinessApp
                     time1 = DateTime.Now.ToShortTimeString();
                     txttime.Text = time1;
 				    // insert Copyright symbol
-				    lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 Nozemen InfoTech(08163775990)";
+				    lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + System.DateTime.Now.Year +" Nozemen InfoTech(08163775990)";
                 }
                 else
                 {
@@ -123,7 +123,9 @@ namespace BusinessApp
                             lsvitems.Items.Add(lstitem);
                             temp = temp + Convert.ToDouble(dtgetsaleslog.Rows[i]["amountsold"].ToString());
                         }
-                        txttotal.Text = temp.ToString();
+                        txtservicecharge.Text = dtgetsaleslog.Rows[0]["servicecharge"].ToString();
+
+                        txttotal.Text = (temp+Convert.ToDouble(dtgetsaleslog.Rows[0]["servicecharge"].ToString())).ToString();
                         txtcash.Text = dtgetsaleslog.Rows[0]["cashpaid"].ToString();
                         txtdiscount1.Text = dtgetsaleslog.Rows[0]["discount"].ToString();
                         txtchange.Text = dtgetsaleslog.Rows[0]["changegiven"].ToString();
@@ -138,7 +140,7 @@ namespace BusinessApp
                          DateTimePicker1.Text= datesold;
                         txttime.Text = time1;
                         // insert Copyright symbol
-                        lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 Nozemen InfoTech(08163775990)";
+                        lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + System.DateTime.Now.Year + " Nozemen InfoTech(08163775990)";
 
                     }
 
@@ -165,10 +167,12 @@ namespace BusinessApp
                     Font font = new Font("arial", 8F, FontStyle.Bold);
                     Font fontx = new Font("arial", 7F, FontStyle.Bold);
                     Font font1 = new Font("arial", 7F, FontStyle.Regular);
+                    Font fontsmall = new Font("arial", 6F, FontStyle.Regular);
+
                     Font font2 = new Font("arial", 7F, FontStyle.Regular);
                     Font font3 = new Font("arial", 8F, FontStyle.Regular);
-                    e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 60, 100);
-                    e.Graphics.DrawString(txtaddress.Text, fontx, Brushes.Black, 6, 115);
+                    e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 40, 100);
+                    e.Graphics.DrawString(txtaddress.Text, fontsmall, Brushes.Black, 1, 115);
                     e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 60, 125);
                     e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 140);
                     e.Graphics.DrawString(txtcashiername1.Text, font2, Brushes.Black, 60, 140);
@@ -184,7 +188,7 @@ namespace BusinessApp
                     foreach (ColumnHeader ch in lsvitems.Columns)
                     {
                         e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, k, j);
-                        k = k + 55;
+                        k = k + 50;
                     }
                     j = j + 15;
                     for (var i = 0; i < lsvitems.Items.Count; i++)
@@ -195,10 +199,10 @@ namespace BusinessApp
                         e.Graphics.DrawString(intlistquantity.ToString(), font2, Brushes.Black, 60, j);
                         //e.Graphics.DrawString(ch., headerFont, Brushes.Black, 50, j + 15)
                         double dblunitprice = Convert.ToDouble(lsvitems.Items[i].SubItems[2].Text);
-                        e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 130, j);
+                        e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 100, j);
                         //e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, 140, j + 15)
                         double dblamount = Convert.ToDouble(lsvitems.Items[i].SubItems[3].Text);
-                        e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 180, j);
+                        e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 150, j);
                         j = j + 30;
                         k = 2;
                     }
@@ -243,22 +247,26 @@ namespace BusinessApp
                     mypen = new Pen(Color.Black, Height = 1);
                     e.Graphics.DrawLine(mypen, x1: 10, y1: j, x2: 200, y2: j);
                     j = j + 20;
-                    e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 40, j);
-                    e.Graphics.DrawString(Label13.Text, font2, Brushes.Black, 100, j);
-                    e.Graphics.DrawString(txttotal.Text, font3, Brushes.Black, 150, j);
-                    e.Graphics.DrawString(Label8.Text, font2, Brushes.Black, 40, j + 20);
-                    e.Graphics.DrawString(Label14.Text, font2, Brushes.Black, 100, j + 20);
-                    e.Graphics.DrawString(txtcash.Text, font3, Brushes.Black, 150, j + 20);
-                    e.Graphics.DrawString(Label16.Text, font2, Brushes.Black, 40, j + 40);
-                    e.Graphics.DrawString(Label17.Text, font2, Brushes.Black, 100, j + 40);
-                    e.Graphics.DrawString(txtdiscount1.Text, font3, Brushes.Black, 150, j + 40);
-                    e.Graphics.DrawString(Label9.Text, font2, Brushes.Black, 40, j + 60);
-                    e.Graphics.DrawString(Label15.Text, font2, Brushes.Black, 100, j + 60);
-                    e.Graphics.DrawString(txtchange.Text, font3, Brushes.Black, 150, j + 60);
-                  //  e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80);
-                    e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 30, j + 90);
-                    e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 20, j + 100);
-                    e.Graphics.DrawString(lbcopyright.Text, font2, Brushes.Black, 1, j + 110);
+                    e.Graphics.DrawString(label1.Text, font3, Brushes.Black, 10, j);
+                    e.Graphics.DrawString(label2.Text, font2, Brushes.Black, 120, j);
+                    e.Graphics.DrawString(txtservicecharge.Text, font3, Brushes.Black, 170, j);
+
+                    e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 10, j + 20);
+                    e.Graphics.DrawString(Label13.Text, font2, Brushes.Black, 120, j + 20);
+                    e.Graphics.DrawString(txttotal.Text, font3, Brushes.Black, 170, j + 20);
+                    e.Graphics.DrawString(Label8.Text, font2, Brushes.Black, 10, j + 40);
+                    e.Graphics.DrawString(Label14.Text, font2, Brushes.Black, 120, j + 40);
+                    e.Graphics.DrawString(txtcash.Text, font3, Brushes.Black, 170, j + 40);
+                    e.Graphics.DrawString(Label16.Text, font2, Brushes.Black, 10, j + 60);
+                    e.Graphics.DrawString(Label17.Text, font2, Brushes.Black, 120, j + 60);
+                    e.Graphics.DrawString(txtdiscount1.Text, font3, Brushes.Black, 170, j + 60);
+                    e.Graphics.DrawString(Label9.Text, font2, Brushes.Black, 10, j + 80);
+                    e.Graphics.DrawString(Label15.Text, font2, Brushes.Black, 120, j + 80);
+                    e.Graphics.DrawString(txtchange.Text, font3, Brushes.Black, 170, j + 80);
+                    //  e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80);
+                    e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 30, j + 110);
+                    e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 20, j + 120);
+                    e.Graphics.DrawString(lbcopyright.Text, font2, Brushes.Black, 1, j + 130);
                 }
                 else
                 {
@@ -284,7 +292,7 @@ namespace BusinessApp
                     foreach (ColumnHeader ch in lsvitems.Columns)
                     {
                         e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, k, j);
-                        k = k + 80;
+                        k = k + 78;
                     }
                     j = j + 15;
                     for (var i = 0; i < lsvitems.Items.Count; i++)
@@ -296,10 +304,10 @@ namespace BusinessApp
                         e.Graphics.DrawString(intlistquantity.ToString(), font2, Brushes.Black, 110, j);
                         //e.Graphics.DrawString(ch., headerFont, Brushes.Black, 50, j + 15)
                         double dblunitprice = Convert.ToDouble(lsvitems.Items[i].SubItems[2].Text);
-                        e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 185, j);
+                        e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 165, j);
                         //e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, 140, j + 15)
                         double dblamount = Convert.ToDouble(lsvitems.Items[i].SubItems[3].Text);
-                        e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 250, j);
+                        e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 235, j);
                         j = j + 30;
                         k = 2;
                     }
@@ -308,22 +316,26 @@ namespace BusinessApp
                     mypen = new Pen(Color.Black, Height = 1);
                     e.Graphics.DrawLine(mypen, x1: 10, y1: j, x2: 300, y2: j);
                     j = j + 20;
-                    e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 100, j);
-                    e.Graphics.DrawString(Label13.Text, font2, Brushes.Black, 160, j);
-                    e.Graphics.DrawString(txttotal.Text, font3, Brushes.Black, 210, j);
-                    e.Graphics.DrawString(Label8.Text, font2, Brushes.Black, 100, j + 20);
-                    e.Graphics.DrawString(Label14.Text, font2, Brushes.Black, 160, j + 20);
-                    e.Graphics.DrawString(txtcash.Text, font3, Brushes.Black, 210, j + 20);
-                    e.Graphics.DrawString(Label16.Text, font2, Brushes.Black, 100, j + 40);
-                    e.Graphics.DrawString(Label17.Text, font2, Brushes.Black, 160, j + 40);
-                    e.Graphics.DrawString(txtdiscount1.Text, font3, Brushes.Black, 210, j + 40);
-                    e.Graphics.DrawString(Label9.Text, font2, Brushes.Black, 100, j + 60);
-                    e.Graphics.DrawString(Label15.Text, font2, Brushes.Black, 160, j + 60);
-                    e.Graphics.DrawString(txtchange.Text, font3, Brushes.Black, 210, j + 60);
-                    //e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80)
-                    e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 40, j + 90);
-                    e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 30, j + 100);
-                    e.Graphics.DrawString(lbcopyright.Text, font2, Brushes.Black, 1, j + 110);
+                    e.Graphics.DrawString(label1.Text, font3, Brushes.Black, 10, j);
+                    e.Graphics.DrawString(label2.Text, font2, Brushes.Black, 120, j);
+                    e.Graphics.DrawString(txtservicecharge.Text, font3, Brushes.Black, 170, j);
+
+                    e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 10, j + 20);
+                    e.Graphics.DrawString(Label13.Text, font2, Brushes.Black, 120, j + 20);
+                    e.Graphics.DrawString(txttotal.Text, font3, Brushes.Black, 170, j + 20);
+                    e.Graphics.DrawString(Label8.Text, font2, Brushes.Black, 10, j + 40);
+                    e.Graphics.DrawString(Label14.Text, font2, Brushes.Black, 120, j + 40);
+                    e.Graphics.DrawString(txtcash.Text, font3, Brushes.Black, 170, j + 40);
+                    e.Graphics.DrawString(Label16.Text, font2, Brushes.Black, 10, j + 60);
+                    e.Graphics.DrawString(Label17.Text, font2, Brushes.Black, 120, j + 60);
+                    e.Graphics.DrawString(txtdiscount1.Text, font3, Brushes.Black, 170, j + 60);
+                    e.Graphics.DrawString(Label9.Text, font2, Brushes.Black, 10, j + 80);
+                    e.Graphics.DrawString(Label15.Text, font2, Brushes.Black, 120, j + 80);
+                    e.Graphics.DrawString(txtchange.Text, font3, Brushes.Black, 170, j + 80);
+                    //  e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80);
+                    e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 30, j + 110);
+                    e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 20, j + 120);
+                    e.Graphics.DrawString(lbcopyright.Text, font2, Brushes.Black, 1, j + 130);
                 }
             }
 			catch (Exception ex)

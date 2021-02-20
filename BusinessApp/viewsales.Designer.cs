@@ -84,6 +84,8 @@ namespace BusinessApp
             this.Button6 = new System.Windows.Forms.Button();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
+            this.txtservicecharge = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label3
@@ -264,7 +266,7 @@ namespace BusinessApp
             this.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label9.AutoSize = true;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(381, 415);
+            this.Label9.Location = new System.Drawing.Point(381, 447);
             this.Label9.Name = "Label9";
             this.Label9.Size = new System.Drawing.Size(148, 20);
             this.Label9.TabIndex = 70;
@@ -273,7 +275,7 @@ namespace BusinessApp
             // txtdiscount
             // 
             this.txtdiscount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtdiscount.Location = new System.Drawing.Point(540, 409);
+            this.txtdiscount.Location = new System.Drawing.Point(540, 441);
             this.txtdiscount.Name = "txtdiscount";
             this.txtdiscount.ReadOnly = true;
             this.txtdiscount.Size = new System.Drawing.Size(101, 26);
@@ -287,7 +289,7 @@ namespace BusinessApp
             this.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label10.AutoSize = true;
             this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(413, 458);
+            this.Label10.Location = new System.Drawing.Point(413, 473);
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(104, 20);
             this.Label10.TabIndex = 72;
@@ -296,7 +298,7 @@ namespace BusinessApp
             // txtgrandtotal
             // 
             this.txtgrandtotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtgrandtotal.Location = new System.Drawing.Point(540, 458);
+            this.txtgrandtotal.Location = new System.Drawing.Point(540, 473);
             this.txtgrandtotal.Name = "txtgrandtotal";
             this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(101, 26);
@@ -509,12 +511,35 @@ namespace BusinessApp
             this.txtname.TabIndex = 185;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtservicecharge
+            // 
+            this.txtservicecharge.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtservicecharge.Location = new System.Drawing.Point(540, 412);
+            this.txtservicecharge.Name = "txtservicecharge";
+            this.txtservicecharge.Size = new System.Drawing.Size(101, 26);
+            this.txtservicecharge.TabIndex = 187;
+            this.txtservicecharge.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(398, 418);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 20);
+            this.label1.TabIndex = 188;
+            this.label1.Text = "Service Charge";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // viewsales
             // 
             this.AcceptButton = this.Button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 721);
+            this.Controls.Add(this.txtservicecharge);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.Button6);
@@ -606,6 +631,8 @@ namespace BusinessApp
 		internal System.Windows.Forms.Button Button6;
         private TextBox txtaddress;
         private TextBox txtname;
+        internal TextBox txtservicecharge;
+        internal Label label1;
     }
 
 }

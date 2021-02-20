@@ -289,8 +289,10 @@ namespace BusinessApp
 			try
 			{
 				double finaltotal = 0;
-				finaltotal = Convert.ToDouble(txttotal.Text) - Convert.ToDouble(txtdiscount.Text);
-				txtgrandtotal.Text = finaltotal.ToString();
+                double servicecharge = 0;
+                servicecharge = Convert.ToDouble(txtservicecharge.Text);
+                finaltotal = Convert.ToDouble(txttotal.Text) - Convert.ToDouble(txtdiscount.Text);
+				txtgrandtotal.Text = (finaltotal+servicecharge).ToString();
 			}
 			catch (Exception ex)
 			{
