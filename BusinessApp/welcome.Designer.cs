@@ -47,10 +47,11 @@ namespace BusinessApp
             this.btnbackup = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.txttel = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
-            this.txttel = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +115,7 @@ namespace BusinessApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(201)))), ((int)(((byte)(211)))));
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txttel);
             this.panel1.Controls.Add(this.txtaddress);
             this.panel1.Controls.Add(this.txtname);
@@ -123,18 +125,15 @@ namespace BusinessApp
             this.panel1.Size = new System.Drawing.Size(784, 148);
             this.panel1.TabIndex = 7;
             // 
-            // panel2
+            // txttel
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(165)))), ((int)(((byte)(188)))));
-            this.panel2.Controls.Add(this.btnbackup);
-            this.panel2.Controls.Add(this.btnaddproduct);
-            this.panel2.Controls.Add(this.Button1);
-            this.panel2.Location = new System.Drawing.Point(35, 426);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(720, 123);
-            this.panel2.TabIndex = 8;
+            this.txttel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txttel.Location = new System.Drawing.Point(0, 52);
+            this.txttel.Name = "txttel";
+            this.txttel.ReadOnly = true;
+            this.txttel.Size = new System.Drawing.Size(784, 26);
+            this.txttel.TabIndex = 187;
+            this.txttel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtaddress
             // 
@@ -156,15 +155,27 @@ namespace BusinessApp
             this.txtname.TabIndex = 185;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txttel
+            // panel2
             // 
-            this.txttel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txttel.Location = new System.Drawing.Point(0, 52);
-            this.txttel.Name = "txttel";
-            this.txttel.ReadOnly = true;
-            this.txttel.Size = new System.Drawing.Size(784, 26);
-            this.txttel.TabIndex = 187;
-            this.txttel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(165)))), ((int)(((byte)(188)))));
+            this.panel2.Controls.Add(this.btnbackup);
+            this.panel2.Controls.Add(this.btnaddproduct);
+            this.panel2.Controls.Add(this.Button1);
+            this.panel2.Location = new System.Drawing.Point(35, 426);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(720, 123);
+            this.panel2.TabIndex = 8;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEmail.Location = new System.Drawing.Point(0, 78);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(784, 26);
+            this.txtEmail.TabIndex = 188;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // welcome
             // 
@@ -198,6 +209,7 @@ namespace BusinessApp
         private TextBox txtaddress;
         private TextBox txtname;
         private TextBox txttel;
+        private TextBox txtEmail;
     }
 
 }

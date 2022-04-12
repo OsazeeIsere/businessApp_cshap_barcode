@@ -711,8 +711,8 @@ namespace BusinessApp
             string sql = null;
             string data = null;
             string column = null;
-            int i = 0;
-            int j = 0;
+           // int i = 0;
+            //int j = 0;
             Excel.Application xlApp;
             Excel.Workbook xlWorkBook;
             Excel.Worksheet xlWorkSheet;
@@ -730,23 +730,60 @@ namespace BusinessApp
             DataTable ds = new DataTable();
             dscmd.Fill(ds);
             // DataColumn dc = new DataColumn();
-            xlWorkSheet.Cells[1, 1] = "Salelog DataBase As At " + DateTimePicker1.Value.ToLongDateString();
-
-            for (j = 0; j <= ds.Columns.Count - 1; j++)
-            {
-                // data = ds.Rows[i].ItemArray[j].ToString();
-                column = ds.Columns[j].ColumnName.ToString();
-
-                xlWorkSheet.Cells[2, j + 1] = column;
+            //dating the excel file
+            if (DateTimePicker1.Value.ToLongDateString()== DateTimePicker2.Value.ToLongDateString())
+            { 
+            xlWorkSheet.Cells[1, 1] = "Salelog DataBase As At " + DateTimePicker2.Value.ToLongDateString();
             }
-            for (i = 0; i <= ds.Rows.Count - 1; i++)
+            else
             {
-                for (j = 0; j <= ds.Columns.Count - 1; j++)
+                xlWorkSheet.Cells[1, 1] = "Salelog DataBase Between " + DateTimePicker1.Value.ToLongDateString() +" " + " To "+ DateTimePicker2.Value.ToLongDateString();
+
+            }
+
+            for (int i = 1; i < dgvsaleslog.Columns.Count + 1; i++)
+            {
+                xlWorkSheet.Cells[2, i] = dgvsaleslog.Columns[i - 1].HeaderText;
+            }
+            for (int v = 0; v < dgvsaleslog.Rows.Count; v++)
+            {
+                for (int j = 0; j < dgvsaleslog.Columns.Count; j++)
                 {
-                    data = ds.Rows[i].ItemArray[j].ToString();
-                    xlWorkSheet.Cells[i + 3, j + 1] = data;
+                    if (dgvsaleslog.Rows[v].Cells[j].Value != null)
+                    {
+                        xlWorkSheet.Cells[v + 3, j + 1] = dgvsaleslog.Rows[v].Cells[j].Value.ToString();
+                    }
+                    else
+                    {
+                        xlWorkSheet.Cells[v + 3, j + 1] = "";
+                    }
+                   
                 }
             }
+
+            xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 5, dgvsaleslog.Columns.Count - 3] = "SALES SUMARY";
+ 
+             xlWorkSheet.Cells[dgvsaleslog.Rows.Count+6, dgvsaleslog.Columns.Count - 3] = " TOTAL AMOUNT SOLD(IN NAIRA) "; xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 6, dgvsaleslog.Columns.Count - 2] = txttotalsales.Text;
+            xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 7, dgvsaleslog.Columns.Count - 3] = " SERVICE CHARGE(IN NAIRA)"; xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 7, dgvsaleslog.Columns.Count - 2] = txtservicecharge.Text;
+            xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 8, dgvsaleslog.Columns.Count - 3] = " TOTAL PROFIT(IN NAIRA) "; xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 8, dgvsaleslog.Columns.Count - 2] = txttotaprofit.Text;
+            xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 9, dgvsaleslog.Columns.Count - 3] = " CUSTOMER RESPONSE "; xlWorkSheet.Cells[dgvsaleslog.Rows.Count + 9, dgvsaleslog.Columns.Count - 2] = txtcustomer.Text;
+
+            //Datatable to excel
+            //for (j = 0; j <= ds.Columns.Count - 1; j++)
+            //{
+            //    // data = ds.Rows[i].ItemArray[j].ToString();
+            //    column = ds.Columns[j].ColumnName.ToString();
+
+            //    xlWorkSheet.Cells[2, j + 1] = column;
+            //}
+            //for (i = 0; i <= ds.Rows.Count - 1; i++)
+            //{
+            //    for (j = 0; j <= ds.Columns.Count - 1; j++)
+            //    {
+            //        data = ds.Rows[i].ItemArray[j].ToString();
+            //        xlWorkSheet.Cells[i + 3, j + 1] = data;
+            //    }
+            //}
             // workbook = APP.Workbooks.Open(txtfile.Text);
             saveFileDialog1.ShowDialog();
             xlWorkBook.SaveAs(txtfile1.Text, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);

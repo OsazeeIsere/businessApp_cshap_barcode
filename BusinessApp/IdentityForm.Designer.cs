@@ -36,6 +36,8 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -117,11 +119,31 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEmail.Location = new System.Drawing.Point(250, 422);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(559, 26);
+            this.txtEmail.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(69, 425);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Email(Optional)";
+            // 
             // IdentityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.txtAddress);
@@ -150,5 +172,7 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label5;
     }
 }

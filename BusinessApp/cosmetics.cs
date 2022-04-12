@@ -715,5 +715,10 @@ namespace BusinessApp
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txtaddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

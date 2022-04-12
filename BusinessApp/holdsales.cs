@@ -648,14 +648,16 @@ namespace BusinessApp
 				//x.txtcashiername1.Text = txtcashiername1.Text
 				receiptholdsales x = new receiptholdsales();
 				x.txtcashiername1.Text = txtcashiername1.Text;
-				//If txtcash.Text = "" Then
-				//    MessageBox.Show("Please Enter the Cash Paid")
-				//    txtcash.Focus()
-				//ElseIf CDbl(txtcash.Text) < txtgrandtotal.Text Then
-				//    MessageBox.Show("Please  the Cash Paid is less Than the Cost of items Purchased")
-				//    txtcash.Focus()
-				//Else
-				x.txttotal.Text = txtgrandtotal.Text;
+                x.txtrepeatreceipt.Text = txtreceiptnumber.Text;
+
+                //If txtcash.Text = "" Then
+                //    MessageBox.Show("Please Enter the Cash Paid")
+                //    txtcash.Focus()
+                //ElseIf CDbl(txtcash.Text) < txtgrandtotal.Text Then
+                //    MessageBox.Show("Please  the Cash Paid is less Than the Cost of items Purchased")
+                //    txtcash.Focus()
+                //Else
+                x.txttotal.Text = txtgrandtotal.Text;
 				x.txtdiscount1.Text = txtdiscount.Text;
 				x.txtcash.Text = txtcash.Text;
                 x.txtchange.Text = change.ToString();
@@ -742,6 +744,11 @@ namespace BusinessApp
 		}
 
         private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
         {
 
         }

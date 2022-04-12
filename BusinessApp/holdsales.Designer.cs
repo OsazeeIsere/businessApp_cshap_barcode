@@ -381,11 +381,12 @@ namespace BusinessApp
             this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(479, 528);
+            this.Label8.Location = new System.Drawing.Point(453, 528);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(123, 24);
+            this.Label8.Size = new System.Drawing.Size(142, 24);
             this.Label8.TabIndex = 123;
-            this.Label8.Text = "Cash To Paid";
+            this.Label8.Text = "Cash Tendered";
+            this.Label8.Click += new System.EventHandler(this.Label8_Click);
             // 
             // Label7
             // 

@@ -605,6 +605,7 @@ namespace BusinessApp
             this.txtaddress.Size = new System.Drawing.Size(1284, 27);
             this.txtaddress.TabIndex = 113;
             this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtaddress.TextChanged += new System.EventHandler(this.txtaddress_TextChanged);
             // 
             // txtname
             // 

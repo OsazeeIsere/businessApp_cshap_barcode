@@ -126,7 +126,7 @@ namespace BusinessApp
                     string time1 = null;
                     time1 = DateTime.Now.ToShortTimeString();
                     txttime.Text = time1;
-                    txtcode2.Focus();
+                    txtseachdrugs.Focus();
                 }
 
 
@@ -494,6 +494,9 @@ namespace BusinessApp
 
                         txtcode2.Text = "";
                         txtdrugid.Text = "";
+                        txtseachdrugs.Text = "";
+                        txtseachdrugs.Focus();
+
                     }
                     else if (txtcode2.Text != "")
                     {
@@ -639,7 +642,7 @@ namespace BusinessApp
 
 
 				txtquantity.Text = 1.ToString();
-                txtcode2.Focus();
+                txtseachdrugs.Focus();
 			}
 			catch (Exception ex)
 			{

@@ -43,7 +43,7 @@ namespace BusinessApp
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -74,8 +74,10 @@ namespace BusinessApp
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.txtservicecharge = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.imgNaira = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgNaira)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvsaleslog
@@ -87,14 +89,14 @@ namespace BusinessApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvsaleslog.Location = new System.Drawing.Point(13, 174);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -377,6 +379,17 @@ namespace BusinessApp
             this.label5.TabIndex = 190;
             this.label5.Text = "Service Charge";
             // 
+            // imgNaira
+            // 
+            this.imgNaira.Image = global::BusinessApp.Properties.Resources.NAIRA;
+            this.imgNaira.Location = new System.Drawing.Point(905, 719);
+            this.imgNaira.Name = "imgNaira";
+            this.imgNaira.Size = new System.Drawing.Size(45, 25);
+            this.imgNaira.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgNaira.TabIndex = 191;
+            this.imgNaira.TabStop = false;
+            this.imgNaira.Visible = false;
+            // 
             // drugslog
             // 
             this.AcceptButton = this.Button1;
@@ -386,6 +399,7 @@ namespace BusinessApp
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1294, 782);
+            this.Controls.Add(this.imgNaira);
             this.Controls.Add(this.txtservicecharge);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtfile1);
@@ -422,6 +436,7 @@ namespace BusinessApp
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgNaira)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,6 +471,7 @@ namespace BusinessApp
         private SaveFileDialog saveFileDialog1;
         internal System.Windows.Forms.TextBox txtservicecharge;
         internal System.Windows.Forms.Label label5;
+        private PictureBox imgNaira;
     }
 
 }

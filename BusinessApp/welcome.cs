@@ -64,6 +64,7 @@ namespace BusinessApp
                 txtname.Text =" WELCOME TO "+ dtidentity.Rows[0]["businessName"].ToString();
                 txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 txttel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                txtEmail.Text = dtidentity.Rows[0]["email"].ToString();
 
             }
             else

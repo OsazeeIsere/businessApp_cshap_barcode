@@ -47,11 +47,11 @@ namespace BusinessApp
 			{
                 DataTable dtidentity = new DataTable();
                 dtidentity = getdatabase("Select * from identity");
-                txtcode2.Focus();
+                txtseachdrugs.Focus();
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
-                this.ActiveControl = txtcode2;
+                //this.ActiveControl = txtcode2;
                 lsvitems1.Visible = false;
                 Label1.Visible = false;
                 txtcosmeticsid.Visible = false;
@@ -257,6 +257,11 @@ namespace BusinessApp
 							cn.Close();
                             SalesAlert pop = new SalesAlert();
                             pop.ShowDialog();
+                            txtseachdrugs.Text = "";
+                            txtproductname.Text = "";
+                            txtdrugid.Text = "";
+                            txtseachdrugs.Focus();
+
                             //Dim v As Double
                             //Dim amountcost As Double
                             //Dim profit As Double
@@ -400,9 +405,10 @@ namespace BusinessApp
 				txtquantity.Text = 1.ToString();
 				txtunitsalesprice.Text = "";
 				txtdrugid.Text = "";
+                txtseachdrugs.Focus();
 
-			}
-			catch (Exception ex)
+            }
+            catch (Exception ex)
 			{
 				MessageBox.Show(ex.ToString());
 			}

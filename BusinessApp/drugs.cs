@@ -14,6 +14,8 @@ using xlapp = Microsoft.Office.Interop.Excel;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
+
 namespace BusinessApp
 {
     
@@ -997,6 +999,10 @@ namespace BusinessApp
 
         private void exportDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+            
             MySqlConnection cnn;
             string connectionString = null;
             string sql = null;
@@ -1012,8 +1018,8 @@ namespace BusinessApp
             xlApp = new Excel.Application();
             xlWorkBook = xlApp.Workbooks.Add(misValue);
             xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-            connectionString = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer";
+          //  xlWorkBook.SaveAs(ReadOnlyRecommended: true);
+                connectionString = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer";
             cnn = new MySqlConnection(connectionString);
             cnn.Open();
             sql = "SELECT * FROM Product";
@@ -1040,16 +1046,21 @@ namespace BusinessApp
             }
             // workbook = APP.Workbooks.Open(txtfile.Text);
             saveFileDialog1.ShowDialog();
-            xlWorkBook.SaveAs(txtfile1.Text, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-            xlWorkBook.Close(true, misValue, misValue);
-            xlApp.Quit();
+                // FileStream Fs = new FileStream(txtfile1.ToString(), FileMode.Create, FileAccess.Read);
+             xlApp.Quit();
 
             releaseObject(xlWorkSheet);
             releaseObject(xlWorkBook);
             releaseObject(xlApp);
 
             MessageBox.Show("Excel file created , you can find the file c:\\"+ txtfile1.Text);
-        }
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            }
 
         private void releaseObject(object obj)
         {
@@ -1071,6 +1082,7 @@ namespace BusinessApp
 
         private void saveFileDialog1_FileOk_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            
             txtfile1.Text = saveFileDialog1.FileName+".xls";
         }
 

@@ -582,6 +582,7 @@ namespace BusinessApp
 		{
 			try
 			{
+                
 				double finaltotal = 0;
                 double servicecharge = 0;
                 servicecharge = Convert.ToDouble(txtservicecharge.Text);
@@ -648,6 +649,7 @@ namespace BusinessApp
 							{
 								txtdiscount.Text = (discount + (Convert.ToDouble(txttotal.Text) * (Convert.ToDouble(cbldiscount.Text)) / 100)).ToString();
 							}
+                            
 							else
 							{
 								MessageBox.Show("Please Look For The Administrator");
@@ -975,6 +977,17 @@ namespace BusinessApp
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtnairadiscount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+          //  this.Close();
+            Application.Exit();
         }
     }
 }

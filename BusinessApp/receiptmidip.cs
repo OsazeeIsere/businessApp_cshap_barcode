@@ -46,6 +46,8 @@ namespace BusinessApp
 		{
 			try
 			{
+                string author = "";
+                string authortTel = "";
                 if (txtrepeatreceipt.Text == "")
                 {
 
@@ -85,8 +87,12 @@ namespace BusinessApp
 				    string time1 = null;
                     time1 = DateTime.Now.ToShortTimeString();
                     txttime.Text = time1;
-				    // insert Copyright symbol
-				    lbcopyright.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + System.DateTime.Now.Year +" Nozemen InfoTech(08163775990)";
+                    // insert Copyright symbol
+                    author = dtidentity.Rows[0]["SoftwareAuthor"].ToString();
+
+                    lbcopyright.Text =""+ Microsoft.VisualBasic.Strings.Chr(169) + System.DateTime.Now.Year + " " + author;
+                    authortTel = dtidentity.Rows[0]["authorphonenumber"].ToString();
+                    lbauthorTel.Text = authortTel;
                 }
                 else
                 {
@@ -140,8 +146,12 @@ namespace BusinessApp
                          DateTimePicker1.Text= datesold;
                         txttime.Text = time1;
                         // insert Copyright symbol
-                        lbcopyright.Text = Microsoft.VisualBasic.Strings.Chr(169) + System.DateTime.Now.Year + " Nozemen InfoTech(08163775990)";
 
+                        author = dtidentity.Rows[0]["SoftwareAuthor"].ToString();
+
+                        lbcopyright.Text =  Microsoft.VisualBasic.Strings.Chr(169) + System.DateTime.Now.Year + " " + author;
+                        authortTel = dtidentity.Rows[0]["authorphonenumber"].ToString();
+                        lbauthorTel.Text = authortTel;
                     }
 
                 }
@@ -167,13 +177,12 @@ namespace BusinessApp
                     Font font = new Font("arial", 8F, FontStyle.Bold);
                     Font fontx = new Font("arial", 7F, FontStyle.Bold);
                     Font font1 = new Font("arial", 7F, FontStyle.Regular);
-                    Font fontsmall = new Font("arial", 6F, FontStyle.Regular);
-
+                    Font fontsmall = new Font("arial", 6F, FontStyle.Bold);
                     Font font2 = new Font("arial", 7F, FontStyle.Regular);
                     Font font3 = new Font("arial", 8F, FontStyle.Regular);
-                    e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 40, 100);
+                    e.Graphics.DrawString(txtname.Text, fontx, Brushes.Black, 1, 100);
                     e.Graphics.DrawString(txtaddress.Text, fontsmall, Brushes.Black, 1, 115);
-                    e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 60, 125);
+                    e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 2, 125);
                     e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 140);
                     e.Graphics.DrawString(txtcashiername1.Text, font2, Brushes.Black, 60, 140);
                     e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 110, 140);
@@ -188,7 +197,7 @@ namespace BusinessApp
                     foreach (ColumnHeader ch in lsvitems.Columns)
                     {
                         e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, k, j);
-                        k = k + 50;
+                        k = k+50;
                     }
                     j = j + 15;
                     for (var i = 0; i < lsvitems.Items.Count; i++)
@@ -266,7 +275,9 @@ namespace BusinessApp
                     //  e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80);
                     e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 30, j + 110);
                     e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 20, j + 120);
-                    e.Graphics.DrawString(lbcopyright.Text, fontsmall, Brushes.Black, 1, j + 130);
+                    e.Graphics.DrawString(lbcopyright.Text, font2, Brushes.Black, 1, j + 130);
+                    e.Graphics.DrawString(lbauthorTel.Text, font2, Brushes.Black, 1, j + 140);
+
                 }
                 else
                 {
@@ -275,7 +286,7 @@ namespace BusinessApp
                     Font font1 = new Font("arial", 7F, FontStyle.Regular);
                     Font font2 = new Font("arial", 7F, FontStyle.Regular);
                     Font font3 = new Font("arial", 8F, FontStyle.Regular);
-                    e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 50, 20);
+                    e.Graphics.DrawString(txtname.Text, fontx, Brushes.Black, 50, 20);
                     e.Graphics.DrawString(txtaddress.Text, font1, Brushes.Black, 1, 35);
                     e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 50, 50);
                     e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 65);
@@ -336,6 +347,8 @@ namespace BusinessApp
                     e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 30, j + 110);
                     e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 20, j + 120);
                     e.Graphics.DrawString(lbcopyright.Text, font2, Brushes.Black, 1, j + 130);
+                    e.Graphics.DrawString(lbauthorTel.Text, font2, Brushes.Black, 1, j + 140);
+
                 }
             }
 			catch (Exception ex)
