@@ -86,7 +86,7 @@ namespace BusinessApp
             "Six Months(6) Time",
             "Above Six Months(6) Time",
             "Drugs Already Expired"});
-            this.ComboBox1.Location = new System.Drawing.Point(120, 100);
+            this.ComboBox1.Location = new System.Drawing.Point(120, 14);
             this.ComboBox1.Name = "ComboBox1";
             this.ComboBox1.Size = new System.Drawing.Size(262, 28);
             this.ComboBox1.TabIndex = 60;
@@ -95,7 +95,7 @@ namespace BusinessApp
             // 
             this.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(12, 103);
+            this.Label1.Location = new System.Drawing.Point(12, 17);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(103, 20);
             this.Label1.TabIndex = 61;
@@ -104,7 +104,7 @@ namespace BusinessApp
             // check
             // 
             this.check.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.check.Location = new System.Drawing.Point(391, 94);
+            this.check.Location = new System.Drawing.Point(391, 8);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(223, 38);
             this.check.TabIndex = 62;
@@ -115,7 +115,7 @@ namespace BusinessApp
             // DateTimePicker1
             // 
             this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DateTimePicker1.Location = new System.Drawing.Point(971, 99);
+            this.DateTimePicker1.Location = new System.Drawing.Point(871, 13);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(261, 26);
             this.DateTimePicker1.TabIndex = 63;
@@ -140,10 +140,10 @@ namespace BusinessApp
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
             this.lsvitems.HideSelection = false;
-            this.lsvitems.Location = new System.Drawing.Point(4, 290);
+            this.lsvitems.Location = new System.Drawing.Point(4, 204);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(1268, 436);
+            this.lsvitems.Size = new System.Drawing.Size(1168, 436);
             this.lsvitems.TabIndex = 70;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -217,7 +217,7 @@ namespace BusinessApp
             // 
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(9, 178);
+            this.Label2.Location = new System.Drawing.Point(9, 92);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(285, 20);
             this.Label2.TabIndex = 71;
@@ -226,7 +226,7 @@ namespace BusinessApp
             // txttotal
             // 
             this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txttotal.Location = new System.Drawing.Point(300, 166);
+            this.txttotal.Location = new System.Drawing.Point(300, 80);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(82, 32);
@@ -237,7 +237,7 @@ namespace BusinessApp
             this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PictureBox1.Image = global::BusinessApp.Properties.Resources.search2;
-            this.PictureBox1.Location = new System.Drawing.Point(14, 229);
+            this.PictureBox1.Location = new System.Drawing.Point(14, 143);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(67, 31);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +248,7 @@ namespace BusinessApp
             // 
             this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(216, 240);
+            this.Label8.Location = new System.Drawing.Point(216, 154);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(60, 20);
             this.Label8.TabIndex = 77;
@@ -257,7 +257,7 @@ namespace BusinessApp
             // txtsearch
             // 
             this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtsearch.Location = new System.Drawing.Point(87, 229);
+            this.txtsearch.Location = new System.Drawing.Point(87, 143);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(123, 31);
@@ -267,7 +267,7 @@ namespace BusinessApp
             // import
             // 
             this.import.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.import.Location = new System.Drawing.Point(1019, 157);
+            this.import.Location = new System.Drawing.Point(919, 71);
             this.import.Name = "import";
             this.import.Size = new System.Drawing.Size(128, 49);
             this.import.TabIndex = 73;
@@ -278,7 +278,7 @@ namespace BusinessApp
             // txtitems
             // 
             this.txtitems.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtitems.Location = new System.Drawing.Point(1153, 157);
+            this.txtitems.Location = new System.Drawing.Point(1053, 71);
             this.txtitems.Multiline = true;
             this.txtitems.Name = "txtitems";
             this.txtitems.Size = new System.Drawing.Size(62, 41);
@@ -287,7 +287,7 @@ namespace BusinessApp
             // txtfile
             // 
             this.txtfile.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtfile.Location = new System.Drawing.Point(813, 165);
+            this.txtfile.Location = new System.Drawing.Point(713, 79);
             this.txtfile.Name = "txtfile";
             this.txtfile.Size = new System.Drawing.Size(196, 26);
             this.txtfile.TabIndex = 74;
@@ -303,7 +303,7 @@ namespace BusinessApp
             this.txtaddress.Location = new System.Drawing.Point(0, 26);
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.ReadOnly = true;
-            this.txtaddress.Size = new System.Drawing.Size(1284, 26);
+            this.txtaddress.Size = new System.Drawing.Size(1184, 26);
             this.txtaddress.TabIndex = 110;
             this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -313,7 +313,7 @@ namespace BusinessApp
             this.txtname.Location = new System.Drawing.Point(0, 0);
             this.txtname.Name = "txtname";
             this.txtname.ReadOnly = true;
-            this.txtname.Size = new System.Drawing.Size(1284, 26);
+            this.txtname.Size = new System.Drawing.Size(1184, 26);
             this.txtname.TabIndex = 109;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -323,7 +323,7 @@ namespace BusinessApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1284, 782);
+            this.ClientSize = new System.Drawing.Size(1184, 561);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.PictureBox1);
@@ -345,6 +345,7 @@ namespace BusinessApp
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expiry Date Info";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.expirydateinfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);

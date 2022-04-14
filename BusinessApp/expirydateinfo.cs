@@ -56,6 +56,9 @@ namespace BusinessApp
 				dtgetproduct = getdatabase("Select * From expirydate order by productname");
 				if (dtgetproduct.Rows.Count > 0)
 				{
+                    import.Visible = false;
+                    txtfile.Visible = false;
+                    txtitems.Visible = false;
 					ListViewItem lstitem = new ListViewItem();
 					lsvitems.Items.Clear();
 					for (var j = 0; j < dtgetproduct.Rows.Count; j++)
@@ -347,6 +350,7 @@ namespace BusinessApp
 			}
 			catch (Exception ex)
 			{
+
 			}
 		}
 
@@ -354,44 +358,35 @@ namespace BusinessApp
 		{
 			try
 			{
-				int intitems = 0;
-				if (!string.IsNullOrEmpty(txtitems.Text))
-				{
-					if (Simulate.IsNumeric(txtitems.Text))
-					{
-						intitems = Convert.ToInt32(txtitems.Text);
-					}
-					else
-					{
-						MessageBox.Show("please enter a Value");
-						txtitems.Focus();
-					}
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                dtgetproduct = getdatabase("Select * from product");
+                 
+                    //int intitems = 0;
+				if (dtgetproduct.Rows.Count <1)
+                {
+				        MessageBox.Show("please there is no product in stock");
+						//txtitems.Focus();					
 				}
-				else
+				else 
 				{
-					MessageBox.Show("please enter the TOTAL number of items to be UPLOADED");
-					txtitems.Focus();
-				}
-				if (!string.IsNullOrEmpty(txtitems.Text))
-				{
-					xlapp.Application APP = new xlapp.Application();
-					xlapp.Worksheet worksheet = null;
-					xlapp.Workbook workbook = null;
-					OpenFileDialog1.ShowDialog();
-					workbook = APP.Workbooks.Open(txtfile.Text);
-					worksheet = (xlapp.Worksheet)workbook.Worksheets["sheet1"];
-					int intproductid = 0;
-					string strproductname = "";
-					int intquantity = 0;
-					double dblcost = 0;
-					double dblprice = 0;
-                    string expirydate,barcode;
-					string suppliername = null;
-					string suppliertel = null;
-					string  datepurchased ;
-					double dblamount = 0;
-					string invoicenumber = null;
-					for (var i = 2; i < 2 + intitems; i++)
+					//xlapp.Application APP = new xlapp.Application();
+					//xlapp.Worksheet worksheet = null;
+					//xlapp.Workbook workbook = null;
+					//OpenFileDialog1.ShowDialog();
+					//workbook = APP.Workbooks.Open(txtfile.Text);
+					//worksheet = (xlapp.Worksheet)workbook.Worksheets["sheet1"];
+					//int intproductid = 0;
+					//string strproductname = "";
+					//int intquantity = 0;
+					//double dblcost = 0;
+					//double dblprice = 0;
+     //               string expirydate,barcode;
+					//string suppliername = null;
+					//string suppliertel = null;
+					//string  datepurchased ;
+					//double dblamount = 0;
+					//string invoicenumber = null;
+					for (int  i = 0; i <  dtgetproduct.Rows.Count; i++)
 					{
 						//intproductid = 0
 						//If Not IsNothing(worksheet.Cells(i, 1).Value) Then
@@ -400,19 +395,19 @@ namespace BusinessApp
 						//            intproductid = CInt(worksheet.Cells(i, 1).Value)
 						//        End If
 						//    End If
-						strproductname = worksheet.Cells[i, 2].Value;
-						intquantity = Convert.ToInt32(worksheet.Cells[i, 3].Value);
-						dblcost = Convert.ToDouble(worksheet.Cells[i, 4].Value);
-						dblprice = Convert.ToDouble(worksheet.Cells[i, 5].Value);
-						expirydate =Convert.ToString (worksheet.Cells[i, 6].Value);
-                        expirydate = Convert.ToDateTime(expirydate).ToShortDateString();
-                        barcode = Convert.ToString(worksheet.Cells[i, 7].Value);
+						//strproductname = worksheet.Cells[i, 2].Value;
+						//intquantity = Convert.ToInt32(worksheet.Cells[i, 3].Value);
+						//dblcost = Convert.ToDouble(worksheet.Cells[i, 4].Value);
+						//dblprice = Convert.ToDouble(worksheet.Cells[i, 5].Value);
+						//expirydate =Convert.ToString (worksheet.Cells[i, 6].Value);
+      //                  expirydate = Convert.ToDateTime(expirydate).ToShortDateString();
+      //                  barcode = Convert.ToString(worksheet.Cells[i, 7].Value);
 
-                        suppliername = (worksheet.Cells[i, 8].Value);
-						suppliertel = (worksheet.Cells[i, 9].Value);
-						datepurchased = (worksheet.Cells[i, 10].Value);
-						dblamount = Convert.ToDouble(worksheet.Cells[i, 11].Value);
-						invoicenumber = (worksheet.Cells[i, 12].Value);
+      //                  suppliername = (worksheet.Cells[i, 8].Value);
+						//suppliertel = (worksheet.Cells[i, 9].Value);
+						//datepurchased = (worksheet.Cells[i, 10].Value);
+						//dblamount = Convert.ToDouble(worksheet.Cells[i, 11].Value);
+						//invoicenumber = (worksheet.Cells[i, 12].Value);
 						//If intproductid > 0 Then
 
 						//    Dim cn As New MySqlConnection
@@ -438,40 +433,40 @@ namespace BusinessApp
 						strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
 						cn.ConnectionString = strconnection;
 						cn.Open();
-						cm.CommandText = "Insert Into expirydate(productname,quantity,unitcostprice,unitsalesprice,expirydate,barcode,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + strproductname + "'," + intquantity + "," + dblcost + "," + dblprice + ",'" + expirydate + "','" + barcode + "','" + suppliername + "','" + suppliertel + "','" + datepurchased + "'," + dblamount + ",'" + invoicenumber + "')";
+						cm.CommandText = "Insert Into expirydate(productid,productname,quantity,unitcostprice,unitsalesprice,expirydate,barcode) Values('" + dtgetproduct.Rows[i]["productid"] + "','" + dtgetproduct.Rows[i]["productname"] + "'," + dtgetproduct.Rows[i]["quantity"] + "," + dtgetproduct.Rows[i]["unitcostprice"] + "," + dtgetproduct.Rows[i]["unitsalesprice"] + ",'" + dtgetproduct.Rows[i]["expirydate"] + "','" + dtgetproduct.Rows[i]["barcode"] + "')";
 						cm.Connection = cn;
 						cm.ExecuteNonQuery();
 						cn.Close();
-						System.Data.DataTable dtgetproduct = new System.Data.DataTable();
-						dtgetproduct = getdatabase("Select * From expirydate");
-						if (dtgetproduct.Rows.Count > 0)
+						System.Data.DataTable dtgetproduct1 = new System.Data.DataTable();
+                        dtgetproduct1 = getdatabase("Select * From expirydate");
+						if (dtgetproduct1.Rows.Count > 0)
 						{
 							ListViewItem lstitem = new ListViewItem();
 							lsvitems.Items.Clear();
-							for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+							for (var j = 0; j < dtgetproduct1.Rows.Count; j++)
 							{
 								lstitem = new ListViewItem();
-								lstitem.Text = dtgetproduct.Rows[j]["expirydateid"].ToString();
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["productid"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitcostprice"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["amountpaid"].ToString());
-								lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
+								lstitem.Text = dtgetproduct1.Rows[j]["expirydateid"].ToString();
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["productid"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["productname"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["quantity"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["unitcostprice"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["unitsalesprice"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["expirydate"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["suppliername"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["supplierphonenumber"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["datepurchased"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["amountpaid"].ToString());
+								lstitem.SubItems.Add(dtgetproduct1.Rows[j]["invoicenumber"].ToString());
 								lsvitems.Items.Add(lstitem);
 							}
-							txttotal.Text = dtgetproduct.Rows.Count.ToString();
+							txttotal.Text = dtgetproduct1.Rows.Count.ToString();
 						}
 					}
-					MessageBox.Show(intitems + " Records Entered Successfully");
-					workbook.Save();
-					workbook.Close(System.Reflection.Missing.Value, System.Reflection.Missing.Value, System.Reflection.Missing.Value);
-					APP.Quit();
+					MessageBox.Show( "Expiry Date Table Successfully Populated");
+					//workbook.Save();
+					//workbook.Close(System.Reflection.Missing.Value, System.Reflection.Missing.Value, System.Reflection.Missing.Value);
+					//APP.Quit();
 					txtitems.Text = "";
 					txtfile.Text = "";
 				}

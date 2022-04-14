@@ -94,7 +94,6 @@ namespace BusinessApp
 					cm.Connection = cn;
 					cm.ExecuteNonQuery();
 					cn.Close();
-					cn.Close();
 					cn.Open();
 					cm.CommandText = "Insert Into expirydate(productid,productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + dtgetproduct.Rows[0]["productid"] + "','" + dtgetproduct.Rows[0]["productname"] + "','" + txtquantity.Text + "','" + txtunitcostprice.Text + "','" + txtunitprice.Text + "','" + txtexpirydate.Text + "','" + txtsuppliername.Text + "','" + txtsupplierphonenumber.Text + "','" + txtdatepurchased.Text + "','" + txtamountpaid.Text + "','" + txtinvoicenumber.Text + "')";
 					cm.Connection = cn;
@@ -1156,6 +1155,14 @@ namespace BusinessApp
                 MessageBox.Show(ex.ToString());
 
             }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EditProduct x = new EditProduct();
+            x.txtcashiername1.Text = txtcashiername1.Text;
+            x.Show();
+
         }
     }
 }

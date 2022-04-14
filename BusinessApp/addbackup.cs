@@ -19,8 +19,8 @@ namespace BusinessApp
 		{
 			InitializeComponent();
 		}
-
-		private System.Data.DataTable getdatabase(string strcommand)
+        settings t = new settings();
+        private System.Data.DataTable getdatabase(string strcommand)
 		{
 			System.Data.DataTable tempgetdatabase = null;
 			tempgetdatabase = new System.Data.DataTable();
@@ -109,9 +109,9 @@ namespace BusinessApp
 				string strconnection = "";
 				string time1 = null;
 				time1 =DateTime.Now.ToString ();
-				strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-				cn.ConnectionString = strconnection;
-				cn.Open();
+				//strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+				//cn.ConnectionString = strconnection;
+				//cn.Open();
 				dtgetcashier = getdatabase("Select * From cashier");
 				if (string.IsNullOrEmpty(txtcashiername.Text))
 				{
@@ -127,15 +127,20 @@ namespace BusinessApp
 				}
 				else if (dtgetcashier.Rows.Count <= 10)
 				{
-					cm.CommandText = "Insert Into cashier(cashiername,cashierpassword) Values('" + txtcashiername.Text + "','" + txtcashierpassword1.Text + "')";
-					cm.Connection = cn;
-					cm.ExecuteNonQuery();
-					cn.Close();
-					MessageBox.Show("A CASHIER is Registered");
-					txtcashiername.Text = "";
-					txtcashierpassword1.Text = "";
-					txtcashierpassword2.Text = "";
-				}
+                    int count = 0;
+                    count = t.InsertData("Insert Into cashier(cashiername,cashierpassword) Values('" + txtcashiername.Text + "','" + txtcashierpassword1.Text + "')");
+                    if (count == 1)
+                    {
+                        MessageBox.Show("A CASHIER is Registered");
+                        txtcashiername.Text = "";
+                        txtcashierpassword1.Text = "";
+                        txtcashierpassword2.Text = "";
+                    }
+                    else
+                    {
+                      MessageBox.Show("Unsuccessful attempt");
+                    }
+                }
 				else
 				{
 					MessageBox.Show("The Maximum CASHIER has been reached");

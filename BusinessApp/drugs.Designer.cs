@@ -117,6 +117,7 @@ namespace BusinessApp
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -328,11 +329,11 @@ namespace BusinessApp
             this.Label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(444, 161);
+            this.Label9.Location = new System.Drawing.Point(436, 161);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(81, 20);
+            this.Label9.Size = new System.Drawing.Size(90, 20);
             this.Label9.TabIndex = 31;
-            this.Label9.Text = "expirydate";
+            this.Label9.Text = "Expiry Date";
             // 
             // txtexpirydate
             // 
@@ -422,7 +423,7 @@ namespace BusinessApp
             this.Label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(407, 193);
+            this.Label11.Location = new System.Drawing.Point(413, 192);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(113, 20);
             this.Label11.TabIndex = 46;
@@ -722,6 +723,7 @@ namespace BusinessApp
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
             this.exportDatabaseToolStripMenuItem,
             this.reprintReceiptToolStripMenuItem,
             this.quitToolStripMenuItem,
@@ -826,6 +828,13 @@ namespace BusinessApp
             this.PictureBox1.TabStop = false;
             this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Edit Product Details";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // drugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -833,7 +842,7 @@ namespace BusinessApp
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1284, 762);
+            this.ClientSize = new System.Drawing.Size(1284, 733);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtfile1);
@@ -981,6 +990,7 @@ namespace BusinessApp
         private ToolStripMenuItem viewReportToolStripMenuItem;
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 
 }

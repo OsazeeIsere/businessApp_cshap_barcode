@@ -34,6 +34,24 @@ namespace BusinessApp
 			cn.Close();
 			return tempgetdatabase;
 		}
-	}
+        public int InsertData(string strcommand)
+        {
+            int count = 0;
+            MySqlConnection cn = new MySqlConnection();
+            MySqlDataAdapter ad = new MySqlDataAdapter();
+            MySqlCommand cm = new MySqlCommand();
+            string strconnection = "";
+            strconnection = "Server=localhost;Port=3306;Database=businessdatabase;Uid=root;Pwd=prayer;";
+            cn.ConnectionString = strconnection;
+            cn.Open();
+            cm.CommandText = strcommand;
+            cm.Connection = cn;
+            cm.ExecuteNonQuery();
+            cn.Close();
+            return count = 1;
+        }
+
+
+    }
 
 }

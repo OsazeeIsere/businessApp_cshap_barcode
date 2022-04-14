@@ -146,6 +146,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="IdentityForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -578,6 +584,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="drinksreorderlevel.resx">
       <DependentUpon>drinksreorderlevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editsales.resx">
       <DependentUpon>editsales.cs</DependentUpon>
